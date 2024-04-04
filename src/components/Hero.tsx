@@ -4,7 +4,7 @@ function Hero() {
   return (
     <>
       <section className="mt-3">
-        <div className="bg-[url('/img/hero-bg-1.png')] bg-cover bg-center px-24 py-5 rounded-[21px] flex items-start justify-between">
+        <div className="bg-[url('/img/hero-bg-1.png')] bg-cover bg-center px-24 py-7 rounded-[21px] flex items-start justify-between">
           <div className="   text-white">
             <p className="font-medium 2xl:text-[35px] text-[25px]">
               Double Your Online Presence
