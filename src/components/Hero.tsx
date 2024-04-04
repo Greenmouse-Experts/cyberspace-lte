@@ -4,12 +4,12 @@ function Hero() {
   return (
     <>
       <section className="mt-3">
-        <div className="bg-[url('/img/hero-bg-1.png')] bg-cover bg-center px-24 py-10 rounded-[21px] flex items-start justify-between">
+        <div className="bg-[url('/img/hero-bg-1.png')] bg-cover bg-center px-24 py-5 rounded-[21px] flex items-start justify-between">
           <div className="   text-white">
-            <p className="font-medium 2xl:text-[40px] text-[25px]">
+            <p className="font-medium 2xl:text-[35px] text-[25px]">
               Double Your Online Presence
             </p>
-            <h3 className="2xl:text-[84px] text-[60px] font-semibold">New LTE Modem</h3>
+            <h3 className="2xl:text-[70px] text-[60px] font-semibold">New LTE Modem</h3>
             <div className="flex items-center gap-5">
               <p className="font-medium 2xl:text-[35px] text-[25px]">Enjoy Smart Deals</p>
               <img src="/icons/arrowright.svg" alt="" className="mt-2 2xl:h-4 h-2" />
@@ -18,7 +18,7 @@ function Hero() {
           <img
             src="/img/hero-img.png"
             alt=""
-            className="2xl:w-[430px] 2xl:h-[390px] w-[250px] h-[200px] mt-[-30px]"
+            className="2xl:w-[350px] 2xl:h-[300px] w-[250px] h-[200px] mt-[-30px]"
           />
         </div>
       </section>
