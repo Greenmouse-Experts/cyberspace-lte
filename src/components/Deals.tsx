@@ -25,10 +25,10 @@ function Deals() {
                 className="2xl:w-[90%] w-[80%] 2xl:h-[300px] h-[250px]"
               />
             </div>
-            <p className="2xl:text-xl text-sm font-semibold text-[#222222] mt-3">
+            <p className="2xl:text-lg text-sm font-semibold text-[#222222] mt-3">
               Superfast Outdoor ODU Device
             </p>
-            <p className="2xl:text-[22px] text-base font-bold text-[#222222] mt-3">
+            <p className="2xl:text-[22px] text-base font-semibold text-[#222222] mt-3">
               ₦122,000
             </p>
             <button className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2">
@@ -48,10 +48,10 @@ function Deals() {
                 className="2xl:w-[90%] w-[80%] 2xl:h-[300px] h-[250px]"
               />
             </div>
-            <p className="2xl:text-xl text-sm font-semibold text-[#222222] mt-3">
+            <p className="2xl:text-lg text-sm font-semibold text-[#222222] mt-3">
               Superfast Broadband Device
             </p>
-            <p className="2xl:text-[22px] text-base font-bold text-[#222222] mt-3">
+            <p className="2xl:text-[22px] text-base font-semibold text-[#222222] mt-3">
               ₦28,500
             </p>
             <button className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2">
@@ -71,10 +71,10 @@ function Deals() {
                 className="2xl:w-[90%] w-[80%] 2xl:h-[300px] h-[250px]"
               />
             </div>
-            <p className="2xl:text-xl text-sm font-semibold text-[#222222] mt-3">
+            <p className="2xl:text-lg text-sm font-semibold text-[#222222] mt-3">
               Superfast Outdoor IDU Device
             </p>
-            <p className="2xl:text-[22px] text-base font-bold text-[#222222] mt-3">
+            <p className="2xl:text-[22px] text-base font-semibold text-[#222222] mt-3">
               ₦28,500
             </p>
             <button className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2">

@@ -23,7 +23,7 @@ function Plans() {
 
       <div className="flex items-center gap-8 mt-10">
         <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 w-[33%] font-grotesk shadow-lg">
-          <p className="text-bluePrimary font-bold 2xl:text-[22px] text-base font-grotesk">
+          <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
             Modem + 70GB Data bundle + Voice
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
@@ -31,19 +31,19 @@ function Plans() {
             CYBER STARTER
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="text-bluePrimary font-bold 2xl:text-xl text-sm">
+          <p className="text-bluePrimary font-bold 2xl:text-lg text-sm">
             30 Days
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="text-lightGray font-bold 2xl:text-3xl text-lg ">
+          <p className="text-lightGray font-bold 2xl:text-2xl text-lg ">
             N28,500
           </p>
-          <button className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-xl text-sm text-center rounded-md font-grotesk font-semibold">
+          <button className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-lg text-sm text-center rounded-md font-grotesk font-semibold">
             SUBSCRIBE TO PLAN
           </button>
         </div>
         <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 w-[33%] font-grotesk shadow-lg ">
-          <p className="text-bluePrimary font-bold 2xl:text-[22px] text-base font-grotesk">
+          <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
             Modem + 70GB Data bundle + Voice
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
@@ -51,19 +51,19 @@ function Plans() {
             CYBER STARTER
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="text-bluePrimary font-bold 2xl:text-xl text-sm">
+          <p className="text-bluePrimary font-bold 2xl:text-lg text-sm">
             30 Days
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="text-lightGray font-bold 2xl:text-3xl text-lg ">
+          <p className="text-lightGray font-bold 2xl:text-2xl text-lg ">
             N28,500
           </p>
-          <button className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-xl text-sm text-center rounded-md font-grotesk font-semibold">
+          <button className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-lg text-sm text-center rounded-md font-grotesk font-semibold">
             SUBSCRIBE TO PLAN
           </button>
         </div>
         <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 w-[33%] font-grotesk  shadow-lg">
-          <p className="text-bluePrimary font-bold 2xl:text-[22px] text-base font-grotesk">
+          <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
             Unlimited volume (1 Mbps/1Mbps)
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
@@ -71,14 +71,14 @@ function Plans() {
             CYBER STARTER
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="text-bluePrimary font-bold 2xl:text-xl text-sm">
+          <p className="text-bluePrimary font-bold 2xl:text-lg text-sm">
             1 Year
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="text-lightGray font-bold 2xl:text-3xl text-lg ">
+          <p className="text-lightGray font-bold 2xl:text-2xl text-lg ">
             N28,500
           </p>
-          <button className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-xl text-sm text-center rounded-md font-grotesk font-semibold">
+          <button className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-lg text-sm text-center rounded-md font-grotesk font-semibold">
             SUBSCRIBE TO PLAN
           </button>
         </div>
