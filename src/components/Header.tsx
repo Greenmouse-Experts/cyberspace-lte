@@ -1,4 +1,4 @@
-import React from "react";
+
 import { BsCart2, BsPatchCheck, BsSearch } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <header className="">
-      <div className="flex justify-between items-center 2xl:py-5 py-2 2xl:px-32 md:px-24 bg-bluePrimary text-white 2xl:text-[19px] text-[12px]  font-grotesk">
+      <div className="flex justify-between items-center 2xl:py-4 py-2 2xl:px-32 md:px-24 bg-bluePrimary text-white 2xl:text-[19px] text-[12px]  font-grotesk">
         <p className=""> Welcome to Cyberspace LTE!</p>
 
         <div className="flex gap-6 items-center font-sora 2xl:text-[18px] text-[12px] text-white">
