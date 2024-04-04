@@ -1,6 +1,7 @@
 
 import Deals from '../components/Deals'
 import Hero from '../components/Hero'
+import News from '../components/News'
 import Plans from '../components/Plans'
 import Testimonials from '../components/Testimonials'
 
@@ -11,6 +12,7 @@ function Home() {
     <Deals/>
     <Testimonials/>
     <Plans/>
+    <News/>
     </>
   )
 }

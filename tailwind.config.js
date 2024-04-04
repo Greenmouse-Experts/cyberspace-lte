@@ -13,6 +13,8 @@ export default {
       },
       colors: {
         bluePrimary: '#0080CF',
+        bluePrimary2: '#0080CF',
+        redPrimary: '#DE0F04',
         grayPrimary:'#666666',
         lightGray:'#5F6C72'
       }

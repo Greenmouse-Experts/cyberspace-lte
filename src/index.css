@@ -31,6 +31,31 @@ h6 {
 }
 
 section{
-    margin-left: 128px;
-    margin-right: 128px;
+    margin-left: 140px;
+    margin-right: 140px;
 }
+h4{
+    font-size: 30px;
+}
+
+footer a{
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1440px) {
+    section{
+        margin-left: 96px;
+        margin-right: 96px;
+    }
+
+    h4{
+        font-size: 20px;
+    }
+
+    footer a{
+        font-size: 10px;
+    }
+    
+    
+  }
+
