@@ -5,7 +5,7 @@ function Testimonials() {
 
     // State to track whether "Read More" button is clicked for each testimonial
  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [showFullText, setShowFullText] = useState({
+    const [showFullText, _setShowFullText] = useState({
         testimonial1: false,
         testimonial2: false,
         testimonial3: false
