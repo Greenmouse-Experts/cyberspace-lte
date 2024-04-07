@@ -16,8 +16,8 @@ function Deals() {
           <span className="text-bluePrimary">Internet Routers</span>
         </h4>
 
-        <div className="flex items-center justify-center 2xl:gap-20 gap-10 mt-16">
-          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] w-[25%]  pb-3 overflow-hidden relative">
+        <div className="flex 2xl:flex-row flex-col items-center justify-center 2xl:gap-20 gap-10 mt-16">
+          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] md:w-[25%] w-[80%]  pb-3 overflow-hidden relative">
             <div className="bg-[#E4E7E9] w-full flex justify-center">
               <img
                 src="/img/deal-1.png"
@@ -40,7 +40,7 @@ function Deals() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] w-[25%]  pb-3 overflow-hidden relative">
+          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] md:w-[25%] w-[80%]  pb-3 overflow-hidden relative">
             <div className="bg-[#E4E7E9] w-full flex justify-center">
               <img
                 src="/img/deal-2.png"
@@ -63,7 +63,7 @@ function Deals() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] w-[25%]  pb-3 overflow-hidden relative">
+          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] md:w-[25%] w-[80%]  pb-3 overflow-hidden relative">
             <div className="bg-[#E4E7E9] w-full flex justify-center">
               <img
                 src="/img/deal-3.png"
@@ -94,7 +94,7 @@ function Deals() {
           </button>
         </div>
       </section>
-      <section className=" mx-32 border flex justify-between border-[#E4E7E9] rounded-[10px] px-10 py-10 jus mt-16 font-pSans mb-20">
+      <section className="border flex  sm:flex-row flex-col sm:gap-0 gap-5 sm:justify-between border-[#E4E7E9] rounded-[10px] px-10 py-10 jus mt-16 font-pSans mb-20">
         <div className="flex items-center gap-3">
           <PiPackageLight size={40} />
           <div>
@@ -106,7 +106,7 @@ function Deals() {
             </p>
           </div>
         </div>
-        <div className="w-[1.3px] bg-[#E4E7E9]" />
+        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
         <div className="flex items-center gap-3">
           <PiTrophyThin size={40} />
           <div>
@@ -118,7 +118,7 @@ function Deals() {
             </p>
           </div>
         </div>
-        <div className="w-[1.3px] bg-[#E4E7E9]" />
+        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
         <div className="flex items-center gap-3">
           <PiCreditCardThin size={40} />
           <div>
@@ -130,7 +130,7 @@ function Deals() {
             </p>
           </div>
         </div>
-        <div className="w-[1.3px] bg-[#E4E7E9]" />
+        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
         <div className="flex items-center gap-3">
           <PiHeadphonesThin size={40} />
           <div>

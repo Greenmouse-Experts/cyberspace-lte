@@ -59,3 +59,12 @@ footer a{
     
   }
 
+  @media screen and (max-width: 768px) {
+    section{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+  }
+
+
+

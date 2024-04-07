@@ -11,8 +11,8 @@ function News() {
       <h3 className="text-[#191C1F] font-semibold 2xl:text-4xl  text-2xl text-center mb-5">
         Latest News
       </h3>
-      <div className="flex items-center gap-8">
-        <div className="font-pSans w-[33%] border-[1.2px] border-bluePrimary 2xl:p-8 p-5 rounded-[4px]">
+      <div className="flex md:flex-row flex-col items-center gap-8">
+        <div className="font-pSans md:w-[33%] w-[90%] border-[1.2px] border-bluePrimary 2xl:p-8 p-5 rounded-[4px]">
           <img
             src="/img/news-1.png"
             alt="news"
@@ -52,7 +52,7 @@ function News() {
             <GoArrowRight color="#FA8232" size={20} />
           </button>
         </div>
-        <div className="font-pSans w-[33%] border-[1.2px] border-bluePrimary 2xl:p-8 p-5 rounded-[4px]">
+        <div className="font-pSans md:w-[33%] w-[90%] border-[1.2px] border-bluePrimary 2xl:p-8 p-5 rounded-[4px]">
           <img
             src="/img/news-1.png"
             alt="news"
@@ -92,7 +92,7 @@ function News() {
             <GoArrowRight color="#FA8232" size={20} />
           </button>
         </div>
-        <div className="font-pSans w-[33%] border-[1.2px] border-bluePrimary 2xl:p-8 p-5 rounded-[4px]">
+        <div className="font-pSans md:w-[33%] w-[90%] border-[1.2px] border-bluePrimary 2xl:p-8 p-5 rounded-[4px]">
           <img
             src="/img/news-1.png"
             alt="news"

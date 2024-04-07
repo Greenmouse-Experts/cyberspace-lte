@@ -21,8 +21,8 @@ function Plans() {
         <div className="bg-lightGray h-[0.5px] w-[72%] opacity-50" />
       </div>
 
-      <div className="flex items-center gap-8 mt-10">
-        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 w-[33%] font-grotesk shadow-lg">
+      <div className="flex md:flex-row flex-col items-center gap-8 mt-10">
+        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-[90%] font-grotesk shadow-lg">
           <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
             Modem + 70GB Data bundle + Voice
           </p>
@@ -42,7 +42,7 @@ function Plans() {
             SUBSCRIBE TO PLAN
           </button>
         </div>
-        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 w-[33%] font-grotesk shadow-lg ">
+        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-[90%] font-grotesk shadow-lg ">
           <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
             Modem + 70GB Data bundle + Voice
           </p>
@@ -62,7 +62,7 @@ function Plans() {
             SUBSCRIBE TO PLAN
           </button>
         </div>
-        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 w-[33%] font-grotesk  shadow-lg">
+        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-[90%] font-grotesk  shadow-lg">
           <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
             Unlimited volume (1 Mbps/1Mbps)
           </p>

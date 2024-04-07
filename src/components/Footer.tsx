@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <section className="bg-[#057FCC] mt-32 2xl:py-20 py-14  mx-0">
-        <div className="text-white font-pSans text-center justify-center flex flex-col mx-auto w-[35%]">
+      <section className="bg-[#057FCC] mt-32 2xl:py-20 md:py-14 py-6  mx-0">
+        <div className="text-white font-pSans text-center justify-center flex flex-col mx-auto md:w-[35%] w-[80%]">
           <h3 className="2xl:text-[30px] text-2xl font-semibold">
             Subscribe to our newsletter
           </h3>
@@ -28,7 +28,7 @@ function Footer() {
         </div>
       </section>
       <footer className="bg-[#191C1F] pt-24">
-        <div className="flex flex-wrap justify-between 2xl:px-[200px] px-[140px] ">
+        <div className="flex flex-wrap md:justify-between justify-start md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
           <div>
             <p className="font-normal 2xl:text-[17px] text-[12px] text-white uppercase">
               Customer Supports:

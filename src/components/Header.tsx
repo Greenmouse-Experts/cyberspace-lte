@@ -1,3 +1,4 @@
+//import { useState } from "react";
 import { BsCart2, BsPatchCheck, BsSearch } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
@@ -5,12 +6,18 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 
 function Header() {
+
+  //const [menu, setmMenu] = useState(false)
+
+
+
+
   return (
     <header className="">
-      <div className="flex justify-between items-center 2xl:py-2 py-2 2xl:px-32 md:px-24 bg-bluePrimary text-white 2xl:text-[19px] text-[12px]  font-grotesk">
+      <div className="flex justify-between items-center 2xl:py-2 py-2 2xl:px-28 md:px-24  bg-bluePrimary text-white 2xl:text-[19px] text-[12px]  font-grotesk">
         <p className=""> Welcome to Cyberspace LTE!</p>
 
-        <div className="flex gap-6 items-center font-sora 2xl:text-[18px] text-[12px] text-white">
+        <div className="flex gap-6 items-center font-sora 2xl:text-[18px] sm:text-[12px] text-[5px] text-white">
           <div className="flex gap-1 items-center">
             <BsPatchCheck color="white" size={20} />
             <p>All Offers</p>
@@ -28,13 +35,13 @@ function Header() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-20 font-grotesk 2xl:text-[20px] text-[14px] py-5 2xl:px-[140px] md:px-24 border-b-[0.6px] border-[#EDEDED]">
+      <div className="flex items-center justify-between gap-20 font-grotesk 2xl:text-[20px] text-[14px] py-5 2xl:px-[140px] md:px-24 border-b-[0.6px] border-[#EDEDED] relative md:mx-0 mx-5">
         <div className="">
           <img src="/logo.svg" alt="" className="2xl:w-[165px] w-[100px]" />
         </div>
 
-        <div className="flex items-center gap-10">
-          <nav className="">
+        <div className=" items-center gap-10 md:flex hidden">
+          <nav className="  ">
             <ul className="flex gap-4 items-center text-[16px]  text-[#666666] font-bold">
               <li className="">
                 <NavLink to="">Shop Products</NavLink>{" "}
@@ -70,6 +77,9 @@ function Header() {
               <p className="font-bold text-grayPrimary">Cart</p>
             </div>
           </div>
+        </div>
+        <div className="md:hidden block">
+          <img src="/icons/hamburger.svg" alt="menu" />
         </div>
       </div>
     </header>
