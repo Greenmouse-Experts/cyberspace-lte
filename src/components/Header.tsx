@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <header className="">
-      <div className="flex justify-between items-center 2xl:py-2 py-2 2xl:px-28 md:px-24  bg-bluePrimary text-white 2xl:text-[19px] text-[10px]  font-grotesk">
+      <div className=" justify-between items-center 2xl:py-2 py-2 2xl:px-28 md:px-24 md:flex hidden  bg-bluePrimary text-white 2xl:text-[19px] text-[10px]  font-grotesk">
         <p className=""> Welcome to Cyberspace LTE!</p>
 
         <div className="flex gap-6 items-center font-sora 2xl:text-[18px] sm:text-[12px] text-[5px] text-white">
@@ -31,8 +31,8 @@ function Header() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-20 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] md:px-24 border-b-[0.6px] border-[#EDEDED] relative md:mx-0 mx-5">
-        <div className="">
+      <div className="flex items-center justify-between md:gap-20 gap-5 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] md:px-24 border-b-[0.6px] border-[#EDEDED] relative md:mx-0 mx-5">
+        <div className="2xl:w-[165px] w-[100px]">
           <img src="/logo.svg" alt="" className="2xl:w-[165px] w-[100px]" />
         </div>
 
@@ -81,10 +81,10 @@ function Header() {
           </div>
         </div>
         <div
-          className="md:hidden block cursor-pointer"
+          className="md:hidden block cursor-pointer w-8 h-8"
           onClick={() => setmMenu((menu) => !menu)}
         >
-          <img src="/icons/hamburger.svg" alt="menu" />
+          <img src="/icons/hamburger.svg" alt="menu" className="w-8 h-8" />
         </div>
       </div>
     </header>
