@@ -16,7 +16,7 @@ function Deals() {
           <span className="text-bluePrimary">Internet Routers</span>
         </h4>
 
-        <div className="flex 2xl:flex-row flex-col items-center justify-center 2xl:gap-20 gap-10 mt-16">
+        <div className="flex md:flex-row flex-col items-center justify-center 2xl:gap-20 gap-10 mt-16">
           <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] md:w-[25%] w-[80%]  pb-3 overflow-hidden relative">
             <div className="bg-[#E4E7E9] w-full flex justify-center">
               <img

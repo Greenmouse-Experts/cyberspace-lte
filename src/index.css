@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 /* 
 a,
@@ -17,7 +17,7 @@ button {
 } */
 
 p {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 h1,
@@ -26,45 +26,44 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Hanken Grotesk, 'sans-serif';
-
+  font-family: Hanken Grotesk, "sans-serif";
 }
 
-section{
-    margin-left: 140px;
-    margin-right: 140px;
+section {
+  margin-left: 140px;
+  margin-right: 140px;
 }
-h4{
-    font-size: 30px;
+h4 {
+  font-size: 30px;
 }
 
-footer a{
-    font-size: 16px;
+footer a {
+  font-size: 16px;
 }
 
 @media screen and (max-width: 1440px) {
-    section{
-        margin-left: 96px;
-        margin-right: 96px;
-    }
-
-    h4{
-        font-size: 20px;
-    }
-
-    footer a{
-        font-size: 10px;
-    }
-    
-    
+  section {
+    margin-left: 96px;
+    margin-right: 96px;
   }
 
-  @media screen and (max-width: 768px) {
-    section{
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+  h4 {
+    font-size: 20px;
   }
 
+  footer a {
+    font-size: 10px;
+  }
+}
 
-
+@media screen and (max-width: 768px) {
+  section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+    .unset {
+      position: unset;
+    }
+  }

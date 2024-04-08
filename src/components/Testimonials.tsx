@@ -20,7 +20,7 @@ function Testimonials() {
     // };
 
     return (
-        <section className="bg-bluePrimary py-24 2xl:px-[140px] px-24 mx-0">
+        <section className="bg-bluePrimary py-24 2xl:px-[140px] md:px-24 px-5 mx-0">
             <h5 className="text-white text-3xl font-bold mb-10">Testimonials</h5>
             <div className="flex items-center gap-5 md:flex-nowrap flex-wrap">
                 {/* Testimonial 1 */}

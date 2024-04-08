@@ -1,4 +1,4 @@
-//import { useState } from "react";
+import { useState } from "react";
 import { BsCart2, BsPatchCheck, BsSearch } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
@@ -6,15 +6,11 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 
 function Header() {
-
-  //const [menu, setmMenu] = useState(false)
-
-
-
+  const [menu, setmMenu] = useState(false);
 
   return (
     <header className="">
-      <div className="flex justify-between items-center 2xl:py-2 py-2 2xl:px-28 md:px-24  bg-bluePrimary text-white 2xl:text-[19px] text-[12px]  font-grotesk">
+      <div className="flex justify-between items-center 2xl:py-2 py-2 2xl:px-28 md:px-24  bg-bluePrimary text-white 2xl:text-[19px] text-[10px]  font-grotesk">
         <p className=""> Welcome to Cyberspace LTE!</p>
 
         <div className="flex gap-6 items-center font-sora 2xl:text-[18px] sm:text-[12px] text-[5px] text-white">
@@ -35,14 +31,18 @@ function Header() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-20 font-grotesk 2xl:text-[20px] text-[14px] py-5 2xl:px-[140px] md:px-24 border-b-[0.6px] border-[#EDEDED] relative md:mx-0 mx-5">
+      <div className="flex items-center justify-between gap-20 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] md:px-24 border-b-[0.6px] border-[#EDEDED] relative md:mx-0 mx-5">
         <div className="">
           <img src="/logo.svg" alt="" className="2xl:w-[165px] w-[100px]" />
         </div>
 
-        <div className=" items-center gap-10 md:flex hidden">
-          <nav className="  ">
-            <ul className="flex gap-4 items-center text-[16px]  text-[#666666] font-bold">
+        <div className="flex items-center gap-10 2xl:text-[17px] text-[14px]">
+          <nav
+            className={` absolute bg-white ${
+              menu ? "left-0 w-[80%] " : "left-[-1000px] "
+            } top-5   flex justify-start md:h-auto h-screen transition-all unset`}
+          >
+            <ul className="flex gap-4 md:flex-row flex-col md:items-center   text-[#666666] font-bold">
               <li className="">
                 <NavLink to="">Shop Products</NavLink>{" "}
               </li>
@@ -54,7 +54,7 @@ function Header() {
               </li>
             </ul>
           </nav>
-          <div className="2xl:w-[400px] w-[300px] 2xl:h-[60px] h-[40px] relative">
+          <div className="2xl:w-[400px] w-[300px] 2xl:h-[60px] h-[40px] relative md:block hidden">
             <BsSearch
               color="#0080CF"
               size={20}
@@ -66,10 +66,12 @@ function Header() {
               placeholder="Search devices, plans and more..."
             />
           </div>
-          <div className="flex gap-6">
+          <div className="flex  md:gap-6 gap-2">
             <div className="flex items-center gap-1">
               <FiUser color="#0094EF" size={25} />
-              <p className="font-bold text-bluePrimary">Client Login</p>
+              <p className="font-bold text-bluePrimary text-nowrap">
+                Client Login
+              </p>
             </div>
             <div className="bg-[#D9D9D9] w-[2px]" />
             <div className="flex items-center gap-1">
@@ -78,7 +80,10 @@ function Header() {
             </div>
           </div>
         </div>
-        <div className="md:hidden block">
+        <div
+          className="md:hidden block cursor-pointer"
+          onClick={() => setmMenu((menu) => !menu)}
+        >
           <img src="/icons/hamburger.svg" alt="menu" />
         </div>
       </div>
