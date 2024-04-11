@@ -32,9 +32,11 @@ function Header() {
       </div>
 
       <div className="flex items-center justify-between md:gap-20 gap-5 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] md:px-24 border-b-[0.6px] border-[#EDEDED] relative md:mx-0 mx-5">
-        <div className="2xl:w-[165px] w-[100px]">
+       <NavLink to="/">
+       <div className="2xl:w-[165px] w-[100px]">
           <img src="/logo.svg" alt="" className="2xl:w-[165px] w-[100px]" />
         </div>
+       </NavLink>
 
         <div className="flex items-center gap-10 2xl:text-[17px] text-[14px]">
           <nav
@@ -50,7 +52,7 @@ function Header() {
                 <NavLink to="">Coverage</NavLink>{" "}
               </li>
               <li className="">
-                <NavLink to="">Our dealers</NavLink>{" "}
+                <NavLink to="/dealers">Our dealers</NavLink>{" "}
               </li>
             </ul>
           </nav>
@@ -74,10 +76,10 @@ function Header() {
               </p>
             </div>
             <div className="bg-[#D9D9D9] w-[2px]" />
-            <div className="flex items-center gap-1">
+            <NavLink to="cart" className="flex items-center gap-1">
               <BsCart2 color="#0094EF" size={25} />
               <p className="font-bold text-grayPrimary">Cart</p>
-            </div>
+            </NavLink>
           </div>
         </div>
         <div

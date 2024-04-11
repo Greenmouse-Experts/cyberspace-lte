@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,6 +19,8 @@ button {
 
 p {
   font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
 }
 
 h1,
@@ -32,6 +35,10 @@ h6 {
 section {
   margin-left: 140px;
   margin-right: 140px;
+}
+h3{
+font-size: 32px;
+font-weight: 500;
 }
 h4 {
   font-size: 30px;
@@ -66,4 +73,9 @@ footer a {
     .unset {
       position: unset;
     }
+  }
+
+
+.css-1flt7uf-MuiTabs-root .MuiTabs-flexContainer{
+   justify-content: center !important;
   }

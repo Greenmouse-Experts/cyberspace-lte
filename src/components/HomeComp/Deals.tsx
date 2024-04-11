@@ -1,11 +1,12 @@
 
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import {
   PiCreditCardThin,
   PiHeadphonesThin,
   PiPackageLight,
   PiTrophyThin,
 } from "react-icons/pi";
+import { NavLink } from "react-router-dom";
+import Advert from "../Advert";
 
 function Deals() {
   return (
@@ -31,9 +32,9 @@ function Deals() {
             <p className="2xl:text-[22px] text-base font-semibold text-[#222222] mt-3">
               ₦122,000
             </p>
-            <button className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2">
+            <NavLink to="/product/123" className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center">
               Buy Now
-            </button>
+            </NavLink>
             <div className="absolute top-0 right-0 bg-redPrimary rounded-es-[26px]">
               <p className="uppercase text-white text-xl py-5 px-3 font-grotesk 2xl:font-semibold font-medium">
                 hot
@@ -54,9 +55,9 @@ function Deals() {
             <p className="2xl:text-[22px] text-base font-semibold text-[#222222] mt-3">
               ₦28,500
             </p>
-            <button className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2">
+            <NavLink to="/product/123" className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center">
               Buy Now
-            </button>
+            </NavLink>
             <div className="absolute top-0 right-0 bg-redPrimary rounded-es-[26px]">
               <p className="uppercase text-white text-xl py-5 px-3 font-grotesk 2xl:font-semibold font-medium">
                 hot
@@ -77,9 +78,9 @@ function Deals() {
             <p className="2xl:text-[22px] text-base font-semibold text-[#222222] mt-3">
               ₦28,500
             </p>
-            <button className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2">
+            <NavLink to="/product/123" className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center">
               Buy Now
-            </button>
+            </NavLink>
             <div className="absolute top-0 right-0 bg-redPrimary rounded-es-[26px]">
               <p className="uppercase text-white text-xl py-5 px-3 font-grotesk 2xl:font-semibold font-medium">
                 hot
@@ -143,37 +144,7 @@ function Deals() {
           </div>
         </div>
       </section>
-
-      <section className="my-20">
-        <div className="flex justify-between">
-          <h4 className="text-grayPrimary font-semibold">
-            Explore Great Deals On
-            <span className="text-bluePrimary"> Devices</span>
-          </h4>
-          <div className="flex items-end ">
-            <p className="text-[#222222] text-base font-medium capitalize">
-              see more{" "}
-            </p>
-            <MdOutlineKeyboardArrowRight color="#0080CF" size={25} />
-          </div>
-        </div>
-        <div className="flex w-full items-center 2xl:mt-10 mt-5">
-          <div className="bg-bluePrimary h-[5px] w-[28%]" />
-          <div className="bg-lightGray h-[0.5px] w-[72%] opacity-50" />
-        </div>
-
-        <div className="flex items-center mt-20 gap-5">
-          <div>
-            <img src="/img/deal-4.png" alt="" />
-          </div>
-          <div>
-            <img src="/img/deal-5.png" alt="" />
-          </div>
-          <div>
-            <img src="/img/deal-6.png" alt="" />
-          </div>
-        </div>
-      </section>
+<Advert/>
     </>
   );
 }

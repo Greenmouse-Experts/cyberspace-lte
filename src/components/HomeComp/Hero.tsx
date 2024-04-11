@@ -1,4 +1,5 @@
 import { IoMdCart } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 function Hero() {
   return (
@@ -58,8 +59,10 @@ function Hero() {
           <p className="2xl:text-[16px] text-[12px] text-[#222222] font-semibold">Secure</p>
         </div>
       </section>
-      <div className="bg-[#DE0F04] w-12 h-12 flex justify-center items-center fixed right-0 top-[50%] cursor-pointer">
-        <IoMdCart color="white" size={30} />
+      <div className="bg-[#DE0F04] w-12 h-12 flex justify-center items-center fixed right-0 top-[50%] cursor-pointer ">
+     <NavLink to="/cart">
+     <IoMdCart color="white" size={30} />
+     </NavLink>
       </div>
     </>
   );
