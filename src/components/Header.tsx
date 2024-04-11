@@ -49,7 +49,7 @@ function Header() {
                 <NavLink to="">Shop Products</NavLink>{" "}
               </li>
               <li className="">
-                <NavLink to="">Coverage</NavLink>{" "}
+                <NavLink to="/coverage">Coverage</NavLink>{" "}
               </li>
               <li className="">
                 <NavLink to="/dealers">Our dealers</NavLink>{" "}

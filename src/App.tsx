@@ -4,6 +4,7 @@ import AppLayout from "./components/AppLayout";
 import ProductDetail from "./pages/ProductDetail";
 import CartPage from "./pages/CartPage";
 import Dealers from "./pages/Dealers";
+import Coverage from "./pages/Coverage";
 
 
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/dealers",
         element: <Dealers />,
+      },
+      {
+        path: "/coverage",
+        element: <Coverage />,
       }
     ],
   },
