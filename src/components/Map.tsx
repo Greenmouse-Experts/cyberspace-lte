@@ -1,5 +1,7 @@
 
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import Loader from './Loader';
+import { memo } from 'react';
 
 
 const mapContainerStyle = {
@@ -11,7 +13,7 @@ const center = {
   lng: 3.2773819, // default longitude
 };
 
-function CoverageMap() {
+const CoverageMap = memo(function CoverageMap() {
     const { isLoaded, loadError } = useLoadScript({
         googleMapsApiKey: 'AIzaSyDGaiubUdqf5Bypla2u6eSlVDmvopME5ew',
       });
@@ -20,9 +22,7 @@ function CoverageMap() {
         return <div>Error loading maps</div>;
       }
     
-      if (!isLoaded) {
-        return <div>Loading maps</div>;
-      }
+      if (!isLoaded) return <Loader/>
 
   return (
     <section className='mt-20'>
@@ -35,6 +35,6 @@ function CoverageMap() {
     </GoogleMap>
   </section>
   ) 
-}
+})
 
 export default CoverageMap

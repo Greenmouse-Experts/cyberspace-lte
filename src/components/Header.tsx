@@ -46,7 +46,7 @@ function Header() {
           >
             <ul className="flex gap-4 md:flex-row flex-col md:items-center   text-[#666666] font-bold">
               <li className="">
-                <NavLink to="">Shop Products</NavLink>{" "}
+                <NavLink to="/">Shop Products</NavLink>{" "}
               </li>
               <li className="">
                 <NavLink to="/coverage">Coverage</NavLink>{" "}

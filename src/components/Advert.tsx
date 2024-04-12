@@ -1,6 +1,7 @@
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Slider from "react-slick";
 import { settings } from "../utils/settings";
+import { NavLink } from "react-router-dom";
 
 function Advert() {
 
@@ -11,12 +12,12 @@ function Advert() {
           Explore Great Deals On
           <span className="text-bluePrimary"> Devices</span>
         </h4>
-        <div className="flex items-end ">
+        <NavLink to="/businessplan" className="flex items-end ">
           <p className="text-[#222222] text-base font-medium capitalize">
             see more{" "}
           </p>
           <MdOutlineKeyboardArrowRight color="#0080CF" size={25} />
-        </div>
+        </NavLink>
       </div>
       <div className="flex w-full items-center 2xl:mt-8 mt-5">
         <div className="bg-bluePrimary h-[5px] w-[28%]" />

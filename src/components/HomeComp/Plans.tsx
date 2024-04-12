@@ -1,4 +1,5 @@
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 function Plans() {
   return (
@@ -9,12 +10,12 @@ function Plans() {
           Our Starter Plans and
           <span className="text-bluePrimary"> Data Pricing</span>
         </h4>
-        <div className="flex items-center ">
+        <NavLink to="/personalplan" className="flex items-center ">
           <p className="text-[#222222] text-base font-medium capitalize">
             see more{" "}
           </p>
           <MdOutlineKeyboardArrowRight color="#0080CF" size={25} />
-        </div>
+        </NavLink>
       </div>
       <div className="flex w-full items-end 2xl:mt-10 mt-5">
         <div className="bg-bluePrimary h-[5px] w-[28%]" />

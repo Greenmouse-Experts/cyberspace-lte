@@ -1,13 +1,19 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+import { IoMdCart } from "react-icons/io";
 
 function AppLayout() {
   return (
     <>
       <Header />
-      <main>
+      <main className="relative">
         <Outlet />
+        <div className="bg-[#DE0F04] w-12 h-12 flex justify-center items-center fixed right-0 top-[50%] cursor-pointer ">
+        <NavLink to="/cart">
+          <IoMdCart color="white" size={30} />
+        </NavLink>
+      </div>
       </main>
       <Footer />
     </>
