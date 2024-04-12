@@ -25,7 +25,7 @@ function PersonalPlanOverview() {
         </p>
       </div>
 
-      <div className="pt-16 grid md:grid-cols-4 grid-col-1 gap-6 ">
+      <div className="pt-16 grid md:grid-cols-4 grid-col-1 gap-5 ">
         <PersonalPlanItem />
         <PersonalPlanItem />
         <PersonalPlanItem />
