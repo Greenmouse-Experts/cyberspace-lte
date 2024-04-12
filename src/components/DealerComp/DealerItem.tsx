@@ -1,4 +1,4 @@
-import React from "react";
+
 import { GrLocation } from "react-icons/gr";
 import { IoMdCall } from "react-icons/io";
 
