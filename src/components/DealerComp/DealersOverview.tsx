@@ -4,8 +4,8 @@ import DealerItem from "./DealerItem";
 function DealersOverview() {
   return (
     <>
-      <section className="flex items-center justify-between pt-20 font-inter bg-[#FCFCFC]">
-        <div className="w-[40%]">
+      <section className="flex lg:flex-row flex-col items-center justify-between pt-20 font-inter bg-[#FCFCFC]">
+        <div className="lg:w-[40%] w-full">
           <h3>Cyberspace Dealers</h3>
           <p className="font-normal mt-5">
             Cyberspace dealers are individuals who have been granted the
@@ -15,7 +15,7 @@ function DealersOverview() {
           </p>
         </div>
 
-        <div className="w-[48%]">
+        <div className="lg:w-[48%] lg:mt-0 mt-5 w-full ">
           <p className="font-normal">
             Click the buttons below to view the requirements of being a
             cyberspace dealer.
@@ -28,7 +28,7 @@ function DealersOverview() {
       <section className="pt-20 bg-[#FCFCFC]">
         <div className="flex justify-between">
           <h4 className="text-black font-semibold">Our List of Dealers</h4>
-          <div className="flex items-end rounded-xl w-[400px] overflow-hidden relative">
+          <div className="flex items-end rounded-xl w-[400px] h-[50px] overflow-hidden relative">
             <BsSearch
               color="#0080CF"
               size={20}
@@ -46,7 +46,7 @@ function DealersOverview() {
           <div className="bg-lightGray h-[0.5px] w-[72%] opacity-50" />
         </div>
 
-        <div className="mt-10 grid md:grid-cols-4 grid-col-1 gap-8 ">
+        <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-8 ">
         <DealerItem/>
         <DealerItem/>
         <DealerItem/>

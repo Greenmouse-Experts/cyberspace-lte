@@ -3,13 +3,13 @@
 function Hero() {
   return (
     <>
-      <section className="mt-3">
+      <section className="lg:mt-40 mt-24">
         <div className="bg-[url('/img/hero-bg-1.png')] bg-cover bg-center sm:px-24 px-5 py-7 rounded-[21px] flex md:flex-row flex-col md:items-start md:gap-0 gap-10 items-center justify-between">
           <div className="  gap-10 text-white">
             <p className="font-medium 2xl:text-[35px] md:text-[25px] text-lg">
               Double Your Online Presence
             </p>
-            <h3 className="2xl:text-[70px] md:text-[60px] text-3xl font-semibold md:my-10">
+            <h3 className="2xl:text-[70px] lg:text-[60px] md:text-5xl text-3xl font-semibold md:my-10">
               New LTE Modem
             </h3>
             <div className="flex items-center gap-5">
@@ -31,8 +31,8 @@ function Hero() {
         </div>
       </section>
 
-      <section className="font-grotesk border flex sm:flex-row flex-col sm:gap-0 gap-5 sm:justify-between border-[#E4E7E9] rounded-[10px] px-10 py-5 mt-10">
-        <div className="flex flex-col items-center">
+      <section className="font-grotesk border grid md:grid-cols-6 grid-cols-2  sm:gap-0 gap-5  border-[#E4E7E9] rounded-[10px] px-10 py-5 mt-10 md:divide-x divide-grey-400">
+        <div className="flex flex-col items-center justify-center">
           <img
             src="/icons/fast.gif"
             className="2xl:w-[83px] w-[40px] "
@@ -42,7 +42,7 @@ function Hero() {
             Super fast
           </p>
         </div>
-        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
+       
         <div className="flex flex-col items-center">
           <img
             src="/icons/support.gif"
@@ -53,8 +53,8 @@ function Hero() {
             Customer support
           </p>
         </div>
-        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
-        <div className="flex flex-col items-center">
+        
+        <div className="flex flex-col items-center justify-center ">
           <img
             src="/icons/coverage.gif"
             className="2xl:w-[83px] w-[40px] "
@@ -64,8 +64,8 @@ function Hero() {
             Wide coverage
           </p>
         </div>
-        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
-        <div className="flex flex-col items-center">
+        
+        <div className="flex flex-col items-center justify-center ">
           <img
             src="/icons/reliable.gif"
             className="2xl:w-[83px] w-[40px] "
@@ -75,8 +75,8 @@ function Hero() {
             Reliable
           </p>
         </div>
-        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
-        <div className="flex flex-col items-center">
+        
+        <div className="flex flex-col items-center justify-center ">
           <img
             src="/icons/selfcare.gif"
             className="2xl:w-[83px] w-[40px] "
@@ -86,8 +86,8 @@ function Hero() {
             Selfcare
           </p>
         </div>
-        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
-        <div className="flex flex-col items-center">
+        
+        <div className="flex flex-col items-center justify-center ">
           <img
             src="/icons/secure.gif"
             className="2xl:w-[83px] w-[40px] "

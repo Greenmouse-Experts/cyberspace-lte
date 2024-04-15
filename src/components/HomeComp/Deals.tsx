@@ -17,13 +17,13 @@ function Deals() {
           <span className="text-bluePrimary">Internet Routers</span>
         </h4>
 
-        <div className="flex md:flex-row flex-col items-center justify-center 2xl:gap-20 gap-10 mt-16">
-          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] md:w-[25%] w-[80%]  pb-3 overflow-hidden relative">
+        <div className="flex lg:flex-row flex-col items-center justify-center 2xl:gap-20 gap-10 mt-16">
+          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] lg:w-[25%] md:w-[50%] w-[80%]  pb-3 overflow-hidden relative">
             <div className="bg-[#E4E7E9] w-full flex justify-center">
               <img
                 src="/img/deal-1.png"
                 alt=""
-                className="2xl:w-[90%] w-[80%] 2xl:h-[300px] h-[250px]"
+                className="2lg:w-[90%] md:w-[50%] w-[80%] 2xl:h-[300px] h-[250px]"
               />
             </div>
             <p className="2xl:text-lg text-sm font-semibold text-[#222222] mt-3">
@@ -41,12 +41,12 @@ function Deals() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] md:w-[25%] w-[80%]  pb-3 overflow-hidden relative">
+          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] lg:w-[25%] md:w-[50%] w-[80%]  pb-3 overflow-hidden relative">
             <div className="bg-[#E4E7E9] w-full flex justify-center">
               <img
                 src="/img/deal-2.png"
                 alt=""
-                className="2xl:w-[90%] w-[80%] 2xl:h-[300px] h-[250px]"
+                className="2lg:w-[90%] md:w-[50%] w-[80%] 2xl:h-[300px] h-[250px]"
               />
             </div>
             <p className="2xl:text-lg text-sm font-semibold text-[#222222] mt-3">
@@ -64,12 +64,12 @@ function Deals() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] md:w-[25%] w-[80%]  pb-3 overflow-hidden relative">
+          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] lg:w-[25%] md:w-[50%] w-[80%]  pb-3 overflow-hidden relative">
             <div className="bg-[#E4E7E9] w-full flex justify-center">
               <img
                 src="/img/deal-3.png"
                 alt=""
-                className="2xl:w-[90%] w-[80%] 2xl:h-[300px] h-[250px]"
+                className="2lg:w-[90%] md:w-[50%] w-[80%] 2xl:h-[300px] h-[250px]"
               />
             </div>
             <p className="2xl:text-lg text-sm font-semibold text-[#222222] mt-3">
@@ -95,7 +95,7 @@ function Deals() {
           </button>
         </div>
       </section>
-      <section className="border flex  sm:flex-row flex-col sm:gap-0 gap-5 sm:justify-between border-[#E4E7E9] rounded-[10px] px-10 py-10 jus mt-16 font-pSans mb-20">
+      <section className="border grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 sm:gap-3 gap-5 justify-center items-center lg:divide-x divide-grey-400 border-[#E4E7E9] rounded-[10px] px-10 py-10 jus mt-16 font-pSans mb-20">
         <div className="flex items-center gap-3">
           <PiPackageLight size={40} />
           <div>
@@ -107,7 +107,7 @@ function Deals() {
             </p>
           </div>
         </div>
-        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
+        
         <div className="flex items-center gap-3">
           <PiTrophyThin size={40} />
           <div>
@@ -119,7 +119,7 @@ function Deals() {
             </p>
           </div>
         </div>
-        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
+        
         <div className="flex items-center gap-3">
           <PiCreditCardThin size={40} />
           <div>
@@ -131,7 +131,7 @@ function Deals() {
             </p>
           </div>
         </div>
-        <div className="sm:w-[1.3px] w-full bg-[#E4E7E9]" />
+        
         <div className="flex items-center gap-3">
           <PiHeadphonesThin size={40} />
           <div>

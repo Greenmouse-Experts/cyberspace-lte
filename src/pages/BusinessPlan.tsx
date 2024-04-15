@@ -9,7 +9,7 @@ interface Iplan {
 
 function BusinessPlanItem({ img, title, text }: Iplan) {
   return (
-    <div className=" rounded-2xl flex flex-col items-center justify-center font-inter bg-white">
+    <div className=" rounded-2xl  flex flex-col items-center justify-center font-inter bg-white">
       <img src={img} alt="plan" className="h-[160px] w-full" />
       <div className="pl-3">
         <p className="text-xl font-normal py-3">{title}</p>
@@ -23,8 +23,8 @@ function BusinessPlan() {
   return (
     <>
       <Banner title="Business Plan" text="Business Plan" />
-      <section className="flex items-center justify-between pt-20 font-inter bg-[#FCFCFC]">
-        <div className="w-[40%]">
+      <section className="flex lg:flex-row flex-col items-center justify-between pt-20 font-inter bg-[#FCFCFC]">
+        <div className="lg:w-[40%] w-full">
           <h3>Enterprise connectivity</h3>
           <p className="font-normal mt-5">
             We offer State-of-the-art dedicated link broadband services to
@@ -33,7 +33,7 @@ function BusinessPlan() {
           </p>
         </div>
       </section>
-      <section className="mt-10 grid md:grid-cols-4 grid-col-1 items-start gap-5 bg-[#FCFCFC]">
+      <section className="mt-10 grid lg:grid-cols-4 md:grid-cols-3 grid-col-1 items-start gap-5 bg-[#FCFCFC]">
         <BusinessPlanItem
           img="/img/plan-1.png"
           title="Cybersat- VSAT Solutions"

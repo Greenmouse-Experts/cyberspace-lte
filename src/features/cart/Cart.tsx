@@ -2,8 +2,8 @@ import CartItem from "./CartItem";
 
 function Cart() {
   return (
-    <section className=" font-inter flex mt-16 gap-20">
-      <div className="w-[55%]">
+    <section className=" font-inter flex lg:flex-row flex-col mt-16 gap-20">
+      <div className="lg:w-[55%] w-full">
         <h3 className="uppercase font-medium">SHOPPING CART</h3>
         <div className="mt-5">
           <CartItem />
@@ -12,7 +12,7 @@ function Cart() {
         </div>
       </div>
 
-      <div className="w-[45%] border border-x-grey-400 py-10 px-10 rounded-lg">
+      <div className="lg:w-[45%] w-full border border-x-grey-400 py-10 sm:px-10 px-5 rounded-lg">
         <h3 className="font-medium ml-10">Order Summary</h3>
         <div className="mt-10">
           <p className="text-lg font-normal">

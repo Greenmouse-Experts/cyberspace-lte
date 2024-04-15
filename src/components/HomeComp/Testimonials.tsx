@@ -24,13 +24,13 @@ function Testimonials() {
   // };
 
   return (
-    <section className="bg-bluePrimary py-24 2xl:px-[140px] md:px-24 px-5 mx-0">
+    <section className="bg-bluePrimary py-24 2xl:px-[140px] lg:px-24 px-5 mx-0">
       <h5 className="text-white text-3xl font-bold mb-10">Testimonials</h5>
       <div className="">
         {/* Testimonial 1 */}
 
         <Slider {...settings}>
-          <div className="bg-white px-7 py-14 rounded-xl font-mdSans 2xl:max-w-[400px] md:max-w-[340px]">
+          <div className="bg-white px-7 py-14 rounded-xl font-mdSans xl:max-w-[400px] md:max-w-[340px]">
             <p className="text-[#514F6E] 2xl:text-lg text-[12px] font-normal">
               {showFullText.testimonial1
                 ? "I'm absolutely in love with @cyberpaylte. Since switching to routers from them, my internet connection has never been more reliable. Highly recommended!"
@@ -60,7 +60,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="bg-white px-7 py-14 rounded-xl font-mdSans 2xl:max-w-[400px] md:max-w-[340px]">
+          <div className="bg-white px-7 py-14 rounded-xl font-mdSans xl:max-w-[400px] md:max-w-[340px]">
             <p className="text-[#514F6E] 2xl:text-lg text-[12px] font-normal">
               {showFullText.testimonial1
                 ? "I'm absolutely in love with @cyberpaylte. Since switching to routers from them, my internet connection has never been more reliable. Highly recommended!"
@@ -90,7 +90,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="bg-white px-7 py-14 rounded-xl font-mdSans 2xl:max-w-[400px] md:max-w-[340px]">
+          <div className="bg-white px-7 py-14 rounded-xl font-mdSans xl:max-w-[400px] md:max-w-[340px]">
             <p className="text-[#514F6E] 2xl:text-lg text-[12px] font-normal">
               {showFullText.testimonial1
                 ? "I'm absolutely in love with @cyberpaylte. Since switching to routers from them, my internet connection has never been more reliable. Highly recommended!"
@@ -120,7 +120,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="bg-white px-7 py-14 rounded-xl font-mdSans 2xl:max-w-[400px] md:max-w-[340px]">
+          <div className="bg-white px-7 py-14 rounded-xl font-mdSans xl:max-w-[400px] md:max-w-[340px]">
             <p className="text-[#514F6E] 2xl:text-lg text-[12px] font-normal">
               {showFullText.testimonial1
                 ? "I'm absolutely in love with @cyberpaylte. Since switching to routers from them, my internet connection has never been more reliable. Highly recommended!"
