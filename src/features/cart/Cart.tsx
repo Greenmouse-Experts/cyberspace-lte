@@ -12,8 +12,8 @@ function Cart() {
         </div>
       </div>
 
-      <div className="lg:w-[45%] w-full border border-x-grey-400 py-10 sm:px-10 px-5 rounded-lg">
-        <h3 className="font-medium ml-10">Order Summary</h3>
+      <div className="lg:w-[45%] w-full border border-x-grey-400 py-10 sm:px-10 px-2 rounded-lg">
+        <h3 className="font-medium sm:ml-10">Order Summary</h3>
         <div className="mt-10">
           <p className="text-lg font-normal">
             <span>Discount</span> / <span>Promo Code</span>

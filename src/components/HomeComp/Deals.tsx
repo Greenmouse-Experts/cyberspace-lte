@@ -18,12 +18,12 @@ function Deals() {
         </h4>
 
         <div className="flex lg:flex-row flex-col items-center justify-center 2xl:gap-20 gap-10 mt-16">
-          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] lg:w-[25%] md:w-[50%] w-[80%]  pb-3 overflow-hidden relative">
-            <div className="bg-[#E4E7E9] w-full flex justify-center">
+          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] lg:w-[23%] md:w-[50%] w-[80%]  pb-3 overflow-hidden relative">
+            <div className="bg-[#E4E7E9] w-full flex justify-center xl:h-64 sm:h-48 h-44 px-5">
               <img
                 src="/img/deal-1.png"
                 alt=""
-                className="2lg:w-[90%] md:w-[50%] w-[80%] 2xl:h-[300px] h-[250px]"
+                className=""
               />
             </div>
             <p className="2xl:text-lg text-sm font-semibold text-[#222222] mt-3">
@@ -41,12 +41,12 @@ function Deals() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] lg:w-[25%] md:w-[50%] w-[80%]  pb-3 overflow-hidden relative">
-            <div className="bg-[#E4E7E9] w-full flex justify-center">
+          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] lg:w-[23%] md:w-[50%] w-[80%]  pb-3 overflow-hidden relative">
+            <div className="bg-[#E4E7E9] w-full flex justify-center xl:h-64 sm:h-48 h-44 px-5">
               <img
                 src="/img/deal-2.png"
                 alt=""
-                className="2lg:w-[90%] md:w-[50%] w-[80%] 2xl:h-[300px] h-[250px]"
+                className=""
               />
             </div>
             <p className="2xl:text-lg text-sm font-semibold text-[#222222] mt-3">
@@ -64,12 +64,12 @@ function Deals() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] lg:w-[25%] md:w-[50%] w-[80%]  pb-3 overflow-hidden relative">
-            <div className="bg-[#E4E7E9] w-full flex justify-center">
+          <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  2xl:w-[23%] lg:w-[23%] md:w-[50%] w-[80%]  pb-3 overflow-hidden relative">
+            <div className="bg-[#E4E7E9] w-full flex justify-center xl:h-64 sm:h-48 h-44 px-5">
               <img
                 src="/img/deal-3.png"
                 alt=""
-                className="2lg:w-[90%] md:w-[50%] w-[80%] 2xl:h-[300px] h-[250px]"
+                className=""
               />
             </div>
             <p className="2xl:text-lg text-sm font-semibold text-[#222222] mt-3">

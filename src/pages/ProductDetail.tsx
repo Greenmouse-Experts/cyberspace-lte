@@ -32,28 +32,28 @@ function ProductDetail() {
         <div className="lg:w-[55%] w-full">
           <div className="flex gap-5 md:flex-row flex-col-reverse items-start">
             <div className="flex md:flex-col flex-row gap-5 ">
-              <div className="border  border-bluePrimary p-2 sm:w-36 w-16">
+              <div className="border  border-bluePrimary p-2 sm:w-36 w-14">
                 <img
                   src="/img/product-small.png"
                   alt="product-small"
                   className="w-[50%]  mx-auto"
                 />
               </div>
-              <div className="border  border-grey-400 p-2 sm:w-36 w-16 ">
+              <div className="border  border-grey-400 p-2 sm:w-36 w-14 ">
                 <img
                   src="/img/product-small.png"
                   alt="product-small"
                   className="w-[50%]  mx-auto"
                 />
               </div>
-              <div className="border  border-grey-400 p-2 sm:w-36 w-16">
+              <div className="border  border-grey-400 p-2 sm:w-36 w-14">
                 <img
                   src="/img/product-small.png"
                   alt="product-small"
                   className="w-[50%]  mx-auto"
                 />
               </div>
-              <div className="border  border-grey-400 p-2 sm:w-36 w-16">
+              <div className="border  border-grey-400 p-2 sm:w-36 w-14">
                 <img
                   src="/img/product-small.png"
                   alt="product-small"
@@ -138,28 +138,28 @@ function ProductDetail() {
             </h3>
           </div>
 
-          <div className="flex gap-5 mt-2">
-            <div className="flex justify-center divide-x divide-grey-400 border-grey-400 border">
+          <div className="flex sm:flex-row flex-col gap-5 mt-2">
+            <div className="grid grid-cols-3 md:w-[200px] py-2 items-center justify-center  divide-x divide-grey-400 border-grey-400 border">
               <span
-                className="w-14 flex justify-center items-center cursor-pointer"
+                className=" flex justify-center items-center cursor-pointer"
                 onClick={decrement}
               >
                 <FiMinus size={30} />
               </span>
-              <span className="w-14 flex justify-center items-center text-3xl">
+              <span className=" flex justify-center items-center text-3xl">
                 {quantity}
               </span>
               <span
-                className="w-14 flex justify-center items-center cursor-pointer "
+                className=" flex justify-center items-center cursor-pointer "
                 onClick={increment}
               >
                 <FiPlus size={30} />
               </span>
             </div>
-            <button className="  text-white bg-bluePrimary  md:w-[200px] sm:py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary">
+            <button className="  text-white bg-bluePrimary  md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary">
               Buy Now
             </button>
-            <button className=" text-bluePrimary md:w-[200px] sm:py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary">
+            <button className=" text-bluePrimary md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary">
               Add to Cart
             </button>
           </div>

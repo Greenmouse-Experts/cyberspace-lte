@@ -32,11 +32,11 @@ function Header() {
       </div>
 
       <div className="flex items-center justify-between xl:gap-20 lg:gap-5 md:gap-5 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] xl:px-24 lg:px-10 sm:px-24 px-5 border-b-[0.6px] border-[#EDEDED] relative">
-       <NavLink  onClick={() => setmMenu(false)} to="/">
-       <div className="2xl:w-[165px] w-[100px]">
-          <img src="/logo.svg" alt="" className="2xl:w-[165px] w-[100px]" />
-        </div>
-       </NavLink>
+        <NavLink onClick={() => setmMenu(false)} to="/">
+          <div className="2xl:w-[165px] w-[100px]">
+            <img src="/logo.svg" alt="" className="2xl:w-[165px] w-[100px]" />
+          </div>
+        </NavLink>
 
         <div className="flex items-center gap-10 2xl:text-[17px] xl:text-[14px] text-[12px] text-nowrap">
           <nav
@@ -46,13 +46,19 @@ function Header() {
           >
             <ul className="flex gap-4 md:flex-row flex-col md:items-center   text-[#666666] font-bold">
               <li className="">
-                <NavLink  onClick={() => setmMenu(false)} to="/">Shop Products</NavLink>{" "}
+                <NavLink onClick={() => setmMenu(false)} to="/">
+                  Shop Products
+                </NavLink>{" "}
               </li>
               <li className="">
-                <NavLink  onClick={() => setmMenu(false)} to="/coverage">Coverage</NavLink>{" "}
+                <NavLink onClick={() => setmMenu(false)} to="/coverage">
+                  Coverage
+                </NavLink>{" "}
               </li>
               <li className="">
-                <NavLink  onClick={() => setmMenu(false)} to="/dealers">Our dealers</NavLink>{" "}
+                <NavLink onClick={() => setmMenu(false)} to="/dealers">
+                  Our dealers
+                </NavLink>{" "}
               </li>
             </ul>
           </nav>
@@ -71,14 +77,16 @@ function Header() {
           <div className="flex  md:gap-6 gap-2">
             <div className="flex items-center gap-1">
               <FiUser color="#0094EF" size={25} />
-              <p className="font-bold text-bluePrimary text-nowrap">
+              <p className="font-bold text-bluePrimary text-nowrap sm:block hidden">
                 Client Login
               </p>
             </div>
             <div className="bg-[#D9D9D9] w-[2px]" />
             <NavLink to="cart" className="flex items-center gap-1">
-              <BsCart2 color="#0094EF" size={25} />
-              <p className="font-bold text-grayPrimary">Cart</p>
+           
+                <BsCart2 color="#0094EF" size={25} />
+              
+              <p className="font-bold text-grayPrimary sm:block hidden">Cart</p>
             </NavLink>
           </div>
         </div>

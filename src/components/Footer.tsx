@@ -10,7 +10,7 @@ function Footer() {
           <h3 className="2xl:text-[30px] text-2xl font-semibold">
             Subscribe to our newsletter
           </h3>
-          <p className="2xl:text-sm text-[10px] font-[300] text-[#f4f4f4] mt-3 w-[80%] mx-auto">
+          <p className="2xl:text-sm text-sm font-[300] text-[#f4f4f4] mt-3 w-[80%] mx-auto">
             Subscribe to our newsletter and be the first to know when we have
             new products to boost your internet experience.
           </p>
@@ -20,7 +20,7 @@ function Footer() {
               placeholder="Email address"
               className="w-full 2xl:h-[70px] h-[60px] rounded-[3px] pl-6 2xl:placeholder:text-[16px] placeholder:text-[11px]"
             />
-            <button className="flex items-center font-bold 2xl:text-[12px] text-[10px] h-[80%] sm:px-6 px-2 uppercase bg-[#FA8232] absolute right-2 2xl:top-2 sm:top-2 top-[6px] rounded-[3px]">
+            <button className="flex items-center font-bold 2xl:text-[12px] text-[10px] h-[80%] sm:px-6 px-2 uppercase bg-[#FA8232] absolute right-2 2xl:top-2 md:top-[6px] sm:top-2 top-[6px] rounded-[3px]">
               Subscribe &nbsp;
               <GoArrowRight color="white" size={22} />
             </button>
