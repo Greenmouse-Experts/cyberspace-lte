@@ -31,7 +31,7 @@ function Hero() {
         </div>
       </section>
 
-      <section className="font-grotesk border grid md:grid-cols-6 grid-cols-2  sm:gap-0 gap-5  border-[#E4E7E9] rounded-[10px] px-10 py-5 mt-10 md:divide-x divide-grey-400">
+      <section className="font-grotesk border grid md:grid-cols-6 grid-cols-2 justify-start items-center  sm:gap-0 gap-5  border-[#E4E7E9] rounded-[10px] px-10 py-5 mt-10 md:divide-x divide-grey-400">
         <div className="flex flex-col items-center justify-center">
           <img
             src="/icons/fast.gif"
@@ -49,7 +49,7 @@ function Hero() {
             className="2xl:w-[83px] w-[40px] "
             alt=""
           />
-          <p className="2xl:text-[16px] text-[12px] text-[#222222] font-semibold">
+          <p className="2xl:text-[16px] text-[12px] text-[#222222] font-semibold text-nowrap">
             Customer support
           </p>
         </div>
