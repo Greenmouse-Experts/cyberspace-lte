@@ -40,7 +40,7 @@ function DarkmodeToggle() {
 
   return (
     <div className=" cursor-pointer" onClick={toggleDarkMode}>
-      {isDarkMode ? <MdOutlineWbSunny color="#0080CF" size={25} /> : <FaRegMoon size={25} color="#0080CF" />}
+      {isDarkMode ? <MdOutlineWbSunny color="#0080CF" size={25} /> : <FaRegMoon size={22} color="#0080CF" />}
     </div>
   );
 }
