@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,38 +11,23 @@
     width: 45px;
     aspect-ratio: 0.75;
     --c: no-repeat linear-gradient(theme(colors.bluePrimary) 0 0);
-    background:
-      var(--c) 0% 50%,
-      var(--c) 50% 50%,
-      var(--c) 100% 50%;
+    background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
     background-size: 20% 50%;
     animation: loading 1s infinite linear;
   }
-  
+
   @keyframes loading {
     20% {
-      background-position:
-        0% 0%,
-        50% 50%,
-        100% 50%;
+      background-position: 0% 0%, 50% 50%, 100% 50%;
     }
     40% {
-      background-position:
-        0% 100%,
-        50% 0%,
-        100% 50%;
+      background-position: 0% 100%, 50% 0%, 100% 50%;
     }
     60% {
-      background-position:
-        0% 50%,
-        50% 100%,
-        100% 0%;
+      background-position: 0% 50%, 50% 100%, 100% 0%;
     }
     80% {
-      background-position:
-        0% 50%,
-        50% 50%,
-        100% 100%;
+      background-position: 0% 50%, 50% 50%, 100% 100%;
     }
   }
 }
@@ -57,6 +42,37 @@ a,
 button {
     
 } */
+
+.dark span {
+  color: white;
+  transition: color 0.3s;
+}
+.dark li {
+  color: white;
+  transition: color 0.3s;
+}
+.dark p {
+  color: white;
+  transition: color 0.3s;
+}
+.dark h3 {
+  color: white;
+  transition: color 0.3s;
+}
+.dark h4 {
+  color: white;
+  transition: color 0.3s;
+}
+.dark svg {
+  color: #0080CF;
+  transition: color 0.3s;
+}
+.dark input {
+  background-color: #18212f;
+  color: white;
+  transition: color 0.3s;
+}
+
 
 p {
   font-weight: 300;
@@ -77,9 +93,9 @@ section {
   margin-left: 140px;
   margin-right: 140px;
 }
-h3{
-font-size: 32px;
-font-weight: 500;
+h3 {
+  font-size: 32px;
+  font-weight: 500;
 }
 h4 {
   font-size: 30px;
@@ -111,16 +127,29 @@ footer a {
   }
 }
 @media screen and (min-width: 768px) {
-    .unset {
-      position: unset;
-    }
+  .unset {
+    position: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  h4 {
+    font-size: 16px;
+  }
+}
+
+.css-1flt7uf-MuiTabs-root .MuiTabs-flexContainer {
+  justify-content: center !important;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.no-scrollbar {
+  /* Target WebKit browsers (Chrome, Safari, etc.) */
+  &::-webkit-scrollbar {
+    display: none;
   }
 
-
-.css-1flt7uf-MuiTabs-root .MuiTabs-flexContainer{
-   justify-content: center !important;
-  }
-
-  .slick-slide > div{
-    margin: 0 10px;
-  }
+  /* Target Internet Explorer (less common these days) */
+  -ms-overflow-style: none;
+}

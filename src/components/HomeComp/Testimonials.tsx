@@ -30,7 +30,7 @@ function Testimonials() {
         {/* Testimonial 1 */}
 
         <Slider {...settings}>
-          <div className="bg-white px-7 md:py-14 py-4 rounded-xl font-mdSans">
+          <div className="bg-white dark:bg-darkMood px-7 md:py-14 py-4 rounded-xl font-mdSans">
             <p className="text-[#514F6E] 2xl:text-lg text-[12px] font-normal">
               {showFullText.testimonial1
                 ? "I'm absolutely in love with @cyberpaylte. Since switching to routers from them, my internet connection has never been more reliable. Highly recommended!"
@@ -60,7 +60,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="bg-white px-7 md:py-14 py-4 rounded-xl font-mdSans">
+          <div className="bg-white dark:bg-darkMood px-7 md:py-14 py-4 rounded-xl font-mdSans">
             <p className="text-[#514F6E] 2xl:text-lg text-[12px] font-normal">
               {showFullText.testimonial1
                 ? "I'm absolutely in love with @cyberpaylte. Since switching to routers from them, my internet connection has never been more reliable. Highly recommended!"
@@ -90,7 +90,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="bg-white px-7 md:py-14 py-4 rounded-xl font-mdSans">
+          <div className="bg-white dark:bg-darkMood px-7 md:py-14 py-4 rounded-xl font-mdSans">
             <p className="text-[#514F6E] 2xl:text-lg text-[12px] font-normal">
               {showFullText.testimonial1
                 ? "I'm absolutely in love with @cyberpaylte. Since switching to routers from them, my internet connection has never been more reliable. Highly recommended!"
@@ -120,7 +120,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div className="bg-white px-7 md:py-14 py-4 rounded-xl font-mdSans">
+          <div className="bg-white dark:bg-darkMood px-7 md:py-14 py-4 rounded-xl font-mdSans">
             <p className="text-[#514F6E] 2xl:text-lg text-[12px] font-normal">
               {showFullText.testimonial1
                 ? "I'm absolutely in love with @cyberpaylte. Since switching to routers from them, my internet connection has never been more reliable. Highly recommended!"

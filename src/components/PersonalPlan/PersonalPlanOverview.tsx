@@ -9,7 +9,7 @@ function PersonalPlanOverview() {
       <div className="border border-bluePrimary rounded-[100px] flex items-center 2xl:w-[55%] md:w-[70%] w-full justify-center mx-auto h-[70px] ">
         <p
           onClick={() => setPlan(false)}
-          className={`text-2xl font-medium w-[50%] text-center mx-2 rounded-[100px] h-[80%] flex justify-center items-center cursor-pointer ${
+          className={`sm:text-2xl text-sm font-medium w-[50%] text-center mx-2 rounded-[100px] h-[80%] flex justify-center items-center cursor-pointer ${
             !plan && "bg-bluePrimary text-white"
           }`}
         >
@@ -17,7 +17,7 @@ function PersonalPlanOverview() {
         </p>
         <p
           onClick={() => setPlan(true)}
-          className={`text-2xl font-medium w-[50%] text-center mx-2 rounded-[100px] h-[80%] flex justify-center items-center cursor-pointer ${
+          className={`sm:text-2xl text-sm font-medium w-[50%] text-center mx-2 rounded-[100px] h-[80%] flex justify-center items-center cursor-pointer ${
             plan && "bg-bluePrimary text-white"
           }`}
         >

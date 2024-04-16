@@ -165,8 +165,8 @@ function ProductDetail() {
           </div>
         </div>
       </section>
-      <section className="mt-20 font-inter mx-0">
-        <div className="flex justify-center items-center gap-20 border-b border-grey-400 max-w-[768px] overflow-x-scroll">
+      <section className="mt-20 font-inter mx-0 flex flex-col justify-center items-center">
+        <div className="flex justify-center items-center gap-20 border-b border-grey-400 max-w-[600px] no-scrollbar overflow-x-scroll">
           <div>
             <h6 className={`text-2xl font-medium pb-3 cursor-pointer ${value === 0 && 'border-b-[3px]'} border-bluePrimary`} onClick={() =>handleChange(0)}>Description</h6>
           </div>

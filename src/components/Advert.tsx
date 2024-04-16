@@ -12,8 +12,8 @@ function Advert() {
           Explore Great Deals On
           <span className="text-bluePrimary"> Devices</span>
         </h4>
-        <NavLink to="/businessplan" className="flex items-end ">
-          <p className="text-[#222222] text-base font-medium capitalize">
+        <NavLink to="/businessplan" className="flex items-end  ">
+          <p className="text-[#222222] sm:text-base text-[12px] text-nowrap font-medium capitalize">
             see more{" "}
           </p>
           <MdOutlineKeyboardArrowRight color="#0080CF" size={25} />

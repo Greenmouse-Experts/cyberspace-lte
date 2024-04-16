@@ -8,6 +8,8 @@ import Dealers from "./pages/Dealers";
 import Coverage from "./pages/Coverage";
 import BusinessPlan from "./pages/BusinessPlan";
 import PersonalPlan from "./pages/PersonalPlan";
+import { Provider } from "react-redux";
+import store from "./state/store";
 
 
 const router = createBrowserRouter([
@@ -47,7 +49,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  )
 }
 
 export default App;

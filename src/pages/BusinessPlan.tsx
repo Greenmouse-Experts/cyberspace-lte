@@ -9,7 +9,7 @@ interface Iplan {
 
 function BusinessPlanItem({ img, title, text }: Iplan) {
   return (
-    <div className=" rounded-2xl  flex flex-col items-center justify-center font-inter bg-white">
+    <div className=" rounded-2xl  flex flex-col items-center justify-center font-inter ">
       <img src={img} alt="plan" className="h-[160px] w-full" />
       <div className="pl-3">
         <p className="text-xl font-normal py-3">{title}</p>
@@ -23,7 +23,7 @@ function BusinessPlan() {
   return (
     <>
       <Banner title="Business Plan" text="Business Plan" />
-      <section className="flex lg:flex-row flex-col items-center justify-between pt-20 font-inter bg-[#FCFCFC]">
+      <section className="flex lg:flex-row flex-col items-center justify-between pt-20 font-inter bg-[#FCFCFC] dark:bg-darkMood">
         <div className="lg:w-[40%] w-full">
           <h3>Enterprise connectivity</h3>
           <p className="font-normal mt-5">
@@ -33,7 +33,7 @@ function BusinessPlan() {
           </p>
         </div>
       </section>
-      <section className="mt-10 grid lg:grid-cols-4 md:grid-cols-3 grid-col-1 items-start gap-5 bg-[#FCFCFC]">
+      <section className="pt-10 grid lg:grid-cols-4 md:grid-cols-3 grid-col-1 items-start gap-5 bg-[#FCFCFC] dark:bg-darkMood">
         <BusinessPlanItem
           img="/img/plan-1.png"
           title="Cybersat- VSAT Solutions"
@@ -56,9 +56,9 @@ function BusinessPlan() {
         />
       </section>
 
-      <section className="flex justify-center pt-20 bg-[#FCFCFC]">
+      <section className="flex justify-center pt-20 ">
         <p>
-        Visit <span className="text-bluePrimary underline"><NavLink to="">Cyberspace.net.ng</NavLink></span> to know more about our products and services that cater to Business
+        Visit <span className="text-bluePrimary underline "><NavLink to="">Cyberspace.net.ng</NavLink></span> to know more about our products and services that cater to Business
         </p>
       </section>
     </>

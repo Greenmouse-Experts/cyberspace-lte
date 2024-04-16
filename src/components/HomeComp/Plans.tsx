@@ -11,7 +11,7 @@ function Plans() {
           <span className="text-bluePrimary"> Data Pricing</span>
         </h4>
         <NavLink to="/personalplan" className="flex items-center ">
-          <p className="text-[#222222] text-base font-medium capitalize">
+          <p className="text-[#222222] sm:text-base text-[12px] font-medium text-nowrap capitalize">
             see more{" "}
           </p>
           <MdOutlineKeyboardArrowRight color="#0080CF" size={25} />

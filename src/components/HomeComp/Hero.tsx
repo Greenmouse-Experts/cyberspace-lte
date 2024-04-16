@@ -3,7 +3,7 @@
 function Hero() {
   return (
     <>
-      <section className="lg:mt-40 mt-24">
+      <section className="lg:pt-40 pt-24">
         <div className="bg-[url('/img/hero-bg-1.png')] bg-cover bg-center sm:px-24 px-5 py-7 rounded-[21px] flex md:flex-row flex-col md:items-start md:gap-0 gap-10 items-center justify-between">
           <div className="  gap-10 text-white">
             <p className="font-medium 2xl:text-[35px] md:text-[25px] text-lg">

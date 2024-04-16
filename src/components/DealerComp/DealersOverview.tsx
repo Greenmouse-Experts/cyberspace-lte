@@ -4,7 +4,7 @@ import DealerItem from "./DealerItem";
 function DealersOverview() {
   return (
     <>
-      <section className="flex lg:flex-row flex-col items-center justify-between pt-20 font-inter bg-[#FCFCFC]">
+      <section className="flex lg:flex-row flex-col items-center justify-between pt-20 font-inter bg-[#FCFCFC] dark:bg-darkMood">
         <div className="lg:w-[40%] w-full">
           <h3>Cyberspace Dealers</h3>
           <p className="font-normal mt-5">
@@ -25,7 +25,7 @@ function DealersOverview() {
           </button>
         </div>
       </section>
-      <section className="pt-20 bg-[#FCFCFC]">
+      <section className="pt-20 bg-[#FCFCFC] dark:bg-darkMood">
         <div className="flex justify-between">
           <h4 className="text-black font-semibold">Our List of Dealers</h4>
           <div className="flex items-end rounded-xl w-[400px] h-[50px] overflow-hidden relative">
