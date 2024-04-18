@@ -59,6 +59,10 @@ button {
   color: white;
   transition: color 0.3s;
 }
+.dark h2 {
+  color: white;
+  transition: color 0.3s;
+}
 .dark h4 {
   color: white;
   transition: color 0.3s;
@@ -67,16 +71,39 @@ button {
   color: white;
   transition: color 0.3s;
 }
+.dark label {
+  color: white;
+  transition: color 0.3s;
+}
+.dark legend {
+  color: white;
+  transition: color 0.3s;
+}
 .dark svg {
-  color: #0080CF;
+  color: #0080cf;
   transition: color 0.3s;
 }
 .dark input {
+  border: #f4f4f4 1px solid;
+  border-radius: 10px;
   background-color: #18212f;
   color: white;
   transition: color 0.3s;
 }
+.dark .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+  border: #f4f4f4 1px solid;
+  color: white;
+  transition: color 0.3s;
+}
 
+.dark .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root input {
+  border: none  !important;
+}
+
+.dark input::placeholder {
+  color: white;
+  transition: color 0.3s;
+}
 
 p {
   font-weight: 300;
@@ -156,4 +183,15 @@ footer a {
 
   /* Target Internet Explorer (less common these days) */
   -ms-overflow-style: none;
+}
+
+.css-14lo706 > span {
+  color: #0080cf !important;
+  opacity: 0 !important;
+}
+.css-14lo706 {
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 10px !important;
 }

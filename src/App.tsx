@@ -1,4 +1,3 @@
-
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 import Home from "./pages/Home";
@@ -10,7 +9,8 @@ import BusinessPlan from "./pages/BusinessPlan";
 import PersonalPlan from "./pages/PersonalPlan";
 import { Provider } from "react-redux";
 import store from "./state/store";
-
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +46,14 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/signin",
+    element: <Signin />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
 ]);
 
 function App() {
@@ -53,12 +61,10 @@ function App() {
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
-  )
+  );
 }
 
 export default App;
-
-
 
 // import { Suspense, lazy } from "react";
 // import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -117,12 +123,3 @@ export default App;
 // }
 
 // export default App;
-
-
-
-
-
-
-
-
-

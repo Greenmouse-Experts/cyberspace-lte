@@ -76,12 +76,13 @@ function Header() {
             />
           </div>
           <div className="flex  md:gap-6 gap-2">
-            <div className="flex items-center gap-1">
+            <NavLink to="/signin" className="flex items-center gap-1">
+
               <FiUser color="#0094EF" size={25} />
               <p className="font-bold text-bluePrimary text-nowrap sm:block hidden">
                 Client Login
               </p>
-            </div>
+            </NavLink>
             <div className="bg-[#D9D9D9] w-[2px]" />
             <NavLink to="cart" className="flex items-center gap-1">
               <BsCart2 color="#0094EF" size={25} />

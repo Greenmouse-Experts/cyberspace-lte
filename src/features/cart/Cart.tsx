@@ -1,3 +1,4 @@
+import Button from "../../components/Button";
 import CartItem from "./CartItem";
 
 function Cart() {
@@ -30,19 +31,28 @@ function Cart() {
           </div>
 
           <div className="mt-10 flex flex-col gap-5">
-            <div className="flex justify-between"><span className="text-2xl font-medium">Subtotal</span> <span className="text-[22px] font-medium">₦28,500</span></div>
-            <div className="flex justify-between"><span className="text-lg font-[300] ">Estimated Tax</span> <span className="text-[22px] font-medium">₦0</span></div>
-            <div className="flex justify-between"><span className="text-lg font-[300] ">Shipping and Handling</span> <span className="text-[22px] font-medium">₦0</span></div>
-            <div className="flex justify-between"><span className="text-2xl font-medium ">Total</span> <span className="text-[22px] font-medium">₦28,500</span></div>
+            <div className="flex justify-between">
+              <span className="text-2xl font-medium">Subtotal</span>{" "}
+              <span className="text-[22px] font-medium">₦28,500</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-lg font-[300] ">Estimated Tax</span>{" "}
+              <span className="text-[22px] font-medium">₦0</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-lg font-[300] ">Shipping and Handling</span>{" "}
+              <span className="text-[22px] font-medium">₦0</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-2xl font-medium ">Total</span>{" "}
+              <span className="text-[22px] font-medium">₦28,500</span>
+            </div>
           </div>
 
-       <button className="w-full text-lg text-white bg-bluePrimary rounded-lg py-3 mt-12">
-       Checkout
-       </button>
+          <Button>Checkout</Button>
         </div>
       </div>
     </section>
-    
   );
 }
 
