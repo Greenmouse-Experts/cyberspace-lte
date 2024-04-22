@@ -106,10 +106,10 @@ button {
 }
 
 .css-1v4ccyo{
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 .css-1v4ccyo:hover{
-  border: none;
+  border: none !important;
 }
 
 p {
