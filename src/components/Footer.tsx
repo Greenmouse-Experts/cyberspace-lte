@@ -1,5 +1,7 @@
-
 import { GoArrowRight } from "react-icons/go";
+import { GrLocation } from "react-icons/gr";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+import { LuSmartphone } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 
 function Footer() {
@@ -34,21 +36,25 @@ function Footer() {
               Customer Supports:
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
-              <li className="text-[16px] text-[#ADB7BC] font-normal">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <GrLocation size={20} />
                 <NavLink to="/">
                   12 Ologun Agbaje Street, Victoria
                   <br /> Island, Lagos, Nigeria
                 </NavLink>
               </li>
-              <li className="text-[16px] text-[#ADB7BC] font-normal">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <LuSmartphone size={20} />
                 <NavLink to="tel:015159999">015159999, 09076555420</NavLink>
               </li>
-              <li className="text-[16px] text-[#ADB7BC] font-normal">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <HiOutlineEnvelope size={20} />
                 <NavLink to="mailto:lteretail@cyberspace.net.ng">
                   lteretail@cyberspace.net.ng
                 </NavLink>
               </li>
-              <li className="text-[16px] text-[#ADB7BC] font-normal">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <HiOutlineEnvelope size={20} />
                 <NavLink to="mailto:cyberspacelteltd@gmail.com">
                   cyberspacelteltd@gmail.com
                 </NavLink>
@@ -66,14 +72,9 @@ function Footer() {
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">Shop Product</NavLink>
               </li>
+              
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">personal</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">business</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">out dealers</NavLink>
+                <NavLink to="">our dealers</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">coverage</NavLink>
@@ -89,9 +90,9 @@ function Footer() {
               <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
                 <NavLink to="/">tearms & conditions</NavLink>
               </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+              {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">help</NavLink>
-              </li>
+              </li> */}
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">privacy policy</NavLink>
               </li>
@@ -114,18 +115,15 @@ function Footer() {
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">orders</NavLink>
               </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+              {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">wishlist</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+              </li> */}
+              {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">payment</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">shipping</NavLink>
-              </li>
+              </li> */}
+             
             </ul>
           </div>
-        
         </div>
 
         <div className="text-[#ADB7BC] flex justify-center items-center 2xl:py-10 py-6 border-t-[0.7px] border-grayPrimary mt-16">
