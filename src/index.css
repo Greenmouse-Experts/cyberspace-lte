@@ -85,7 +85,7 @@ button {
 }
 .dark input {
   border: #f4f4f4 1px solid;
-  border-radius: 10px;
+  border-radius: 10px !important;
   background-color: #18212f;
   color: white;
   transition: color 0.3s;
@@ -96,7 +96,7 @@ button {
   transition: color 0.3s;
 }
 
-.dark .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root input {
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root input {
   border: none  !important;
 }
 
