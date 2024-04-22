@@ -105,6 +105,13 @@ button {
   transition: color 0.3s;
 }
 
+.css-1v4ccyo{
+  border-radius: 10px;
+}
+.css-1v4ccyo:hover{
+  border: none;
+}
+
 p {
   font-weight: 300;
   font-size: 16px;
