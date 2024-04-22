@@ -46,12 +46,12 @@ function Signin() {
                   variant="outlined"
                   style={{ width: "100%", height: 60, borderRadius: "10px" }}
                 />
-                <FormControl sx={{ width: "100%" }} variant="outlined">
+                <FormControl sx={{ width: "100%",  height: 60, borderRadius: "10px"}} variant="outlined">
                   <InputLabel htmlFor="outlined-adornment-password">
                     Password
                   </InputLabel>
                   <OutlinedInput
-                   style={{ width: "100%", height: 60, borderRadius: "10px" }}
+                   style={{ width: "100%",  height: 60, borderRadius: "10px" }}
                     id="outlined-adornment-password"
                     type={showPassword ? "text" : "password"}
                     endAdornment={
