@@ -20,19 +20,19 @@ function News() {
           />
           <div className="flex 2xl:gap-4 gap-3 font-pSans mt-6">
             <div className="flex items-center 2xl:gap-2 gap-1">
-              <RxAvatar color="#FA8232" size={28} />
+              <RxAvatar color="#DE0F04" size={28} />
               <span className="2xl:text-[14px] text-[11px] text-[#475156]">
                 Admin
               </span>
             </div>
             <div className="flex items-center 2xl:gap-2 gap-1">
-              <IoCalendarClearOutline color="#FA8232" size={25} />
+              <IoCalendarClearOutline color="#DE0F04" size={25} />
               <span className="2xl:text-[14px] text-[11px] text-[#475156]">
                 8 March, 2024
               </span>
             </div>
             <div className="flex items-center 2xl:gap-2 gap-1">
-              <IoChatbubbleEllipsesOutline color="#FA8232" size={25} />
+              <IoChatbubbleEllipsesOutline color="#DE0F04" size={25} />
               <span className="2xl:text-[14px] text-[11px] text-[#475156]">
                 453
               </span>
@@ -46,10 +46,10 @@ function News() {
             Maecenas scelerisque, arcu quis tempus egestas, ligula diam molestie
             lectus, tincidunt malesuada arcu metus posuere metus.
           </p>
-          <button className="border-[2px] border-[#FFE7D6] flex items-center font-bold 2xl:text-[14px] text-[11px] 2xl:py-3 py-2 2xl:px-5 px-3 mt-6 uppercase text-[#FA8232]">
+          <button className="border-[2px] border-[#FFE7D6] flex items-center font-bold 2xl:text-[14px] text-[11px] 2xl:py-3 py-2 2xl:px-5 px-3 mt-6 uppercase text-[#DE0F04]">
             Read more
             &nbsp;
-            <GoArrowRight color="#FA8232" size={20} />
+            <GoArrowRight color="#DE0F04" size={20} />
           </button>
         </div>
         <div className="font-pSans md:w-[33%] w-[90%] border-[1.2px] border-bluePrimary 2xl:p-8 p-5 rounded-[4px]">
@@ -60,19 +60,19 @@ function News() {
           />
           <div className="flex 2xl:gap-4 gap-3 font-pSans mt-6">
             <div className="flex items-center 2xl:gap-2 gap-1">
-              <RxAvatar color="#FA8232" size={28} />
+              <RxAvatar color="#DE0F04" size={28} />
               <span className="2xl:text-[14px] text-[11px] text-[#475156]">
                 Admin
               </span>
             </div>
             <div className="flex items-center 2xl:gap-2 gap-1">
-              <IoCalendarClearOutline color="#FA8232" size={25} />
+              <IoCalendarClearOutline color="#DE0F04" size={25} />
               <span className="2xl:text-[14px] text-[11px] text-[#475156]">
                 8 March, 2024
               </span>
             </div>
             <div className="flex items-center 2xl:gap-2 gap-1">
-              <IoChatbubbleEllipsesOutline color="#FA8232" size={25} />
+              <IoChatbubbleEllipsesOutline color="#DE0F04" size={25} />
               <span className="2xl:text-[14px] text-[11px] text-[#475156]">
                 453
               </span>
@@ -86,10 +86,10 @@ function News() {
             Maecenas scelerisque, arcu quis tempus egestas, ligula diam molestie
             lectus, tincidunt malesuada arcu metus posuere metus.
           </p>
-          <button className="border-[2px] border-[#FFE7D6] flex items-center font-bold 2xl:text-[14px] text-[11px] 2xl:py-3 py-2 2xl:px-5 px-3 mt-6 uppercase text-[#FA8232]">
+          <button className="border-[2px] border-[#FFE7D6] flex items-center font-bold 2xl:text-[14px] text-[11px] 2xl:py-3 py-2 2xl:px-5 px-3 mt-6 uppercase text-[#DE0F04]">
             Read more
             &nbsp;
-            <GoArrowRight color="#FA8232" size={20} />
+            <GoArrowRight color="#DE0F04" size={20} />
           </button>
         </div>
         <div className="font-pSans md:w-[33%] w-[90%] border-[1.2px] border-bluePrimary 2xl:p-8 p-5 rounded-[4px]">
@@ -100,19 +100,19 @@ function News() {
           />
           <div className="flex 2xl:gap-4 gap-3 font-pSans mt-6">
             <div className="flex items-center 2xl:gap-2 gap-1">
-              <RxAvatar color="#FA8232" size={28} />
+              <RxAvatar color="#DE0F04" size={28} />
               <span className="2xl:text-[14px] text-[11px] text-[#475156]">
                 Admin
               </span>
             </div>
             <div className="flex items-center 2xl:gap-2 gap-1">
-              <IoCalendarClearOutline color="#FA8232" size={25} />
+              <IoCalendarClearOutline color="#DE0F04" size={25} />
               <span className="2xl:text-[14px] text-[11px] text-[#475156]">
                 8 March, 2024
               </span>
             </div>
             <div className="flex items-center 2xl:gap-2 gap-1">
-              <IoChatbubbleEllipsesOutline color="#FA8232" size={25} />
+              <IoChatbubbleEllipsesOutline color="#DE0F04" size={25} />
               <span className="2xl:text-[14px] text-[11px] text-[#475156]">
                 453
               </span>
@@ -126,10 +126,10 @@ function News() {
             Maecenas scelerisque, arcu quis tempus egestas, ligula diam molestie
             lectus, tincidunt malesuada arcu metus posuere metus.
           </p>
-          <button className="border-[2px] border-[#FFE7D6] flex items-center font-bold 2xl:text-[14px] text-[11px] 2xl:py-3 py-2 2xl:px-5 px-3 mt-6 uppercase text-[#FA8232]">
+          <button className="border-[2px] border-[#FFE7D6] flex items-center font-bold 2xl:text-[14px] text-[11px] 2xl:py-3 py-2 2xl:px-5 px-3 mt-6 uppercase text-[#DE0F04]">
             Read more
             &nbsp;
-            <GoArrowRight color="#FA8232" size={20} />
+            <GoArrowRight color="#DE0F04" size={20} />
           </button>
         </div>
 

@@ -23,6 +23,7 @@ export default {
           800:'#969696',
         
         },
+        blueLight:"#F5FBFE",
         bluePrimary: '#0080CF',
         bluePrimary2: '#0080CF',
         redPrimary: '#DE0F04',

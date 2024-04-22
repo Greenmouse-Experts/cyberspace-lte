@@ -20,7 +20,7 @@ function Footer() {
               placeholder="Email address"
               className="w-full 2xl:h-[70px] h-[60px] rounded-[3px] pl-6 2xl:placeholder:text-[16px] placeholder:text-[11px]"
             />
-            <button className="flex items-center font-bold 2xl:text-[12px] text-[10px] h-[80%] sm:px-6 px-2 uppercase bg-[#FA8232] absolute right-2 2xl:top-2 md:top-[6px] sm:top-2 top-[6px] rounded-[3px]">
+            <button className="flex items-center font-bold 2xl:text-[12px] text-[10px] h-[80%] sm:px-6 px-2 uppercase bg-[#DE0F04] absolute right-2 2xl:top-2 md:top-[6px] sm:top-2 top-[6px] rounded-[3px]">
               Subscribe &nbsp;
               <GoArrowRight color="white" size={22} />
             </button>
@@ -125,25 +125,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div>
-            <p className="font-normal 2xl:text-[17px] text-[12px] text-white uppercase">
-              store
-            </p>
-            <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
-              <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
-                <NavLink to="/">affiliate</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal">
-                <NavLink to="">discount</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">sales</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">contact</NavLink>
-              </li>
-            </ul>
-          </div>
+        
         </div>
 
         <div className="text-[#ADB7BC] flex justify-center items-center 2xl:py-10 py-6 border-t-[0.7px] border-grayPrimary mt-16">
