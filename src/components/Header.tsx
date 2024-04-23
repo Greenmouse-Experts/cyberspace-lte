@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { BsCart2, BsPatchCheck, BsSearch } from "react-icons/bs";
+import { BsCart2, BsSearch } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
-import { TbTruckDelivery } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 import DarkmodeToggle from "../features/darkmode/DarkmodeToggle";
 
@@ -15,19 +14,11 @@ function Header() {
         <p className=""> Welcome to Cyberspace LTE!</p>
 
         <div className="flex gap-6 items-center font-sora 2xl:text-[18px] sm:text-[12px] text-[5px] text-white">
-          <div className="flex gap-1 items-center">
-            <BsPatchCheck color="white" size={20} />
-            <p>All Offers</p>
-          </div>
-          <div className="flex gap-1 items-center border-r border-white pr-4">
+          <div className="flex gap-1 items-centerpr-4">
             <CiLocationOn color="white" size={22} />
             <p className="font-[300]">
               12 Ologun Agbaje Street, Victoria Island, Lagos, Nigeria
             </p>
-          </div>
-          <div className="flex gap-1 items-center border-r border-white pr-4">
-            <TbTruckDelivery color="white" size={22} />
-            <p className="font-[300]">Location Delivery</p>
           </div>
         </div>
       </div>
@@ -77,7 +68,6 @@ function Header() {
           </div>
           <div className="flex  md:gap-6 gap-2">
             <NavLink to="/signin" className="flex items-center gap-1">
-
               <FiUser color="#0094EF" size={25} />
               <p className="font-bold text-bluePrimary text-nowrap sm:block hidden">
                 Client Login
@@ -91,7 +81,7 @@ function Header() {
             </NavLink>
           </div>
         </div>
-        <DarkmodeToggle/>
+        <DarkmodeToggle />
         <div
           className="md:hidden block cursor-pointer w-8 h-8"
           onClick={() => setmMenu((menu) => !menu)}
