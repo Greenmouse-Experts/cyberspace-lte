@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { LiaTimesSolid } from "react-icons/lia";
+import { formatCurrency } from "../../utils/helpers";
 
 function CartItem() {
   const [quantity, setQuantity] = useState(1);
@@ -43,10 +44,10 @@ function CartItem() {
           </span>
         </div>
         <div className="">
-          <p className="font-medium text-lg">₦28,500</p>
+          <p className="font-medium text-lg">{formatCurrency(quantity * 2800)}</p>
         </div>
       </div>
-      <LiaTimesSolid className="absolute top-0 right-2" size={25} />
+      <LiaTimesSolid className="absolute top-0 right-2 cursor-pointer" size={25} />
     </div>
   );
 }

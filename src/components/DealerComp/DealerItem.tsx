@@ -13,14 +13,14 @@ function DealerItem() {
         <span>
           <GrLocation color="#DE0F04" size={20} />
         </span>
-        <p className="mt-[-8px]">
+        <p className="mt-[-8px] font-[300]">
           Suite 14, Ogidan Shopping Complex, Ogidan Bus-stop, Sangotedo. Road 5,
           Shop K132 see more...
         </p>
       </div>
       <div className="flex items-start gap-2 border-t border-grey-400 pt-3 pb-1">
         <IoMdCall color="#DE0F04" size={20} />
-        <p className="mt-[-5px]">08065357513, 07025001972</p>
+        <p className="mt-[-5px] font-[300]">08065357513, 07025001972</p>
       </div>
     </div>
   );

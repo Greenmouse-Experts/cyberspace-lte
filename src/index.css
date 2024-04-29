@@ -113,8 +113,8 @@ button {
 }
 
 p {
-  font-weight: 300;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 1.1rem;
   line-height: 32px;
 }
 
@@ -137,10 +137,15 @@ h3 {
 }
 h4 {
   font-size: 30px;
+  font-weight: 600;
 }
 
 footer a {
   font-size: 16px;
+}
+
+li{
+  list-style: none;
 }
 
 @media screen and (max-width: 1440px) {
@@ -154,7 +159,7 @@ footer a {
   }
 
   footer a {
-    font-size: 10px;
+    font-size: 16px;
   }
 }
 
@@ -201,4 +206,40 @@ footer a {
 
 .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
   border-radius: 10px !important;
+}
+
+@media screen and (max-width: 1024px){
+    
+  html{
+      font-size: 90%;
+  }
+}
+
+
+
+
+@media screen and (max-width: 850px){
+  
+  html{
+    font-size: 85%;
+  }
+}
+
+
+
+@media screen and (max-width: 640px){
+  
+  html{
+      font-size: 80%;
+  }
+
+}
+
+@media screen and (max-width: 550px){
+  
+  html{
+      font-size: 75%;
+  }
+
+ 
 }

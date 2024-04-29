@@ -9,10 +9,11 @@ import {
 import React, { FormEvent } from "react";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import Button from "../components/Button";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Signin() {
   const [showPassword, setShowPassword] = React.useState(false);
+  const navigate = useNavigate()
 
   const handleClickShowPassword = () => setShowPassword((show) => !show)
 
@@ -23,7 +24,9 @@ function Signin() {
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e?.preventDefault();
+    e.preventDefault();
+    navigate("/",{replace:true})
+    
   };
   return (
     <main className="h-full dark:bg-darkMood transition-all">

@@ -13,14 +13,14 @@ const FaqItem = ({ title, answer,open }: AccodionProps) => {
   return (
     <>
       <div
-        className={`py-8  px-5 rounded-lg border border-bluePrimary ${
-          accordionOpen ? "bg-bluePrimary text-white mb-5" : "bg-blueLight mb-5"
-        }`}
+        className={`md:py-8 py-3  px-5 rounded-lg border border-bluePrimary ${
+          accordionOpen ? "bg-bluePrimary text-white mb-5" : "bg-blueLight dark:bg-darkMood mb-5"
+        } `}
         onClick={() => setAccordionOpen(!accordionOpen)}
       >
         <button className="flex justify-between w-full items-center">
           <span
-            className={`font-sora 2xl:text-[22px] 2xl:font-[400] text-base font-normal  ${
+            className={`font-sora 2xl:text-[22px] text-left 2xl:font-[400] text-base font-normal  ${
               accordionOpen ? "white" : "black"
             }`}
           >

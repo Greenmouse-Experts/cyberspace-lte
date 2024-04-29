@@ -8,10 +8,10 @@ function DealersOverview() {
         <div className="lg:w-[40%] w-full">
           <h3>Cyberspace Dealers</h3>
           <p className="font-normal mt-5">
-            Cyberspace dealers are individuals who have been granted the
-            liscence to buy and trade cyberspace product and modems on behalf of
-            cyberspace. They enjoy numerous benefits and bonuses from
-            cyberspace.
+            Cyberspace dealers are authorized individuals entrusted with the
+            license to procure and trade Cyberspace products and modems on
+            behalf of the company. They receive a range of benefits and bonuses
+            from Cyberspace as part of their role.
           </p>
         </div>
 
@@ -47,14 +47,14 @@ function DealersOverview() {
         </div>
 
         <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-8 ">
-        <DealerItem/>
-        <DealerItem/>
-        <DealerItem/>
-        <DealerItem/>
-        <DealerItem/>
-        <DealerItem/>
-        <DealerItem/>
-        <DealerItem/>
+          <DealerItem />
+          <DealerItem />
+          <DealerItem />
+          <DealerItem />
+          <DealerItem />
+          <DealerItem />
+          <DealerItem />
+          <DealerItem />
         </div>
       </section>
     </>

@@ -45,7 +45,7 @@ function Footer() {
               </li>
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               <LuSmartphone size={20} />
-                <NavLink to="tel:015159999">015159999, 09076555420</NavLink>
+                <NavLink to="tel:02015159999">02015159999</NavLink>
               </li>
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               <HiOutlineEnvelope size={20} />
@@ -70,14 +70,14 @@ function Footer() {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">Shop Product</NavLink>
+                <NavLink to="/#shop-product">Shop Product</NavLink>
               </li>
               
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">our dealers</NavLink>
+                <NavLink to="/dealers">our dealers</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">coverage</NavLink>
+                <NavLink to="/coverage">coverage</NavLink>
               </li>
             </ul>
           </div>
@@ -88,7 +88,7 @@ function Footer() {
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
               <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
-                <NavLink to="/">tearms & conditions</NavLink>
+                <NavLink to="/">terms & conditions</NavLink>
               </li>
               {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">help</NavLink>
@@ -100,7 +100,7 @@ function Footer() {
                 <NavLink to="">return policy</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">contact us</NavLink>
+                <NavLink to="/contact">contact us</NavLink>
               </li>
             </ul>
           </div>
@@ -113,7 +113,7 @@ function Footer() {
                 <NavLink to="/">my account</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">orders</NavLink>
+                <NavLink to="/cart">orders</NavLink>
               </li>
               {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">wishlist</NavLink>

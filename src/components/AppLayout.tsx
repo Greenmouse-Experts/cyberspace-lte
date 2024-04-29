@@ -1,9 +1,13 @@
-import Header from "./Header";
+
 import Footer from "./Footer";
 import { NavLink, Outlet } from "react-router-dom";
 import { IoMdCart } from "react-icons/io";
+import Header from "./Header";
 
 function AppLayout() {
+ 
+
+ 
   return (
     <>
       <Header />
