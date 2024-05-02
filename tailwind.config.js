@@ -8,10 +8,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        grotesk: ['Hanken Grotesk', 'sans-serif'],
-        pSans: ['Public Sans', 'sans-serif'],
-        mdSans: ['DM Sans', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        grotesk: ['Montserrat', 'sans-serif'],
+        pSans: ['Montserrat', 'sans-serif'],
+        mdSans: ['Montserrat', 'sans-serif'],
+        inter: ['Montserrat', 'sans-serif'],
       },
       colors: {
         grey:{

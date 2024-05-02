@@ -1,6 +1,6 @@
+import { FaRegEnvelope } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
 import { GrLocation } from "react-icons/gr";
-import { HiOutlineEnvelope } from "react-icons/hi2";
 import { LuSmartphone } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 
@@ -29,10 +29,10 @@ function Footer() {
           </div>
         </div>
       </section>
-      <footer className="bg-[#191C1F] pt-24">
+      <footer className="bg-[#191C1F] pt-16">
         <div className="flex flex-wrap md:justify-between justify-start md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
           <div>
-            <p className="font-normal 2xl:text-[17px] text-[12px] text-white uppercase">
+            <p className="font-normal 2xl:text-[17px] text-white uppercase">
               Customer Supports:
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
@@ -43,26 +43,46 @@ function Footer() {
                   <br /> Island, Lagos, Nigeria
                 </NavLink>
               </li>
+              <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              For inquiries about our products:
+            </p>
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               <LuSmartphone size={20} />
-                <NavLink to="tel:02015159999">02015159999</NavLink>
+                <NavLink to="tel:09076555350 ">09076555350 </NavLink>
               </li>
+         
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
-              <HiOutlineEnvelope size={20} />
-                <NavLink to="mailto:lteretail@cyberspace.net.ng">
-                  lteretail@cyberspace.net.ng
-                </NavLink>
+              <LuSmartphone size={20} />
+                <NavLink to="tel:09076555417 ">09076555417 </NavLink>
               </li>
-              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
-              <HiOutlineEnvelope size={20} />
-                <NavLink to="mailto:cyberspacelteltd@gmail.com">
-                  cyberspacelteltd@gmail.com
-                </NavLink>
-              </li>
+            
             </ul>
           </div>
           <div>
-            <p className="font-normal 2xl:text-[17px] text-[12px] text-white uppercase">
+            <p className="font-normal 2xl:text-[17px] text-white uppercase">
+            Customer service:
+            </p>
+            <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
+            <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <LuSmartphone size={20} />
+                <NavLink to="tel:02015159999 ">02015159999 </NavLink>
+              </li>
+              <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              Emails for customer care and enquiries
+            </p>
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <FaRegEnvelope size={20} />
+                <NavLink to="mailto:customercare_retail@cyberspace.net.ng  ">customercare_retail@cyberspace.net.ng  </NavLink>
+              </li>
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <FaRegEnvelope size={20} />
+                <NavLink to="mailto:lteretail@cyberspace.net.ng  ">lteretail@cyberspace.net.ng   </NavLink>
+              </li>
+              
+            </ul>
+          </div>
+          <div>
+            <p className="font-normal 2xl:text-[17px] text-white uppercase">
               Quick links
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
@@ -83,21 +103,22 @@ function Footer() {
           </div>
 
           <div>
-            <p className="font-normal 2xl:text-[17px] text-[12px] text-white uppercase">
+            <p className="font-normal 2xl:text-[17px] text-white uppercase">
               support
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
               <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
-                <NavLink to="/">terms & conditions</NavLink>
+                <NavLink to="/terms-conditions">terms & conditions</NavLink>
               </li>
               {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">help</NavLink>
               </li> */}
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">privacy policy</NavLink>
+                <NavLink to="/privacy-policy">privacy policy</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">return policy</NavLink>
+                <NavLink to="/faqs">FAQs
+                </NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="/contact">contact us</NavLink>
@@ -105,7 +126,7 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <p className="font-normal 2xl:text-[17px] text-[12px] text-white uppercase">
+            <p className="font-normal 2xl:text-[17px] text-white uppercase">
               account
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">

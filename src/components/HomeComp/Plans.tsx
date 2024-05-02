@@ -1,7 +1,12 @@
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Plans() {
+
+  const navigate = useNavigate();
+function handleViewPlans(){
+  return navigate("/personalplan");
+}
   return (
     <section className="mt-20">
       <div className="flex justify-between">
@@ -39,8 +44,8 @@ function Plans() {
           <p className="text-lightGray font-bold 2xl:text-2xl text-lg ">
             N28,500
           </p>
-          <button className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-lg text-sm text-center rounded-md font-grotesk font-semibold">
-            SUBSCRIBE TO PLAN
+          <button onClick={handleViewPlans} className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-lg text-sm text-center rounded-md font-grotesk font-semibold">
+            VIEW
           </button>
         </div>
         <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk shadow-lg ">
@@ -59,8 +64,8 @@ function Plans() {
           <p className="text-lightGray font-bold 2xl:text-2xl text-lg ">
             N28,500
           </p>
-          <button className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-lg text-sm text-center rounded-md font-grotesk font-semibold">
-            SUBSCRIBE TO PLAN
+          <button onClick={handleViewPlans} className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-lg text-sm text-center rounded-md font-grotesk font-semibold">
+            VIEW
           </button>
         </div>
         <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk  shadow-lg">
@@ -79,8 +84,8 @@ function Plans() {
           <p className="text-lightGray font-bold 2xl:text-2xl text-lg ">
             N28,500
           </p>
-          <button className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-lg text-sm text-center rounded-md font-grotesk font-semibold">
-            SUBSCRIBE TO PLAN
+          <button onClick={handleViewPlans} className="text-white bg-bluePrimary w-full 2xl:py-5 py-3 2xl:text-lg text-sm text-center rounded-md font-grotesk font-semibold">
+            VIEW
           </button>
         </div>
       </div>

@@ -8,12 +8,18 @@ import Coverage from "./pages/Coverage";
 import BusinessPlan from "./pages/BusinessPlan";
 import PersonalPlan from "./pages/PersonalPlan";
 import { Provider } from "react-redux";
-import store from "./state/store";
+
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import { store } from "./state/store";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Faq from "./pages/Faq";
+import TermsAndCondition from "./pages/TermsAndCondition";
+
+
 
 const router = createBrowserRouter([
   {
@@ -59,6 +65,18 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path:"/privacy-policy",
+        element:<PrivacyPolicy/>
+      },
+      {
+        path:"faqs",
+        element:<Faq/>
+      },
+      {
+        path:"terms-conditions",
+        element:<TermsAndCondition/>
+      }
     ],
   },
   {
@@ -72,6 +90,8 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+
+
   return (
     <Provider store={store}>
       <RouterProvider router={router} />

@@ -12,20 +12,27 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@hookform/resolvers": "^3.3.4",
     "@mui/material": "^5.15.15",
     "@react-google-maps/api": "^2.19.3",
     "@reduxjs/toolkit": "^2.2.3",
+    "@tanem/react-nprogress": "^5.0.51",
+    "nprogress": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.3",
     "react-icons": "^5.0.1",
     "react-leaflet-kml": "^2.1.2",
     "react-redux": "^9.1.1",
     "react-router-dom": "^6.22.3",
     "react-slick": "^0.30.2",
+    "redux-persist": "^6.0.0",
     "slick-carousel": "^1.8.1",
-    "use-places-autocomplete": "^4.0.1"
+    "use-places-autocomplete": "^4.0.1",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/nprogress": "^0.2.3",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/react-slick": "^0.23.13",

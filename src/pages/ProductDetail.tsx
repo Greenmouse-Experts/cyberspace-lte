@@ -122,14 +122,14 @@ function ProductDetail() {
               Wi-Fi Frequency: Supports 2.4GHz and 5GHz Frequency
             </li>
           </ul>
-          <div className="flex gap-4 border-y border-grey-400 py-5 mt-2">
+          {/* <div className="flex gap-4 border-y border-grey-400 py-5 mt-2">
             <button className="  uppercase text-bluePrimary px-10 py-3 text-lg border border-bluePrimary">
               White
             </button>
             <button className=" uppercase text-grey-700 px-10 py-3 text-lg focus:border focus:border-bluePrimary focus:text-bluePrimary">
               Black
             </button>
-          </div>
+          </div> */}
           <p className="text-base font-normal">NGN(incl. of VAT) :</p>
           <div className="flex items-center gap-3">
             <h4 className=" font-inter">₦28,500</h4>

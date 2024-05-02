@@ -1,13 +1,10 @@
 import { MdOutlineWbSunny } from "react-icons/md";
-import { useAppSelector } from "../../state/hooks";
-import { isDark } from "./DarkModeSlice";
 import { FaRegMoon } from "react-icons/fa";
 import { useEffect } from "react";
 import { useLocalStorageState } from "../../hooks/useLocalStorageState";
 
 
 function DarkmodeToggle() {
-  const isDarkMood = useAppSelector(isDark);
 
   const [isDarkMode, setIsDarkMode] = useLocalStorageState(
     window.matchMedia("(prefers-color-scheme:dark)").matches,
@@ -23,7 +20,6 @@ function DarkmodeToggle() {
       document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode, setIsDarkMode]);
-  console.log("dark", isDarkMood);
 
   function toggleDarkMode() {
     setIsDarkMode((isDark:boolean) => !isDark);

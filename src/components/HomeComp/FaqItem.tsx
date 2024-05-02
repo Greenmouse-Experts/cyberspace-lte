@@ -13,7 +13,7 @@ const FaqItem = ({ title, answer,open }: AccodionProps) => {
   return (
     <>
       <div
-        className={`md:py-8 py-3  px-5 rounded-lg border border-bluePrimary ${
+        className={`md:py-8 py-5  px-5 rounded-lg border border-bluePrimary ${
           accordionOpen ? "bg-bluePrimary text-white mb-5" : "bg-blueLight dark:bg-darkMood mb-5"
         } `}
         onClick={() => setAccordionOpen(!accordionOpen)}

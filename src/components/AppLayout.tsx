@@ -1,12 +1,25 @@
 
 import Footer from "./Footer";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { IoMdCart } from "react-icons/io";
 import Header from "./Header";
+import { useEffect } from "react";
+import nprogress from "nprogress";
 
 function AppLayout() {
  
+  const { pathname } = useLocation();
+  const location = useLocation();
 
+  useEffect(() => {
+    nprogress.start();
+    nprogress.done();
+  }, [location.pathname]);
+ 
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
  
   return (
     <>

@@ -12,7 +12,7 @@ function Advert() {
           Explore Great Deals On
           <span className="text-bluePrimary"> Devices</span>
         </h4>
-        <NavLink to="/businessplan" className="flex items-end  ">
+        <NavLink to="/personalplan" className="flex items-end  ">
           <p className="text-[#222222] sm:text-base text-[12px] text-nowrap font-medium capitalize">
             see more{" "}
           </p>
