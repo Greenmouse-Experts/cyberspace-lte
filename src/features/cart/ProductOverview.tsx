@@ -1,12 +1,15 @@
 import { BsSearch } from "react-icons/bs";
 import ProductCategory from "./ProductCategory";
-import ProductItem from "./ProductItem";
 import { useProducts } from "./useProducts";
+import { useState } from "react";
+import { useCategory } from "./useCategory";
+import ProductView from "./ProductView";
 
 function ProductOverview() {
 
-  const { products} = useProducts()
-  console.log(products)
+  const { products, isLoading} = useProducts()
+  const { category, isLoading:loading} = useCategory()
+  const [active, setActive] = useState(0)
   return (
     <section className="mt-20">
       <div className="sm:w-[400px] w-full mb-20 2xl:h-[60px] h-[40px] relative lg:block hidden">
@@ -22,11 +25,9 @@ function ProductOverview() {
         />
       </div>
       <div className="flex items-start justify-between">
-        <ProductCategory />
-        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-col-1 gap-8 ">
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
+        <ProductCategory data={category?.data} isLoading={loading} active={active} setActive={setActive}/>
+        <div>
+         <ProductView data={products?.data} active={active}/>
         </div>
       </div>
     </section>

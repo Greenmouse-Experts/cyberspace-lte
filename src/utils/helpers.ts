@@ -9,3 +9,10 @@ export const formatCurrency = (value: number) =>
       const token = ""
       return `Bearer ${token}`
   }
+  export const formatAsNgnMoney = (value: number | string) => {
+    if (!value) return '';
+    const val = Number(value);
+    return `₦${val
+      .toLocaleString('en-US')
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+  };

@@ -1,35 +1,37 @@
-
 import Footer from "./Footer";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { IoMdCart } from "react-icons/io";
 import Header from "./Header";
 import { useEffect } from "react";
 import nprogress from "nprogress";
+import useCart from "../hooks/useCart";
 
 function AppLayout() {
- 
   const { pathname } = useLocation();
   const location = useLocation();
+  const {cartCount} = useCart()
 
   useEffect(() => {
     nprogress.start();
     nprogress.done();
   }, [location.pathname]);
- 
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
- 
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <Header />
       <main className="relative pb-28 dark:bg-darkMood transition-all">
         <Outlet />
         <div className="bg-[#DE0F04] w-12 h-12 flex justify-center items-center fixed right-0 top-[50%] cursor-pointer ">
-          <NavLink to="/cart">
-            <IoMdCart color="white" size={30} />
-          </NavLink>
+          <div className="relative">
+            <NavLink to="/cart">
+              <IoMdCart color="white" size={30} />
+            </NavLink>
+            {cartCount > 0  && <p className="absolute z-10 -top-6 -left-6 drop-shadow-lg w-7 h-7 !bg-[#ffff] rounded-full flex items-center justify-center font-semibold text-[14px]">{cartCount}</p>}
+          </div>
         </div>
       </main>
       <Footer />

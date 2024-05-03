@@ -60,6 +60,7 @@ function LoginForm() {
           dispatch(saveUser(data.data))
           dispatch(setToken(data.token))
           dispatch(setIsLoggedIn())
+          sessionStorage.setItem('lte_token', data.token)
           // dispatch(loginUser())
         },
       }
