@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 //@ts-nocheck
 import {
@@ -13,17 +12,18 @@ import React, { useState } from "react";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import Button from "../../components/Button";
-import { useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { useLogin } from "./useLogin";
 import SpinnerMini from "../../components/SpinnerMini";
 import { saveUser, setIsLoggedIn, setToken } from "../../state/user/userSlice";
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
 
-interface SignupProps {
+interface FormData extends FieldValues {
   email: string;
   password: string;
 }
+
 
 
 function LoginForm() {
@@ -39,7 +39,8 @@ function LoginForm() {
   const { register, handleSubmit, formState } = useForm({});
   const { errors } = formState;
 
-  const form = useForm<SignupProps>({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const form = useForm<FormData>({
     defaultValues: {
       email: "",
       password: "",
@@ -49,7 +50,7 @@ function LoginForm() {
   const { login, isLoading } = useLogin();
   const dispatch  = useDispatch()
 
-  function onSubmit({password, email}:SignupProps) {
+  const onSubmit:SubmitHandler<FieldValues> = ({password, email}) => {
     console.log(email, password)
     login(
       { email, password },
@@ -59,6 +60,7 @@ function LoginForm() {
           toast.success(`Login Successfull`);
           dispatch(saveUser(data.data))
           dispatch(setToken(data.token))
+          localStorage.setItem("token", data.token);
           dispatch(setIsLoggedIn())
           sessionStorage.setItem('lte_token', data.token)
           // dispatch(loginUser())
@@ -89,7 +91,7 @@ function LoginForm() {
                 type="email"
                 variant="outlined"
                 error={!!errors.email}
-                helperText={errors?.email?.message}
+                helperText={errors.email ? String(errors.email.message) : ""}
                 {...register("email", { required: "Email is required" })}
                 // value={values.email}
                 style={{ width: "100%", height: 60, borderRadius: "10px" }}
@@ -107,9 +109,9 @@ function LoginForm() {
                   {...register("password", {
                     required: "Password is required",
                   })}
-                  helperText={errors?.password?.message}
-                
-                  error={!!errors.password}
+                   // eslint-disable-next-line @typescript-eslint/no-unused-vars       
+                   error={!!errors.password}
+                   helperText={errors.password ? <>{errors.password.message}</> : ""}
                   // value={values.password}
                   type={showPassword ? "text" : "password"}
                   endAdornment={

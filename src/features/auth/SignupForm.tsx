@@ -12,44 +12,46 @@ import {
 import React, { FormEvent } from "react";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import { useForm } from "react-hook-form";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import { useSignup } from "./useSignup";
 import { useDispatch } from "react-redux";
 import { setVerifyEmail } from "../../state/user/userSlice";
+import SpinnerMini from "../../components/SpinnerMini";
 
 interface SignupProps {
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   email: string;
-  phoneNumber: string;
+  phone_number: string;
   password: string;
-  passwordConfirm: string;
+  password_confirmation: string;
 }
 
 function SignupForm() {
   const [showPassword, setShowPassword] = React.useState(false);
-  const [showPasswordConfirm, setShowPasswordConfirm] = React.useState(false);
+  const [showpassword_confirmation, setShowpassword_confirmation] = React.useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { register, handleSubmit, getValues, reset, watch, formState } = useForm({});
   const { errors } = formState;
   console.log(errors);
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const form = useForm<SignupProps>({
     defaultValues: {
-      firstName: "",
-      lastName: "",
-      phoneNumber: "",
+      first_name: "",
+      last_name: "",
+      phone_number: "",
       email: "",
       password: "",
-      passwordConfirm: "",
+      password_confirmation: "",
     },
   });
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-  const handleClickShowPasswordConfirm = () =>
-    setShowPasswordConfirm((show) => !show);
+  const handleClickShowpassword_confirmation = () =>
+    setShowpassword_confirmation((show) => !show);
 
   const handleMouseDownPassword = (
     event: React.MouseEvent<HTMLButtonElement>
@@ -62,16 +64,18 @@ function SignupForm() {
   function onSubmit({
     password,
     email,
-    firstName,
-    lastName,
-    phoneNumber,
+    first_name,
+    last_name,
+    phone_number,
+    password_confirmation,
   }: SignupProps) {
-    console.log(email, password, firstName, lastName, phoneNumber);
+    console.log(email, password, first_name, last_name, phone_number);
     signup(
-      { email, password, firstName, lastName, phoneNumber },
+      { email, password, first_name, last_name, phone_number, password_confirmation },
       {
         onSuccess(data) {
           dispatch(setVerifyEmail(email))
+          navigate("/verify-account")
           console.log(data)
 
           // dispatch(loginUser())
@@ -98,25 +102,27 @@ function SignupForm() {
               Fill in your details to create an account
             </p>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-6">
               <TextField
                 id="outlined-basic"
                 label="First Name"
+                disabled={isLoading}
                 variant="outlined"
-                error={!!errors.firstName}
-                helperText={errors?.firstName?.message}
-                {...register("firstName", {
-                  required: "firstName is required",
+                error={!!errors.first_name}
+                helperText={errors?.first_name?.message}
+                {...register("first_name", {
+                  required: "first_name is required",
                 })}
                 style={{ width: "100%", height: 60, borderRadius: "10px" }}
               />
               <TextField
                 id="outlined-basic"
                 label="Last Name"
+                disabled={isLoading}
                 variant="outlined"
-                error={!!errors.lastName}
-                helperText={errors?.lastName?.message}
-                {...register("lastName", { required: "lastName is required" })}
+                error={!!errors.last_name}
+                helperText={errors?.last_name?.message}
+                {...register("last_name", { required: "last_name is required" })}
                 style={{ width: "100%", height: 60, borderRadius: "10px" }}
               />
               <TextField
@@ -125,6 +131,7 @@ function SignupForm() {
                 type="email"
                 variant="outlined"
                 error={!!errors.email}
+                disabled={isLoading}
                 helperText={errors?.email?.message}
                 {...register("email", { required: "Email is required" })}
                 style={{ width: "100%", height: 60, borderRadius: "10px" }}
@@ -134,10 +141,11 @@ function SignupForm() {
                 id="outlined-basic"
                 label="Phone Number"
                 variant="outlined"
-                error={!!errors.phoneNumber}
-                helperText={errors?.phoneNumber?.message}
-                {...register("phoneNumber", {
-                  required: "phoneNumber is required",
+                error={!!errors.phone_number}
+                disabled={isLoading}
+                helperText={errors?.phone_number?.message}
+                {...register("phone_number", {
+                  required: "phone_number is required",
                 })}
                 style={{ width: "100%", height: 60, borderRadius: "10px" }}
               />
@@ -157,6 +165,7 @@ function SignupForm() {
                       message: "Password needs a minimum of 8 characters",
                     },
                   })}
+                  disabled={isLoading}
                   helperText={errors?.password?.message}
                   error={!!errors.password}
                   endAdornment={
@@ -181,10 +190,11 @@ function SignupForm() {
                 <OutlinedInput
                   style={{ width: "100%", height: 60, borderRadius: "10px" }}
                   id="outlined-adornment-password"
-                  type={showPasswordConfirm ? "text" : "password"}
-                  helperText={errors?.passwordConfirm?.message}
-                  error={!!errors.passwordConfirm}
-                  {...register("passwordConfirm", {
+                  type={showpassword_confirmation ? "text" : "password"}
+                  helperText={errors?.password_confirmation?.message}
+                  error={!!errors.password_confirmation}
+                  disabled={isLoading}
+                  {...register("password_confirmation", {
                     required: "This field is required",
                     validate: (val: string) => {
                       if (watch("password") != val) {
@@ -196,11 +206,11 @@ function SignupForm() {
                     <InputAdornment position="end">
                       <IconButton
                         aria-label="toggle password visibility"
-                        onClick={handleClickShowPasswordConfirm}
+                        onClick={handleClickShowpassword_confirmation}
                         onMouseDown={handleMouseDownPassword}
                         edge="end"
                       >
-                        {showPasswordConfirm ? (
+                        {showpassword_confirmation ? (
                           <MdVisibility />
                         ) : (
                           <MdVisibilityOff />
@@ -228,7 +238,9 @@ function SignupForm() {
                   </span>
                 </label>
               </div>
-              <Button type="submit">Sign up</Button>
+              <Button type="submit">
+              {!isLoading ? "Sign Up" : <SpinnerMini />}
+              </Button>
               <div className="w-full flex justify-center items-center">
                 <span className="bg-grey-200 h-[1px] block w-full"></span>
                 <span className="mx-2 text-grey-700">or</span>

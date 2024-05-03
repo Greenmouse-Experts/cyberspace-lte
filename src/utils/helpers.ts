@@ -6,7 +6,7 @@ export const formatCurrency = (value: number) =>
     ).replace('NGN', '₦');
 
     export const getBearerToken = () => {
-      const token = ""
+      const token = localStorage.getItem('token')
       return `Bearer ${token}`
   }
   export const formatAsNgnMoney = (value: number | string) => {

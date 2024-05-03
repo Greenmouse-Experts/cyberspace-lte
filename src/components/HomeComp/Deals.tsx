@@ -114,7 +114,7 @@ function Deals() {
               Fast Delivery
             </p>
             <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
-              Delivery in 24/H
+              Delivery in 24 Hours
             </p>
           </div>
         </div>
