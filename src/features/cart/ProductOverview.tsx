@@ -7,7 +7,7 @@ import ProductView from "./ProductView";
 
 function ProductOverview() {
 
-  const { products, isLoading} = useProducts()
+  const { products } = useProducts()
   const { category, isLoading:loading} = useCategory()
   const [active, setActive] = useState(0)
   return (
