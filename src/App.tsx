@@ -18,7 +18,10 @@ import { store } from "./state/store";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Faq from "./pages/Faq";
 import TermsAndCondition from "./pages/TermsAndCondition";
-
+import { Toaster } from "react-hot-toast";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Products from "./pages/Products";
+import VerifyAccount from "./pages/VerifyAccount";
 
 
 const router = createBrowserRouter([
@@ -66,17 +69,21 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path:"/privacy-policy",
-        element:<PrivacyPolicy/>
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />,
       },
       {
-        path:"faqs",
-        element:<Faq/>
+        path: "faqs",
+        element: <Faq />,
       },
       {
-        path:"terms-conditions",
-        element:<TermsAndCondition/>
-      }
+        path: "terms-conditions",
+        element: <TermsAndCondition />,
+      },
+      {
+        path: "products",
+        element: <Products />,
+      },
     ],
   },
   {
@@ -87,14 +94,36 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <Signup />,
   },
+  {
+    path: "/verify-account",
+    element: <VerifyAccount />,
+  },
 ]);
 
 function App() {
-
+  const queryClient = new QueryClient();
 
   return (
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        <Toaster
+          position="top-center"
+          gutter={12}
+          containerStyle={{ margin: "8px" }}
+          toastOptions={{
+            success: { duration: 3000 },
+            error: { duration: 5000 },
+            style: {
+              fontSize: "16px",
+              maxWidth: "500px",
+              padding: "16px 24px",
+              backgroundColor: "#fff",
+              color: "#374151",
+            },
+          }}
+        />
+      </QueryClientProvider>
     </Provider>
   );
 }

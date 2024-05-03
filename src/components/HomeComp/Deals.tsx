@@ -110,10 +110,10 @@ function Deals() {
         <div className="flex items-center gap-3">
           <PiPackageLight size={40} />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222] uppercase font-normal">
-              Fasted Delivery
+            <p className="2xl:text-lg text-sm text-[#222222]  font-medium">
+              Fast Delivery
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-normal">
+            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
               Delivery in 24/H
             </p>
           </div>
@@ -122,10 +122,10 @@ function Deals() {
         <div className="flex items-center gap-3">
           <PiTrophyThin size={40} />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222] uppercase font-normal">
-              QUALITY DEVICES
+            <p className="2xl:text-lg text-sm text-[#222222]  font-medium">
+              Quality Devices
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-normal">
+            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
               100% Quality products
             </p>
           </div>
@@ -134,10 +134,10 @@ function Deals() {
         <div className="flex items-center gap-3">
           <PiCreditCardThin size={40} />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222] uppercase font-normal">
+            <p className="2xl:text-lg text-sm text-[#222222]  font-medium">
               Secure Payment
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-normal">
+            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
               Your money is safe
             </p>
           </div>
@@ -146,10 +146,10 @@ function Deals() {
         <div className="flex items-center gap-3">
           <PiHeadphonesThin size={40} />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222] uppercase font-normal">
+            <p className="2xl:text-lg text-sm text-[#222222]  font-medium">
               Support 24/7
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-normal">
+            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
               Live contact/message
             </p>
           </div>

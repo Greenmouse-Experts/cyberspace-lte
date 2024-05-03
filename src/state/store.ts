@@ -5,7 +5,15 @@ import { persistStore, persistReducer } from "redux-persist";
 import userReducer from "./user/userSlice";
 import storage from 'redux-persist/lib/storage';
 import { setupListeners } from "@reduxjs/toolkit/query";
-import { api } from "../services/api";
+import {
+  FLUSH,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+  REHYDRATE,
+} from "redux-persist";
+// import { api } from "../services/api";
 
 const persistConfig = {
   key: "root",
@@ -15,22 +23,27 @@ const persistConfig = {
 
 
 const rootReducer = combineReducers({
-  [api.reducerPath]: api.reducer,
   ui: uiReducer,
   user: userReducer,
 });
 
-//We are persisting only userSlice
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      immutableCheck: false,
-      serializableCheck: false,
-    }).concat(api.middleware),
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+  reducer: persistedReducer,
 });
+
+// export const store = configureStore({
+//   reducer: persistedReducer,
+//   devTools: process.env.NODE_ENV !== 'production',
+//   middleware: [thunk]
+// })
 
 setupListeners(store.dispatch);
 export type RootState = ReturnType<typeof rootReducer>;

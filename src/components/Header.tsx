@@ -2,18 +2,22 @@ import { useState } from "react";
 import {  BsSearch } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import DarkmodeToggle from "../features/darkmode/DarkmodeToggle";
+import { useAppSelector } from "../state/hooks";
+import { isLoggedIn, removeToken } from "../state/user/userSlice";
+import { useDispatch } from "react-redux";
 
 function Header() {
   const [menu, setmMenu] = useState(false);
+  const verifyUser = useAppSelector(isLoggedIn)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const logout = () => {
+    navigate("/signin")
+  dispatch(removeToken())
+  }
 
-  // const pushPageDown = () => {
-  //   window.scrollTo({
-  //     top: window.scrollY + 600, // Adjust the value as needed
-  //     behavior: 'smooth',
-  //   }); 
-  // };
 
   return (
     <header className="fixed top-0 bg-white dark:bg-darkMood transition-colors z-[999999] right-0 w-full left-0">
@@ -56,7 +60,7 @@ function Header() {
               </li>
             
               <li className="">
-                <NavLink to="/#shop-product" onClick={() => {
+                <NavLink to="/products" onClick={() => {
                   // e.preventDefault(); 
                   // pushPageDown(); 
                   setmMenu(false);}} >
@@ -85,12 +89,12 @@ function Header() {
             />
           </div>
           <div className="flex items-center  md:gap-6 gap-2">
-            <NavLink to="/signin" className="flex items-center gap-1">
+            <div className="flex items-center gap-1 cursor-pointer" onClick={logout}>
               <FiUser color="#0094EF" size={25} />
               <p className="font-bold text-bluePrimary text-nowrap sm:block hidden">
-                Client Login
+               {verifyUser ? "Client Logout": "Client Login"}
               </p>
-            </NavLink>
+            </div>
             <div className="bg-[#D9D9D9] w-[2px]" />
             <li className=" text-grayPrimary font-bold dark:text-white ">
                 <NavLink onClick={() => setmMenu(false)} to="/dealers">

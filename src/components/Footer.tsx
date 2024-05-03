@@ -33,7 +33,7 @@ function Footer() {
         <div className="flex flex-wrap md:justify-between justify-start md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
           <div>
             <p className="font-normal 2xl:text-[17px] text-white uppercase">
-              Customer Supports:
+              Customer Supports
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
@@ -60,7 +60,7 @@ function Footer() {
           </div>
           <div>
             <p className="font-normal 2xl:text-[17px] text-white uppercase">
-            Customer service:
+            Customer service
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
             <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
@@ -90,7 +90,7 @@ function Footer() {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/#shop-product">Shop Product</NavLink>
+                <NavLink to="/products">Shop Product</NavLink>
               </li>
               
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">

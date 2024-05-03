@@ -1,4 +1,6 @@
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-nocheck
 import {
   FormControl,
   IconButton,
@@ -7,29 +9,25 @@ import {
   OutlinedInput,
   TextField,
 } from "@mui/material";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
-
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Button from "../../components/Button";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as Yup from "yup";
 import { useForm } from "react-hook-form";
+import { useLogin } from "./useLogin";
+import SpinnerMini from "../../components/SpinnerMini";
+import { saveUser, setIsLoggedIn, setToken } from "../../state/user/userSlice";
+import { useDispatch } from "react-redux";
+import toast from "react-hot-toast";
 
-interface SignupProps{
-  email:string;
-  password:string;
+interface SignupProps {
+  email: string;
+  password: string;
 }
 
-const defaultInputValues:SignupProps = {
-  email: "",
-  password: "",
-};
 
 function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
-  const [values, setValues] = useState(defaultInputValues);
-  const navigate = useNavigate();
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const handleMouseDownPassword = (
@@ -38,45 +36,43 @@ function LoginForm() {
     event.preventDefault();
   };
 
-  const signup = () => {
-    return navigate("/", { replace: true });
-  }
-  // const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   navigate("/", { replace: true });
-  // }
+  const { register, handleSubmit, formState } = useForm({});
+  const { errors } = formState;
 
-  // const phoneRegExp =
-  //   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
-  const validationSchema = Yup.object().shape({
-    email: Yup.string()
-      .required("Email is required")
-      .email("Email is invalid."),
-    password: Yup.string().required("Password is required"),
+  const form = useForm<SignupProps>({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
   });
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(validationSchema),
-  });
+  const { login, isLoading } = useLogin();
+  const dispatch  = useDispatch()
 
-  const handleChange = (value: React.SetStateAction<SignupProps>) => {
-    setValues(value);
-  };
-
-  function onSubmit() {
-    signup();
+  function onSubmit({password, email}:SignupProps) {
+    console.log(email, password)
+    login(
+      { email, password },
+      {
+        onSuccess(data) {
+          console.log(data)
+          toast.success(`Login Successfull`);
+          dispatch(saveUser(data.data))
+          dispatch(setToken(data.token))
+          dispatch(setIsLoggedIn())
+          // dispatch(loginUser())
+        },
+      }
+    );
   }
 
   return (
     <section className="grid lg:grid-cols-2 grid-cols-1 mx-0 font-inter">
       <div className="md:w-[580px] w-full md:p-0 p-5 flex justify-center items-center mx-auto">
         <form onSubmit={handleSubmit(onSubmit)}>
+        <NavLink to="/">
           <img src="/logo.svg" alt="logo" className="mb-10" />
+        </NavLink>
           <div>
             <h2 className="text-[40px] font-bold tracking-[-2px] mb-2">
               Sign in
@@ -89,15 +85,12 @@ function LoginForm() {
               <TextField
                 id="outlined-basic"
                 label="Email"
+                type="email"
                 variant="outlined"
-                //   helperText="This field is required"
-                {...register("email")}
-                error={errors.email ? true : false}
-                helperText={errors.email?.message}
-                value={values.email}
-                onChange={(event) =>
-                  handleChange({ ...values, email: event.target.value })
-                }
+                error={!!errors.email}
+                helperText={errors?.email?.message}
+                {...register("email", { required: "Email is required" })}
+                // value={values.email}
                 style={{ width: "100%", height: 60, borderRadius: "10px" }}
               />
               <FormControl
@@ -110,13 +103,13 @@ function LoginForm() {
                 <OutlinedInput
                   style={{ width: "100%", height: 60, borderRadius: "10px" }}
                   id="outlined-adornment-password"
-                  {...register("email")}
-                  error={errors.email ? true : false}
-                  // helperText={errors.password?.message}
-                  value={values.email}
-                  onChange={(event) =>
-                    handleChange({ ...values, password: event.target.value })
-                  }
+                  {...register("password", {
+                    required: "Password is required",
+                  })}
+                  helperText={errors?.password?.message}
+                
+                  error={!!errors.password}
+                  // value={values.password}
                   type={showPassword ? "text" : "password"}
                   endAdornment={
                     <InputAdornment position="end">
@@ -138,16 +131,15 @@ function LoginForm() {
                 <input type="checkbox" name="" id="check" className="w-5 h-5" />
                 <label htmlFor="check">Keep me logged in</label>
               </div>
-              <Button>Sign in</Button>
+              <Button type="submit">
+              {!isLoading ? "Log in" : <SpinnerMini />}
+              </Button>
               <div className="w-full flex justify-center items-center">
                 <span className="bg-grey-200 h-[1px] block w-full"></span>
                 <span className="mx-2 text-grey-700">or</span>
                 <span className="bg-grey-200 h-[1px] inline w-full"></span>
               </div>
-              <div className="flex items-center justify-center gap-2 border border-grey-300 w-full py-3 rounded-lg cursor-pointer">
-                <p className="font-semibold text-lg">Sign in with google</p>
-                <img src="/icons/google.svg" alt="google" />
-              </div>
+             
             </div>
 
             <p className="text-grey-800 text-lg font-normal mb-3 text-center mt-3">

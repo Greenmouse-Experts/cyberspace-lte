@@ -1,22 +1,48 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { IUser } from "./user.types";
 import { RootState } from "../store";
 
 const initialState: IUser = {
-  email: "",
+  user: {
+    name: "",
+    email: "",
+    phone_number: "",
+    id: 0,
+    user_type: "",
+    email_verified_at: "",
+    gender: null,
+    residence_address: null,
+    city: null,
+    region: null,
+    country: null,
+    status: "",
+    token: null,
+    created_at: "",
+    updated_at: "",
+    tokens: [],
+  },
   token: "",
   isLoggedIn: false,
+  verifyEmail:""
 };
 
 export const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setEmail: (state, action: PayloadAction<string>) => {
-      state.email = action.payload;
+    saveUser: (state, action) => {
+      state.user = action.payload;
+      console.log("user saved")
     },
-    setToken: (state, action: PayloadAction<string>) => {
+    setToken: (state, action) => {
       state.token = action.payload;
+      console.log("token saved")
+    },
+    setIsLoggedIn: (state) => {
+      state.isLoggedIn = true;
+    },
+    setVerifyEmail:(state, action)=>{
+      state.verifyEmail = action.payload
     },
     removeToken: (state) => {
       state.isLoggedIn = false;
@@ -25,7 +51,9 @@ export const userSlice = createSlice({
   },
 });
 
-export const { setToken, setEmail, removeToken } = userSlice.actions;
+export const { setToken, saveUser, removeToken, setIsLoggedIn, setVerifyEmail } = userSlice.actions;
 export const getToken = (state: RootState) => state.user.token;
+export const getVerifyEmail = (state: RootState) => state?.user?.verifyEmail;
+export const isLoggedIn = (state: RootState) => state.user.isLoggedIn
 
 export default userSlice.reducer;

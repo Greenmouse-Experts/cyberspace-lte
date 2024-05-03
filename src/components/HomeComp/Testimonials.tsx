@@ -3,9 +3,18 @@ import { settings } from "../../utils/settings";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import TestimonialModal from "../modals/TestimonialModal";
 
 function Testimonials() {
   const maxCharacters = 80;
+
+  const [modal, setModal] = useState(false);
+  const handleOpen = () => {
+    console.log("wor")
+    setModal(true)
+  };
+
+  const handleClose = () => setModal(false);
 
   // State to track whether "Read More" button is clicked for each testimonial
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -15,15 +24,10 @@ function Testimonials() {
     testimonial3: false,
   });
 
-  // // Function to toggle the state for showing full testimonial text
-  // const toggleShowFullText = testimonial => {
-  //     setShowFullText(prevState => ({
-  //         ...prevState,
-  //         [testimonial]: !prevState[testimonial]
-  //     }));
-  // };
+ 
 
   return (
+  <>
     <section className="bg-bluePrimary py-24 2xl:px-[140px] xl:px-24 px-5 mx-0">
       <h5 className="text-white text-3xl font-bold mb-10">Testimonials</h5>
       <div className="">
@@ -40,7 +44,7 @@ function Testimonials() {
                   ) + "..."}
             </p>
             {showFullText.testimonial1 || (
-              <button className="text-bluePrimary font-semibold mt-2">
+              <button onClick={handleOpen} className="text-bluePrimary font-semibold mt-2">
                 Read More
               </button>
             )}
@@ -70,7 +74,7 @@ function Testimonials() {
                   ) + "..."}
             </p>
             {showFullText.testimonial1 || (
-              <button className="text-bluePrimary font-semibold mt-2">
+              <button onClick={handleOpen} className="text-bluePrimary font-semibold mt-2">
                 Read More
               </button>
             )}
@@ -100,7 +104,7 @@ function Testimonials() {
                   ) + "..."}
             </p>
             {showFullText.testimonial1 || (
-              <button className="text-bluePrimary font-semibold mt-2">
+              <button onClick={handleOpen} className="text-bluePrimary font-semibold mt-2">
                 Read More
               </button>
             )}
@@ -130,7 +134,7 @@ function Testimonials() {
                   ) + "..."}
             </p>
             {showFullText.testimonial1 || (
-              <button className="text-bluePrimary font-semibold mt-2">
+              <button onClick={handleOpen} className="text-bluePrimary font-semibold mt-2">
                 Read More
               </button>
             )}
@@ -153,6 +157,8 @@ function Testimonials() {
         </Slider>
       </div>
     </section>
+    <TestimonialModal open={modal} handleClose={handleClose}/>
+  </>
   );
 }
 
