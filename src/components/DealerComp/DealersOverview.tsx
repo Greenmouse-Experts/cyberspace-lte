@@ -1,7 +1,13 @@
 import { BsSearch } from "react-icons/bs";
 import DealerItem from "./DealerItem";
+import { useQuery } from "@tanstack/react-query";
+import { getDealers } from "../../services/apis/routineApi";
 
 function DealersOverview() {
+  const {data, isLoading} = useQuery({
+    queryFn: getDealers,
+    queryKey: ['getDealer']
+  })
   return (
     <>
       <section className="flex lg:flex-row flex-col items-center justify-between pt-20 font-inter bg-[#FCFCFC] dark:bg-darkMood">
@@ -47,6 +53,11 @@ function DealersOverview() {
         </div>
 
         <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-8 ">
+          {
+            !isLoading && !!data?.data?.length && data?.data?.map((item:any) => (
+              <></>
+            ))
+          }
           <DealerItem />
           <DealerItem />
           <DealerItem />
