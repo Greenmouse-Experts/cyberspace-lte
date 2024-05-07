@@ -13,8 +13,6 @@ import { getSingleProduct } from "../services/apis/productApi";
 function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
   const {id} = useParams()
-  console.log(id);
-  
   const {data} = useQuery({
     queryFn: () => getSingleProduct(`${id}`),
     queryKey: ['single-product']
