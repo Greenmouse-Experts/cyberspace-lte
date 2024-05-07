@@ -37,6 +37,12 @@ export const getProducts = async () => {
     .then((response) => response.data);
 };
 
+export const getSingleProduct = async (id:string) => {
+  return axios
+    .get(`${ENDPOINT.GET_PRODUCTS}/${id}`)
+    .then((response) => response.data);
+};
+
 export const getCategories = async () => {
   return axios
     .get(`${ENDPOINT.GET_CATEGORIES}`)

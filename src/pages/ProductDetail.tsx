@@ -3,12 +3,22 @@ import { IoStar } from "react-icons/io5";
 import Banner from "../components/Banner";
 import { GoDotFill } from "react-icons/go";
 import { FiMinus, FiPlus } from "react-icons/fi";
+import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { getSingleProduct } from "../services/apis/productApi";
 // import Tabs from "@mui/material/Tabs";
 // import Tab from "@mui/material/Tab";
 // import Box from "@mui/material/Box";
 
 function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
+  const {id} = useParams()
+  console.log(id);
+  
+  const {data} = useQuery({
+    queryFn: () => getSingleProduct(`${id}`),
+    queryKey: ['single-product']
+  })
 
   const increment = () => {
     setQuantity(quantity + 1);
