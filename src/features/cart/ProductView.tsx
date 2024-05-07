@@ -16,7 +16,7 @@ const ProductView: FC<Props> = ({ data, active }) => {
       );
       setProducts(filtered);
     }
-  }, [active]);
+  }, [active, data]);
   return (
     <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-col-1 gap-8">
       {products &&
