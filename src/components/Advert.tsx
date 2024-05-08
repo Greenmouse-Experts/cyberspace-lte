@@ -9,7 +9,7 @@ function Advert() {
     <section className="my-20">
       <div className="flex justify-between">
         <h4 className="text-grayPrimary font-semibold">
-          Explore Great Deals On
+          Explore Great Deals And
           <span className="text-bluePrimary"> Devices</span>
         </h4>
         <NavLink to="/personalplan" className="flex items-end  ">

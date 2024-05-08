@@ -6,12 +6,13 @@ interface CategoryItemType {
   updated_at: string;
 }
 
-interface ProductItemType {
+export interface ProductItemType {
   category: CategoryItemType;
   category_id: string;
   count_in_stock: string;
   coverage: string;
   created_at: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dealer: any;
   dealer_id: string;
   description: string;

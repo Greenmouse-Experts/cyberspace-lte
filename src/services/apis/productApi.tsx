@@ -25,7 +25,7 @@ axios.interceptors.response.use(
     if (error.response.status === 401) {
       localStorage.clear();
       sessionStorage.clear();
-      return (window.location.href = "/auth/login");
+      return (window.location.href = "/signin");
     }
     return Promise.reject(error);
   }
@@ -34,6 +34,12 @@ axios.interceptors.response.use(
 export const getProducts = async () => {
   return axios
     .get(`${ENDPOINT.GET_PRODUCTS}`)
+    .then((response) => response.data);
+};
+
+export const getProduct = async (id:string) => {
+  return axios
+    .get(`${ENDPOINT.GET_PRODUCT}/${id}`)
     .then((response) => response.data);
 };
 
