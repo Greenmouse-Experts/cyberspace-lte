@@ -24,7 +24,7 @@ function ProductOverview() {
           placeholder="Search products..."
         />
       </div>
-      <div className="flex items-start justify-between">
+      <div className="flex items-start justify-between gap-20">
         <ProductCategory data={category?.data} isLoading={loading} active={active} setActive={setActive}/>
         <div>
          <ProductView data={products?.data} active={active}/>

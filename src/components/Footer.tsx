@@ -33,7 +33,7 @@ function Footer() {
         <div className="flex flex-wrap md:justify-between justify-start md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
           <div>
             <p className="font-normal 2xl:text-[17px] text-white uppercase">
-              Customer Supports
+              Contact Us
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
@@ -43,9 +43,13 @@ function Footer() {
                   <br /> Island, Lagos, Nigeria
                 </NavLink>
               </li>
-              <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              {/* <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               For inquiries about our products:
-            </p>
+            </p> */}
+            <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <LuSmartphone size={20} />
+                <NavLink to="tel:02015159999 ">02015159999 </NavLink>
+              </li>
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               <LuSmartphone size={20} />
                 <NavLink to="tel:09076555350 ">09076555350 </NavLink>
@@ -55,10 +59,21 @@ function Footer() {
               <LuSmartphone size={20} />
                 <NavLink to="tel:09076555417 ">09076555417 </NavLink>
               </li>
-            
+             
+              {/* <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              Emails for customer care and enquiries
+            </p> */}
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <FaRegEnvelope size={20} />
+                <NavLink to="mailto:customercare_retail@cyberspace.net.ng  ">customercare_retail@cyberspace.net.ng  </NavLink>
+              </li>
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <FaRegEnvelope size={20} />
+                <NavLink to="mailto:lteretail@cyberspace.net.ng  ">lteretail@cyberspace.net.ng   </NavLink>
+              </li>
             </ul>
           </div>
-          <div>
+          {/* <div>
             <p className="font-normal 2xl:text-[17px] text-white uppercase">
             Customer service
             </p>
@@ -80,7 +95,7 @@ function Footer() {
               </li>
               
             </ul>
-          </div>
+          </div> */}
           <div>
             <p className="font-normal 2xl:text-[17px] text-white uppercase">
               Quick links
@@ -131,15 +146,15 @@ function Footer() {
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
               <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
-                <NavLink to="/">my account</NavLink>
+                <NavLink to="/signin">my account</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/cart">orders</NavLink>
+                <NavLink to="/cart">My cart</NavLink>
               </li>
               {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">wishlist</NavLink>
-              </li> */}
-              {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+              </li>
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">payment</NavLink>
               </li> */}
              
@@ -149,7 +164,7 @@ function Footer() {
 
         <div className="text-[#ADB7BC] flex justify-center items-center 2xl:py-10 py-6 border-t-[0.7px] border-grayPrimary mt-16">
           <p className="2xl:text-[12px] text-[10px] font-pSans">
-            © 2024 Cyberspace LTE. All Rights Reserved | Whistle Blower
+            © 2024 Cyberspace LTE. All Rights Reserved
           </p>
         </div>
       </footer>
