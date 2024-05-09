@@ -6,7 +6,7 @@ import {  DealerProps } from "./dealers.types";
 function DealerItem({dealer}:DealerProps) {
   return (
     <div className="border border-grey-400 p-4 rounded-2xl">
-      <div className="h-[100px] w-full rounded-xl bg-grey-300" />
+      {/* <div className="h-[100px] w-full rounded-xl bg-grey-300" /> */}
       <p className="text-xl text-bluePrimary font-normal py-3">
        {dealer.name}
       </p>

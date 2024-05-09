@@ -58,7 +58,7 @@ function DealersOverview() {
         </div>
 
         <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-8 ">
-          {dealers?.data?.map((dealer:DealerItemTypes) => <DealerItem dealer={dealer}  key={dealer.id}/>)}
+          {dealers?.data?.slice().reverse().map((dealer:DealerItemTypes) => <DealerItem dealer={dealer}  key={dealer.id}/>)}
       
         </div>
       </section>
