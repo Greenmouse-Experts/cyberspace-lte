@@ -57,7 +57,7 @@ function Footer() {
                 <NavLink to="tel:09076555417 ">09076555417 </NavLink>
               </li>
               <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1">
-              Customer Service
+              Customer Service :
             </p>
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1">
               <LuSmartphone size={20} />

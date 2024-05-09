@@ -1,13 +1,14 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { NavLink } from "react-router-dom";
-import { formatAsNgnMoney } from "../../utils/helpers";
 import { ProductItemType } from "../../contracts/product.";
+import {Tooltip} from "@material-tailwind/react"
+import { formatCurrency } from "../../utils/helpers";
 
 interface Props {
   data: ProductItemType;
 }
 const ProductItem: FC<Props> = ({ data }) => {
-  const [tooltip, setTooltip] = useState(false);
+ 
   
 
   const { product_name, price, images, id } = data;
@@ -21,25 +22,30 @@ const ProductItem: FC<Props> = ({ data }) => {
         {product_name}
       </p>
       <p className="2xl:text-[22px] text-base font-semibold text-[#222222] mt-3">
-        {formatAsNgnMoney(price)}
+        {formatCurrency(price)}
       </p>
+      <Tooltip
+                  placement="bottom"
+                  className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
+                  content={
+                    <div className="w-80">
+                      <p className="font-normal opacity-80 text-gray-500">
+                        Note ${formatCurrency(price)} is is only for the
+                        product not with installation
+                      </p>
+                    </div>
+                  }
+                >
       <NavLink
-        onMouseLeave={() => setTooltip(false)}
+      
         to={`/product/${id}`}
         className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
       >
-      <span  onMouseEnter={() => setTooltip(true)}>
+     
       Buy Now
-      </span>
+      
       </NavLink>
-      {tooltip && price == 122000 && (
-        <div className="absolute bg-[#fffffff0] shadow-xl p-4 bottom-20">
-          <p className="text-redPrimary">
-            <span className="font-medium">Note:</span> The price{" "}
-            {formatAsNgnMoney(price)} is only for product not with installation
-          </p>
-        </div>
-      )}
+      </Tooltip>
     </div>
   );
 };

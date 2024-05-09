@@ -10,11 +10,10 @@ import Advert from "../Advert";
 import { useProducts } from "../../features/cart/useProducts";
 import { ProductItemType } from "../../contracts/product.";
 import { formatCurrency } from "../../utils/helpers";
-import { useState } from "react";
+import { Tooltip } from "@material-tailwind/react";
 
 function Deals() {
   const location = useLocation();
-  const [tooltip, setTooltip] = useState(false);
 
   const handleScroll = (id: string) => {
     const targetElement = document.getElementById(id);
@@ -38,7 +37,10 @@ function Deals() {
 
         <div className="grid lg:grid-cols-2 grid-cols-1 items-center lg:text-[1.3rem] text-sm justify-center gap-8 mt-16">
           {products?.data?.slice(0, 2).map((product: ProductItemType) => (
-            <div key={product.id} className="flex sm:flex-row flex-col items-center gap-8 p-2 sm:h-[19rem] h-[25] rounded-[20px] border-[1.6px] border-[#008ECC] pb-3 overflow-hidden relative">
+            <div
+              key={product.id}
+              className="flex sm:flex-row flex-col items-center gap-8 p-2 sm:h-[19rem] h-[25] rounded-[20px] border-[1.6px] border-[#008ECC] pb-3 overflow-hidden relative"
+            >
               <div className="bg-[#E4E7E9] sm:w-[45%] w-full h-full  rounded-2xl flex justify-center items-center">
                 <img
                   src={JSON.parse(product.images)[0]}
@@ -55,23 +57,26 @@ function Deals() {
                   {formatCurrency(product.price)}
                 </p>
 
-                <NavLink
-                 onMouseEnter={() => setTooltip(true)}
-                  to={`/product/${product.id}`}
-                  className="2xl:text-lg text-sm bg-[#008ECC] py-[10px]  rounded-[20px] text-white my-2 text-center"
+                <Tooltip
+                  placement="bottom"
+                  className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
+                  content={
+                    <div className="w-80">
+                      <p className="font-normal opacity-80 text-gray-500">
+                        Note ${formatCurrency(product.price)} is is only for the
+                        product not with installation
+                      </p>
+                    </div>
+                  }
                 >
-                  <span onMouseLeave={() => setTooltip(true)} > Buy Now</span>
-                </NavLink>
+                  <NavLink
+                    to={`/product/${product.id}`}
+                    className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
+                  >
+                    Buy Now
+                  </NavLink>
+                </Tooltip>
               </div>
-              {tooltip && product.price == 122000 && (
-                <div className="absolute bg-[#fffffff0] shadow-xl p-4 bottom-20">
-                  <p className="text-redPrimary">
-                    <span className="font-medium">Note:</span> The price{" "}
-                    {formatCurrency(product.price)} is only for product not with
-                    installation
-                  </p>
-                </div>
-              )}
             </div>
           ))}
         </div>
