@@ -25,6 +25,9 @@ function Header() {
         <p className=""> Welcome to Cyberspace LTE!</p>
 
         <div className="flex gap-6 items-center font-sora 2xl:text-[18px] sm:text-[12px] text-[5px] text-white">
+         <NavLink to="/dealers" className="border-r pr-6">
+Dealers
+         </NavLink>
           <div className="flex gap-1 items-centerpr-4">
             <CiLocationOn color="white" size={22} />
             <p className="font-[300]">
