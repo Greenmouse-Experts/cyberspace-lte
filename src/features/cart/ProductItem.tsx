@@ -17,26 +17,28 @@ const ProductItem: FC<Props> = ({ data }) => {
         <img src={renderImg} alt="" className="max-w-[95%] max-h-[95%]" />
       </div>
       {price == 122000 && (
-        <Tooltip
-          placement="top"
-          className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
-          content={
-            <div className="w-80">
-              <p className="font-normal opacity-80 text-redPrimary">
-                Note {formatCurrency(price)} is only for the product not with
-                installation
-              </p>
-            </div>
-          }
-        >
-         <span>
+       <div className=" absolute top-4 right-4 ">
+       <Tooltip
+       placement="top"
+       className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
+       content={
+         <div className="w-80">
+           <p className="font-normal opacity-80 text-redPrimary">
+             Note {formatCurrency(price)} is only for the
+             product not with installation
+           </p>
+         </div>
+       }
+     >
+       <span>
          <FaInfoCircle
-            color="red"
-            size={20}
-            className="absolute top-2 right-2 cursor-pointer"
-          />
-         </span>
-        </Tooltip>
+           color="red"
+           size={20}
+           className=" cursor-pointer"
+         />
+       </span>
+     </Tooltip>
+   </div>
       )}
       <p className="2xl:text-lg text-center text-sm font-semibold text-[#222222] mt-3">
         {product_name}

@@ -50,7 +50,8 @@ function Deals() {
                 />
               </div>
               {product.price == 122000 && (
-                  <Tooltip
+                <div className=" absolute top-4 right-4 ">
+                    <Tooltip
                     placement="top"
                     className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
                     content={
@@ -66,10 +67,11 @@ function Deals() {
                       <FaInfoCircle
                         color="red"
                         size={20}
-                        className="absolute top-2 right-2 cursor-pointer"
+                        className=" cursor-pointer"
                       />
                     </span>
                   </Tooltip>
+                </div>
                 )}
               <div className=" flex flex-col gap-3 sm:w-[55%] w-full pr-8">
                 <p className="2xl:text-lg text-sm font-semibold text-[#222222]">
