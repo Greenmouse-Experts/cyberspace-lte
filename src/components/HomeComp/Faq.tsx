@@ -10,7 +10,7 @@ function Faq() {
       </h4>
       <FaqItem
         open={true}
-        title="“How do I subscribe to the Cyberspace Superfast Service"
+        title="“How do I subscribe to the Cyberspace Superfast Service?"
         answer={
           <div>
             <p>
@@ -21,7 +21,7 @@ function Faq() {
       />
       <FaqItem
         open={false}
-        title="How do I renew my subscription via the selfcare portal"
+        title="How do I renew my subscription via the selfcare portal?"
         answer={
           <List
             items={[

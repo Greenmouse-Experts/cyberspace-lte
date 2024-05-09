@@ -44,12 +44,9 @@ function Footer() {
                 </NavLink>
               </li>
               <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
-              For inquiries about our products:
+              For enquiries about our products:
             </p>
-            <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
-              <LuSmartphone size={20} />
-                <NavLink to="tel:02015159999 ">02015159999 </NavLink>
-              </li>
+           
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               <LuSmartphone size={20} />
                 <NavLink to="tel:09076555350 ">09076555350 </NavLink>
@@ -58,6 +55,13 @@ function Footer() {
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               <LuSmartphone size={20} />
                 <NavLink to="tel:09076555417 ">09076555417 </NavLink>
+              </li>
+              <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              Contact Us
+            </p>
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <LuSmartphone size={20} />
+                <NavLink to="tel:02015159999 ">02015159999 </NavLink>
               </li>
              
               <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
