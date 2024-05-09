@@ -70,13 +70,13 @@ function LoginForm() {
   }
 
   return (
-    <section className="grid lg:grid-cols-2 grid-cols-1 mx-0 font-inter">
-      <div className="md:w-[580px] w-full md:p-0 p-5 flex justify-center items-center mx-auto">
-        <form onSubmit={handleSubmit(onSubmit)}>
+    <section className="flex items-center h-full  mx-0 font-inter lg:py-20">
+   
+        <form onSubmit={handleSubmit(onSubmit)} className="md:w-[35rem] bg-white w-full px-5 py-10 flex flex-col justify-center items-center mx-auto h-auto ">
         <NavLink to="/">
           <img src="/logo.svg" alt="logo" className="mb-10" />
         </NavLink>
-          <div>
+          <div className="flex flex-col gap-4 w-full">
             <h2 className="text-[40px] font-bold tracking-[-2px] mb-2">
               Sign in
             </h2>
@@ -84,7 +84,7 @@ function LoginForm() {
               Please login to continue to your account.
             </p>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-7 ">
               <TextField
                 id="outlined-basic"
                 label="Email"
@@ -153,10 +153,7 @@ function LoginForm() {
             </p>
           </div>
         </form>
-      </div>
-      <div className="bg-[#F5FBFE] lg:flex justify-center items-center hidden">
-        <img src="/img/signin.png" alt="" />
-      </div>
+    
     </section>
   );
 }

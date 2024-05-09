@@ -5,7 +5,7 @@ import SignupForm from "../features/auth/SignupForm";
 function Signup() {
   
   return (
-    <main className="h-full dark:bg-darkMood transition-all">
+    <main className="bg-bluePrimary  h-full transition-all">
   <SignupForm/>
     </main>
   );
