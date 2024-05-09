@@ -26,9 +26,9 @@ function Header() {
 
         <div className="flex gap-6 items-center font-sora 2xl:text-[18px] sm:text-[12px] text-[5px] text-white">
          <NavLink to="/dealers" className="border-r pr-6">
-Dealers
+Our Dealers
          </NavLink>
-          <div className="flex gap-1 items-centerpr-4">
+          <div className="flex gap-1 items-center pr-4">
             <CiLocationOn color="white" size={22} />
             <p className="font-[300]">
               12 Ologun Agbaje Street, Victoria Island, Lagos, Nigeria
@@ -52,7 +52,7 @@ Dealers
           >
             <ul className="flex gap-4 md:flex-row flex-col md:items-center   text-[#666666] dark:text-white font-bold">
             <li className="">
-                <NavLink onClick={() => setmMenu(false)} to="/about">
+                <NavLink onClick={() => setmMenu(false)} to="/about" >
                   About Us
                 </NavLink>{" "}
               </li>
