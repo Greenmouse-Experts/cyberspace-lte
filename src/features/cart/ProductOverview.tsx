@@ -4,12 +4,17 @@ import { useProducts } from "./useProducts";
 import { useState } from "react";
 import { useCategory } from "./useCategory";
 import ProductView from "./ProductView";
+import Loader from "../../components/Loader";
 
 function ProductOverview() {
 
-  const { products } = useProducts()
+  const { products, isLoading } = useProducts()
   const { category, isLoading:loading} = useCategory()
   const [active, setActive] = useState(0)
+
+
+  if (loading || isLoading) return <Loader/>
+
   return (
     <section className="mt-20">
       <div className="sm:w-[400px] w-full mb-20 2xl:h-[60px] h-[40px] relative lg:block hidden">
@@ -24,11 +29,11 @@ function ProductOverview() {
           placeholder="Search products..."
         />
       </div>
-      <div className="flex items-start justify-between gap-20">
+      <div className="flex lg:flex-row flex-col items-start justify-between gap-20">
         <ProductCategory data={category?.data} isLoading={loading} active={active} setActive={setActive}/>
-        <div>
+      
          <ProductView data={products?.data} active={active}/>
-        </div>
+      
       </div>
     </section>
   );
