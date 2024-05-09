@@ -139,104 +139,104 @@ function SignupForm() {
             </div>
 
             <div className="flex lg:flex-row flex-col gap-6">
-            <TextField
-              id="outlined-basic"
-              label="Email Address"
-              type="email"
-              variant="outlined"
-              error={!!errors.email}
-              disabled={isLoading}
-              helperText={errors?.email?.message}
-              {...register("email", { required: "Email is required" })}
-              style={{ width: "100%", height: 60, borderRadius: "10px" }}
-            />
-
-            <TextField
-              id="outlined-basic"
-              label="Phone Number"
-              variant="outlined"
-              error={!!errors.phone_number}
-              disabled={isLoading}
-              helperText={errors?.phone_number?.message}
-              {...register("phone_number", {
-                required: "phone_number is required",
-              })}
-              style={{ width: "100%", height: 60, borderRadius: "10px" }}
-            />
-</div>
-
-<div className="flex lg:flex-row flex-col gap-6">
-            <FormControl sx={{ width: "100%" }} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-password">
-                Password
-              </InputLabel>
-              <OutlinedInput
-                style={{ width: "100%", height: 60, borderRadius: "10px" }}
-                id="outlined-adornment-password"
-                type={showPassword ? "text" : "password"}
-                {...register("password", {
-                  required: "This field is required",
-                  minLength: {
-                    value: 8,
-                    message: "Password needs a minimum of 8 characters",
-                  },
-                })}
+              <TextField
+                id="outlined-basic"
+                label="Email Address"
+                type="email"
+                variant="outlined"
+                error={!!errors.email}
                 disabled={isLoading}
-                helperText={errors?.password?.message}
-                error={!!errors.password}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
-                      edge="end"
-                    >
-                      {showPassword ? <MdVisibility /> : <MdVisibilityOff />}
-                    </IconButton>
-                  </InputAdornment>
-                }
-                label="Password"
-              />
-            </FormControl>
-            <FormControl sx={{ width: "100%" }} variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-password">
-                Confirm Password
-              </InputLabel>
-              <OutlinedInput
+                helperText={errors?.email?.message}
+                {...register("email", { required: "Email is required" })}
                 style={{ width: "100%", height: 60, borderRadius: "10px" }}
-                id="outlined-adornment-password"
-                type={showpassword_confirmation ? "text" : "password"}
-                helperText={errors?.password_confirmation?.message}
-                error={!!errors.password_confirmation}
-                disabled={isLoading}
-                {...register("password_confirmation", {
-                  required: "This field is required",
-                  validate: (val: string) => {
-                    if (watch("password") != val) {
-                      return "Your passwords do no match";
-                    }
-                  },
-                })}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowpassword_confirmation}
-                      onMouseDown={handleMouseDownPassword}
-                      edge="end"
-                    >
-                      {showpassword_confirmation ? (
-                        <MdVisibility />
-                      ) : (
-                        <MdVisibilityOff />
-                      )}
-                    </IconButton>
-                  </InputAdornment>
-                }
-                label="Password"
               />
-            </FormControl>
+
+              <TextField
+                id="outlined-basic"
+                label="Phone Number"
+                variant="outlined"
+                error={!!errors.phone_number}
+                disabled={isLoading}
+                helperText={errors?.phone_number?.message}
+                {...register("phone_number", {
+                  required: "phone_number is required",
+                })}
+                style={{ width: "100%", height: 60, borderRadius: "10px" }}
+              />
+            </div>
+
+            <div className="flex lg:flex-row flex-col gap-6">
+              <FormControl sx={{ width: "100%" }} variant="outlined">
+                <InputLabel htmlFor="outlined-adornment-password">
+                  Password
+                </InputLabel>
+                <OutlinedInput
+                  style={{ width: "100%", height: 60, borderRadius: "10px" }}
+                  id="outlined-adornment-password"
+                  type={showPassword ? "text" : "password"}
+                  {...register("password", {
+                    required: "This field is required",
+                    minLength: {
+                      value: 8,
+                      message: "Password needs a minimum of 8 characters",
+                    },
+                  })}
+                  disabled={isLoading}
+                  helperText={errors?.password?.message}
+                  error={!!errors.password}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                        edge="end"
+                      >
+                        {showPassword ? <MdVisibility /> : <MdVisibilityOff />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
+                />
+              </FormControl>
+              <FormControl sx={{ width: "100%" }} variant="outlined">
+                <InputLabel htmlFor="outlined-adornment-password">
+                  Confirm Password
+                </InputLabel>
+                <OutlinedInput
+                  style={{ width: "100%", height: 60, borderRadius: "10px" }}
+                  id="outlined-adornment-password"
+                  type={showpassword_confirmation ? "text" : "password"}
+                  helperText={errors?.password_confirmation?.message}
+                  error={!!errors.password_confirmation}
+                  disabled={isLoading}
+                  {...register("password_confirmation", {
+                    required: "This field is required",
+                    validate: (val: string) => {
+                      if (watch("password") != val) {
+                        return "Your passwords do no match";
+                      }
+                    },
+                  })}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowpassword_confirmation}
+                        onMouseDown={handleMouseDownPassword}
+                        edge="end"
+                      >
+                        {showpassword_confirmation ? (
+                          <MdVisibility />
+                        ) : (
+                          <MdVisibilityOff />
+                        )}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
+                />
+              </FormControl>
             </div>
             <div className="flex gap-2">
               <input
@@ -248,7 +248,7 @@ function SignupForm() {
               <label htmlFor="checkbox" className="text-[#232323] font-normal">
                 I agree to{" "}
                 <span className="text-bluePrimary underline">
-                  Terms and Conditions
+                  <NavLink to="/terms-conditions">Terms and Conditions</NavLink>
                 </span>
               </label>
             </div>
