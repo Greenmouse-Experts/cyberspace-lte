@@ -57,25 +57,34 @@ function Deals() {
                   {formatCurrency(product.price)}
                 </p>
 
-                <Tooltip
-                  placement="bottom"
-                  className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
-                  content={
-                    <div className="w-80">
-                      <p className="font-normal opacity-80 text-gray-500">
-                        Note ${formatCurrency(product.price)} is is only for the
-                        product not with installation
-                      </p>
-                    </div>
-                  }
-                >
+                {product.price == 122000 ? (
+                  <Tooltip
+                    placement="top"
+                    className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
+                    content={
+                      <div className="w-80">
+                        <p className="font-normal opacity-80 text-redPrimary">
+                          Note {formatCurrency(product.price)} is only for the product
+                          not with installation
+                        </p>
+                      </div>
+                    }
+                  >
+                    <NavLink
+                      to={`/product/${product.id}`}
+                      className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
+                    >
+                      Buy Now
+                    </NavLink>
+                  </Tooltip>
+                ) : (
                   <NavLink
                     to={`/product/${product.id}`}
                     className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
                   >
                     Buy Now
                   </NavLink>
-                </Tooltip>
+                )}
               </div>
             </div>
           ))}
