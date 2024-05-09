@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { ProductItemType } from "../../contracts/product.";
 import { Tooltip } from "@material-tailwind/react";
 import { formatCurrency } from "../../utils/helpers";
+import { FaInfoCircle } from "react-icons/fa";
 
 interface Props {
   data: ProductItemType;
@@ -15,36 +16,41 @@ const ProductItem: FC<Props> = ({ data }) => {
       <div className="bg-[#E4E7E9] w-full flex items-center justify-center xl:h-64 md:h-52 sm:h-48 h-44 px-5">
         <img src={renderImg} alt="" className="max-w-[95%] max-h-[95%]" />
       </div>
+      {price == 122000 && (
+        <Tooltip
+          placement="top"
+          className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
+          content={
+            <div className="w-80">
+              <p className="font-normal opacity-80 text-redPrimary">
+                Note {formatCurrency(price)} is only for the product not with
+                installation
+              </p>
+            </div>
+          }
+        >
+         <span>
+         <FaInfoCircle
+            color="red"
+            size={20}
+            className="absolute top-2 right-2 cursor-pointer"
+          />
+         </span>
+        </Tooltip>
+      )}
       <p className="2xl:text-lg text-center text-sm font-semibold text-[#222222] mt-3">
         {product_name}
       </p>
       <p className="2xl:text-[22px] text-base font-semibold text-[#222222] mt-3">
         {formatCurrency(price)}
       </p>
-     {price  == 122000 ?  <Tooltip
-        placement="top"
-        className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
-        content={
-          <div className="w-80">
-            <p className="font-normal opacity-80 text-redPrimary">
-              Note {formatCurrency(price)} is only for the product not with
-              installation
-            </p>
-          </div>
-        }
+     
+      <NavLink
+        to={`/product/${id}`}
+        className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
       >
-        <NavLink
-          to={`/product/${id}`}
-          className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
-        >
-          Buy Now
-        </NavLink>
-      </Tooltip> :   <NavLink
-          to={`/product/${id}`}
-          className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
-        >
-          Buy Now
-        </NavLink>}
+        Buy Now
+      </NavLink>
     </div>
   );
 };

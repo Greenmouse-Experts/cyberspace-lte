@@ -11,6 +11,7 @@ import { useProducts } from "../../features/cart/useProducts";
 import { ProductItemType } from "../../contracts/product.";
 import { formatCurrency } from "../../utils/helpers";
 import { Tooltip } from "@material-tailwind/react";
+import { FaInfoCircle } from "react-icons/fa";
 
 function Deals() {
   const location = useLocation();
@@ -48,6 +49,28 @@ function Deals() {
                   className="w-[85%]"
                 />
               </div>
+              {product.price == 122000 && (
+                  <Tooltip
+                    placement="top"
+                    className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
+                    content={
+                      <div className="w-80">
+                        <p className="font-normal opacity-80 text-redPrimary">
+                          Note {formatCurrency(product.price)} is only for the
+                          product not with installation
+                        </p>
+                      </div>
+                    }
+                  >
+                    <span>
+                      <FaInfoCircle
+                        color="red"
+                        size={20}
+                        className="absolute top-2 right-2 cursor-pointer"
+                      />
+                    </span>
+                  </Tooltip>
+                )}
               <div className=" flex flex-col gap-3 sm:w-[55%] w-full pr-8">
                 <p className="2xl:text-lg text-sm font-semibold text-[#222222]">
                   {product.product_name}
@@ -57,34 +80,13 @@ function Deals() {
                   {formatCurrency(product.price)}
                 </p>
 
-                {product.price == 122000 ? (
-                  <Tooltip
-                    placement="top"
-                    className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
-                    content={
-                      <div className="w-80">
-                        <p className="font-normal opacity-80 text-redPrimary">
-                          Note {formatCurrency(product.price)} is only for the product
-                          not with installation
-                        </p>
-                      </div>
-                    }
-                  >
-                    <NavLink
-                      to={`/product/${product.id}`}
-                      className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
-                    >
-                      Buy Now
-                    </NavLink>
-                  </Tooltip>
-                ) : (
-                  <NavLink
-                    to={`/product/${product.id}`}
-                    className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
-                  >
-                    Buy Now
-                  </NavLink>
-                )}
+               
+                <NavLink
+                  to={`/product/${product.id}`}
+                  className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
+                >
+                  Buy Now
+                </NavLink>
               </div>
             </div>
           ))}
