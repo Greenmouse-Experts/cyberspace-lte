@@ -19,7 +19,7 @@ export interface ProductItemType {
   display: string;
   id: number;
   images: string;
-  price: string;
+  price: number;
   product_name: string;
   specification: string;
   updated_at: string;
