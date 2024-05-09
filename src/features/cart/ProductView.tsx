@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
+import { ProductItemType } from "../../contracts/product.";
 
 interface Props {
   data: ProductItemType[];
