@@ -5,6 +5,7 @@ interface NetworkError {
   response: {
     data: {
       message: string;
+      code: number;
     };
   };
 }
@@ -16,7 +17,12 @@ export function useSignup() {
       toast.success("Account successfully created! Please verify your account ");
     },
     onError: (error:NetworkError) => {
-      toast.error(`${error.response.data.message}`);
+      if(error.response.data.code === 422){
+        toast.error(`Email Already Exists`);
+      }else{
+        toast.error(`${error.response.data.message}`);
+      }
+      
     },
   });
 

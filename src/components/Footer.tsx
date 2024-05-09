@@ -43,9 +43,9 @@ function Footer() {
                   <br /> Island, Lagos, Nigeria
                 </NavLink>
               </li>
-              {/* <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               For inquiries about our products:
-            </p> */}
+            </p>
             <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               <LuSmartphone size={20} />
                 <NavLink to="tel:02015159999 ">02015159999 </NavLink>
@@ -60,9 +60,9 @@ function Footer() {
                 <NavLink to="tel:09076555417 ">09076555417 </NavLink>
               </li>
              
-              {/* <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               Emails for customer care and enquiries
-            </p> */}
+            </p>
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2 text-wrap">
               <FaRegEnvelope size={20} />
                 <NavLink to="mailto:customercare_retail@cyberspace.net.ng" className="text-wrap">customercare_retail@cyberspace.net.ng  </NavLink>
