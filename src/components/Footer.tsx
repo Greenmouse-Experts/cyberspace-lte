@@ -63,9 +63,9 @@ function Footer() {
               {/* <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               Emails for customer care and enquiries
             </p> */}
-              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2 text-wrap">
               <FaRegEnvelope size={20} />
-                <NavLink to="mailto:customercare_retail@cyberspace.net.ng  ">customercare_retail@cyberspace.net.ng  </NavLink>
+                <NavLink to="mailto:customercare_retail@cyberspace.net.ng" className="text-wrap">customercare_retail@cyberspace.net.ng  </NavLink>
               </li>
               <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-2">
               <FaRegEnvelope size={20} />
