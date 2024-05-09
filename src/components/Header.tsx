@@ -92,13 +92,13 @@ function Header() {
             <div className="flex items-center gap-1 cursor-pointer" onClick={logout}>
               <FiUser color="#0094EF" size={25} />
               <p className="font-bold text-bluePrimary text-nowrap sm:block hidden">
-               {verifyUser ? "Client Logout": "Client Login"}
+               {verifyUser ? "Logout": "Selfcare Portal"}
               </p>
             </div>
             <div className="bg-[#D9D9D9] w-[2px]" />
             <li className=" text-grayPrimary font-bold dark:text-white ">
-                <NavLink onClick={() => setmMenu(false)} to="/dealers">
-                  Our dealers
+                <NavLink onClick={() => setmMenu(false)} to="/coverage">
+                  Coverage
                 </NavLink>{" "}
               </li>
           </div>

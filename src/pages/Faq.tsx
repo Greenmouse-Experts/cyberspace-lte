@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Banner from "../components/Banner";
 import FaqItem from "../components/HomeComp/FaqItem";
 import List from "../components/List";
@@ -11,64 +12,59 @@ function Faq() {
           Frequently Asked Questions
         </h4>
         <FaqItem
-          open={true}
-          title="How do I pay for the Cyberspace Superfast modem?"
-          answer={
-            <div>
-              <p className="mb-5">
-                Direct transfer to our Zenith bank account: 1014025067 /
-                Cyberspace Ltd-LTE / Zenith bank
-              </p>
-            </div>
-          }
-        />
-        <FaqItem
-          open={false}
-          title="How do I subscribe on my device?"
-          answer={
-            <List
-              items={[
-                "Direct transfer to our Zenith bank account:1014025067 Cyberspace Ltd-LTE Zenith ",
-                "Or via our self-care portal: http://selfcare.cyberspace.net.ng/",
-              ]}
-            />
-          }
-        />
-        <FaqItem
-          open={false}
-          title="How do I renew via the selfcare portal?"
-          answer={
-            <List
-              items={[
-                "Connect laptop to device via WIFI or LAN cable, logon to http://selfcare.cyberspace.net.ng/",
-                "Click My Account",
-                "Input username as email address and password (password was sent to email upon activation)",
-                "(If password is forgotten, click on forgot password so that a password reset mail be sent to email address)",
-                "Click Profile",
-                "Click Renew",
-                "Choose New Service Plan and Choose Period",
-                "Select Payment Method and click YES to Proceed",
-              ]}
-            />
-          }
-        />
-        <FaqItem
-          open={false}
-          title="How do I change my password for the indoor modem?"
-          answer={
-            <List
-              items={[
-                "Connect to the device, with the default password 12345678",
-                "Input the IP 192.168.1.1 ",
-                "Input username and password: admin/ admin ",
-                "It will show you a page where you click on WLAN ",
-                "Double click and go to where you will see the SSID ",
-                "Scroll down, you will see where the password is, click to view, then change to the preferred and apply ",
-                "Wait for about 5mins and check.",
-              ]}
-            />
-          }
-        />
+        open={true}
+        title="“How do I subscribe to the Cyberspace Superfast Service"
+        answer={
+          <div>
+            <p>
+            Contact us on our LiveChat on our website, give us a call at 09076555350 or 09076555417 or send us an e-mail at lteretail@cyberspace.net.ng.
+            </p>
+          </div>
+        }
+      />
+      <FaqItem
+        open={false}
+        title="How do I renew my subscription via the selfcare portal"
+        answer={
+          <List
+            items={[
+              "Direct transfer to our Zenith bank account:1014025067 Cyberspace Ltd-LTE Zenith. ",
+              "Or via our self-care portal: http://selfcare.cyberspace.net.ng/.",
+            ]}
+          />
+        }
+      />
+      <FaqItem
+        open={false}
+        title="How do I subscribe on my device?"
+        answer={
+        
+          <div>
+            <p>
+            Via our selfcare portal <span className="text-redPrimary"><NavLink to="https://selfcare.cyberspace.net.ng/lteselfcare/renewplan?">here</NavLink></span>.
+            </p>
+            <p>
+            Via direct transfer with the right details.
+            </p>
+          </div>
+        }
+      />
+      <FaqItem
+        open={false}
+        title="How do I change my password for the indoor modem?"
+        answer={
+          <List
+            items={[
+              "Connect to the device, with the default password 12345678.",
+              "Input the IP 192.168.1.1 ",
+              "Input username and password: admin/ admin.",
+              "It will show you a page where you click on WLAN. ",
+              "Double click and go to where you will see the SSID. ",
+              "Scroll down, you will see where the password is, click to view, then change to the preferred and apply.",
+            ]}
+          />
+        }
+      />
 
         <FaqItem
           open={false}

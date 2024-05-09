@@ -7,27 +7,34 @@ function About() {
       <section className="mt-10">
         <div className=" ">
           <p className="font-normal">
-            Cyberspace Superfast is a leading Internet Service Provider (ISP)
-            dedicated to delivering cutting-edge broadband solutions for homes
-            and small businesses. With a commitment to reliability, speed, and
-            customer satisfaction, we empower individuals and organizations to
-            thrive in the digital age. Our comprehensive range of services
-            ensures seamless connectivity, enabling our clients to maximize
-            productivity and enjoyment in their online experiences
+            Superfast is a leading Internet Service delivering cutting-edge
+            broadband solutions for homes and small businesses. Our services
+            offer a pinnacle of Internet hyper-speed. Superfast by Cyberspace
+            Limited, is your gateway to an immersive online experience. And,
+            we’re not just a service; we’re your most reliable teammate, the MVP
+            of ISPs. Our network is designed for the ultimate performance,
+            delivering the speed you need to stay ahead of the curve. For the
+            Nigerian youth carving their path, for the professionals shaping the
+            future, and for the businesses setting the trends, Superfast is the
+            name you can trust. With us, you’re not just online; you’re on a
+            winning streak. And when it comes to voice, our premium VOIP service
+            is the roar in the silence, connecting conversations with the
+            precision of a craftsman. Our VOIP service is the soundtrack to your
+            success, syncing with the heartbeat of nations around the world.
           </p>
         </div>
         <div className="flex md:flex-row flex-col gap-5 justify-between mt-10">
-          <div className=" bg-grey-300 md:w-[50%] ww-full rounded-xl px-5 py-8">
-            <h4 className="dark:!text-black">Mission</h4>
-            <p className="dark:!text-black">
+          <div className=" bg-bluePrimary md:w-[50%] ww-full rounded-xl px-5 py-8">
+            <h4 className="text-white">Mission</h4>
+            <p className="text-white">
               Investing in people and technology to deliver exceptional customer
               service.
             </p>
           </div>
 
-          <div className="bg-grey-300 md:w-[50%] w-full rounded-xl px-5 py-8">
-            <h4 className="dark:!text-black">Vision</h4>
-            <p className="dark:!text-black">
+          <div className="bg-bluePrimary md:w-[50%] w-full rounded-xl px-5 py-8">
+            <h4 className="text-white">Vision</h4>
+            <p className="text-white">
               To be the network and software solutions provider of choice in
               Nigeria.
             </p>

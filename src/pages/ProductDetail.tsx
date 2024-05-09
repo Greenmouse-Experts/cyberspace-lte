@@ -1,20 +1,28 @@
 import { useState } from "react";
-import { IoStar } from "react-icons/io5";
 import Banner from "../components/Banner";
 import { GoDotFill } from "react-icons/go";
 import { FiMinus, FiPlus } from "react-icons/fi";
+import { formatCurrency } from "../utils/helpers";
+// import { useParams } from "react-router-dom";
+// import { useProduct } from "../features/cart/useProduct";
 // import Tabs from "@mui/material/Tabs";
 // import Tab from "@mui/material/Tab";
 // import Box from "@mui/material/Box";
 
 function ProductDetail() {
+
+  // const {id} = useParams()
+
+  // const {product} = useProduct(id)
+
+  // console.log(product)
   const [quantity, setQuantity] = useState(1);
 
   const increment = () => {
     setQuantity(quantity + 1);
   };
   const decrement = () => {
-    if (quantity > 0) {
+    if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
@@ -73,22 +81,11 @@ function ProductDetail() {
         </div>
 
         <div className="flex flex-col gap-3 lg:w-[45%] w-full">
-          <p>
-            <span className="font-normal">Brand:</span> Cyberspace LTE
-          </p>
-          <p>
-            <span className="font-normal">Availability:</span> 19 Devices
-          </p>
+        
           <h3 className="font-medium text-3xl uppercase">
             Superfast broadband device + 70gb
           </h3>
-          <div className="flex gap-2 mt-1">
-            <IoStar color="#FFCC00" size={25} />
-            <IoStar color="#FFCC00" size={25} />
-            <IoStar color="#FFCC00" size={25} />
-            <IoStar color="#FFCC00" size={25} />
-            <IoStar color="#E4E7E9" size={25} />
-          </div>
+        
           <ul className="flex flex-col gap-2">
             <li className="text-lg font-[300] flex items-center gap-2">
               <span>
@@ -132,9 +129,9 @@ function ProductDetail() {
           </div> */}
           <p className="text-base font-normal">NGN(incl. of VAT) :</p>
           <div className="flex items-center gap-3">
-            <h4 className=" font-inter">₦28,500</h4>
+            <h4 className=" font-inter">{formatCurrency(28500 * quantity)}</h4>
             <h3 className="text-2xl text-grey-300 line-through font-inter">
-              ₦28,500
+              ₦50,000
             </h3>
           </div>
 
@@ -173,9 +170,9 @@ function ProductDetail() {
           <div>
             <h6 className={`sm:text-2xl text-sm font-medium pb-3 cursor-pointer ${value === 1 && 'border-b-[3px]'} border-bluePrimary`} onClick={() =>handleChange(1)}>Specification</h6>
           </div>
-          <div>
+          {/* <div>
             <h6 className={`sm:text-2xl text-sm font-medium pb-3 cursor-pointer ${value === 2 && 'border-b-[3px]'} border-bluePrimary`} onClick={() =>handleChange(2)}>Reviews</h6>
-          </div>
+          </div> */}
           <div>
             <h6 className={`sm:text-2xl text-sm font-medium pb-3 cursor-pointer ${value === 3 && 'border-b-[3px]'} border-bluePrimary`} onClick={() =>handleChange(3)}>Coverage</h6>
           </div>
@@ -190,7 +187,7 @@ function ProductDetail() {
               both personal and professional use. With its robust LTE
               capabilities, users can enjoy seamless online activities,
               including streaming, gaming, and browsing, without worrying about
-              data limitations. More ...
+              data limitations.
             </p>
           </section>
         </div>

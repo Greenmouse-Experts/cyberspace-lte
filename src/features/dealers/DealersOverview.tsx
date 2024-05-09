@@ -1,7 +1,15 @@
 import { BsSearch } from "react-icons/bs";
 import DealerItem from "./DealerItem";
+import { NavLink } from "react-router-dom";
+import { useDealers } from "./useDealers";
+import { DealerItemTypes } from "./dealers.types";
+import Loader from "../../components/Loader";
 
 function DealersOverview() {
+
+  const {dealers, isLoading}  = useDealers()
+
+  if (isLoading) return <Loader/>
   return (
     <>
       <section className="flex lg:flex-row flex-col items-center justify-between pt-20 font-inter bg-[#FCFCFC] dark:bg-darkMood">
@@ -15,14 +23,17 @@ function DealersOverview() {
           </p>
         </div>
 
-        <div className="lg:w-[48%] lg:mt-0 mt-5 w-full ">
-          <p className="font-normal">
+        <div className="lg:w-[48%] lg:mt-0 mb-5 w-full ">
+          <p className="font-normal mb-8">
             Click the buttons below to view the requirements of being a
             cyberspace dealer.
           </p>
-          <button className="border border-bluePrimary px-10 py-5 text-bluePrimary rounded-[50px] text-base mt-4">
+          <NavLink
+            to="/products"
+            className="border border-bluePrimary px-10 py-5 text-bluePrimary rounded-[50px] text-base"
+          >
             View Requirements {">"}
-          </button>
+          </NavLink>
         </div>
       </section>
       <section className="pt-20 bg-[#FCFCFC] dark:bg-darkMood">
@@ -47,14 +58,8 @@ function DealersOverview() {
         </div>
 
         <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-8 ">
-          <DealerItem />
-          <DealerItem />
-          <DealerItem />
-          <DealerItem />
-          <DealerItem />
-          <DealerItem />
-          <DealerItem />
-          <DealerItem />
+          {dealers?.data?.map((dealer:DealerItemTypes) => <DealerItem dealer={dealer}  key={dealer.id}/>)}
+      
         </div>
       </section>
     </>
