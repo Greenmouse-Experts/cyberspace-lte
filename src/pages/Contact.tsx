@@ -8,7 +8,7 @@ function Contact() {
       <section className="pt-20">
         <p className="font-normal md:text-lg">
           Experience the power of superfast internet with Cyberspace Superfast.
-          To learn more about our services or inquire about custom solutions for
+          To learn more about our services or enquire about custom solutions for
           your home or business, contact us today:
         </p>
       <div className="mt-10">
