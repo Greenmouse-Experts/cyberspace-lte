@@ -14,6 +14,8 @@ function Contact() {
       <div className="mt-10">
         <p><span className="font-medium capitalize">Address:</span> 12 Ologun Agbaje Street, off Adeola Odeku Street, Victoria Island, Lagos.</p>
         <p><span className="font-medium capitalize">phone:</span> 02015159999</p>
+        <p><span className="font-medium capitalize">sales phone number:</span> 09076555350, 09076555417</p>
+        
         <p><span className="font-medium capitalize">email:</span> <NavLink to="mailto:lteretail@cyberspace.net.ng">
                   lteretail@cyberspace.net.ng
                 </NavLink></p>
