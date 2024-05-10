@@ -68,8 +68,8 @@ function Deals() {
                         content={
                           <div className="w-80">
                             <p className="font-normal opacity-80 text-redPrimary">
-                              Note {formatCurrency(product.price)} is only for
-                              the product not with installation
+                            <span className="font-medium">Note:</span> {formatCurrency(product.price)} is only for
+                              the product not with installation.
                             </p>
                           </div>
                         }

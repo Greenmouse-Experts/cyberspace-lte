@@ -32,8 +32,8 @@ const ProductItem: FC<Props> = ({ data }) => {
               content={
                 <div className="w-80">
                   <p className="font-normal opacity-80 text-redPrimary">
-                    Note {formatCurrency(price)} is only for the product not
-                    with installation
+                    <span className="font-medium">Note:</span> {formatCurrency(price)} is only for the product not
+                    with installation.
                   </p>
                 </div>
               }
