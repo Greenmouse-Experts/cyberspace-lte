@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useDealers } from "./useDealers";
 import { DealerItemTypes } from "./dealers.types";
 import Loader from "../../components/Loader";
+import { IoIosArrowForward } from "react-icons/io";
 
 function DealersOverview() {
 
@@ -30,9 +31,9 @@ function DealersOverview() {
           </p>
           <NavLink
             to="/products"
-            className="border border-bluePrimary px-10 py-5 text-bluePrimary rounded-[50px] text-base"
+            className="border border-bluePrimary px-10 py-5 text-bluePrimary rounded-[50px] text-base flex items-center gap-2 w-fit"
           >
-            View Requirements {">"}
+            View Products <span> <IoIosArrowForward /></span>
           </NavLink>
         </div>
       </section>

@@ -8,7 +8,7 @@ function handleViewPlans(){
   return navigate("/personalplan");
 }
   return (
-    <section className="mt-20">
+    <section className="md:mt-40 mt-20">
      
 
       <div className="flex md:flex-row flex-col items-center justify-center gap-8 mt-10">
