@@ -3,20 +3,25 @@ import Banner from "../components/Banner";
 import { GoDotFill } from "react-icons/go";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { formatCurrency } from "../utils/helpers";
-// import { useParams } from "react-router-dom";
-// import { useProduct } from "../features/cart/useProduct";
+import { useProducts } from "../features/cart/useProducts";
+import { useParams } from "react-router-dom";
+import Loader from "../components/Loader";
+import { ProductItemType } from "../contracts/product.";
+
 // import Tabs from "@mui/material/Tabs";
 // import Tab from "@mui/material/Tab";
 // import Box from "@mui/material/Box";
 
 function ProductDetail() {
-
-  // const {id} = useParams()
-
-  // const {product} = useProduct(id)
-
-  // console.log(product)
   const [quantity, setQuantity] = useState(1);
+  const { id } = useParams();
+
+  const productId = id ? parseInt(id) : undefined;
+
+  const { products, isLoading } = useProducts();
+  const [value, setValue] = useState(0);
+
+  if (isLoading) return <Loader />;
 
   const increment = () => {
     setQuantity(quantity + 1);
@@ -27,7 +32,14 @@ function ProductDetail() {
     }
   };
 
-  const [value, setValue] = useState(0);
+  const product = products.data.filter(
+    (p: ProductItemType) => p.id == productId
+  );
+  console.log(product, id);
+
+  const {product_name, price, images} = product[0];
+ 
+  const renderImg = JSON.parse(images)[0];
 
   const handleChange = (newValue: number) => {
     setValue(newValue);
@@ -38,7 +50,7 @@ function ProductDetail() {
       <Banner title="internet routers" text=" Product / INTERNET ROUTERS" />
       <section className="mt-20 flex lg:flex-row flex-col items-start gap-10 font-inter">
         <div className="lg:w-[55%] w-full">
-          <div className="flex gap-5 md:flex-row flex-col-reverse items-start">
+          <div className="flex gap-5 md:flex-row flex-col-reverse items-start h-full">
             <div className="flex md:flex-col flex-row gap-5 ">
               <div className="border  border-bluePrimary p-2 sm:w-36 w-14">
                 <img
@@ -70,9 +82,9 @@ function ProductDetail() {
               </div>
             </div>
 
-            <div className="bg-grey-100 px-5 py-4 md:w-[80%] w-full">
+            <div className="bg-grey-100 px-5 py-4 md:w-[80%] w-full lg:h-[26rem] flex items-center justify-center h-full">
               <img
-                src="/img/product-1.png"
+                src={renderImg}
                 alt="product"
                 className="w-[80%] mx-auto"
               />
@@ -81,11 +93,10 @@ function ProductDetail() {
         </div>
 
         <div className="flex flex-col gap-3 lg:w-[45%] w-full">
-        
           <h3 className="font-medium text-3xl uppercase">
-            Superfast broadband device + 70gb
+            {product_name}
           </h3>
-        
+
           <ul className="flex flex-col gap-2">
             <li className="text-lg font-[300] flex items-center gap-2">
               <span>
@@ -129,7 +140,7 @@ function ProductDetail() {
           </div> */}
           <p className="text-base font-normal">NGN(incl. of VAT) :</p>
           <div className="flex items-center gap-3">
-            <h4 className=" font-inter">{formatCurrency(28500 * quantity)}</h4>
+            <h4 className=" font-inter">{formatCurrency(price * quantity)}</h4>
             <h3 className="text-2xl text-grey-300 line-through font-inter">
               ₦50,000
             </h3>
@@ -165,16 +176,37 @@ function ProductDetail() {
       <section className="mt-20 font-inter mx-0 flex w-full flex-col justify-center items-center">
         <div className="flex justify-center items-center md:gap-20 gap-10 border-b border-grey-400 w-screen no-scrollbar   overflow-x-scroll">
           <div>
-            <h6 className={`sm:text-2xl text-sm font-medium pb-3 cursor-pointer ${value === 0 && 'border-b-[3px]'} border-bluePrimary`} onClick={() =>handleChange(0)}>Description</h6>
+            <h6
+              className={`sm:text-2xl text-sm font-medium pb-3 cursor-pointer ${
+                value === 0 && "border-b-[3px]"
+              } border-bluePrimary`}
+              onClick={() => handleChange(0)}
+            >
+              Description
+            </h6>
           </div>
           <div>
-            <h6 className={`sm:text-2xl text-sm font-medium pb-3 cursor-pointer ${value === 1 && 'border-b-[3px]'} border-bluePrimary`} onClick={() =>handleChange(1)}>Specification</h6>
+            <h6
+              className={`sm:text-2xl text-sm font-medium pb-3 cursor-pointer ${
+                value === 1 && "border-b-[3px]"
+              } border-bluePrimary`}
+              onClick={() => handleChange(1)}
+            >
+              Specification
+            </h6>
           </div>
           {/* <div>
             <h6 className={`sm:text-2xl text-sm font-medium pb-3 cursor-pointer ${value === 2 && 'border-b-[3px]'} border-bluePrimary`} onClick={() =>handleChange(2)}>Reviews</h6>
           </div> */}
           <div>
-            <h6 className={`sm:text-2xl text-sm font-medium pb-3 cursor-pointer ${value === 3 && 'border-b-[3px]'} border-bluePrimary`} onClick={() =>handleChange(3)}>Coverage</h6>
+            <h6
+              className={`sm:text-2xl text-sm font-medium pb-3 cursor-pointer ${
+                value === 3 && "border-b-[3px]"
+              } border-bluePrimary`}
+              onClick={() => handleChange(3)}
+            >
+              Coverage
+            </h6>
           </div>
         </div>
 
