@@ -1,3 +1,4 @@
+import { FaChartLine, FaFontAwesomeFlag } from "react-icons/fa";
 import Banner from "../components/Banner";
 
 function About() {
@@ -25,7 +26,12 @@ function About() {
         </div>
         <div className="flex md:flex-row flex-col gap-5 justify-between mt-10">
           <div className=" bg-bluePrimary md:w-[50%] ww-full rounded-xl px-5 py-8">
-            <h4 className="text-white">Mission</h4>
+            <div className=" flex justify-between items-center">
+              <h4 className="text-white">Mission</h4>
+              <div className="bg-white rounded-full p-4">
+                <FaFontAwesomeFlag size={20} color="#0080CF" />
+              </div>
+            </div>
             <p className="text-white">
               Investing in people and technology to deliver exceptional customer
               service.
@@ -33,7 +39,13 @@ function About() {
           </div>
 
           <div className="bg-bluePrimary md:w-[50%] w-full rounded-xl px-5 py-8">
-            <h4 className="text-white">Vision</h4>
+            <div className=" flex justify-between items-center">
+              <h4 className="text-white">Vision</h4>
+              <div className="bg-white rounded-full p-4">
+                <FaChartLine size={20} color="#0080CF" />
+              </div>
+            </div>
+
             <p className="text-white">
               To be the network and software solutions provider of choice in
               Nigeria.
