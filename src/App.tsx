@@ -110,7 +110,7 @@ function App() {
         <Toaster
           position="top-center"
           gutter={12}
-          containerStyle={{ margin: "8px" }}
+          containerStyle={{ margin: "8px", top: 150 }}
           toastOptions={{
             success: { duration: 3000 },
             error: { duration: 5000 },
@@ -120,6 +120,7 @@ function App() {
               padding: "16px 24px",
               backgroundColor: "#fff",
               color: "#374151",
+              zIndex:9999999999,
             },
           }}
         />

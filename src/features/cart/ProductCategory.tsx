@@ -10,8 +10,8 @@ interface Props {
 const ProductCategory: FC<Props> = ({ data, isLoading, active, setActive }) => {
   return (
     <>
-      <div className=" bg-[#F3F9FB] h-full w-[30%] hidden lg:block px-4 pb-20 pt-5 rounded-md">
-        <h3 className=" border-b-4 border-black">Categories</h3>
+      <div className=" bg-[#F3F9FB] dark:bg-gray-900 h-full w-[30%] hidden lg:block px-4 pb-20 pt-5 rounded-md">
+        <h3 className=" border-b-4 border-black dark:border-white">Categories</h3>
         <div className="flex flex-col items-start gap-1 mt-10">
           <p
             onClick={() => setActive(0)}

@@ -29,7 +29,7 @@ function Footer() {
           </div>
         </div>
       </section>
-      <footer className="bg-[#191C1F] pt-16">
+      <footer className="bg-[url('/img/footer-bg-test.png')] bg-contain pt-16 w-full">
         <div className="flex flex-wrap md:justify-between justify-start md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
           <div>
             <p className="font-normal 2xl:text-[17px] text-white uppercase">
@@ -111,7 +111,12 @@ function Footer() {
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="/products">Shop Product</NavLink>
               </li>
-              
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/products">Services</NavLink>
+              </li>
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/products">About us</NavLink>
+              </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="/dealers">our dealers</NavLink>
               </li>
@@ -167,8 +172,8 @@ function Footer() {
         </div>
 
         <div className="text-[#ADB7BC] flex justify-center items-center 2xl:py-10 py-6 border-t-[0.7px] border-grayPrimary mt-16">
-          <p className="2xl:text-[12px] text-[10px] font-pSans">
-            © 2024 Cyberspace LTE. All Rights Reserved
+          <p className="2xl:text-base text-[10px] font-pSans">
+            © 2024 Cyberspace LTE. All Rights Reserved | Whistle Blower
           </p>
         </div>
       </footer>

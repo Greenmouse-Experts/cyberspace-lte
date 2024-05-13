@@ -7,6 +7,11 @@ import { useProducts } from "../features/cart/useProducts";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import { ProductItemType } from "../contracts/product.";
+import { addProduct, decreaseQuantity, increaseQuantity } from "../state/cart/cartSlice";
+import { useAppDispatch } from "../state/hooks";
+import { Tooltip } from "@material-tailwind/react";
+import { FaInfoCircle } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 // import Tabs from "@mui/material/Tabs";
 // import Tab from "@mui/material/Tab";
@@ -14,40 +19,61 @@ import { ProductItemType } from "../contracts/product.";
 
 function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
+  
   const { id } = useParams();
+  const dispatch = useAppDispatch()
 
   const productId = id ? parseInt(id) : undefined;
 
   const { products, isLoading } = useProducts();
+  
   const [value, setValue] = useState(0);
 
-  if (isLoading) return <Loader />;
-
+  
   const increment = () => {
+    dispatch(increaseQuantity(id))
+
     setQuantity(quantity + 1);
   };
   const decrement = () => {
+    dispatch(decreaseQuantity(id))
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
+  
+  if (isLoading) return <Loader />;
 
   const product = products.data.filter(
     (p: ProductItemType) => p.id == productId
   );
   console.log(product, id);
 
-  const {product_name, price, images} = product[0];
- 
+  const { product_name, price, images } = product[0];
+
   const renderImg = JSON.parse(images)[0];
 
   const handleChange = (newValue: number) => {
     setValue(newValue);
   };
 
+
+
+  const addToCart = () => {
+    dispatch( addProduct({
+      price:parseInt(price) * quantity,
+      name: product_name,
+      quantity:quantity,
+      productId: id ,
+      unitPrice:price,
+      image: renderImg,
+    }));
+    toast.success(`${product_name} added successfully`);
+  };
+
   return (
     <>
-      <Banner title="internet routers" text=" Product / INTERNET ROUTERS" />
+      <Banner title="internet routers" text={ `Product / ${product_name}`} />
       <section className="mt-20 flex lg:flex-row flex-col items-start gap-10 font-inter">
         <div className="lg:w-[55%] w-full">
           <div className="flex gap-5 md:flex-row flex-col-reverse items-start h-full">
@@ -83,19 +109,13 @@ function ProductDetail() {
             </div>
 
             <div className="bg-grey-100 px-5 py-4 md:w-[80%] w-full lg:h-[26rem] flex items-center justify-center h-full">
-              <img
-                src={renderImg}
-                alt="product"
-                className="w-[80%] mx-auto"
-              />
+              <img src={renderImg} alt="product" className="w-[80%] mx-auto" />
             </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-3 lg:w-[45%] w-full">
-          <h3 className="font-medium text-3xl uppercase">
-            {product_name}
-          </h3>
+          <h3 className="font-medium text-3xl uppercase">{product_name}</h3>
 
           <ul className="flex flex-col gap-2">
             <li className="text-lg font-[300] flex items-center gap-2">
@@ -140,7 +160,34 @@ function ProductDetail() {
           </div> */}
           <p className="text-base font-normal">NGN(incl. of VAT) :</p>
           <div className="flex items-center gap-3">
-            <h4 className=" font-inter">{formatCurrency(price * quantity)}</h4>
+
+         
+         <h4 className=" font-inter">{formatCurrency(price * quantity)}</h4>
+            {price == 122000 && (
+          <div className=" bottom-4 right-2 ">
+            <Tooltip
+              placement="top"
+              className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
+              content={
+                <div className="w-80">
+                  <p className="font-normal opacity-80 text-redPrimary">
+                    <span className="font-medium">Note:</span> {formatCurrency(price)} is only for the product not
+                    with installation.
+                  </p>
+                </div>
+              }
+            >
+              <span>
+                <FaInfoCircle
+                  color="red"
+                  size={20}
+                  className=" cursor-pointer"
+                />
+              </span>
+            </Tooltip>
+          </div>
+        )}
+        
             <h3 className="text-2xl text-grey-300 line-through font-inter">
               ₦50,000
             </h3>
@@ -167,7 +214,7 @@ function ProductDetail() {
             <button className="  text-white bg-bluePrimary  md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary">
               Buy Now
             </button>
-            <button className=" text-bluePrimary md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary">
+            <button  onClick={addToCart} className=" text-bluePrimary md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary">
               Add to Cart
             </button>
           </div>

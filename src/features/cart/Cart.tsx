@@ -1,16 +1,24 @@
+import { useSelector } from "react-redux";
 import Button from "../../components/Button";
 import { formatCurrency } from "../../utils/helpers";
 import CartItem from "./CartItem";
+import { CartItemTyping, getCart, getTotalCartPrice } from "../../state/cart/cartSlice";
 
 function Cart() {
+  const cartItems = useSelector(getCart);
+  const totalPrice = useSelector(getTotalCartPrice);
+
+  console.log(cartItems);
   return (
     <section className=" font-inter flex lg:flex-row flex-col mt-16 gap-20">
       <div className="lg:w-[55%] w-full">
         <h3 className="uppercase font-medium">SHOPPING CART</h3>
         <div className="mt-5">
-          <CartItem />
-          <CartItem />
-          <CartItem />
+          {cartItems.items.map((item:CartItemTyping) => (
+            <CartItem item={item} key={item.productId} />
+          ))}
+          {/* <CartItem />
+          <CartItem /> */}
         </div>
       </div>
 
@@ -34,7 +42,9 @@ function Cart() {
           <div className="mt-10 flex flex-col gap-5">
             <div className="flex justify-between">
               <span className="text-2xl font-medium">Subtotal</span>{" "}
-              <span className="text-[22px] font-medium">{formatCurrency(2800)}</span>
+              <span className="text-[22px] font-medium">
+                {formatCurrency(totalPrice)}
+              </span>
             </div>
             <div className="flex justify-between">
               <span className="text-lg font-[300] ">Estimated Tax</span>{" "}
@@ -46,7 +56,9 @@ function Cart() {
             </div>
             <div className="flex justify-between">
               <span className="text-2xl font-medium ">Total</span>{" "}
-              <span className="text-[22px] font-medium">{formatCurrency(2800)}</span>
+              <span className="text-[22px] font-medium">
+                {formatCurrency(totalPrice)}
+              </span>
             </div>
           </div>
 

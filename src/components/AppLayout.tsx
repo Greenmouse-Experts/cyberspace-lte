@@ -4,12 +4,14 @@ import { IoMdCart } from "react-icons/io";
 import Header from "./Header";
 import { useEffect } from "react";
 import nprogress from "nprogress";
-import useCart from "../hooks/useCart";
+import { useSelector } from "react-redux";
+import { getCart } from "../state/cart/cartSlice";
 
 function AppLayout() {
   const { pathname } = useLocation();
   const location = useLocation();
-  const {cartCount} = useCart()
+  const cartItems = useSelector(getCart);
+  const cartCount = cartItems.items.length;
 
   useEffect(() => {
     nprogress.start();
