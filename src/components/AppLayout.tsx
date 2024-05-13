@@ -30,9 +30,9 @@ function AppLayout() {
         <div className="bg-[#DE0F04] w-12 h-12 flex justify-center items-center fixed right-0 top-[50%] cursor-pointer ">
           <div className="relative">
             <NavLink to="/cart">
-              <IoMdCart color="white" size={30} />
+              <IoMdCart color="white" size={30}  />
             </NavLink>
-            {cartCount > 0  && <p className="absolute z-10 -top-6 -left-6 drop-shadow-lg w-7 h-7 !bg-[#ffff] rounded-full flex items-center justify-center font-semibold text-[14px]">{cartCount}</p>}
+            {cartCount > 0  && <p className="absolute z-10 -top-6 -left-6 drop-shadow-lg w-7 h-7 !bg-[#ffff] dark:!bg-gray-900  rounded-full flex items-center justify-center font-semibold text-[14px]">{cartCount}</p>}
           </div>
         </div>
       </main>
