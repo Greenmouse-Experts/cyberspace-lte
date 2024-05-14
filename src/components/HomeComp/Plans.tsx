@@ -19,7 +19,7 @@ function handleViewPlans(){
           <span className="text-bluePrimary"> Pricing</span>
         </h4>
         <p>Embark on your digital journey with confidence through our Starter Plans, meticulously crafted to meet your evolving needs.</p>
-        <NavLink to="/personalplan" className="flex items-center ">
+        <NavLink to="/personalplan" className="flex items-center mt-5">
           <p className="text-[#222222] sm:text-base text-[12px] font-medium text-nowrap capitalize">
             see more{" "}
           </p>
