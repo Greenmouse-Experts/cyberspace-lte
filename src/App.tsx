@@ -22,6 +22,7 @@ import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Products from "./pages/Products";
 import VerifyAccount from "./pages/VerifyAccount";
+import WhistleBlower from "./pages/WhistleBlower";
 
 
 const router = createBrowserRouter([
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+      },
+      {
+        path: "whistle-blower",
+        element: <WhistleBlower />,
       },
     ],
   },
