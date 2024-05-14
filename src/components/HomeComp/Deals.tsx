@@ -1,9 +1,4 @@
-import {
-  PiCreditCardThin,
-  PiHeadphonesThin,
-  PiTrophyThin,
-} from "react-icons/pi";
-import { FaTruckFast } from "react-icons/fa6";
+
 import { NavLink, useLocation } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import Advert from "../Advert";
@@ -11,7 +6,7 @@ import { useProducts } from "../../features/cart/useProducts";
 import { ProductItemType } from "../../contracts/product.";
 import { formatCurrency } from "../../utils/helpers";
 import { Tooltip } from "@material-tailwind/react";
-import { FaInfoCircle, FaRegCreditCard } from "react-icons/fa";
+import { FaInfoCircle } from "react-icons/fa";
 
 function Deals() {
   const location = useLocation();
