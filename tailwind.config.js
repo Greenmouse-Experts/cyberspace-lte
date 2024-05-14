@@ -12,6 +12,7 @@ export default {
         pSans: ['Montserrat', 'sans-serif'],
         mdSans: ['Montserrat', 'sans-serif'],
         inter: ['Montserrat', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
         grey:{
