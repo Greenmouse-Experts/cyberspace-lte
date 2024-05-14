@@ -25,7 +25,6 @@ function Deals() {
 
   const { products } = useProducts();
 
-  console.log(products);
 
   return (
     <>
@@ -64,10 +63,10 @@ function Deals() {
                     <div className=" bottom-0 right-4 ">
                       <Tooltip
                         placement="top"
-                        className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
+                        className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl dark:bg-darkMood shadow-black/10"
                         content={
                           <div className="w-80">
-                            <p className="font-normal opacity-80 text-redPrimary">
+                            <p className="font-normal opacity-80 text-redPrimary dark:!text-bluePrimary">
                             <span className="font-medium">Note:</span> {formatCurrency(product.price)} is only for
                               the product not with installation.
                             </p>
@@ -109,7 +108,7 @@ function Deals() {
           </NavLink>
         </div>
       </section>
-      <section className="border grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 sm:gap-3 gap-5 justify-center items-center lg:divide-x divide-grey-400 border-[#E4E7E9] rounded-[10px] px-10 py-10 jus mt-20 font-pSans mb-20">
+      <section className="border grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 sm:gap-3 gap-5 justify-center items-center  rounded-[10px] px-10 py-10 jus mt-20 font-pSans mb-20">
         <div className="flex items-center gap-3">
           <PiPackageLight size={40} />
           <div>

@@ -36,7 +36,7 @@ function Footer() {
               Contact Us
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
-              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1 ml-2">
               <GrLocation size={20} />
                 <NavLink to="/">
                   12 Ologun Agbaje Street, Victoria
@@ -47,19 +47,19 @@ function Footer() {
               For enquiries about our products:
             </p>
            
-              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
               <LuSmartphone size={20} />
                 <NavLink to="tel:09076555350 ">09076555350 </NavLink>
               </li>
          
-              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
               <LuSmartphone size={20} />
                 <NavLink to="tel:09076555417 ">09076555417 </NavLink>
               </li>
-              <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1">
+              <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
               Customer Service :
             </p>
-              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
               <LuSmartphone size={20} />
                 <NavLink to="tel:02015159999 ">02015159999 </NavLink>
               </li>
@@ -67,11 +67,11 @@ function Footer() {
               <p className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1">
               Emails for customer care and enquiries
             </p>
-              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1 text-wrap">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1 text-wrap  ml-2">
               <FaRegEnvelope size={20} />
                 <NavLink to="mailto:customercare_retail@cyberspace.net.ng" className="text-wrap">customercare_retail@cyberspace.net.ng  </NavLink>
               </li>
-              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1">
+              <li className="text-[16px] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
               <FaRegEnvelope size={20} />
                 <NavLink to="mailto:lteretail@cyberspace.net.ng  ">lteretail@cyberspace.net.ng   </NavLink>
               </li>

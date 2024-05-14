@@ -28,10 +28,10 @@ const ProductItem: FC<Props> = ({ data }) => {
           <div className=" bottom-4 right-2 ">
             <Tooltip
               placement="top"
-              className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
+              className="border border-blue-gray-50 bg-white px-4 py-3 dark:bg-darkMood shadow-xl shadow-black/10"
               content={
                 <div className="w-80">
-                  <p className="font-normal opacity-80 text-redPrimary">
+                  <p className="font-normal opacity-80 text-redPrimary dark:!text-bluePrimary">
                     <span className="font-medium">Note:</span> {formatCurrency(price)} is only for the product not
                     with installation.
                   </p>

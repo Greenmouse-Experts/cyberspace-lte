@@ -35,7 +35,7 @@ const ProductCategory: FC<Props> = ({ data, isLoading, active, setActive }) => {
                 {item.name}
               </p>
             ))}
-            <NavLink to="/personalplan" className="px-3 py-2 cursor-pointer rounded-md w-full font-medium text-lg">Plans</NavLink>
+            <NavLink to="/personalplan" className="px-3 py-2 cursor-pointer rounded-md w-full font-medium text-lg dark:text-white">Plans</NavLink>
         </div>
       </div>
     <div className="lg:hidden block w-full">

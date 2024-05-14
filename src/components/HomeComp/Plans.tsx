@@ -15,8 +15,8 @@ function handleViewPlans(){
       <div className="flex justify-between flex-col md:w-[33%] w-full">
         <h4 className="text-grayPrimary font-semibold">
           {" "}
-          Our Starter Plans and
-          <span className="text-bluePrimary"> Data Pricing</span>
+          Our Data Plans and
+          <span className="text-bluePrimary"> Pricing</span>
         </h4>
         <p>Embark on your digital journey with confidence through our Starter Plans, meticulously crafted to meet your evolving needs.</p>
         <NavLink to="/personalplan" className="flex items-center ">
