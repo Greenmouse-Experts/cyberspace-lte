@@ -1,9 +1,9 @@
 import {
   PiCreditCardThin,
   PiHeadphonesThin,
-  PiPackageLight,
   PiTrophyThin,
 } from "react-icons/pi";
+import { FaTruckFast } from "react-icons/fa6";
 import { NavLink, useLocation } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import Advert from "../Advert";
@@ -11,7 +11,7 @@ import { useProducts } from "../../features/cart/useProducts";
 import { ProductItemType } from "../../contracts/product.";
 import { formatCurrency } from "../../utils/helpers";
 import { Tooltip } from "@material-tailwind/react";
-import { FaInfoCircle } from "react-icons/fa";
+import { FaInfoCircle, FaRegCreditCard } from "react-icons/fa";
 
 function Deals() {
   const location = useLocation();
@@ -110,7 +110,7 @@ function Deals() {
       </section>
       <section className="border grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 sm:gap-3 gap-5 justify-center items-center  rounded-[10px] px-10 py-10 jus mt-20 font-montserrat mb-20">
         <div className="flex items-center gap-3">
-          <PiPackageLight size={40} />
+        <img src="/icons/quality-4.png" alt="" className="w-10 h-10" />
           <div>
             <p className="2xl:text-lg text-sm text-[#222222]  font-normal">
               Fast Delivery
@@ -122,7 +122,7 @@ function Deals() {
         </div>
 
         <div className="flex items-center gap-3">
-          <PiTrophyThin size={40} />
+        <img src="/icons/quality-3.png" alt="" className="w-10 h-10" />
           <div>
             <p className="2xl:text-lg text-sm text-[#222222]  font-normal">
               Quality Devices
@@ -134,7 +134,7 @@ function Deals() {
         </div>
 
         <div className="flex items-center gap-3">
-          <PiCreditCardThin size={40} />
+        <img src="/icons/quality-2.png" alt="" className="w-10 h-10" />
           <div>
             <p className="2xl:text-lg text-sm text-[#222222]  font-normal">
               Secure Payment
@@ -146,10 +146,10 @@ function Deals() {
         </div>
 
         <div className="flex items-center gap-3">
-          <PiHeadphonesThin size={40} />
+          <img src="/icons/quality-1.png" alt="" className="w-10 h-10" />
           <div>
             <p className="2xl:text-lg text-sm text-[#222222]  font-normal">
-              Support 24/7
+              Support 24 Hours
             </p>
             <p className="2xl:text-sm text-[12px] text-lightGray font-normal">
               Live contact/message
