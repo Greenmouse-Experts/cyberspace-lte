@@ -13,18 +13,19 @@ function handleViewPlans(){
 
       <div className="flex md:flex-row flex-col items-center justify-center gap-8 mt-10">
       <div className="flex justify-between flex-col md:w-[33%] w-full">
-        <h4 className="text-grayPrimary font-semibold">
+        <h4 className="text-grayPrimary font-semibold mb-3">
           {" "}
           Our Data Plans and
           <span className="text-bluePrimary"> Pricing</span>
         </h4>
-        <p>Embark on your digital journey with confidence through our Starter Plans, meticulously crafted to meet your evolving needs.</p>
+        <p>Embark on your digital journey with confidence through our data plans, meticulously crafted to meet your evolving needs.</p>
         <NavLink to="/personalplan" className="flex items-center mt-5">
           <p className="text-[#222222] sm:text-base text-[12px] font-medium text-nowrap capitalize">
             see more{" "}
           </p>
           <MdOutlineKeyboardArrowRight color="#0080CF" size={25} />
         </NavLink>
+        
       </div>
         <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk shadow-lg">
           <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">

@@ -22,7 +22,7 @@ function Header() {
   return (
     <header className="fixed top-0 bg-white dark:bg-darkMood transition-colors z-[999999] right-0 w-full left-0">
       <div className=" justify-between items-center 2xl:py-2 py-2 2xl:px-28 md:px-24 xl:flex hidden  bg-bluePrimary text-white 2xl:text-[19px] text-[10px]  font-grotesk">
-        <p className=""> Welcome to Cyberspace LTE!</p>
+        <p className=""> Welcome to Cyberspace Superfast LTE!</p>
 
         <div className="flex gap-6 items-center font-sora 2xl:text-[18px] sm:text-[12px] text-[5px] text-white">
          <NavLink to="/dealers" className="border-r pr-6">

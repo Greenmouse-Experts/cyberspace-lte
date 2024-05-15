@@ -5,6 +5,8 @@ import { useState } from "react";
 import { useCategory } from "./useCategory";
 import ProductView from "./ProductView";
 import Loader from "../../components/Loader";
+import { NavLink } from "react-router-dom";
+import { IoIosArrowForward } from "react-icons/io";
 
 function ProductOverview() {
 
@@ -17,7 +19,8 @@ function ProductOverview() {
 
   return (
     <section className="mt-20">
-      <div className="sm:w-[400px] w-full mb-20 2xl:h-[60px] h-[40px] relative lg:block hidden">
+     <div className="flex justify-between mb-20 w-full" >
+     <div className="sm:w-[400px] w-full  2xl:h-[60px] h-[40px] relative lg:block hidden">
         <BsSearch
           color="#0080CF"
           size={20}
@@ -29,6 +32,16 @@ function ProductOverview() {
           placeholder="Search products..."
         />
       </div>
+      <NavLink
+            to="/personalplan"
+            className="border border-bluePrimary px-11 py-5 text-white bg-bluePrimary rounded-[50px] flex items-center justify-center"
+          >
+            Plans
+            <span>
+              <IoIosArrowForward />
+            </span>
+          </NavLink>
+     </div>
       <div className="flex lg:flex-row flex-col items-start justify-between gap-20">
         <ProductCategory data={category?.data} isLoading={loading} active={active} setActive={setActive}/>
       

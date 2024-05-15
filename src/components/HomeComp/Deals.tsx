@@ -94,7 +94,7 @@ function Deals() {
         <div className="text-center mt-16 flex items-center justify-center">
           <NavLink
             to="/products"
-            className="border border-bluePrimary px-11 py-5 text-bluePrimary rounded-[50px] flex items-center justify-center"
+            className="border border-bluePrimary px-11 py-5 text-white bg-bluePrimary rounded-[50px] flex items-center justify-center"
           >
             View All{" "}
             <span>
@@ -107,10 +107,10 @@ function Deals() {
         <div className="flex items-center gap-3">
         <img src="/icons/quality-4.png" alt="" className="w-10 h-10" />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222]  font-normal">
+            <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Fast Delivery
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-normal">
+            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
               Delivery in 24 Hours
             </p>
           </div>
@@ -119,10 +119,10 @@ function Deals() {
         <div className="flex items-center gap-3">
         <img src="/icons/quality-3.png" alt="" className="w-10 h-10" />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222]  font-normal">
+            <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Quality Devices
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-normal">
+            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
               100% Quality products
             </p>
           </div>
@@ -131,10 +131,10 @@ function Deals() {
         <div className="flex items-center gap-3">
         <img src="/icons/quality-2.png" alt="" className="w-10 h-10" />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222]  font-normal">
+            <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Secure Payment
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-normal">
+            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
               Your money is safe
             </p>
           </div>
@@ -143,10 +143,10 @@ function Deals() {
         <div className="flex items-center gap-3">
           <img src="/icons/quality-1.png" alt="" className="w-10 h-10" />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222]  font-normal">
+            <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Support 24 Hours
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-normal">
+            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
               Live contact/message
             </p>
           </div>
