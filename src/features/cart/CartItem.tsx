@@ -2,7 +2,7 @@
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { LiaTimesSolid } from "react-icons/lia";
 import { formatCurrency } from "../../utils/helpers";
-import {  decreaseQuantity, increaseQuantity } from "../../state/cart/cartSlice";
+import {  decreaseQuantity, deleteProduct, increaseQuantity } from "../../state/cart/cartSlice";
 import { useAppDispatch } from "../../state/hooks";
 
 
@@ -21,6 +21,8 @@ const dispatch = useAppDispatch()
     console.log("clicked")
     dispatch(decreaseQuantity(productId))
   };
+
+
   return (
     <div className="flex sm:flex-row flex-col sm:items-center items-start justify-between relative py-5">
       <div className="flex items-center gap-5">
@@ -38,7 +40,7 @@ const dispatch = useAppDispatch()
             className="w-12 flex justify-center items-center cursor-pointer"
             onClick={decrement}
           >
-            <FiMinus size={18} />
+            <FiMinus size={18}  />
           </span>
           <span className="w-12 flex justify-center items-center text-xl">
             {itemQuantity}
@@ -54,7 +56,7 @@ const dispatch = useAppDispatch()
           <p className="font-medium text-lg">{formatCurrency(price)}</p>
         </div>
       </div>
-      <LiaTimesSolid className="absolute top-0 right-2 cursor-pointer" size={25} />
+      <LiaTimesSolid className="absolute top-0 right-2 cursor-pointer" size={25} onClick={() => dispatch(deleteProduct(productId))} />
     </div>
   );
 }

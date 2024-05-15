@@ -3,12 +3,16 @@ import Button from "../../components/Button";
 import { formatCurrency } from "../../utils/helpers";
 import CartItem from "./CartItem";
 import { CartItemTyping, getCart, getTotalCartPrice } from "../../state/cart/cartSlice";
+import { CheckoutModal } from "../../components/modals/CheckoutModal";
+import { useState } from "react";
+
 
 function Cart() {
   const cartItems = useSelector(getCart);
   const totalPrice = useSelector(getTotalCartPrice);
 
-  console.log(cartItems);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(!open);
   return (
     <section className=" font-inter flex lg:flex-row flex-col mt-16 gap-20">
       <div className="lg:w-[55%] w-full">
@@ -61,8 +65,8 @@ function Cart() {
               </span>
             </div>
           </div>
-
-          <Button>Checkout</Button>
+<CheckoutModal handleOpen={handleOpen} open={open}/>
+          <Button onClick={handleOpen}>Checkout</Button>
         </div>
       </div>
     </section>

@@ -10,14 +10,14 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink  } from "react-router-dom";
 import Button from "../../components/Button";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { useLogin } from "./useLogin";
 import SpinnerMini from "../../components/SpinnerMini";
-import { saveUser, setIsLoggedIn, setToken } from "../../state/user/userSlice";
+import {  saveUser, setIsLoggedIn, setToken } from "../../state/user/userSlice";
 import { useDispatch } from "react-redux";
-import toast from "react-hot-toast";
+// import { useAppSelector } from "../../state/hooks";
 
 interface FormData extends FieldValues {
   email: string;
@@ -27,6 +27,11 @@ interface FormData extends FieldValues {
 
 
 function LoginForm() {
+
+  
+
+  // const navigate = useNavigate();
+  // const verifyUser = useAppSelector(isLoggedIn)
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -56,8 +61,6 @@ function LoginForm() {
       { email, password },
       {
         onSuccess(data) {
-          console.log(data)
-          toast.success(`Login Successfull`);
           dispatch(saveUser(data.data))
           dispatch(setToken(data.token))
           localStorage.setItem("token", data.token);
@@ -68,6 +71,12 @@ function LoginForm() {
       }
     );
   }
+
+  // useEffect(() => {
+  //   if (verifyUser) {
+  //     navigate("/", {replace:true});
+  //   }
+  // }, [verifyUser, navigate]);
 
   return (
     <section className="flex items-center h-full  mx-0 font-inter lg:py-20">
