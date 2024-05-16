@@ -97,7 +97,7 @@ function SignupForm() {
     <section className="flex items-center  mx-0 font-inter h-full lg:py-20">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="md:w-[47rem]  bg-white w-full px-5 py-10 flex flex-col justify-center items-center mx-auto "
+        className="md:w-[47rem]  bg-white dark:bg-darkMood w-full px-5 py-10 flex flex-col justify-center items-center mx-auto "
       >
         <NavLink to="/">
           <img src="/logo.svg" alt="logo" className="mb-5" />

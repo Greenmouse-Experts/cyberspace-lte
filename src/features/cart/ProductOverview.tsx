@@ -34,11 +34,11 @@ function ProductOverview() {
       </div>
       <NavLink
             to="/personalplan"
-            className="border border-bluePrimary px-11 py-5 text-white bg-bluePrimary rounded-[50px] flex items-center justify-center"
+            className="border border-bluePrimary px-11 py-5 dark:text-white text-white bg-bluePrimary rounded-[50px] flex items-center justify-center animate__animated animate__pulse animate__infinite animate__slow"
           >
-            Plans
-            <span>
-              <IoIosArrowForward />
+            View Plans
+            <span className="text-white">
+              <IoIosArrowForward className="dark:!text-white" />
             </span>
           </NavLink>
      </div>

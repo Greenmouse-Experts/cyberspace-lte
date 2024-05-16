@@ -81,7 +81,7 @@ function LoginForm() {
   return (
     <section className="flex items-center h-full  mx-0 font-inter lg:py-20">
    
-        <form onSubmit={handleSubmit(onSubmit)} className="md:w-[35rem] bg-white w-full px-5 py-10 flex flex-col justify-center items-center mx-auto h-auto ">
+        <form onSubmit={handleSubmit(onSubmit)} className="md:w-[35rem] bg-white dark:bg-darkMood w-full px-5 py-10 flex flex-col justify-center items-center mx-auto h-auto ">
         <NavLink to="/">
           <img src="/logo.svg" alt="logo" className="mb-10" />
         </NavLink>
@@ -113,7 +113,7 @@ function LoginForm() {
                   Password
                 </InputLabel>
                 <OutlinedInput
-                  style={{ width: "100%", height: 60, borderRadius: "10px" }}
+                  style={{ width: "100%", height: 60, borderRadius: "10px", }}
                   id="outlined-adornment-password"
                   {...register("password", {
                     required: "Password is required",
