@@ -27,7 +27,7 @@ function ProductOverview() {
           className="absolute left-4 2xl:top-5 md:top-4 top-5 "
         />
         <input
-          type="text"
+          type="text" 
           className=" w-full h-full bg-[#F3F9FB] px-14 text-bluePrimary rounded-xl 2xl:placeholder:text-[16px] placeholder:text-grayPrimary placeholder:text-[12px]"
           placeholder="Search products..."
         />
