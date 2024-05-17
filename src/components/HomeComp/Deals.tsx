@@ -61,7 +61,7 @@ function Deals() {
                         className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl dark:bg-darkMood shadow-black/10"
                         content={
                           <div className="w-80">
-                            <p className="font-normal opacity-80 text-redPrimary dark:!text-bluePrimary">
+                            <p className="font-normal opacity-80 text-redPrimary dark:!text-white">
                             <span className="font-medium">Note:</span> {formatCurrency(product.price)} is only for
                               the product not with installation.
                             </p>

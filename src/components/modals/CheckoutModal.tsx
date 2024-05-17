@@ -25,8 +25,8 @@ export function CheckoutModal({handleOpen, open}) {
  
   return (
     <>
-    <Dialog size="md" open={open} handler={handleOpen}>
-      <DialogHeader>Checkout</DialogHeader>
+    <Dialog size="md" open={open} handler={handleOpen} className=" dark:bg-darkMood">
+      <DialogHeader className="dark:text-white">Checkout</DialogHeader>
       <DialogBody>
         <div className="flex md:flex-row flex-col items-center gap-10">
           <InputText textLabel="First name" setValue={setFirstName} value={firstName} type="text"/>
