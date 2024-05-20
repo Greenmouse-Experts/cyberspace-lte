@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa6";
 
@@ -11,6 +12,11 @@ interface AccordionProps {
 }
 
 const FaqItem = ({ index, title, answer, open, toggleAccordion }: AccordionProps) => {
+
+  useEffect(() => {
+   toggleAccordion(0)
+  }, [])
+  
  
 
   return (
