@@ -34,8 +34,8 @@ function Faq() {
           answer={
             <List
               items={[
-                "Direct transfer to our Zenith bank account:1014025067 Cyberspace Ltd-LTE Zenith. ",
-                "Or via our self-care portal: http://selfcare.cyberspace.net.ng/.",
+                "Direct transfer to our Zenith bank account: 1014025067 Cyberspace Ltd-LTE Zenith. ",
+                "Or via our selfcare portal: http://selfcare.cyberspace.net.ng/.",
               ]}
             />
           }
