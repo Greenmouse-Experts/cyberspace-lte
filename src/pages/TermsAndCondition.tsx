@@ -8,13 +8,13 @@ function TermsAndCondition() {
    <section className="my-20">
    <div className=" mt-5">
         <div className="mb-12">
-          <h3 className="h3 mb-5">What’s in these terms?</h3>
+          <h3 className="h3 mb-2">What’s in these terms?</h3>
           <p className=" ">
             These terms tell you the framework for using our site.
           </p>
         </div>
         <div className="mb-12">
-          <h3 className="h3 mb-5">By using our site, you accept these terms</h3>
+          <h3 className="h3 mb-2">By using our site, you accept these terms</h3>
           <p className=" ">
             By using our site, you confirm that you accept these terms of use
             and that you agree to comply with them. If you do not agree to these
@@ -24,7 +24,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">We may make changes to these terms</h3>
+          <h3 className="h3 mb-2">We may make changes to these terms</h3>
           <p className=" ">
             We amend these terms from time to time. Every time you wish to use
             our site, please check these terms to ensure you understand the
@@ -33,7 +33,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">We may suspend or withdraw our site</h3>
+          <h3 className="h3 mb-2">We may suspend or withdraw our site</h3>
           <p className=" ">
             Our site is made available and accessible “as is”, on a limited,
             conditional, and non-exclusive basis, which can be revoked at any
@@ -49,7 +49,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">How you may use material on our site</h3>
+          <h3 className="h3 mb-2">How you may use material on our site</h3>
           <p className=" ">
             We are the owner or the licensee of all intellectual property on our
             site and in the material published on it. Those works are protected
@@ -117,7 +117,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">
+          <h3 className="h3 mb-2">
             How to complain about content uploaded by other users
           </h3>
           <p className=" ">
@@ -127,7 +127,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">Who we are and how to contact us</h3>
+          <h3 className="h3 mb-2">Who we are and how to contact us</h3>
           <p className=" ">
             CyberPay.net.ng is a site (the “site”) operated by CyberPay Limited
             (“We”, “us” and “our”). We are registered in the Federal Republic of
@@ -140,7 +140,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">
+          <h3 className="h3 mb-2">
             There are other terms that may apply to you
           </h3>
           <p className=" ">
@@ -150,7 +150,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">Our Privacy Policy</h3>
+          <h3 className="h3 mb-2">Our Privacy Policy</h3>
           <p className=" ">
             Our Acceptable Use Policy, which sets out the permitted uses and
             prohibited uses of our site. When using our site, you must comply
@@ -163,7 +163,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">
+          <h3 className="h3 mb-2">
             We may transfer this agreement to someone else
           </h3>
           <p className=" ">
@@ -174,7 +174,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">We may make changes to our site</h3>
+          <h3 className="h3 mb-2">We may make changes to our site</h3>
           <p className=" ">
             We may update and change our site from time to time to reflect
             changes to our products and services, our user’s needs and our
@@ -183,7 +183,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">You must keep your account details safe</h3>
+          <h3 className="h3 mb-2">You must keep your account details safe</h3>
           <p className=" ">
             If you choose, or you are provided with, a user identification code,
             password, or any other piece of information as part of our security
@@ -199,7 +199,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">No text or data mining, or web scraping</h3>
+          <h3 className="h3 mb-2">No text or data mining, or web scraping</h3>
           <p className=" ">
             You shall not conduct, facilitate, authorize or permit any text or
             data mining or web scraping about our site or any services provided
@@ -226,7 +226,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">
+          <h3 className="h3 mb-2">
             Do not rely on the information on this site
           </h3>
           <p className=" ">
@@ -243,7 +243,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">
+          <h3 className="h3 mb-2">
             We are not responsible for websites we link to
           </h3>
           <p className=" ">
@@ -256,7 +256,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">
+          <h3 className="h3 mb-2">
             User-generated content is not approved by us
           </h3>
           <p className=" ">
@@ -269,7 +269,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">Disclaimer</h3>
+          <h3 className="h3 mb-2">Disclaimer</h3>
           <p className=" ">
             <br />&bull; The content on our site is provided on an “as is” basis. We
             make no warranties, expressed or implied, and hereby disclaim and
@@ -305,7 +305,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">Indemnity</h3>
+          <h3 className="h3 mb-2">Indemnity</h3>
           <p className=" ">
             You hereby agree to fully indemnify and hold us harmless from and
             against any claims brought by a third party resulting from the use
@@ -320,7 +320,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">
+          <h3 className="h3 mb-2">
             Rights you are giving us to use material you upload
           </h3>
           <p className=" ">
@@ -361,7 +361,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">Breach of this policy</h3>
+          <h3 className="h3 mb-2">Breach of this policy</h3>
           <p className=" ">
             When we consider that a breach of this policy has occurred, we may
             take such action as we deem appropriate. Failure to comply with this
@@ -389,7 +389,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">How we may use your personal information</h3>
+          <h3 className="h3 mb-2">How we may use your personal information</h3>
           <p className=" ">
             We will only use your personal information as set out in our privacy
             policy or data privacy policy and related policies as issued from
@@ -398,7 +398,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">Rules about linking to our site</h3>
+          <h3 className="h3 mb-2">Rules about linking to our site</h3>
           <p className=" ">
             You may link to our home page, provided you do so in a way that is
             fair, legal and as agreed with us in writing, provided such does not
@@ -418,7 +418,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">Uploading content to our site</h3>
+          <h3 className="h3 mb-2">Uploading content to our site</h3>
           <p className=" ">
             Whenever you make use of a feature that allows you to upload content
             to our site, or to make contact with other users of our site, you
@@ -446,7 +446,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">Transfer of this Contract</h3>
+          <h3 className="h3 mb-2">Transfer of this Contract</h3>
           <p className=" ">
             We can transfer our rights and obligations under these terms to any
             third party
@@ -454,7 +454,7 @@ function TermsAndCondition() {
         </div>
 
         <div className="mb-12">
-          <h3 className="h3 mb-5">
+          <h3 className="h3 mb-2">
             Which country’s laws apply to this Policy?
           </h3>
           <p className=" ">

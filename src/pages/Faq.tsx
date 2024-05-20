@@ -1,9 +1,16 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Banner from "../components/Banner";
 import FaqItem from "../components/HomeComp/FaqItem";
 import List from "../components/List";
 
 function Faq() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <>
       <Banner title="faqs" text="faqs" />
@@ -12,62 +19,69 @@ function Faq() {
           Frequently Asked Questions
         </h4>
         <FaqItem
-        open={true}
-        title="“How do I subscribe to the Cyberspace Superfast Service?"
-        answer={
-          <div>
-            <p>
-            Contact us on our LiveChat on our website, give us a call at 09076555350 or 09076555417 or send us an e-mail at lteretail@cyberspace.net.ng.
-            </p>
-          </div>
-        }
-      />
-      <FaqItem
-        open={false}
-        title="How do I renew my subscription via the selfcare portal?"
-        answer={
-          <List
-            items={[
-              "Direct transfer to our Zenith bank account:1014025067 Cyberspace Ltd-LTE Zenith. ",
-              "Or via our self-care portal: http://selfcare.cyberspace.net.ng/.",
-            ]}
-          />
-        }
-      />
-      <FaqItem
-        open={false}
-        title="How do I subscribe on my device?"
-        answer={
-        
-          <div>
-            <p>
-            Via our selfcare portal <span className="text-redPrimary"><NavLink to="https://selfcare.cyberspace.net.ng/lteselfcare/renewplan?">here</NavLink></span>.
-            </p>
-            <p>
-            Via direct transfer with the right details.
-            </p>
-          </div>
-        }
-      />
-      <FaqItem
-        open={false}
-        title="How do I change my password for the indoor modem?"
-        answer={
-          <List
-            items={[
-              "Connect to the device, with the default password 12345678.",
-              "Input the IP 192.168.1.1 ",
-              "Input username and password: admin/ admin.",
-              "It will show you a page where you click on WLAN. ",
-              "Double click and go to where you will see the SSID. ",
-              "Scroll down, you will see where the password is, click to view, then change to the preferred and apply.",
-            ]}
-          />
-        }
-      />
-
+          index={0}
+          open={openIndex === 0}
+          title="How do I subscribe to the Cyberspace Superfast Service?"
+          answer={
+            <div>
+              <p>
+                Contact us on our LiveChat on our website, give us a call at 09076555350 or 09076555417 or send us an e-mail at lteretail@cyberspace.net.ng.
+              </p>
+            </div>
+          }
+          toggleAccordion={toggleAccordion}
+        />
         <FaqItem
-          open={false}
+          index={1}
+          open={openIndex === 1}
+          title="How do I renew my subscription via the selfcare portal?"
+          answer={
+            <List
+              items={[
+                "Direct transfer to our Zenith bank account:1014025067 Cyberspace Ltd-LTE Zenith. ",
+                "Or via our self-care portal: http://selfcare.cyberspace.net.ng/.",
+              ]}
+            />
+          }
+          toggleAccordion={toggleAccordion}
+        />
+        <FaqItem
+          index={2}
+          open={openIndex === 2}
+          title="How do I subscribe on my device?"
+          answer={
+            <div>
+              <p>
+                Via our selfcare portal <span className="text-redPrimary"><NavLink to="https://selfcare.cyberspace.net.ng/lteselfcare/renewplan?">here</NavLink></span>.
+              </p>
+              <p>
+                Via direct transfer with the right details.
+              </p>
+            </div>
+          }
+          toggleAccordion={toggleAccordion}
+        />
+        <FaqItem
+          index={3}
+          open={openIndex === 3}
+          title="How do I change my password for the indoor modem?"
+          answer={
+            <List
+              items={[
+                "Connect to the device, with the default password 12345678.",
+                "Input the IP 192.168.1.1 ",
+                "Input username and password: admin/ admin.",
+                "It will show you a page where you click on WLAN. ",
+                "Double click and go to where you will see the SSID. ",
+                "Scroll down, you will see where the password is, click to view, then change to the preferred and apply.",
+              ]}
+            />
+          }
+          toggleAccordion={toggleAccordion}
+        />
+        <FaqItem
+          index={4}
+          open={openIndex === 4}
           title="How do I change my password for the outdoor modem?"
           answer={
             <List
@@ -82,16 +96,18 @@ function Faq() {
               ]}
             />
           }
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={5}
+          open={openIndex === 5}
           title="How do I pull my data usage?"
           answer="You can send a mail to customercare_retail@cyberspace.net.ng requesting for your data usage or login to http://selfcare.cyberspace.net.ng/"
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={6}
+          open={openIndex === 6}
           title="How do I check my data balance?"
           answer={
             <div>
@@ -110,20 +126,25 @@ function Faq() {
               />
             </div>
           }
+          toggleAccordion={toggleAccordion}
         />
         <FaqItem
-          open={false}
+          index={7}
+          open={openIndex === 7}
           title="Our coverage areas (Lagos, Abuja and Asaba)"
           answer=""
+          toggleAccordion={toggleAccordion}
         />
         <FaqItem
-          open={false}
+          index={8}
+          open={openIndex === 8}
           title="Where can I find information about promotions or discounts on the self-service website?"
           answer="Notifications will be sent via SMS, email, website and all our social media platforms (Instagram, X and LinkedIn)"
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={9}
+          open={openIndex === 9}
           title="What are the documents needed to activate my account?"
           answer={
             <List
@@ -137,10 +158,11 @@ function Faq() {
               ]}
             />
           }
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={10}
+          open={openIndex === 10}
           title="Documents needed for voice (VOIP) activation:"
           answer={
             <List
@@ -154,34 +176,39 @@ function Faq() {
               ]}
             />
           }
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={11}
+          open={openIndex === 11}
           title="Does my unused data roll over?"
           answer="Yes, your unused data roll over when you renew on the same service plan or a higher service plan on or before the expiration date."
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={12}
+          open={openIndex === 12}
           title="What is your internet speed?"
           answer="Internet speed within a good coverage area will range up to 7mbps on upload and 25mbps on download."
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={13}
+          open={openIndex === 13}
           title="How many devices can I connect to the indoor modem?"
           answer="Multiple user WIFI access up to 15 users."
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={14}
+          open={openIndex === 14}
           title="How many devices can I connect to the outdoor modem?"
           answer="Multiple user WIFI access up to 40 users."
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={15}
+          open={openIndex === 15}
           title="How do I monitor devices connected to the WIFI?"
           answer={
             <List
@@ -194,16 +221,18 @@ function Faq() {
               ]}
             />
           }
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={16}
+          open={openIndex === 16}
           title="Do I get compensation for downtimes?"
           answer="The validity period may be extended in the event that a network problem caused a prolonged outage from our end."
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={17}
+          open={openIndex === 17}
           title="Can I suspend my account and how?"
           answer={
             <div>
@@ -220,16 +249,18 @@ function Faq() {
               />
             </div>
           }
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={18}
+          open={openIndex === 18}
           title="How do I update information on my account?"
           answer="Send a mail to customercare_retail@cyberspace.net.ng with your customer ID or MDN and information you intend to update on your account."
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={19}
+          open={openIndex === 19}
           title="How can I monitor my data using your self-service applications?"
           answer={
             <List
@@ -243,10 +274,11 @@ function Faq() {
               ]}
             />
           }
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={20}
+          open={openIndex === 20}
           title="What do I do if I'm experiencing connectivity issues with my internet service?"
           answer={
             <List
@@ -259,32 +291,22 @@ function Faq() {
               ]}
             />
           }
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={21}
+          open={openIndex === 21}
           title="Can I add or remove unauthorized users on my account through the self-service portal?"
           answer="No, you cannot add or remove unauthorized users"
+          toggleAccordion={toggleAccordion}
         />
-
         <FaqItem
-          open={false}
+          index={22}
+          open={openIndex === 22}
           title="Can I schedule a service appointment or technician visit online?"
           answer="Yes, you can send us a mail or call any of our numbers on the website."
+          toggleAccordion={toggleAccordion}
         />
-
-        {/* <FaqItem
-        open={false}
-        title="How do I pay for the Cyberspace Superfast modem?"
-        answer="You can determine the number of shares you hold by adding up all your share certificates and holdings in CSCS, referring to your recent dividend warrant, or by contacting."
-      /> */}
-        {/* <section>
-        <div className="text-center mt-16">
-          <button className="border bg-bluePrimary px-12 py-5 text-white rounded-[50px]">
-            Read More {">"}
-          </button>
-        </div>
-      </section> */}
       </section>
     </>
   );

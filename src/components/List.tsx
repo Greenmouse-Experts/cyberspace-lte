@@ -12,7 +12,7 @@ function ListItem({item}:ListItemProps) {
   return (
     <li className="flex items-start gap-1 md:text-lg text-base font-normal ">
       <span>
-        <BsDot color="black" size={30} />
+        <BsDot className="!text-black dark:!text-white" size={30} />
       </span>
       {item}
     </li>
