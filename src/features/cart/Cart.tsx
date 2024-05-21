@@ -2,14 +2,24 @@ import { useSelector } from "react-redux";
 import Button from "../../components/Button";
 import { formatCurrency } from "../../utils/helpers";
 import CartItem from "./CartItem";
-import { CartItemTyping, getCart, getTotalCartPrice } from "../../state/cart/cartSlice";
+import {
+  CartItemTyping,
+  getCart,
+  getTotalCartPrice,
+} from "../../state/cart/cartSlice";
 import { CheckoutModal } from "../../components/modals/CheckoutModal";
 import { useState } from "react";
+import { isLoggedIn } from "../../state/user/userSlice";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+
 
 
 function Cart() {
   const cartItems = useSelector(getCart);
   const totalPrice = useSelector(getTotalCartPrice);
+  const checkUser = useSelector(isLoggedIn);
+  const navigate = useNavigate()
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
@@ -18,7 +28,7 @@ function Cart() {
       <div className="lg:w-[55%] w-full">
         <h3 className="uppercase font-medium">SHOPPING CART</h3>
         <div className="mt-5">
-          {cartItems.items.map((item:CartItemTyping) => (
+          {cartItems.items.map((item: CartItemTyping) => (
             <CartItem item={item} key={item.productId} />
           ))}
           {/* <CartItem />
@@ -65,8 +75,17 @@ function Cart() {
               </span>
             </div>
           </div>
-<CheckoutModal handleOpen={handleOpen} open={open}/>
-          <Button onClick={handleOpen}>Checkout</Button>
+          <CheckoutModal handleOpen={handleOpen} open={open} />
+          <Button onClick={
+           () => {
+            if(checkUser){
+              handleOpen()
+            }else{
+              navigate('/signin')
+              toast.error('Sign in to continue...')
+            }
+           }
+            }>Checkout</Button>
         </div>
       </div>
     </section>
