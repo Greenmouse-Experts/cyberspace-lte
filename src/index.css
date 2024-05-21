@@ -139,16 +139,16 @@ section {
   margin-right: 140px;
 }
 h3 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 500;
 }
 h4 {
-  font-size: 30px;
+  font-size: 1.88rem;
   font-weight: 600;
 }
 
 footer a {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 li{
@@ -162,11 +162,11 @@ li{
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 1.3rem;
   }
 
   footer a {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 

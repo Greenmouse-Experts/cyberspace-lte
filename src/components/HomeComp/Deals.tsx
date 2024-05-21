@@ -44,8 +44,8 @@ function Deals() {
                 />
               </div>
 
-              <div className=" flex flex-col gap-3 sm:w-[55%] w-full pr-8">
-                <p className="2xl:text-lg text-sm font-semibold text-[#222222]">
+              <div className=" flex flex-col sm:items-start items-center gap-3 sm:w-[55%] w-full sm:pr-8 pr-0">
+                <p className="2xl:text-lg font-semibold text-[#222222]">
                   {product.product_name}
                 </p>
                 <p className=" text-redPrimary">2.4GHz and 5Ghz Frequency.</p>
