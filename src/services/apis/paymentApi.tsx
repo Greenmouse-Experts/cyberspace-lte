@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const verifyUser = async(payload:unknown) => {
-    return  axios.post(`/email-confirm`, payload).then((response) => response.data)
+export const payment = async(payload:unknown) => {
+    return  axios.post('https://payment-api.staging.cyberpay.ng/api/v1/payments', payload).then((response) => response.data)
   } 
   
