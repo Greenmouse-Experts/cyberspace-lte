@@ -128,13 +128,13 @@ function Faq() {
           }
           toggleAccordion={toggleAccordion}
         />
-        <FaqItem
+        {/* <FaqItem
           index={7}
           open={openIndex === 7}
           title="Our coverage areas (Lagos, Abuja and Asaba)"
           answer=""
           toggleAccordion={toggleAccordion}
-        />
+        /> */}
         <FaqItem
           index={8}
           open={openIndex === 8}
