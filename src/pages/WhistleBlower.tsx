@@ -19,24 +19,12 @@ function WhistleBlower() {
               className="w-full h-12 outline-none border rounded-md p-2 border-grey-300 mt-5"
             />
           </div>
-          <div className="md:w-[33%] w-full">
-            <label className="para">Email Address</label>
-            <input
-              type="text"
-              className="w-full h-12 outline-none border rounded-md p-2 border-grey-300 mt-5"
-            />
-          </div>
-          <div className="md:w-[33%] w-full">
-            <label className="para">Phone Number</label>
-            <input
-              type="text"
-              className="w-full h-12 outline-none border rounded-md p-2 border-grey-300 mt-5"
-            />
-          </div>
+        
+        
         </div>
         <div className="mt-10">
-          <label className="para">Description</label>
-          <textarea className="h-40 p-4 w-full border rounded-md border-grey-300 mt-5 text-black dark:text-white bg-white dark:bg-darkMood"></textarea>
+          <label className="para flex items-center">Description <span className=" text-redPrimary">*</span></label>
+          <textarea required={true} className="h-40 p-4 w-full border rounded-md border-grey-300 mt-5 text-black dark:text-white bg-white dark:bg-darkMood"></textarea>
         </div>
         <div className="flex flex-col lg:mt-20 mt-10">
           <label className="para">Supporting Document</label>

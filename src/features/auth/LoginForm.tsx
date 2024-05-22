@@ -81,7 +81,7 @@ function LoginForm() {
   return (
     <section className="flex items-center h-full  mx-0 font-inter lg:py-20">
    
-        <form onSubmit={handleSubmit(onSubmit)} className="md:w-[35rem] bg-white dark:bg-darkMood w-full px-5 py-10 flex flex-col justify-center items-center mx-auto h-auto ">
+        <form onSubmit={handleSubmit(onSubmit)} className="md:w-[35rem] bg-white dark:bg-darkMood w-full px-5 py-10 flex flex-col justify-center items-center mx-auto h-auto rounded-2xl">
         <NavLink to="/">
           <img src="/logo.svg" alt="logo" className="mb-10" />
         </NavLink>

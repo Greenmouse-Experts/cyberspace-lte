@@ -14,15 +14,16 @@ function About() {
             Limited, is your gateway to an immersive online experience. And,
             we’re not just a service; we’re your most reliable teammate, the MVP
             of ISPs. Our network is designed for the ultimate performance,
-            delivering the speed you need to stay ahead of the curve. For the
+            delivering the speed you need to stay ahead of the curve.
+          </p>
+          <p>For the
             Nigerian youth carving their path, for the professionals shaping the
             future, and for the businesses setting the trends, Superfast is the
             name you can trust. With us, you’re not just online; you’re on a
             winning streak. And when it comes to voice, our premium VOIP service
             is the roar in the silence, connecting conversations with the
             precision of a craftsman. Our VOIP service is the soundtrack to your
-            success, syncing with the heartbeat of nations around the world.
-          </p>
+            success, syncing with the heartbeat of nations around the world.</p>
         </div>
         <div className="flex md:flex-row flex-col gap-5 justify-between mt-10">
           <div className=" bg-bluePrimary md:w-[50%] ww-full rounded-xl px-5 py-8">
