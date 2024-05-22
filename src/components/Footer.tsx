@@ -30,7 +30,7 @@ function Footer() {
         </div>
       </section>
       <footer className="bg-[url('/img/footer-bg-test.png')] bg-contain pt-16 w-full">
-        <div className="flex flex-wrap md:justify-between justify-start md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
+        <div className="flex flex-wrap md:flex-row flex-col md:justify-between justify-start md:items-start items-center md:text-start text-center  md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
           <div>
             <p className="font-normal text-[1.06rem] text-white uppercase">
               Contact Us
