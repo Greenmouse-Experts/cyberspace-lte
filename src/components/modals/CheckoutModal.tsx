@@ -60,7 +60,7 @@ export function CheckoutModal({ handleOpen, open }) {
       {
         Currency: "NGN",
         MerchantRef: generateMerchantRef(),
-        Amount: 50000,
+        Amount: totalPrice,
         Description: "Product",
         CustomerId: "960",
         CustomerName: `${data.first_name} ${data.last_name}`,
@@ -73,7 +73,7 @@ export function CheckoutModal({ handleOpen, open }) {
         Splits: [
           {
             WalletCode: "teargstd",
-            Amount: 50000,
+            Amount: totalPrice,
             ShouldDeductFrom: true,
           },
         ],

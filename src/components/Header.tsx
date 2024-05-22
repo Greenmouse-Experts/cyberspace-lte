@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  BsSearch } from "react-icons/bs";
+import { BsSearch } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -11,16 +11,15 @@ import { isDark } from "../features/darkmode/DarkModeSlice";
 
 function Header() {
   const [menu, setmMenu] = useState(false);
-  const verifyUser = useAppSelector(isLoggedIn)
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const verifyUser = useAppSelector(isLoggedIn);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const logout = () => {
-    navigate("/signin")
-  dispatch(removeToken())
-  }
+    navigate("/signin");
+    dispatch(removeToken());
+  };
 
-  const mood = useAppSelector(isDark)
-
+  const mood = useAppSelector(isDark);
 
   return (
     <header className="fixed top-0 bg-white dark:bg-darkMood transition-colors z-10 right-0 w-full left-0">
@@ -28,9 +27,9 @@ function Header() {
         <p className=""> Welcome to Cyberspace Superfast LTE!</p>
 
         <div className="flex gap-6 items-center font-sora 2xl:text-[18px] sm:text-[12px] text-[5px] text-white">
-         <NavLink to="/dealers" className="border-r pr-6">
-Our Dealers
-         </NavLink>
+          <NavLink to="/dealers" className="border-r pr-6">
+            Our Dealers
+          </NavLink>
           <div className="flex gap-1 items-center pr-4">
             <CiLocationOn color="white" size={22} />
             <p className="font-[300]">
@@ -40,22 +39,26 @@ Our Dealers
         </div>
       </div>
 
-      <div className="flex items-center justify-between lg:gap-5 md:gap-5 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] xl:px-24 lg:px-10 px-5 border-b-[0.6px] border-[#EDEDED] relative">
+      <div className="flex items-center justify-between lg:gap-5 md:gap-5 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] px-5 border-b-[0.6px] border-[#EDEDED] relative">
         <NavLink onClick={() => setmMenu(false)} to="/">
           <div className="2xl:w-[165px] w-[100px]">
-            <img src={mood ? "/logo-dark.png" : "/logo.svg"} alt="" className="2xl:w-[10.3rem] w-[6.25rem]" />
+            <img
+              src={mood ? "/logo-dark.png" : "/logo.svg"}
+              alt=""
+              className="2xl:w-[10.3rem] w-[6.25rem]"
+            />
           </div>
         </NavLink>
 
-        <div className="flex items-center gap-10 2xl:text-[17px] xl:text-[14px] text-[12px] text-nowrap">
+        <div className="flex items-center gap-10 2xl:text-[1.05rem]  text-[14px] text-nowrap">
           <nav
-            className={` absolute bg-white dark:bg-darkMood transition-colors  ${
-              menu ? "left-0 w-[80%] z-50 h-screen pl-10" : "left-[-1000px]"
+            className={` absolute bg-white dark:bg-darkMood transition-all  ${
+              menu ? "left-0 w-[80%] z-50 h-screen pl-10 top-20" : "left-[-1000px] top-10"
             } top-5   flex justify-start md:h-auto h-screen transition-all unset`}
           >
-            <ul className="flex gap-4 md:flex-row flex-col md:items-center   text-[#666666] dark:text-white font-bold">
-            <li className="">
-                <NavLink onClick={() => setmMenu(false)} to="/about" >
+            <ul className="flex md:gap-4 md:pt-0 pt-10 gap-10 md:flex-row flex-col md:items-center   text-[#666666] dark:text-white font-bold">
+              <li className="">
+                <NavLink onClick={() => setmMenu(false)} to="/about">
                   About Us
                 </NavLink>{" "}
               </li>
@@ -64,12 +67,16 @@ Our Dealers
                   Services
                 </NavLink>{" "}
               </li>
-            
+
               <li className="">
-                <NavLink to="/products" onClick={() => {
-                  // e.preventDefault(); 
-                  // pushPageDown(); 
-                  setmMenu(false);}} >
+                <NavLink
+                  to="/products"
+                  onClick={() => {
+                    // e.preventDefault();
+                    // pushPageDown();
+                    setmMenu(false);
+                  }}
+                >
                   Shop Products
                 </NavLink>{" "}
               </li>
@@ -80,11 +87,9 @@ Our Dealers
               </li>
               <li className="md:hidden block">
                 <NavLink onClick={() => setmMenu(false)} to="/coverage">
-                Coverage
+                  Coverage
                 </NavLink>{" "}
               </li>
-              
-              
             </ul>
           </nav>
           <div className="2xl:w-[400px] w-[300px] 2xl:h-[60px] h-[40px] relative xl:block hidden">
@@ -100,18 +105,21 @@ Our Dealers
             />
           </div>
           <div className="flex items-center  md:gap-6 gap-2">
-            <div className="flex items-center gap-1 cursor-pointer" onClick={logout}>
+            <div
+              className="flex items-center gap-1 cursor-pointer"
+              onClick={logout}
+            >
               <FiUser color="#0094EF" size={25} />
-              <p className="font-bold text-bluePrimary text-nowrap sm:block hidden">
-               {verifyUser ? "Logout": "Selfcare Portal"}
+              <p className="font-bold text-bluePrimary text-nowrap 2xl:text-[1.05rem] text-sm sm:block hidden">
+                {verifyUser ? "Logout" : "Selfcare Portal"}
               </p>
             </div>
             <div className="bg-[#D9D9D9] w-[2px]" />
             <li className=" text-grayPrimary font-bold dark:text-white md:block hidden ">
-                <NavLink onClick={() => setmMenu(false)} to="/coverage">
-                  Coverage
-                </NavLink>{" "}
-              </li>
+              <NavLink onClick={() => setmMenu(false)} to="/coverage">
+                Coverage
+              </NavLink>{" "}
+            </li>
           </div>
         </div>
         <DarkmodeToggle />
