@@ -19,10 +19,8 @@ import { useForm } from "react-hook-form";
 // import toast from "react-hot-toast";
 import SpinnerMini from "../SpinnerMini";
 
-
 export function CheckoutModal({ handleOpen, open }) {
   const totalPrice = useSelector(getTotalCartPrice);
- 
 
   const {
     register,
@@ -45,26 +43,25 @@ export function CheckoutModal({ handleOpen, open }) {
   const { pay, isLoading } = usePayment();
 
   const watchState = watch("state");
-  // const [merchantRef, setMerchantRef] = useState(""); 
+  // const [merchantRef, setMerchantRef] = useState("");
 
   const generateMerchantRef = () => {
     // Generate a unique identifier using timestamp or any other method you prefer
     const timestamp = Date.now().toString();
-    const randomSuffix = Math.floor(Math.random() * 10000).toString().padStart(4, "0"); // Add random numbers to ensure uniqueness
+    const randomSuffix = Math.floor(Math.random() * 10000)
+      .toString()
+      .padStart(4, "0"); // Add random numbers to ensure uniqueness
     const newMerchantRef = `MRef-${timestamp}-${randomSuffix}`;
-    return newMerchantRef// Update the state with the new MerchantRef
+    return newMerchantRef; // Update the state with the new MerchantRef
   };
- 
-
 
   const onSubmit = (data) => {
-    
     pay(
       {
         Currency: "NGN",
         MerchantRef: generateMerchantRef(),
-        Amount: totalPrice,
-        Description: "showmax subscription",
+        Amount: 50000,
+        Description: "Product",
         CustomerId: "960",
         CustomerName: `${data.first_name} ${data.last_name}`,
         CustomerEmail: data.email,
@@ -76,7 +73,7 @@ export function CheckoutModal({ handleOpen, open }) {
         Splits: [
           {
             WalletCode: "teargstd",
-            Amount: totalPrice,
+            Amount: 50000,
             ShouldDeductFrom: true,
           },
         ],
@@ -85,13 +82,12 @@ export function CheckoutModal({ handleOpen, open }) {
         onSuccess(data) {
           console.log(data);
           if (data.succeeded) {
-           window.location.href = data.data.redirectUrl;
+            window.location.href = data.data.redirectUrl;
           }
         },
         onError() {
-          handleOpen()
-         
-        }
+          handleOpen();
+        },
       }
     );
   };
@@ -222,7 +218,7 @@ export function CheckoutModal({ handleOpen, open }) {
             <span>Cancel</span>
           </Button>
           <Button variant="gradient" color="green" type="submit">
-          {isLoading ? <SpinnerMini/> :  <span>Proceed</span>}
+            {isLoading ? <SpinnerMini /> : <span>Proceed</span>}
           </Button>
         </DialogFooter>
       </form>
