@@ -17,6 +17,8 @@ import { useLogin } from "./useLogin";
 import SpinnerMini from "../../components/SpinnerMini";
 import {  saveUser, setIsLoggedIn, setToken } from "../../state/user/userSlice";
 import { useDispatch } from "react-redux";
+import { useAppSelector } from "../../state/hooks";
+import { isDark } from "../darkmode/DarkModeSlice";
 // import { useAppSelector } from "../../state/hooks";
 
 interface FormData extends FieldValues {
@@ -30,6 +32,7 @@ function LoginForm() {
 
   
 
+  const mood = useAppSelector(isDark)
   // const navigate = useNavigate();
   // const verifyUser = useAppSelector(isLoggedIn)
   const [showPassword, setShowPassword] = useState(false);
@@ -83,7 +86,7 @@ function LoginForm() {
    
         <form onSubmit={handleSubmit(onSubmit)} className="md:w-[35rem] bg-white dark:bg-darkMood w-full px-5 py-10 flex flex-col justify-center items-center mx-auto h-auto rounded-2xl">
         <NavLink to="/">
-          <img src="/logo.svg" alt="logo" className="mb-10" />
+          <img src={mood ? "/logo-dark.png" : "/logo.svg"}  alt="logo"  className="2xl:w-[10.3rem] w-[6.25rem] mb-10"/>
         </NavLink>
           <div className="flex flex-col gap-4 w-full">
             <h2 className="text-[40px] font-bold tracking-[-2px] mb-2">

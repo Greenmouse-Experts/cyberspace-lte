@@ -2,10 +2,12 @@ import { MdOutlineWbSunny } from "react-icons/md";
 import { FaRegMoon } from "react-icons/fa";
 import { useEffect } from "react";
 import { useLocalStorageState } from "../../hooks/useLocalStorageState";
+import { toggleMode } from "./DarkModeSlice";
+import { useDispatch } from "react-redux";
 
 
 function DarkmodeToggle() {
-
+const dispatch = useDispatch()
   const [isDarkMode, setIsDarkMode] = useLocalStorageState(
     window.matchMedia("(prefers-color-scheme:dark)").matches,
     "isDaskMode"
@@ -23,6 +25,7 @@ function DarkmodeToggle() {
 
   function toggleDarkMode() {
     setIsDarkMode((isDark:boolean) => !isDark);
+    dispatch(toggleMode())
   }
 
   

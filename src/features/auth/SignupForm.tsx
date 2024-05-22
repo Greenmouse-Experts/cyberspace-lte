@@ -18,6 +18,8 @@ import { useSignup } from "./useSignup";
 import { useDispatch } from "react-redux";
 import { setVerifyEmail } from "../../state/user/userSlice";
 import SpinnerMini from "../../components/SpinnerMini";
+import { useAppSelector } from "../../state/hooks";
+import { isDark } from "../darkmode/DarkModeSlice";
 
 interface SignupProps {
   first_name: string;
@@ -39,6 +41,8 @@ function SignupForm() {
   console.log(errors);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const mood = useAppSelector(isDark)
 
   const form = useForm<SignupProps>({
     defaultValues: {
@@ -100,7 +104,7 @@ function SignupForm() {
         className="md:w-[47rem]  bg-white dark:bg-darkMood w-full px-5 py-10 flex flex-col justify-center items-center mx-auto rounded-2xl"
       >
         <NavLink to="/">
-          <img src="/logo.svg" alt="logo" className="mb-5" />
+          <img src={mood ? "/logo-dark.png" : "/logo.svg"}  alt="logo" className="2xl:w-[10.3rem] w-[6.25rem] mb-5" />
         </NavLink>
         <div className="flex flex-col gap-4 sm:w-[90%] w-full">
           <h2 className="text-[40px] font-bold tracking-[-2px] mb-2">

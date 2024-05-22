@@ -7,6 +7,7 @@ import DarkmodeToggle from "../features/darkmode/DarkmodeToggle";
 import { useAppSelector } from "../state/hooks";
 import { isLoggedIn, removeToken } from "../state/user/userSlice";
 import { useDispatch } from "react-redux";
+import { isDark } from "../features/darkmode/DarkModeSlice";
 
 function Header() {
   const [menu, setmMenu] = useState(false);
@@ -17,6 +18,8 @@ function Header() {
     navigate("/signin")
   dispatch(removeToken())
   }
+
+  const mood = useAppSelector(isDark)
 
 
   return (
@@ -40,7 +43,7 @@ Our Dealers
       <div className="flex items-center justify-between lg:gap-5 md:gap-5 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] xl:px-24 lg:px-10 px-5 border-b-[0.6px] border-[#EDEDED] relative">
         <NavLink onClick={() => setmMenu(false)} to="/">
           <div className="2xl:w-[165px] w-[100px]">
-            <img src="/logo.svg" alt="" className="2xl:w-[165px] w-[100px]" />
+            <img src={mood ? "/logo-dark.png" : "/logo.svg"} alt="" className="2xl:w-[10.3rem] w-[6.25rem]" />
           </div>
         </NavLink>
 
@@ -75,11 +78,16 @@ Our Dealers
                   Our dealers
                 </NavLink>{" "}
               </li>
+              <li className="md:hidden block">
+                <NavLink onClick={() => setmMenu(false)} to="/coverage">
+                Coverage
+                </NavLink>{" "}
+              </li>
               
               
             </ul>
           </nav>
-          <div className="2xl:w-[400px] w-[300px] 2xl:h-[60px] h-[40px] relative lg:block hidden">
+          <div className="2xl:w-[400px] w-[300px] 2xl:h-[60px] h-[40px] relative xl:block hidden">
             <BsSearch
               color="#0080CF"
               size={20}
@@ -99,7 +107,7 @@ Our Dealers
               </p>
             </div>
             <div className="bg-[#D9D9D9] w-[2px]" />
-            <li className=" text-grayPrimary font-bold dark:text-white ">
+            <li className=" text-grayPrimary font-bold dark:text-white md:block hidden ">
                 <NavLink onClick={() => setmMenu(false)} to="/coverage">
                   Coverage
                 </NavLink>{" "}

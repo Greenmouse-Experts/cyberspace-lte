@@ -163,7 +163,7 @@ function Faq() {
         <FaqItem
           index={10}
           open={openIndex === 10}
-          title="Documents needed for voice (VOIP) activation:"
+          title="Documents needed for voice (VOIP) activation?"
           answer={
             <List
               items={[
