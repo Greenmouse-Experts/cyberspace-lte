@@ -142,6 +142,12 @@ function LoginForm() {
                 />
               </FormControl>
 
+              <p className="text-grey-800 text-lg font-normal my-2">
+              Forgot Password?{" "}
+              <span className="text-bluePrimary underline font-semibold pb-1">
+                <NavLink to="#">Click here</NavLink>
+              </span>
+            </p>
               <div className="flex gap-2">
                 <input type="checkbox" name="" id="check" className="w-5 h-5" />
                 <label htmlFor="check">Keep me logged in</label>

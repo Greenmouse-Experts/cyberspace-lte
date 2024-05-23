@@ -1,4 +1,3 @@
-
 import { NavLink, useLocation } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import Advert from "../Advert";
@@ -19,7 +18,6 @@ function Deals() {
   };
 
   const { products } = useProducts();
-
 
   return (
     <>
@@ -62,8 +60,9 @@ function Deals() {
                         content={
                           <div className="w-80">
                             <p className="font-normal opacity-80 text-redPrimary dark:!text-white">
-                            <span className="font-medium">Note:</span> {formatCurrency(product.price)} is only for
-                              the product not with installation.
+                              <span className="font-medium">Note:</span>{" "}
+                              {formatCurrency(product.price)} is only for the
+                              product not with installation.
                             </p>
                           </div>
                         }
@@ -105,7 +104,7 @@ function Deals() {
       </section>
       <section className=" flex flex-wrap gap-10 items-center sm:justify-between justify-center  rounded-[10px] lg:px-0 px-5 py-10 jus mt-20 font-montserrat mb-20">
         <div className="flex items-center gap-3">
-        <img src="/icons/quality-4.png" alt="" className="w-10 h-10" />
+          <img src="/icons/quality-4.png" alt="" className="w-10 h-10" />
           <div>
             <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Fast Delivery
@@ -117,7 +116,7 @@ function Deals() {
         </div>
 
         <div className="flex items-center gap-3">
-        <img src="/icons/quality-3.png" alt="" className="w-10 h-10" />
+          <img src="/icons/quality-3.png" alt="" className="w-10 h-10" />
           <div>
             <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Quality Devices
@@ -129,7 +128,7 @@ function Deals() {
         </div>
 
         <div className="flex items-center gap-3">
-        <img src="/icons/quality-2.png" alt="" className="w-10 h-10" />
+          <img src="/icons/quality-2.png" alt="" className="w-10 h-10" />
           <div>
             <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Secure Payment
