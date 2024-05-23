@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../state/store";
 
-const storedIsDarkMode = localStorage.getItem("isDarkMode");
+
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
 const initialState = {
-  isDarkMode: storedIsDarkMode !== null ? JSON.parse(storedIsDarkMode) : false, // light mode is the default
+  isDarkMode: prefersDarkMode ? prefersDarkMode : false,
 };
 
 export const uiSlice = createSlice({
@@ -12,7 +14,7 @@ export const uiSlice = createSlice({
   reducers: {
     toggleMode: (state) => {
       state.isDarkMode = !state.isDarkMode;
-      localStorage.setItem("isDarkMode", state.isDarkMode);
+      localStorage.setItem("isDarkMode", JSON.stringify(state.isDarkMode));
     },
   },
 });

@@ -39,7 +39,7 @@ function Header() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between lg:gap-5 md:gap-5 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] px-5 border-b-[0.6px] border-[#EDEDED] relative">
+      <div className="flex items-center justify-between lg:gap-5 md:gap-5 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] px-5 border-b-[0.6px] border-[#EDEDED] dark:border-darkMood relative">
         <NavLink onClick={() => setmMenu(false)} to="/">
           <div className="2xl:w-[165px] w-[100px]">
             <img
