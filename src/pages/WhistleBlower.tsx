@@ -12,17 +12,34 @@ function WhistleBlower() {
           <h3 className="">Submit a tip</h3>
         </div>
         <div className=" flex md:flex-row flex-col items-center gap-10 mt-10">
-          <div className="md:w-[33%] w-full">
-            <label className="para">Fullname</label>
+        <div className="md:w-[33%] w-full">
+            <label className="para">Full Name</label>
             <input
+            placeholder="Your Name"
               type="text"
+              className="w-full h-12 outline-none border rounded-md p-2 border-grey-300 mt-5"
+            />
+          </div>
+          <div className="md:w-[33%] w-full">
+            <label className="para">Email Address</label>
+            <input
+            placeholder="Email Address"
+              type="email"
+              className="w-full h-12 outline-none border rounded-md p-2 border-grey-300 mt-5"
+            />
+          </div>
+          <div className="md:w-[33%] w-full">
+            <label className="para">Phone Number</label>
+            <input
+            placeholder="Phone Number"
+              type="tel"
               className="w-full h-12 outline-none border rounded-md p-2 border-grey-300 mt-5"
             />
           </div>
         </div>
         <div className="mt-10">
           <label className="para flex items-center gap-1">
-            Description <span className=" text-redPrimary"><FaAsterisk size={10} /></span>
+            Description of tip <span className=" text-redPrimary"><FaAsterisk size={10} /></span>
           </label>
           <textarea
             required={true}
