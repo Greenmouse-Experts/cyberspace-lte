@@ -98,12 +98,12 @@ button {
   transition: color 0.3s;
 }
 .dark .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
-  border: #f4f4f4 1px solid;
-  color: white;
+  border: #f4f4f4 1px solid !important;
+  color: white !important;
   transition: color 0.3s;
 }
 
-.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root input {
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root > input {
   border: none  !important;
 }
 
