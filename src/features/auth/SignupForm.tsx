@@ -20,6 +20,7 @@ import { setVerifyEmail } from "../../state/user/userSlice";
 import SpinnerMini from "../../components/SpinnerMini";
 import { useAppSelector } from "../../state/hooks";
 import { isDark } from "../darkmode/DarkModeSlice";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 interface SignupProps {
   first_name: string;
@@ -42,7 +43,7 @@ function SignupForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const mood = useAppSelector(isDark)
+  const mood = useAppSelector(isDark);
 
   const form = useForm<SignupProps>({
     defaultValues: {
@@ -104,7 +105,11 @@ function SignupForm() {
         className="md:w-[47rem]  bg-white dark:bg-darkMood w-full px-5 py-10 flex flex-col justify-center items-center mx-auto rounded-2xl"
       >
         <NavLink to="/">
-          <img src={mood ? "/logo-dark.png" : "/logo.svg"}  alt="logo" className="2xl:w-[10.3rem] w-[6.25rem] mb-5" />
+          <img
+            src={mood ? "/logo-dark.png" : "/logo.svg"}
+            alt="logo"
+            className="2xl:w-[10.3rem] w-[6.25rem] mb-5"
+          />
         </NavLink>
         <div className="flex flex-col gap-4 sm:w-[90%] w-full">
           <h2 className="text-[40px] font-bold tracking-[-2px] mb-2">
@@ -124,7 +129,7 @@ function SignupForm() {
                 error={!!errors.first_name}
                 helperText={errors?.first_name?.message}
                 {...register("first_name", {
-                  required: "first_name is required",
+                  required: "first name is required",
                 })}
                 style={{ width: "100%", height: 60, borderRadius: "10px" }}
               />
@@ -136,7 +141,7 @@ function SignupForm() {
                 error={!!errors.last_name}
                 helperText={errors?.last_name?.message}
                 {...register("last_name", {
-                  required: "last_name is required",
+                  required: "last name is required",
                 })}
                 style={{ width: "100%", height: 60, borderRadius: "10px" }}
               />
@@ -163,21 +168,19 @@ function SignupForm() {
                 disabled={isLoading}
                 helperText={errors?.phone_number?.message}
                 {...register("phone_number", {
-                  required: "phone_number is required",
+                  required: "phone number is required",
                 })}
                 style={{ width: "100%", height: 60, borderRadius: "10px" }}
               />
             </div>
 
             <div className="flex lg:flex-row flex-col gap-6">
-              <FormControl sx={{ width: "100%" }} variant="outlined">
-                <InputLabel htmlFor="outlined-adornment-password">
-                  Password
-                </InputLabel>
-                <OutlinedInput
-                  style={{ width: "100%", height: 60, borderRadius: "10px" }}
-                  id="outlined-adornment-password"
+              <div className="relative w-full">
+                <TextField
+                  id="outlined-basic"
+                  label="Password"
                   type={showPassword ? "text" : "password"}
+                  variant="outlined"
                   {...register("password", {
                     required: "This field is required",
                     minLength: {
@@ -188,29 +191,28 @@ function SignupForm() {
                   disabled={isLoading}
                   helperText={errors?.password?.message}
                   error={!!errors.password}
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={handleClickShowPassword}
-                        onMouseDown={handleMouseDownPassword}
-                        edge="end"
-                      >
-                        {showPassword ? <MdVisibility /> : <MdVisibilityOff />}
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                  label="Password"
-                />
-              </FormControl>
-              <FormControl sx={{ width: "100%" }} variant="outlined">
-                <InputLabel htmlFor="outlined-adornment-password">
-                  Confirm Password
-                </InputLabel>
-                <OutlinedInput
+                  // value={values.password}
                   style={{ width: "100%", height: 60, borderRadius: "10px" }}
-                  id="outlined-adornment-password"
-                  type={showpassword_confirmation ? "text" : "password"}
+                />
+                <span
+                  className="absolute right-3 top-4 cursor-pointer"
+                  onClick={handleClickShowPassword}
+                >
+                  {showPassword ? (
+                    <IoMdEyeOff size={27} />
+                  ) : (
+                    <IoMdEye size={27} />
+                  )}
+                </span>
+              </div>
+             
+               <div className="relative w-full">
+                <TextField
+                  id="outlined-basic"
+                  label="Confirm Password"
+                  type={showpassword_confirmation  ? "text" : "password"}
+                  variant="outlined"
+                  
                   helperText={errors?.password_confirmation?.message}
                   error={!!errors.password_confirmation}
                   disabled={isLoading}
@@ -222,25 +224,20 @@ function SignupForm() {
                       }
                     },
                   })}
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={handleClickShowpassword_confirmation}
-                        onMouseDown={handleMouseDownPassword}
-                        edge="end"
-                      >
-                        {showpassword_confirmation ? (
-                          <MdVisibility />
-                        ) : (
-                          <MdVisibilityOff />
-                        )}
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                  label="Password"
+                  style={{ width: "100%", height: 60, borderRadius: "10px" }}
                 />
-              </FormControl>
+                <span
+                  className="absolute right-3 top-4 cursor-pointer"
+                  onClick={handleClickShowpassword_confirmation}
+                >
+                  {showpassword_confirmation  ? (
+                    <IoMdEyeOff size={27} />
+                  ) : (
+                    <IoMdEye size={27} />
+                  )}
+                </span>
+              </div>
+             
             </div>
             <div className="flex gap-2">
               <input
