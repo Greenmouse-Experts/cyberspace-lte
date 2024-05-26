@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { TextField } from "@mui/material";
 import Button from "../components/Button";
 import { NavLink } from "react-router-dom";
