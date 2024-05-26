@@ -126,7 +126,7 @@ function LoginForm() {
 
             <p className="text-grey-800 text-lg font-normal my-2">
               Forgot Password?{" "}
-              <span className="text-bluePrimary underline font-semibold pb-1 cursor-pointer" onClick={() => handleOpen()}>
+              <span className="text-bluePrimary font-semibold pb-1 cursor-pointer" onClick={() => handleOpen()}>
                 Click here
               </span>
             </p>
@@ -146,7 +146,7 @@ function LoginForm() {
 
           <p className="text-grey-800 text-lg font-normal mb-3 text-center mt-3">
             Need an account?{" "}
-            <span className="text-bluePrimary underline font-semibold pb-1">
+            <span className="text-bluePrimary font-semibold pb-1">
               <NavLink to="/signup">Create one</NavLink>
             </span>
           </p>
