@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { TextField } from "@mui/material";
 import Button from "../components/Button";
 import { NavLink } from "react-router-dom";
@@ -15,16 +15,15 @@ function ResetPassword() {
   //const mood = useAppSelector(isDark);
 
   //const userEmail = useAppSelector(getVerifyEmail);
-  const { register, handleSubmit, formState } = useForm({});
-  const { errors } = formState;
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const form = useForm<FormData>({
+  const { register, handleSubmit, formState } = useForm<FormData>({
     defaultValues: {
       code: "",
       password: "",
     },
   });
+
+  const { errors } = formState;
+
 
   const onSubmit: SubmitHandler<FieldValues> = ({code, password}) => {
     resetPassword(
