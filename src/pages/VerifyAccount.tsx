@@ -6,9 +6,11 @@ import { getVerifyEmail } from "../state/user/userSlice";
 import { useVerifyUser } from "../features/auth/useVerifyUser";
 import toast from "react-hot-toast";
 import { NavLink } from "react-router-dom";
+//import { isDark } from "../features/darkmode/DarkModeSlice";
 
 function VerifyAccount() {
   const { verify, isLoading } = useVerifyUser();
+  //const mood = useAppSelector(isDark);
 
   const userEmail = useAppSelector(getVerifyEmail);
 
@@ -27,7 +29,7 @@ function VerifyAccount() {
   };
 
   return (
-    <section className="flex justify-center items-center h-screen">
+    <section className="flex justify-center items-center h-screen dark:bg-darkMood">
       <form
         onSubmit={handleSubmit}
         className="md:w-[580px] w-full h-full md:p-0 p-5 flex justify-center items-center mx-auto flex-col gap-8"

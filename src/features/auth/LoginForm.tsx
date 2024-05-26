@@ -15,6 +15,7 @@ import { useDispatch } from "react-redux";
 import { useAppSelector } from "../../state/hooks";
 import { isDark } from "../darkmode/DarkModeSlice";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { ForgotModal } from "../../components/modals/ForgotModal";
 // import { useAppSelector } from "../../state/hooks";
 
 interface FormData extends FieldValues {
@@ -24,16 +25,11 @@ interface FormData extends FieldValues {
 
 function LoginForm() {
   const mood = useAppSelector(isDark);
-  // const navigate = useNavigate();
-  // const verifyUser = useAppSelector(isLoggedIn)
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(!open);
+  
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-  // const handleMouseDownPassword = (
-  //   event: React.MouseEvent<HTMLButtonElement>
-  // ) => {
-  //   event.preventDefault();
-  // };
 
   const { register, handleSubmit, formState } = useForm({});
   const { errors } = formState;
@@ -50,7 +46,6 @@ function LoginForm() {
   const dispatch = useDispatch();
 
   const onSubmit: SubmitHandler<FieldValues> = ({ password, email }) => {
-    console.log(email, password);
     login(
       { email, password },
       {
@@ -66,11 +61,6 @@ function LoginForm() {
     );
   };
 
-  // useEffect(() => {
-  //   if (verifyUser) {
-  //     navigate("/", {replace:true});
-  //   }
-  // }, [verifyUser, navigate]);
 
   return (
     <section className="flex items-center h-full  mx-0 font-inter lg:py-20">
@@ -136,8 +126,8 @@ function LoginForm() {
 
             <p className="text-grey-800 text-lg font-normal my-2">
               Forgot Password?{" "}
-              <span className="text-bluePrimary underline font-semibold pb-1">
-                <NavLink to="#">Click here</NavLink>
+              <span className="text-bluePrimary underline font-semibold pb-1 cursor-pointer" onClick={() => handleOpen()}>
+                Click here
               </span>
             </p>
             <div className="flex gap-2">
@@ -162,6 +152,7 @@ function LoginForm() {
           </p>
         </div>
       </form>
+<ForgotModal  handleOpen={handleOpen} open={open}/>
     </section>
   );
 }

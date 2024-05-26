@@ -39,7 +39,7 @@ function SignupForm() {
   const { register, handleSubmit, getValues, reset, watch, formState } =
     useForm({});
   const { errors } = formState;
-  console.log(errors);
+  // console.log(errors);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -76,7 +76,7 @@ function SignupForm() {
     phone_number,
     password_confirmation,
   }: SignupProps) {
-    console.log(email, password, first_name, last_name, phone_number);
+    // console.log(email, password, first_name, last_name, phone_number);
     signup(
       {
         email,
@@ -90,7 +90,7 @@ function SignupForm() {
         onSuccess(data) {
           dispatch(setVerifyEmail(email));
           navigate("/verify-account");
-          console.log(data);
+          // console.log(data);
 
           // dispatch(loginUser())
         },

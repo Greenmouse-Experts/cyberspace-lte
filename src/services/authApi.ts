@@ -12,6 +12,13 @@ export const signup = async(payload:SignupProps) => {
  export const verifyUser = async(payload:VerifyProps) => {
   return  AXIOS.post(`/email-confirm`, payload).then((response) => response.data)
 } 
+ export const forgotPassword = async(payload:{email:string}) => {
+  return  AXIOS.post(`/forgot-password`, payload).then((response) => response.data)
+} 
+ export const resetPassword = async(payload:{password:string, code:string}) => {
+  return  AXIOS.post(`/reset-password`, payload).then((response) => response.data)
+} 
+
 
 
 

@@ -23,6 +23,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Products from "./pages/Products";
 import VerifyAccount from "./pages/VerifyAccount";
 import WhistleBlower from "./pages/WhistleBlower";
+import ResetPassword from "./pages/ResetPassword";
 
 
 const router = createBrowserRouter([
@@ -102,6 +103,10 @@ const router = createBrowserRouter([
   {
     path: "/verify-account",
     element: <VerifyAccount />,
+  },
+  {
+    path: "/reset-password",
+    element: <ResetPassword />,
   },
 ]);
 
