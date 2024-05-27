@@ -16,7 +16,7 @@ function About() {
             of ISPs. Our network is designed for the ultimate performance,
             delivering the speed you need to stay ahead of the curve.
           </p>
-          <p className="mt-3">
+          <p className="mt-5">
             For the Nigerian youth carving their path, for the professionals
             shaping the future, and for the businesses setting the trends,
             Superfast is the name you can trust. With us, you’re not just
