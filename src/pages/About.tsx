@@ -1,4 +1,4 @@
-import { FaChartLine, FaFontAwesomeFlag } from "react-icons/fa";
+
 import Banner from "../components/Banner";
 
 function About() {
