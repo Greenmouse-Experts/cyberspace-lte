@@ -52,6 +52,7 @@ export const userSlice = createSlice({
 });
 
 export const { setToken, saveUser, removeToken, setIsLoggedIn, setVerifyEmail } = userSlice.actions;
+export const userData = (state:RootState) => state.user.user
 export const getToken = (state: RootState) => state.user.token;
 export const getVerifyEmail = (state: RootState) => state?.user?.verifyEmail;
 export const isLoggedIn = (state: RootState) => state.user.isLoggedIn

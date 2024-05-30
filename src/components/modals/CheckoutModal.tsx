@@ -13,7 +13,7 @@ import SelectInput from "../SelectInput";
 import { useSelector } from "react-redux";
 import { getTotalCartPrice } from "../../state/cart/cartSlice";
 import { formatCurrency } from "../../utils/helpers";
-import { usePayment } from "../../features/cart/usePayment";
+import { useGetPayment, usePayment } from "../../features/cart/usePayment";
 import { useForm } from "react-hook-form";
 
 // import toast from "react-hot-toast";
@@ -42,6 +42,8 @@ export function CheckoutModal({ handleOpen, open }) {
 
   const { pay, isLoading } = usePayment();
 
+  const {checkPayment} = useGetPayment()
+
   const watchState = watch("state");
   // const [merchantRef, setMerchantRef] = useState("");
 
@@ -56,33 +58,36 @@ export function CheckoutModal({ handleOpen, open }) {
   };
 
   const onSubmit = (data) => {
+    // checkPayment("KIN280524837191475598")
     pay(
       {
         Currency: "NGN",
         MerchantRef: generateMerchantRef(),
-        Amount: totalPrice,
+        Amount: 15000,
         Description: "Product",
         CustomerId: "960",
         CustomerName: `${data.first_name} ${data.last_name}`,
         CustomerEmail: data.email,
         CustomerMobile: data.phone_number,
         IntegrationKey: "078b48a5c64442ddb63ac3d1f0604153",
-        ReturnUrl: "https://cyberspace-lte.netlify.app/",
+        ReturnUrl: "http://localhost:5174/cart",
         WebhookUrl: "https://merchant_webhook_url",
         ProductCode: "",
-        Splits: [
-          {
-            WalletCode: "teargstd",
-            Amount: totalPrice,
-            ShouldDeductFrom: true,
-          },
-        ],
+        // Splits: [
+        //   {
+        //     WalletCode: "teargstd",
+        //     Amount: totalPrice,
+        //     ShouldDeductFrom: true,
+        //   },
+        // ],
       },
       {
         onSuccess(data) {
           console.log(data);
           if (data.succeeded) {
-            window.location.href = data.data.redirectUrl;
+            console.log(data.data)
+            checkPayment(data.data.transactionReference)
+            // window.location.href = data.data.redirectUrl;
           }
         },
         onError() {

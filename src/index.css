@@ -181,6 +181,11 @@ li{
     position: unset !important;
   }
 }
+@media screen and (min-width: 960px) {
+  .unset2 {
+    position: unset !important;
+  }
+}
 @media screen and (max-width: 768px) {
   h4 {
     font-size: 1.2rem;

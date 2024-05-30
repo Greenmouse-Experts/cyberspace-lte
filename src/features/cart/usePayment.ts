@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import { payment } from "../../services/apis/paymentApi";
+import { getPaymentStatus, payment } from "../../services/apis/paymentApi";
 import toast from "react-hot-toast";
 
 export function usePayment(){
@@ -16,4 +16,21 @@ export function usePayment(){
     })
 
     return { pay, isLoading }
+}
+
+export function useGetPayment(){
+    const { mutate: checkPayment, isLoading } = useMutation({
+        mutationFn: getPaymentStatus,
+        onSuccess: (data) => {
+            console.log(data)
+            toast.success("Payment Successful")
+        },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        onError: (error:any) => {
+            console.log(error)
+            toast.error(error.response.data.message)
+        }
+    })
+
+    return { checkPayment, isLoading }
 }

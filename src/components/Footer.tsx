@@ -155,7 +155,7 @@ function Footer() {
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
               <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
-                <NavLink to="/signin">my account</NavLink>
+                <NavLink to="/account">my account</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="/cart">My cart</NavLink>

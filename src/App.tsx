@@ -24,6 +24,7 @@ import Products from "./pages/Products";
 import VerifyAccount from "./pages/VerifyAccount";
 import WhistleBlower from "./pages/WhistleBlower";
 import ResetPassword from "./pages/ResetPassword";
+import Account from "./pages/Account";
 
 
 const router = createBrowserRouter([
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
         path: "whistle-blower",
         element: <WhistleBlower />,
       },
+      {
+        path:"account",
+        element: <Account />,
+      }
     ],
   },
   {
