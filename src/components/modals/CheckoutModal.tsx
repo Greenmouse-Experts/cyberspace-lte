@@ -13,14 +13,17 @@ import SelectInput from "../SelectInput";
 import { useSelector } from "react-redux";
 import { getTotalCartPrice } from "../../state/cart/cartSlice";
 import { formatCurrency } from "../../utils/helpers";
-import { useGetPayment, usePayment } from "../../features/cart/usePayment";
+import {  usePayment } from "../../features/cart/usePayment";
 import { useForm } from "react-hook-form";
 
 // import toast from "react-hot-toast";
 import SpinnerMini from "../SpinnerMini";
+import { userData } from "../../state/user/userSlice";
+import { GATEWAY_KEY } from "../../services/constant";
 
 export function CheckoutModal({ handleOpen, open }) {
   const totalPrice = useSelector(getTotalCartPrice);
+  const {id} = useSelector(userData)
 
   const {
     register,
@@ -42,10 +45,9 @@ export function CheckoutModal({ handleOpen, open }) {
 
   const { pay, isLoading } = usePayment();
 
-  const {checkPayment} = useGetPayment()
+  
 
   const watchState = watch("state");
-  // const [merchantRef, setMerchantRef] = useState("");
 
   const generateMerchantRef = () => {
     // Generate a unique identifier using timestamp or any other method you prefer
@@ -58,19 +60,19 @@ export function CheckoutModal({ handleOpen, open }) {
   };
 
   const onSubmit = (data) => {
-    // checkPayment("KIN280524837191475598")
+   
     pay(
       {
         Currency: "NGN",
         MerchantRef: generateMerchantRef(),
-        Amount: 15000,
+        Amount: `${totalPrice * 100}`,
         Description: "Product",
-        CustomerId: "960",
+        CustomerId: id,
         CustomerName: `${data.first_name} ${data.last_name}`,
         CustomerEmail: data.email,
         CustomerMobile: data.phone_number,
-        IntegrationKey: "078b48a5c64442ddb63ac3d1f0604153",
-        ReturnUrl: "http://localhost:5174/cart",
+        IntegrationKey: `${GATEWAY_KEY}`,
+        ReturnUrl: "https://cyberspace-lte.netlify.app/account",
         WebhookUrl: "https://merchant_webhook_url",
         ProductCode: "",
         // Splits: [
@@ -86,8 +88,8 @@ export function CheckoutModal({ handleOpen, open }) {
           console.log(data);
           if (data.succeeded) {
             console.log(data.data)
-            checkPayment(data.data.transactionReference)
-            // window.location.href = data.data.redirectUrl;
+           
+            window.location.href = data.data.redirectUrl;
           }
         },
         onError() {

@@ -5,9 +5,10 @@ import { FiUser } from "react-icons/fi";
 import { NavLink, useNavigate } from "react-router-dom";
 import DarkmodeToggle from "../features/darkmode/DarkmodeToggle";
 import { useAppSelector } from "../state/hooks";
-import { isLoggedIn, removeToken } from "../state/user/userSlice";
+import { isLoggedIn, removeToken, userData } from "../state/user/userSlice";
 import { useDispatch } from "react-redux";
 import { isDark } from "../features/darkmode/DarkModeSlice";
+import { MdExitToApp } from "react-icons/md";
 
 function Header() {
   const [menu, setmMenu] = useState(false);
@@ -18,7 +19,10 @@ function Header() {
     navigate("/signin");
     dispatch(removeToken());
   };
+  const user = useAppSelector(userData)
+    const {name} = user
 
+    const firstName = name.split(' ')[0];
   const mood = useAppSelector(isDark);
 
   return (
@@ -107,13 +111,15 @@ function Header() {
           <div className="flex items-center  md:gap-6 gap-2">
             <div
               className="flex items-center gap-1 cursor-pointer"
-              onClick={logout}
+              
             >
-              <FiUser color="#0094EF" size={25} />
-              <p className="font-bold text-bluePrimary text-nowrap 2xl:text-[1.05rem] text-sm sm:block hidden">
-                {verifyUser ? "Logout" : "Selfcare Portal"}
+              <FiUser color="#0080CF" size={25} />
+              <p className="font-bold text-bluePrimary text-nowrap 2xl:text-[1.05rem] capitalize  ">
+                {verifyUser ? <NavLink to="/account">{firstName}</NavLink> : <span onClick={logout}>Selfcare Portal</span>}
+                {/* {verifyUser ? `${firstName}` : "Selfcare Portal"} */}
               </p>
             </div>
+           {verifyUser && <MdExitToApp color="#0080CF" size={25} onClick={logout}  className=" cursor-pointer"/>}
             <div className="bg-[#D9D9D9] w-[2px]" />
             <li className=" text-grayPrimary font-bold dark:text-white md:block hidden ">
               <NavLink onClick={() => setmMenu(false)} to="/coverage">

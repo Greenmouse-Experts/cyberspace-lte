@@ -1,26 +1,80 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { IoMailOutline } from "react-icons/io5";
 import UserDetails from "./UserDetails";
+import Orders from "./Orders";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useConfirmPayment, useGetPayment } from "../cart/usePayment";
+import Loader from "../../components/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart, getCart } from "../../state/cart/cartSlice";
 
 function AccountOverview() {
   const [tab, setTab] = useState("account");
+  const cartItems = useSelector(getCart);
+  const { search } = useLocation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { checkPayment, isChecking } = useGetPayment();
+  const { confirmTransaction, isConfirming } = useConfirmPayment();
+  const queryParams = new URLSearchParams(search);
+
+  const ref = queryParams.get("ref");
 
   const data = [
     {
-        title:"My Account",
-        value:"account",
-    }, 
-    {
-        title:"Orders",
-        value:"orders",
+      title: "My Account",
+      value: "account",
     },
     {
-        title:"Inbox",
-        value:"inbox",
+      title: "Orders",
+      value: "orders",
+    },
+    {
+      title: "Inbox",
+      value: "inbox",
+    },
+  ];
+
+  useEffect(() => {
+    if (ref) {
+      setTab("orders");
+      checkPayment(ref, {
+        onSuccess(data) {
+          console.log(data);
+          confirmTransaction(
+            {
+              products: cartItems.items,
+              phone_number: "090111212111",
+              address: "Ikeja",
+              city: "Ikeja",
+              region: "Ikeja",
+              country: "Nigeria",
+              transactionReference: ref,
+            },
+            {
+              onSuccess() {
+                dispatch(clearCart());
+              },
+            }
+          );
+        },
+        onSettled() {
+          navigate("/account");
+        },
+      });
     }
-  ]
+  }, [
+    ref,
+    checkPayment,
+    navigate,
+    confirmTransaction,
+    cartItems.items,
+    dispatch,
+  ]);
+
+  if (isConfirming || isChecking) return <Loader/>;
 
   return (
     <div className="grid lg:grid-cols-4 grid-cols-1  gap-10">
@@ -91,7 +145,7 @@ function AccountOverview() {
         )}
         {tab === "orders" && (
           <div>
-            <p>Orders</p>
+            <Orders />
           </div>
         )}
         {tab === "inbox" && (

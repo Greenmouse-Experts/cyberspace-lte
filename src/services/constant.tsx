@@ -1,4 +1,5 @@
 export const BASE_URL = import.meta.env.VITE_BASE_URL
+export const GATEWAY_KEY = import.meta.env.VITE_CYBERPAY_KEY
 
 
 // product endpoints
