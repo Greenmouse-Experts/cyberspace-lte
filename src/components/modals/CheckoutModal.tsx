@@ -85,10 +85,7 @@ export function CheckoutModal({ handleOpen, open }) {
       },
       {
         onSuccess(data) {
-          console.log(data);
           if (data.succeeded) {
-            console.log(data.data)
-           
             window.location.href = data.data.redirectUrl;
           }
         },
