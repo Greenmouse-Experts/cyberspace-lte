@@ -30,7 +30,7 @@ function PersonalPlanItem({
   return (
     <>
       <div
-        className="border flex  flex-col justify-between border-bluePrimary py-8 px-4 rounded-2xl font-inter shadow-sm"
+        className="border flex  flex-col justify-between border-bluePrimary py-8 px-4 rounded-2xl font-inter shadow-sm cursor-pointer"
         onClick={() => {
           if (checkUser) {
             handleOpen();

@@ -163,12 +163,20 @@ export function PlantModal({ handleOpen, open }) {
             />
           </div>
           <div className="flex flex-col items-start gap-1 mt-10">
-            <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
-            5pm-8am Weekdays, 24Hrs Weekends and Public Holidays
-            </p>
+           
             <div className="bg-[#E4E7E9] h-[1px]" />
             <div className="bg-[#E4E7E9] h-[1px]" />
             <p className="text-bluePrimary font-bold 2xl:text-lg text-sm">
+            Cyber Lounge
+            </p>
+           <p>
+           5pm-8am Weekdays, 24Hrs Weekends and Public Holidays
+           </p>
+
+           <p className="">
+             20GB
+            </p>
+            <p className="">
               30 Days
             </p>
             <div className="bg-[#E4E7E9] h-[1px]" />
