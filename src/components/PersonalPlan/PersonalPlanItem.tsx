@@ -50,6 +50,7 @@ function PersonalPlanItem({
             <p className=" font-normal text-base">
               {time ? time : "24 Hours x 7 Days"}
             </p>
+            
           </div>
           <div className="flex items-start gap-2 border-t border-grey-400 py-4">
             <span>
@@ -80,3 +81,4 @@ function PersonalPlanItem({
 }
 
 export default PersonalPlanItem;
+  
