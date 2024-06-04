@@ -162,32 +162,35 @@ export function PlantModal({ handleOpen, open }) {
               })}
             />
           </div>
-          <div className="flex flex-col items-start gap-1 mt-10">
-           
-            <div className="bg-[#E4E7E9] h-[1px]" />
-            <div className="bg-[#E4E7E9] h-[1px]" />
-            <p className="text-bluePrimary font-bold 2xl:text-lg text-sm">
-            Cyber Lounge
-            </p>
-           <p>
-           5pm-8am Weekdays, 24Hrs Weekends and Public Holidays
-           </p>
+          <div className="flex flex-col items-start gap-3 mt-10">
+          <div className="flex justify-between w-full">
+              <span className="w-[50%] text-lg font-[300]">Name:</span>
+              <span className="w-[50%] text-[1.3rem] font-medium">Cyber Lounge</span>
+            </div>
+            <div className="flex justify-between w-full">
+              <span className="w-[50%] text-lg font-[300]">Usage Time: </span>
+              <span className="w-[50%] text-[1.3rem] font-medium"> 5pm-8am Weekdays, 24Hrs Weekends and Public Holidays</span>
+            </div>
 
-           <p className="">
-             20GB
-            </p>
-            <p className="">
-              30 Days
-            </p>
-            <div className="bg-[#E4E7E9] h-[1px]" />
-            <p className="text-lightGray font-bold 2xl:text-2xl text-lg ">
-              N28,500
-            </p>
+            <div className="flex justify-between w-full">
+              <span className="w-[50%] text-lg font-[300]">Size:</span>
+              <span className="w-[50%] text-[1.3rem] font-medium">  30GB</span>
+            </div>
+
+            <div className="flex justify-between w-full">
+              <span className="w-[50%] text-lg font-[300]">Duration:</span>
+              <span className="w-[50%] text-[1.3rem] font-medium"> 30Days</span>
+            </div>
+            <div className="flex justify-between w-full">
+              <span className="w-[50%] text-lg font-[300]">Price: </span>
+              <span className="w-[50%] text-[1.3rem] font-medium"> {formatCurrency(6000)}</span>
+            </div>
+            
           </div>
 
           <div className="mt-10 flex flex-col gap-5 text-black">
             
-            <div className="flex justify-between">
+            <div className="flex justify-between w-full">
               <span className="text-2xl font-medium">Total</span>
               <span className="text-[1.3rem] font-medium">
                 {formatCurrency(6000)}
