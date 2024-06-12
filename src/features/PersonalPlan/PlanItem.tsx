@@ -1,6 +1,6 @@
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { formatCurrency } from "../../utils/helpers";
-import { PlantModal } from "../modals/PlanModal";
+import { PlantModal } from "../../components/modals/PlanModal";
 import { useState } from "react";
 import { isLoggedIn } from "../../state/user/userSlice";
 import { useSelector } from "react-redux";
@@ -25,7 +25,7 @@ function PersonalPlanItem({
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
   const checkUser = useSelector(isLoggedIn);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
@@ -50,7 +50,6 @@ function PersonalPlanItem({
             <p className=" font-normal text-base">
               {time ? time : "24 Hours x 7 Days"}
             </p>
-            
           </div>
           <div className="flex items-start gap-2 border-t border-grey-400 py-4">
             <span>
@@ -81,4 +80,3 @@ function PersonalPlanItem({
 }
 
 export default PersonalPlanItem;
-  

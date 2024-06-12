@@ -37,6 +37,21 @@ function AccountOverview() {
     },
   ];
 
+  console.log(cartItems)
+  const formattedItems = cartItems.items.map(item => {
+    return {
+      ...item,
+      product_id: item.productId,
+      productId: undefined
+    };
+  });
+  
+  // Remove undefined values (optional)
+  formattedItems.forEach(item => delete item.productId);
+  
+  console.log(formattedItems);
+  
+
   useEffect(() => {
     if (ref) {
       setTab("orders");
@@ -45,7 +60,7 @@ function AccountOverview() {
           console.log(data);
           confirmTransaction(
             {
-              products: cartItems.items,
+              products: formattedItems,
               phone_number: "090111212111",
               address: "Ikeja",
               city: "Ikeja",

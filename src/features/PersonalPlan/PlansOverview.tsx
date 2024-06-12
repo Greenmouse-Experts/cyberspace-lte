@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PersonalPlanItem from "./PersonalPlanItem";
+import PersonalPlanItem from "./PlanItem";
 
 function PersonalPlanOverview() {
   const [plan, setPlan] = useState(false);

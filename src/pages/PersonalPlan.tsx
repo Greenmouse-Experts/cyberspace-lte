@@ -1,6 +1,5 @@
-
 import Banner from "../components/Banner";
-import PersonalPlanOverview from "../components/PersonalPlan/PersonalPlanOverview";
+import PersonalPlanOverview from "../features/PersonalPlan/PlansOverview";
 
 function PersonalPlan() {
   return (

@@ -10,3 +10,6 @@ export const GET_CATEGORIES = `/public/product-categories`
 
 //dealers enpoints
 export const GET_DEALERS = `/public/product-dealer`
+
+//plans endpoints 
+export const GET_ALL_PLANS = `public/plans`

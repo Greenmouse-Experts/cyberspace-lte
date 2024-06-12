@@ -61,7 +61,7 @@ export function PlantModal({ handleOpen, open }) {
         Currency: "NGN",
         MerchantRef: generateMerchantRef(),
         Amount: `${totalPrice * 100}`,
-        Description: "Product",
+        Description: "Plan",
         CustomerId: id,
         CustomerName: `${data.first_name} ${data.last_name}`,
         CustomerEmail: data.email,
