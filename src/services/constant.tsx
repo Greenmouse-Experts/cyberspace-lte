@@ -4,7 +4,7 @@ export const GATEWAY_KEY = import.meta.env.VITE_CYBERPAY_KEY
 
 // product endpoints
 export const GET_PRODUCTS = `/public/products`
-export const GET_PRODUCT = `/public/product`
+export const GET_PRODUCT = `/view/product`
 export const GET_CATEGORIES = `/public/product-categories`
 
 

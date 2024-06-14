@@ -40,7 +40,7 @@ export const getProducts = async () => {
 
 export const getProduct = async (id:string) => {
   return axios
-    .get(`${ENDPOINT.GET_PRODUCT}/${id}`)
+    .get(`https://cyberspacelte.greenmouseacademy.com.ng/api/public/view/product/${id}`)
     .then((response) => response.data);
 };
 

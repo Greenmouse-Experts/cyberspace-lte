@@ -10,8 +10,10 @@ export function useProduct(productId:string) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     queryKey: [productId],
-    queryFn: getProduct(productId),
+    queryFn:() => getProduct(productId),
   });
+
+  console.log("from query", product)
 
   return { isLoading, product, error };
 }

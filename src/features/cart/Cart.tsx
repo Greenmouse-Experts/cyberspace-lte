@@ -39,10 +39,10 @@ function Cart() {
       <div className="lg:w-[45%] w-full border border-x-grey-400 py-10 sm:px-10 px-2 rounded-lg">
         <h3 className="font-medium sm:ml-10">Order Summary</h3>
         <div className="mt-10">
-          <p className="text-lg font-normal">
+          {/* <p className="text-lg font-normal">
             <span>Discount</span> / <span>Promo Code</span>
-          </p>
-          <div className="relative ">
+          </p> */}
+          {/* <div className="relative ">
             <input
               type="text"
               placeholder="Optional"
@@ -51,9 +51,9 @@ function Cart() {
             <button className="bg-bluePrimary px-4 py-[0.5px] text-lg rounded-lg text-white absolute right-3 font-[300] top-7">
               Apply
             </button>
-          </div>
+          </div> */}
 
-          <div className="mt-10 flex flex-col gap-5">
+          <div className="mt-10 flex flex-col gap-5 mb-5">
             <div className="flex justify-between">
               <span className="text-2xl font-medium">Subtotal</span>{" "}
               <span className="text-[1.3rem] font-medium">

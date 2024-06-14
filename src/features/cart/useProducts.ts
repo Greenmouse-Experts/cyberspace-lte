@@ -7,7 +7,7 @@ export function useProducts() {
     data: products,
     error,
   } = useQuery({
-    queryKey: ["producst"],
+    queryKey: ["products"],
     queryFn: getProducts,
   });
 

@@ -26,6 +26,7 @@ import WhistleBlower from "./pages/WhistleBlower";
 import ResetPassword from "./pages/ResetPassword";
 import Account from "./pages/Account";
 import PersonalPlan from "./pages/PersonalPlan";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const router = createBrowserRouter([
   {
@@ -121,6 +122,7 @@ function App() {
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
         <RouterProvider router={router} />
         <Toaster
           position="top-center"
@@ -128,7 +130,7 @@ function App() {
           containerStyle={{ margin: "8px", top: 150 }}
           toastOptions={{
             success: { duration: 3000 },
-            error: { duration: 5000 },
+            error: { duration: 3000 },
             style: {
               fontSize: "16px",
               maxWidth: "500px",

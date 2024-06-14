@@ -3,15 +3,18 @@ import Banner from "../components/Banner";
 import { GoDotFill } from "react-icons/go";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { formatCurrency } from "../utils/helpers";
-import { useProducts } from "../features/cart/useProducts";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Loader from "../components/Loader";
-import { ProductItemType } from "../contracts/product.";
-import { addProduct, decreaseQuantity, increaseQuantity } from "../state/cart/cartSlice";
+import {
+  addProduct,
+  decreaseQuantity,
+  increaseQuantity,
+} from "../state/cart/cartSlice";
 import { useAppDispatch } from "../state/hooks";
 import { Tooltip } from "@material-tailwind/react";
 import { FaInfoCircle } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { useProduct } from "../features/cart/useProduct";
 
 // import Tabs from "@mui/material/Tabs";
 // import Tab from "@mui/material/Tab";
@@ -19,37 +22,37 @@ import toast from "react-hot-toast";
 
 function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
-  
+const navigate = useNavigate()
   const { id } = useParams();
-  const dispatch = useAppDispatch()
+  const { product, isLoading } = useProduct(`${id}`);
 
-  const productId = id ? parseInt(id) : undefined;
+  const dispatch = useAppDispatch();
+ 
+  // const productId = id ? parseInt(id) : undefined;
 
-  const { products, isLoading } = useProducts();
-  
   const [value, setValue] = useState(0);
 
-  
   const increment = () => {
-    dispatch(increaseQuantity(id))
+    dispatch(increaseQuantity(id));
 
     setQuantity(quantity + 1);
   };
   const decrement = () => {
-    dispatch(decreaseQuantity(id))
+    dispatch(decreaseQuantity(id));
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
-  
+
   if (isLoading) return <Loader />;
+  
+  console.log("product",product);
+  // const product = products.data.filter(
+  //   (p: ProductItemType) => p.id == productId
+  // );
+  // console.log(product, id);
 
-  const product = products.data.filter(
-    (p: ProductItemType) => p.id == productId
-  );
-  console.log(product, id);
-
-  const { product_name, price, images } = product[0];
+  const { product_name, price, images, specification }= product.data
 
   const renderImg = JSON.parse(images)[0];
 
@@ -57,24 +60,24 @@ function ProductDetail() {
     setValue(newValue);
   };
 
-
-
   const addToCart = () => {
-    dispatch( addProduct({
-      price:parseInt(price) * quantity,
-      name: product_name,
-      quantity:quantity,
-      productId: id ,
-      unitPrice:price,
-      image: renderImg,
-    }));
+    dispatch(
+      addProduct({
+        price: parseInt(price) * quantity,
+        name: product_name,
+        quantity: quantity,
+        productId: id,
+        unitPrice: price,
+        image: renderImg,
+      })
+    );
     toast.success(`${product_name} added successfully`);
   };
 
   return (
     <>
-      <Banner title="internet routers" text={ `Product / ${product_name}`} />
-      <section className="mt-20 flex lg:flex-row flex-col items-start gap-10 font-inter">
+      <Banner title="internet routers" text={`Product / ${product_name}`} />
+      <section className="mt-20 flex lg:flex-row flex-col items-center gap-10 font-inter">
         <div className="lg:w-[55%] w-full">
           <div className="flex gap-5 md:flex-row flex-col-reverse items-start h-full">
             <div className="flex md:flex-col flex-row gap-5 ">
@@ -122,9 +125,9 @@ function ProductDetail() {
               <span>
                 <GoDotFill size={12} />
               </span>
-              Multiple User Wi-Fi Access Up to 15 Users
+              <span dangerouslySetInnerHTML={{ __html: specification }} />
             </li>
-            <li className="text-lg font-[300] flex items-center gap-2">
+            {/* <li className="text-lg font-[300] flex items-center gap-2">
               <span>
                 <GoDotFill size={12} />
               </span>
@@ -148,7 +151,7 @@ function ProductDetail() {
                 <GoDotFill size={12} />
               </span>
               Wi-Fi Frequency: Supports 2.4GHz and 5GHz Frequency
-            </li>
+            </li> */}
           </ul>
           {/* <div className="flex gap-4 border-y border-grey-400 py-5 mt-2">
             <button className="  uppercase text-bluePrimary px-10 py-3 text-lg border border-bluePrimary">
@@ -160,34 +163,33 @@ function ProductDetail() {
           </div> */}
           <p className="text-base font-normal">NGN(incl. of VAT) :</p>
           <div className="flex items-center gap-3">
-
-         
-         <h4 className=" font-inter">{formatCurrency(price * quantity)}</h4>
+            <h4 className=" font-inter">{formatCurrency(price * quantity)}</h4>
             {price == 122000 && (
-          <div className=" bottom-4 right-2 ">
-            <Tooltip
-              placement="top"
-              className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
-              content={
-                <div className="w-80">
-                  <p className="font-normal opacity-80 text-redPrimary">
-                    <span className="font-medium">Note:</span> {formatCurrency(price)} is only for the product not
-                    with installation.
-                  </p>
-                </div>
-              }
-            >
-              <span>
-                <FaInfoCircle
-                  color="red"
-                  size={20}
-                  className=" cursor-pointer"
-                />
-              </span>
-            </Tooltip>
-          </div>
-        )}
-        
+              <div className=" bottom-4 right-2 ">
+                <Tooltip
+                  placement="top"
+                  className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl shadow-black/10"
+                  content={
+                    <div className="w-80">
+                      <p className="font-normal opacity-80 text-redPrimary">
+                        <span className="font-medium">Note:</span>{" "}
+                        {formatCurrency(price)} is only for the product not with
+                        installation.
+                      </p>
+                    </div>
+                  }
+                >
+                  <span>
+                    <FaInfoCircle
+                      color="red"
+                      size={20}
+                      className=" cursor-pointer"
+                    />
+                  </span>
+                </Tooltip>
+              </div>
+            )}
+
             <h3 className="text-2xl text-grey-300 line-through font-inter">
               ₦50,000
             </h3>
@@ -211,10 +213,16 @@ function ProductDetail() {
                 <FiPlus size={30} />
               </span>
             </div>
-            <button className="  text-white bg-bluePrimary  md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary">
+            <button className="  text-white bg-bluePrimary  md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary" onClick={() => {
+              addToCart();
+              navigate("/cart")
+            }}>
               Buy Now
             </button>
-            <button  onClick={addToCart} className=" text-bluePrimary md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary">
+            <button
+              onClick={addToCart}
+              className=" text-bluePrimary md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary"
+            >
               Add to Cart
             </button>
           </div>
