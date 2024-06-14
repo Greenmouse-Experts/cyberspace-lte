@@ -8,8 +8,8 @@ import {
   DialogFooter,
 } from "@material-tailwind/react";
 import InputText from "../InputText";
-import { useSelector } from "react-redux";
-import { getTotalCartPrice } from "../../state/cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+// import { getTotalCartPrice } from "../../state/cart/cartSlice";
 import { formatCurrency } from "../../utils/helpers";
 import { usePayment } from "../../features/cart/usePayment";
 import { useForm } from "react-hook-form";
@@ -18,10 +18,12 @@ import { useForm } from "react-hook-form";
 import SpinnerMini from "../SpinnerMini";
 import { userData } from "../../state/user/userSlice";
 import { GATEWAY_KEY } from "../../services/constant";
+import { addPaymentDetails } from "../../state/payment/paymentSlice";
 
-export function PlantModal({ handleOpen, open }) {
-  const totalPrice = useSelector(getTotalCartPrice);
+export function PlantModal({ handleOpen, open, planItem }) {
+  // const totalPrice = useSelector(getTotalCartPrice);
   const { id } = useSelector(userData);
+  const dispatch = useDispatch();
 
   const {
     register,
@@ -35,9 +37,7 @@ export function PlantModal({ handleOpen, open }) {
       last_name: "",
       email: "",
       phone_number: "",
-      address: "",
-      state: "",
-      lga: "",
+      routerId:""
     },
   });
 
@@ -56,18 +56,22 @@ export function PlantModal({ handleOpen, open }) {
   };
 
   const onSubmit = (data) => {
+    console.log(data)
+    if(data){
+      dispatch(addPaymentDetails({...data, plan_id: planItem.id}));
+     }
     pay(
       {
         Currency: "NGN",
         MerchantRef: generateMerchantRef(),
-        Amount: `${totalPrice * 100}`,
+        Amount: `${planItem.price * 100}`,
         Description: "Plan",
         CustomerId: id,
         CustomerName: `${data.first_name} ${data.last_name}`,
         CustomerEmail: data.email,
         CustomerMobile: data.phone_number,
         IntegrationKey: `${GATEWAY_KEY}`,
-        ReturnUrl: "https://cyberspace-lte.netlify.app/account",
+        ReturnUrl: "http://localhost:5173/plans",
         WebhookUrl: "https://merchant_webhook_url",
         ProductCode: "",
         // Splits: [

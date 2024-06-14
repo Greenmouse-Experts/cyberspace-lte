@@ -1,18 +1,20 @@
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import { formatCurrency } from "../../utils/helpers";
+import { formatAsNgnMoney } from "../../utils/helpers";
 import { PlantModal } from "../../components/modals/PlanModal";
 import { useState } from "react";
 import { isLoggedIn } from "../../state/user/userSlice";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { PlanType } from "./plans.types";
 
 interface PersonalItemProps {
   plan: string;
   size: string;
   duration?: string;
-  price: number;
-  time?: string;
+  price: string;
+  available_hour?: string;
+  planItem:PlanType;
 }
 
 function PersonalPlanItem({
@@ -20,7 +22,8 @@ function PersonalPlanItem({
   size,
   duration,
   price,
-  time,
+  available_hour,
+  planItem
 }: PersonalItemProps) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
@@ -48,7 +51,7 @@ function PersonalPlanItem({
               <IoIosCheckmarkCircle color="" size={20} />
             </span>
             <p className=" font-normal text-base">
-              {time ? time : "24 Hours x 7 Days"}
+              {available_hour ? available_hour : "24 Hours x 7 Days"}
             </p>
           </div>
           <div className="flex items-start gap-2 border-t border-grey-400 py-4">
@@ -62,7 +65,7 @@ function PersonalPlanItem({
               <IoIosCheckmarkCircle color="" size={20} />
             </span>
             <p className=" font-normal text-base">
-              {duration ? duration : "30 Days"}
+              {duration + " days"}
             </p>
           </div>
         </div>
@@ -70,11 +73,11 @@ function PersonalPlanItem({
         <div className="flex justify-between items-end border border-bluePrimary rounded-lg px-3 py-1">
           <p className="text-base text-bluePrimary">Price:</p>
           <h3 className="font-inter text-bluePrimary text-2xl">
-            {formatCurrency(price)}
+            {formatAsNgnMoney(price)}
           </h3>
         </div>
       </div>
-      <PlantModal handleOpen={handleOpen} open={open} />
+      <PlantModal handleOpen={handleOpen} open={open} planItem={planItem}  />
     </>
   );
 }

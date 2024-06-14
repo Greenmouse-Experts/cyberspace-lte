@@ -6,7 +6,7 @@ import CartPage from "./pages/CartPage";
 import Dealers from "./pages/Dealers";
 import Coverage from "./pages/Coverage";
 import BusinessPlan from "./pages/BusinessPlan";
-import PersonalPlan from "./pages/PersonalPlan";
+
 import { Provider } from "react-redux";
 
 import Signin from "./pages/Signin";
@@ -25,7 +25,7 @@ import VerifyAccount from "./pages/VerifyAccount";
 import WhistleBlower from "./pages/WhistleBlower";
 import ResetPassword from "./pages/ResetPassword";
 import Account from "./pages/Account";
-
+import PersonalPlan from "./pages/PersonalPlan";
 
 const router = createBrowserRouter([
   {
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         element: <BusinessPlan />,
       },
       {
-        path: "/personalplan",
+        path: "/plans",
         element: <PersonalPlan />,
       },
       {
@@ -92,9 +92,9 @@ const router = createBrowserRouter([
         element: <WhistleBlower />,
       },
       {
-        path:"account",
+        path: "account",
         element: <Account />,
-      }
+      },
     ],
   },
   {
@@ -135,7 +135,7 @@ function App() {
               padding: "16px 24px",
               backgroundColor: "#fff",
               color: "#374151",
-              zIndex:9999999999,
+              zIndex: 9999999999,
             },
           }}
         />
@@ -156,7 +156,7 @@ export default App;
 // const Dealers = lazy(() => import("./pages/Dealers"));
 // const Coverage = lazy(() => import("./pages/Coverage"));
 // const BusinessPlan = lazy(() => import("./pages/BusinessPlan"));
-// const PersonalPlan = lazy(() => import("./pages/PersonalPlan"));
+// const PersonalPlan = lazy(() => import("./pages/plans"));
 
 // const router = createBrowserRouter([
 //   {
@@ -187,7 +187,7 @@ export default App;
 //         element: <BusinessPlan />,
 //       },
 //       {
-//         path: "/personalplan",
+//         path: "/plans",
 //         element: <PersonalPlan />,
 //       },
 //     ],

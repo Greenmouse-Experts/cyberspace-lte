@@ -25,7 +25,8 @@ axios.interceptors.response.use(
     if (error.response.status === 401) {
       localStorage.clear();
       sessionStorage.clear();
-      return (window.location.href = "/signin");
+      console.log(error)
+      // return (window.location.href = "/signin");
     }
     return Promise.reject(error);
   }

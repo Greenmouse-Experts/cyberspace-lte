@@ -10,20 +10,22 @@ import {
 import InputText from "../InputText";
 import NaijaStates from "naija-state-local-government";
 import SelectInput from "../SelectInput";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getTotalCartPrice } from "../../state/cart/cartSlice";
 import { formatCurrency } from "../../utils/helpers";
-import {  usePayment } from "../../features/cart/usePayment";
+import { usePayment } from "../../features/cart/usePayment";
 import { useForm } from "react-hook-form";
 
 // import toast from "react-hot-toast";
 import SpinnerMini from "../SpinnerMini";
 import { userData } from "../../state/user/userSlice";
 import { GATEWAY_KEY } from "../../services/constant";
+import { addPaymentDetails } from "../../state/payment/paymentSlice";
 
 export function CheckoutModal({ handleOpen, open }) {
   const totalPrice = useSelector(getTotalCartPrice);
-  const {id} = useSelector(userData)
+  const { id } = useSelector(userData);
+  const dispatch = useDispatch();
 
   const {
     register,
@@ -45,8 +47,6 @@ export function CheckoutModal({ handleOpen, open }) {
 
   const { pay, isLoading } = usePayment();
 
-  
-
   const watchState = watch("state");
 
   const generateMerchantRef = () => {
@@ -60,7 +60,19 @@ export function CheckoutModal({ handleOpen, open }) {
   };
 
   const onSubmit = (data) => {
-   
+    // const paymentData = {
+    //   first_name: data.first_name || "",
+    //   last_name: data.last_name || "",
+    //   address: data.address || "",
+    //   email: data.email || "",
+    //   phone_number: data.phone_number || "",
+    //   state: data.state || "",
+    //   lga: data.lga || "",
+    // };
+
+   if(data){
+    dispatch(addPaymentDetails(data));
+   }
     pay(
       {
         Currency: "NGN",

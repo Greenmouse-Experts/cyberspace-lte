@@ -10,17 +10,24 @@ import Loader from "../../components/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, getCart } from "../../state/cart/cartSlice";
 
+import { clearPaymentDetails, getPaymentDetails } from "../../state/payment/paymentSlice";
+
 function AccountOverview() {
   const [tab, setTab] = useState("account");
   const cartItems = useSelector(getCart);
+ 
   const { search } = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { checkPayment, isChecking } = useGetPayment();
   const { confirmTransaction, isConfirming } = useConfirmPayment();
   const queryParams = new URLSearchParams(search);
-
   const ref = queryParams.get("ref");
+  const paymentDetails = useSelector(getPaymentDetails)
+
+  const { phone_number, address, state, lga,} = paymentDetails
+
+  // console.log("user details",paymentDetails);
 
   const data = [
     {
@@ -37,20 +44,17 @@ function AccountOverview() {
     },
   ];
 
-  console.log(cartItems)
-  const formattedItems = cartItems.items.map(item => {
+  console.log(cartItems);
+  const formattedItems = cartItems.items.map((item) => {
     return {
       ...item,
       product_id: item.productId,
-      productId: undefined
+      productId: undefined,
     };
   });
-  
+
   // Remove undefined values (optional)
-  formattedItems.forEach(item => delete item.productId);
-  
-  console.log(formattedItems);
-  
+  formattedItems.forEach((item) => delete item.productId);
 
   useEffect(() => {
     if (ref) {
@@ -60,17 +64,18 @@ function AccountOverview() {
           console.log(data);
           confirmTransaction(
             {
-              products: formattedItems,
-              phone_number: "090111212111",
-              address: "Ikeja",
-              city: "Ikeja",
-              region: "Ikeja",
-              country: "Nigeria",
               transactionReference: ref,
+              products: formattedItems,
+              phone_number: phone_number,
+              address: address,
+              city: state,
+              region: lga,
+              country: "Nigeria",
             },
             {
               onSuccess() {
                 dispatch(clearCart());
+                dispatch(clearPaymentDetails())
               },
             }
           );
@@ -89,7 +94,7 @@ function AccountOverview() {
     dispatch,
   ]);
 
-  if (isConfirming || isChecking) return <Loader/>;
+  if (isConfirming || isChecking) return <Loader />;
 
   return (
     <div className="grid lg:grid-cols-4 grid-cols-1  gap-10">
@@ -134,7 +139,7 @@ function AccountOverview() {
             <span>
               <IoMailOutline />
             </span>
-            Inbox
+            Plans
           </p>
         </div>
       </aside>

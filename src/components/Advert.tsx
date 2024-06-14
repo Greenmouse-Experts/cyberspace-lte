@@ -4,7 +4,6 @@ import { settings } from "../utils/settings";
 import { NavLink } from "react-router-dom";
 
 function Advert() {
-
   return (
     <section className="my-20">
       <div className="flex justify-between">
@@ -12,7 +11,7 @@ function Advert() {
           Explore Great Deals And
           <span className="text-bluePrimary"> Devices</span>
         </h4>
-        <NavLink to="/personalplan" className="flex items-end  ">
+        <NavLink to="/plans" className="flex items-end  ">
           <p className="text-[#222222] sm:text-base text-[12px] text-nowrap font-medium capitalize">
             see more{" "}
           </p>
@@ -26,23 +25,47 @@ function Advert() {
 
       <div className="mt-16">
         <Slider {...settings}>
-          <div >
-            <img src="/img/deal-4.png" alt="" className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5" />
+          <div>
+            <img
+              src="/img/deal-4.png"
+              alt=""
+              className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5"
+            />
           </div>
           <div>
-            <img src="/img/deal-5.png" alt="" className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5" />
+            <img
+              src="/img/deal-5.png"
+              alt=""
+              className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5"
+            />
           </div>
           <div>
-            <img src="/img/deal-6.png" alt="" className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5" />
-          </div>
-          <div >
-            <img src="/img/deal-4.png" alt="" className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5" />
-          </div>
-          <div>
-            <img src="/img/deal-5.png" alt="" className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5" />
+            <img
+              src="/img/deal-6.png"
+              alt=""
+              className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5"
+            />
           </div>
           <div>
-            <img src="/img/deal-6.png" alt="" className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5" />
+            <img
+              src="/img/deal-4.png"
+              alt=""
+              className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5"
+            />
+          </div>
+          <div>
+            <img
+              src="/img/deal-5.png"
+              alt=""
+              className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5"
+            />
+          </div>
+          <div>
+            <img
+              src="/img/deal-6.png"
+              alt=""
+              className="xl:w-[400px] md:w-[340px] 2xl:h-[250px] h:[200px] ml-5"
+            />
           </div>
         </Slider>
       </div>

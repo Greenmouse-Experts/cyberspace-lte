@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { NavLink } from "react-router-dom";
-import 'animate.css';
+import "animate.css";
 function Slider() {
   const [currentSlide, setCurrentSlide] = useState(1);
   const slideLength = 3; // Total number of slides
@@ -51,7 +51,7 @@ function Slider() {
                 </span>
               </NavLink>
             </div>
-            <img src="/icons/dot1.svg" alt="dot"  className="mt-5 ml-2"/>
+            <img src="/icons/dot1.svg" alt="dot" className="mt-5 ml-2" />
           </div>
           <img
             src="/img/hero-img.png"
@@ -82,7 +82,7 @@ function Slider() {
             <div className="">
               <NavLink
                 className="bg-white text-black rounded-3xl text-base px-5 py-3 mt-5 font-bold flex items-center w-fit gap-2 justify-center"
-                to="/personalplan"
+                to="/plans"
               >
                 See our Data Plans{" "}
                 <span>
@@ -90,31 +90,28 @@ function Slider() {
                 </span>
               </NavLink>
             </div>
-            <img src="/icons/dot2.svg" alt="dot"  className="mt-5 ml-2"/>
+            <img src="/icons/dot2.svg" alt="dot" className="mt-5 ml-2" />
           </div>
-        
-             
-         <img
-              src="/img/hero-img2.png"
-              alt=""
-              className="2xl:w-[350px] 2xl:h-[90%] w-[250px] h-[200px] mt-[-30px] absolute bottom-0 right-3 "
-            />
-        
-         
+
+          <img
+            src="/img/hero-img2.png"
+            alt=""
+            className="2xl:w-[350px] 2xl:h-[90%] w-[250px] h-[200px] mt-[-30px] absolute bottom-0 right-3 "
+          />
         </div>
       )}
       {currentSlide === 3 && (
-          <div className="bg-[url('/img/hero-bg-3.png')] bg-cover bg-center sm:pl-24 sm:pr-10 px-5 py-10 rounded-[21px] md:min-h-[21rem] min-h-[35rem] flex md:flex-row flex-col md:items-center md:gap-0 gap-10 items-center justify-between relative">
+        <div className="bg-[url('/img/hero-bg-3.png')] bg-cover bg-center sm:pl-24 sm:pr-10 px-5 py-10 rounded-[21px] md:min-h-[21rem] min-h-[35rem] flex md:flex-row flex-col md:items-center md:gap-0 gap-10 items-center justify-between relative">
           <div className="  gap-10 text-white animate__animated  animate__fadeIn animate__delay-3">
             <p className="font-medium 2xl:text-3xl text-2xl">
               Double Your Online Presence
             </p>
             <h3 className="2xl:text-6xl md:text-5xl text-4xl font-semibold my-5">
-            High Speed Internet
+              High Speed Internet
             </h3>
             <div className="flex items-center gap-5">
               <p className="font-medium 2xl:text-3xl text-2xl">
-              Affordable Internet Voices
+                Affordable Internet Voices
               </p>
               <img
                 src="/icons/arrowright.svg"
@@ -125,7 +122,7 @@ function Slider() {
             <div className="">
               <NavLink
                 className="bg-redPrimary text-white rounded-3xl text-base px-5 py-3 mt-5 font-bold flex items-center w-fit gap-2 justify-center"
-                to="/personalplan"
+                to="/plans"
               >
                 Explore More{" "}
                 <span>
@@ -133,17 +130,14 @@ function Slider() {
                 </span>
               </NavLink>
             </div>
-            <img src="/icons/dot3.svg" alt="dot"  className="mt-5 ml-2"/>
+            <img src="/icons/dot3.svg" alt="dot" className="mt-5 ml-2" />
           </div>
-        
-             
-         <img
-              src="/img/hero-img3.png"
-              alt=""
-              className="2xl:w-[350px] 2xl:h-[90%] w-[250px] h-[200px] mt-[-30px] absolute bottom-0 right-3 "
-            />
-        
-         
+
+          <img
+            src="/img/hero-img3.png"
+            alt=""
+            className="2xl:w-[350px] 2xl:h-[90%] w-[250px] h-[200px] mt-[-30px] absolute bottom-0 right-3 "
+          />
         </div>
       )}
     </>
