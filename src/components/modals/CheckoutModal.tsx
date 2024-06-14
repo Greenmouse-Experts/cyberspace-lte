@@ -84,7 +84,7 @@ export function CheckoutModal({ handleOpen, open }) {
         CustomerEmail: data.email,
         CustomerMobile: data.phone_number,
         IntegrationKey: `${GATEWAY_KEY}`,
-        ReturnUrl: "http://localhost:5173/account",
+        ReturnUrl: "https://cyberspace-lte.netlify.app/account",
         WebhookUrl: "https://merchant_webhook_url",
         ProductCode: "",
         // Splits: [

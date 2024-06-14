@@ -71,7 +71,7 @@ export function PlantModal({ handleOpen, open, planItem }) {
         CustomerEmail: data.email,
         CustomerMobile: data.phone_number,
         IntegrationKey: `${GATEWAY_KEY}`,
-        ReturnUrl: "http://localhost:5173/plans",
+        ReturnUrl: "https://cyberspace-lte.netlify.app/plans",
         WebhookUrl: "https://merchant_webhook_url",
         ProductCode: "",
         // Splits: [
