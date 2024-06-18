@@ -3,6 +3,16 @@ import axios from "axios";
 
 export const getOrders = async () => {
     return axios
-      .get(`https://cyberspacelte.greenmouseacademy.com.ng/api/orders`)
+      .get(`/orders`)
+      .then((response) => response.data);
+  };
+  export const getOrder = async (id:number | string) => {
+    return axios
+      .get(`/orders/${id}`)
+      .then((response) => response.data);
+  };
+  export const getPlans = async () => {
+    return axios
+      .get(`/plan/orders`)
       .then((response) => response.data);
   };

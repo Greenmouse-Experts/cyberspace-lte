@@ -35,3 +35,35 @@ export interface OrderTypes {
     delivery: Delivery;
     items: Item[];
 }
+
+ interface Plan  {
+    id: number;
+    name: string;
+    price: string;
+    validity: string;
+    avalibilty_hour: string;
+    avalibilty_day: string;
+    image: string | null;
+    created_at: string;
+    updated_at: string;
+    data_balance: string;
+    plan_type: string;
+}
+
+export interface PlanTypes {
+    id: number;
+    plan_id: string;
+    user_id: string;
+    first_name: string;
+    last_name: string;
+    email_address: string;
+    phone_number: string;
+    router_id: string;
+    transactionReference: string;
+    status: string;
+    created_at: string;
+    updated_at: string;
+    plan: Plan;
+}
+
+// Define the Main object type

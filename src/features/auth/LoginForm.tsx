@@ -50,7 +50,18 @@ function LoginForm() {
       { email, password },
       {
         onSuccess(data) {
-          dispatch(saveUser(data.data));
+          const fullName = data.data.name.trim();
+          const nameParts = fullName.split(" ");
+          const first_name = nameParts[0] || ''; 
+          const last_name = nameParts.slice(1).join(" ") || '';
+          
+          const userDetails = {
+            ...data.data,
+            first_name,
+            last_name
+          }
+          
+          dispatch(saveUser(userDetails));
           dispatch(setToken(data.token));
           localStorage.setItem("token", data.token);
           dispatch(setIsLoggedIn());

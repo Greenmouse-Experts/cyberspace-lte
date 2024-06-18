@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   confirmPayment,
   getPaymentStatus,
@@ -40,10 +40,15 @@ export function useGetPayment() {
 }
 
 export function useConfirmPayment() {
+  const queryClient = useQueryClient();
   const { mutate: confirmTransaction, isLoading:isConfirming } = useMutation({
     mutationFn: confirmPayment,
+  
     onSuccess: () => {
       toast.success("Payment Successful");
+      queryClient.invalidateQueries({
+        queryKey: ["plan-orders, orders"],
+      });
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onError: (error: any) => {

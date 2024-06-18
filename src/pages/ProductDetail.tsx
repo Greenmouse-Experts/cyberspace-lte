@@ -22,12 +22,12 @@ import { useProduct } from "../features/cart/useProduct";
 
 function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
-const navigate = useNavigate()
+  const navigate = useNavigate();
   const { id } = useParams();
   const { product, isLoading } = useProduct(`${id}`);
 
   const dispatch = useAppDispatch();
- 
+
   // const productId = id ? parseInt(id) : undefined;
 
   const [value, setValue] = useState(0);
@@ -45,14 +45,14 @@ const navigate = useNavigate()
   };
 
   if (isLoading) return <Loader />;
-  
-  console.log("product",product);
+
+  // console.log("product", product);
   // const product = products.data.filter(
   //   (p: ProductItemType) => p.id == productId
   // );
-  // console.log(product, id);
+  
 
-  const { product_name, price, images, specification }= product.data
+  const { product_name, price, images, specification, description, coverage  } = product.data;
 
   const renderImg = JSON.parse(images)[0];
 
@@ -213,10 +213,13 @@ const navigate = useNavigate()
                 <FiPlus size={30} />
               </span>
             </div>
-            <button className="  text-white bg-bluePrimary  md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary" onClick={() => {
-              addToCart();
-              navigate("/cart")
-            }}>
+            <button
+              className="  text-white bg-bluePrimary  md:w-[200px] py-3 sm:px-0 px-1  sm:text-lg text-sm border border-bluePrimary"
+              onClick={() => {
+                addToCart();
+                navigate("/cart");
+              }}
+            >
               Buy Now
             </button>
             <button
@@ -267,15 +270,22 @@ const navigate = useNavigate()
 
         <div className="mt-5">
           <section>
-            <p className="text-center">
-              The Cyberspace LTE Internet router offers lightning-fast broadband
-              connectivity along with a generous data allowance of 70GB. This
-              router ensures high-speed internet access, making it ideal for
-              both personal and professional use. With its robust LTE
-              capabilities, users can enjoy seamless online activities,
-              including streaming, gaming, and browsing, without worrying about
-              data limitations.
-            </p>
+            {value === 0 && (
+              <p className="text-center">
+              {description}
+              </p>
+            )}
+            {value === 1 && (
+              <p className="text-center">
+               <span dangerouslySetInnerHTML={{ __html: specification }} />
+              </p>
+            )}
+            {value === 3 && (
+              <p className="text-center">
+              {coverage}
+              </p>
+            )}
+            
           </section>
         </div>
       </section>

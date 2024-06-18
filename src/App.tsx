@@ -27,6 +27,7 @@ import ResetPassword from "./pages/ResetPassword";
 import Account from "./pages/Account";
 import PersonalPlan from "./pages/PersonalPlan";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/product/:id",
+        path: "/product/:id/:slug",
         element: <ProductDetail />,
       },
       {
@@ -93,8 +94,13 @@ const router = createBrowserRouter([
         element: <WhistleBlower />,
       },
       {
-        path: "account",
-        element: <Account />,
+        path: "account/*",
+        element: (
+          <ProtectedRoute>
+            {" "}
+            <Account />
+          </ProtectedRoute>
+        ),
       },
     ],
   },
@@ -122,7 +128,7 @@ function App() {
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
+        <ReactQueryDevtools initialIsOpen={false} />
         <RouterProvider router={router} />
         <Toaster
           position="top-center"

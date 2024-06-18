@@ -15,10 +15,10 @@ export const getPaymentStatus = async (transactionReference: string) => {
 };
 
 export const confirmPayment = async (payload:unknown) => {
-  return axios.post(`https://cyberspacelte.greenmouseacademy.com.ng/api/orders/verify/payment`, payload).then((response) => response.data);
+  return axios.post(`/orders/verify/payment`, payload).then((response) => response.data);
 };
 
 export const confirmPlanPayment = async (payload:unknown) => {
-  return axios.post(`https://cyberspacelte.greenmouseacademy.com.ng/api/plan/orders/verify/payment`, payload).then((response) => response.data);
+  return axios.post(`/plan/orders/verify/payment`, payload).then((response) => response.data);
 };
 

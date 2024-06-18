@@ -7,7 +7,8 @@ export interface IUser{
 
 export interface User {
     id: number;
-    name: string;
+    first_name: string;
+    last_name: string;
     user_type: string;
     email: string;
     email_verified_at: string;

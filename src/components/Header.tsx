@@ -9,9 +9,12 @@ import { isLoggedIn, removeToken, userData } from "../state/user/userSlice";
 import { useDispatch } from "react-redux";
 import { isDark } from "../features/darkmode/DarkModeSlice";
 import { MdExitToApp } from "react-icons/md";
+import { LogoutModal } from "./modals/LogoutModal";
 
 function Header() {
   const [menu, setmMenu] = useState(false);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(!open);
   const verifyUser = useAppSelector(isLoggedIn);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -19,13 +22,14 @@ function Header() {
     navigate("/signin");
     dispatch(removeToken());
   };
-  const user = useAppSelector(userData)
-    const {name} = user
+  const user = useAppSelector(userData);
+  const { first_name } = user;
+  
 
-    const firstName = name.split(' ')[0];
   const mood = useAppSelector(isDark);
 
   return (
+    <>
     <header className="fixed top-0 bg-white dark:bg-darkMood transition-colors z-10 right-0 w-full left-0">
       <div className=" justify-between items-center 2xl:py-2 py-2 2xl:px-28 md:px-24 xl:flex hidden  bg-bluePrimary text-white 2xl:text-[19px] text-[10px]  font-grotesk">
         <p className=""> Welcome to Cyberspace Superfast LTE!</p>
@@ -57,7 +61,9 @@ function Header() {
         <div className="flex items-center gap-10 2xl:text-[1.05rem]  text-[14px] text-nowrap">
           <nav
             className={` absolute bg-white dark:bg-darkMood transition-all  ${
-              menu ? "left-0 w-[80%] z-50 h-screen pl-10 top-20" : "left-[-1000px] top-10"
+              menu
+                ? "left-0 w-[80%] z-50 h-screen pl-10 top-20"
+                : "left-[-1000px] top-10"
             } top-5   flex justify-start md:h-auto h-screen transition-all unset`}
           >
             <ul className="flex md:gap-4 md:pt-0 pt-10 gap-10 md:flex-row flex-col md:items-center   text-[#666666] dark:text-white font-bold">
@@ -109,17 +115,25 @@ function Header() {
             />
           </div>
           <div className="flex items-center  md:gap-6 gap-2">
-            <div
-              className="flex items-center gap-1 cursor-pointer"
-              
-            >
+            <div className="flex items-center gap-1 cursor-pointer">
               <FiUser color="#0080CF" size={25} />
               <p className="font-bold text-bluePrimary text-nowrap 2xl:text-[1.05rem] capitalize  ">
-                {verifyUser ? <NavLink to="/account">{firstName}</NavLink> : <span onClick={logout}>Selfcare Portal</span>}
+                {verifyUser ? (
+                  <NavLink to="/account">{first_name}</NavLink>
+                ) : (
+                  <span onClick={logout}>Selfcare Portal</span>
+                )}
                 {/* {verifyUser ? `${firstName}` : "Selfcare Portal"} */}
               </p>
             </div>
-           {verifyUser && <MdExitToApp color="#0080CF" size={25} onClick={logout}  className=" cursor-pointer"/>}
+            {verifyUser && (
+              <MdExitToApp
+                color="#0080CF"
+                size={25}
+                onClick={handleOpen}
+                className=" cursor-pointer"
+              />
+            )}
             <div className="bg-[#D9D9D9] w-[2px]" />
             <li className=" text-grayPrimary font-bold dark:text-white md:block hidden ">
               <NavLink onClick={() => setmMenu(false)} to="/coverage">
@@ -137,6 +151,8 @@ function Header() {
         </div>
       </div>
     </header>
+    <LogoutModal handleOpen={handleOpen} open={open}  onClick={logout}/>
+    </>
   );
 }
 

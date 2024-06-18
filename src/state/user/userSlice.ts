@@ -4,7 +4,8 @@ import { RootState } from "../store";
 
 const initialState: IUser = {
   user: {
-    name: "",
+    first_name: "",
+    last_name:"",
     email: "",
     phone_number: "",
     id: 0,
@@ -31,7 +32,11 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     saveUser: (state, action) => {
-      state.user = action.payload;
+      state.user ={ ...action.payload};
+      console.log("user saved")
+    },
+    updateUser: (state, action) => {
+      state.user = {...action.payload};
       console.log("user saved")
     },
     setToken: (state, action) => {
@@ -51,7 +56,7 @@ export const userSlice = createSlice({
   },
 });
 
-export const { setToken, saveUser, removeToken, setIsLoggedIn, setVerifyEmail } = userSlice.actions;
+export const { setToken, saveUser, updateUser, removeToken, setIsLoggedIn, setVerifyEmail } = userSlice.actions;
 export const userData = (state:RootState) => state.user.user
 export const getToken = (state: RootState) => state.user.token;
 export const getVerifyEmail = (state: RootState) => state?.user?.verifyEmail;
