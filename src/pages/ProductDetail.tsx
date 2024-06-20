@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Banner from "../components/Banner";
-import { GoDotFill } from "react-icons/go";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { formatCurrency } from "../utils/helpers";
 import { useNavigate, useParams } from "react-router-dom";
@@ -53,7 +52,7 @@ function ProductDetail() {
   
 
   const { product_name, price, images, specification, description, coverage  } = product.data;
-
+console.log(specification)
   const renderImg = JSON.parse(images)[0];
 
   const handleChange = (newValue: number) => {
@@ -80,7 +79,7 @@ function ProductDetail() {
       <section className="mt-20 flex lg:flex-row flex-col items-center gap-10 font-inter">
         <div className="lg:w-[55%] w-full">
           <div className="flex gap-5 md:flex-row flex-col-reverse items-start h-full">
-            <div className="flex md:flex-col flex-row gap-5 ">
+            {/* <div className="flex md:flex-col flex-row gap-5 ">
               <div className="border  border-bluePrimary p-2 sm:w-36 w-14">
                 <img
                   src="/img/product-small.png"
@@ -109,7 +108,7 @@ function ProductDetail() {
                   className="w-[50%]  mx-auto"
                 />
               </div>
-            </div>
+            </div> */}
 
             <div className="bg-grey-100 px-5 py-4 md:w-[80%] w-full lg:h-[26rem] flex items-center justify-center h-full">
               <img src={renderImg} alt="product" className="w-[80%] mx-auto" />
@@ -122,10 +121,10 @@ function ProductDetail() {
 
           <ul className="flex flex-col gap-2">
             <li className="text-lg font-[300] flex items-center gap-2">
-              <span>
+              {/* <span>
                 <GoDotFill size={12} />
-              </span>
-              <span dangerouslySetInnerHTML={{ __html: specification }} />
+              </span> */}
+              <div className="add_list"  dangerouslySetInnerHTML={{ __html: specification }} />
             </li>
             {/* <li className="text-lg font-[300] flex items-center gap-2">
               <span>
@@ -276,9 +275,7 @@ function ProductDetail() {
               </p>
             )}
             {value === 1 && (
-              <p className="text-center">
-               <span dangerouslySetInnerHTML={{ __html: specification }} />
-              </p>
+               <div className="add_list"  dangerouslySetInnerHTML={{ __html: specification }} />
             )}
             {value === 3 && (
               <p className="text-center">

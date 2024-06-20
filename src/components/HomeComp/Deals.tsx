@@ -19,6 +19,14 @@ function Deals() {
 
   const { products } = useProducts();
 
+  function createSlug(name:string) {
+    return name
+      .toLowerCase()
+      .replace(/ /g, '-')
+      .replace(/[^\w-]+/g, '');
+  }
+
+ 
   return (
     <>
       <section className="mt-20" id="shop-product">
@@ -80,7 +88,7 @@ function Deals() {
                 </div>
 
                 <NavLink
-                  to={`/product/${product.id}`}
+                  to={`/product/${product.id}/${createSlug(product.product_name)}`}
                   className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
                 >
                   Buy Now

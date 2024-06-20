@@ -50,6 +50,10 @@ button {
     
 } */
 
+.add_list > ul > li{
+  list-style: disc;
+}
+
 .dark span {
   color: white;
   transition: color 0.3s;

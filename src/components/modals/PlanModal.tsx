@@ -26,6 +26,14 @@ export function PlantModal({ handleOpen, open, planItem }) {
   const dispatch = useDispatch();
 
   const {
+    name,
+    price,
+    data_balance,
+    avalibilty_hour,
+    avalibilty_day,
+  } = planItem;
+
+  const {
     register,
     handleSubmit,
     setValue,
@@ -37,13 +45,13 @@ export function PlantModal({ handleOpen, open, planItem }) {
       last_name: "",
       email: "",
       phone_number: "",
-      routerId:""
+      routerId: "",
     },
   });
 
   const { pay, isLoading } = usePayment();
 
-//   const watchState = watch("state");
+  //   const watchState = watch("state");
 
   const generateMerchantRef = () => {
     // Generate a unique identifier using timestamp or any other method you prefer
@@ -56,10 +64,10 @@ export function PlantModal({ handleOpen, open, planItem }) {
   };
 
   const onSubmit = (data) => {
-    console.log(data)
-    if(data){
-      dispatch(addPaymentDetails({...data, plan_id: planItem.id}));
-     }
+    console.log(data);
+    if (data) {
+      dispatch(addPaymentDetails({ ...data, plan_id: planItem.id }));
+    }
     pay(
       {
         Currency: "NGN",
@@ -166,38 +174,47 @@ export function PlantModal({ handleOpen, open, planItem }) {
               })}
             />
           </div>
-          <div className="flex flex-col items-start gap-3 mt-10">
-          <div className="flex justify-between w-full">
+          <div className="flex flex-col items-start gap-3 mt-10 text-[#111111]">
+            <div className="flex justify-between w-full">
               <span className="w-[50%] text-lg font-[300]">Name:</span>
-              <span className="w-[50%] text-[1.3rem] font-medium">Cyber Lounge</span>
+              <span className="w-[50%] text-[1.3rem] font-medium">{name}</span>
             </div>
             <div className="flex justify-between w-full">
               <span className="w-[50%] text-lg font-[300]">Usage Time: </span>
-              <span className="w-[50%] text-[1.3rem] font-medium"> 5pm-8am Weekdays, 24Hrs Weekends and Public Holidays</span>
+              <span className="w-[50%] text-[1.3rem] font-medium">
+                {avalibilty_hour}
+              </span>
             </div>
 
             <div className="flex justify-between w-full">
               <span className="w-[50%] text-lg font-[300]">Size:</span>
-              <span className="w-[50%] text-[1.3rem] font-medium">  30GB</span>
+              <span className="w-[50%] text-[1.3rem] font-medium">
+                {" "}
+                {data_balance}
+              </span>
             </div>
 
             <div className="flex justify-between w-full">
               <span className="w-[50%] text-lg font-[300]">Duration:</span>
-              <span className="w-[50%] text-[1.3rem] font-medium"> 30Days</span>
+              <span className="w-[50%] text-[1.3rem] font-medium">
+                {" "}
+                {avalibilty_day}days
+              </span>
             </div>
             <div className="flex justify-between w-full">
               <span className="w-[50%] text-lg font-[300]">Price: </span>
-              <span className="w-[50%] text-[1.3rem] font-medium"> {formatCurrency(6000)}</span>
+              <span className="w-[50%] text-[1.3rem] font-medium">
+                {" "}
+                {formatCurrency(price)}
+              </span>
             </div>
-            
           </div>
 
           <div className="mt-10 flex flex-col gap-5 text-black">
-            
             <div className="flex justify-between w-full">
               <span className="text-2xl font-medium">Total</span>
               <span className="text-[1.3rem] font-medium">
-                {formatCurrency(6000)}
+                {formatCurrency(price)}
               </span>
             </div>
           </div>
