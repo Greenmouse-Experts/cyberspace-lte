@@ -39,6 +39,78 @@ function Footer() {
       </section>
       <footer className="lg:bg-[url('/img/footer-bg-test.png')] bg-[url('/img/footer-small.png')] bg-contain pt-16 w-full">
         <div className="flex flex-wrap md:flex-row flex-col md:justify-between justify-start md:items-start items-center md:text-start text-center  md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
+          
+        
+          <div>
+            <p className="font-normal text-[1.06rem] text-white uppercase">
+              Quick links
+            </p>
+            <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
+              <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/products">Shop Products</NavLink>
+              </li>
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/products">Services</NavLink>
+              </li>
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/products">About us</NavLink>
+              </li>
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/dealers">our dealers</NavLink>
+              </li>
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/coverage">coverage</NavLink>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-normal text-[1.06rem] text-white uppercase">
+              support
+            </p>
+            <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
+              <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
+                <NavLink to="/terms-conditions">terms & conditions</NavLink>
+              </li>
+              {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="">help</NavLink>
+              </li> */}
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/privacy-policy">privacy policy</NavLink>
+              </li>
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/faqs">FAQs</NavLink>
+              </li>
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/contact">contact us</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-normal text-[1.06rem] text-start text-white uppercase">
+              account
+            </p>
+            <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
+              {verifyUser && (
+                <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
+                  <NavLink to="/account">my account</NavLink>
+                </li>
+              )}
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="/cart">My cart</NavLink>
+              </li>
+              {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="">wishlist</NavLink>
+              </li>
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+                <NavLink to="">payment</NavLink>
+              </li> */}
+            </ul>
+          </div>
+
           <div>
             <p className="font-normal text-[1.06rem] text-white uppercase">
               Contact Us
@@ -90,98 +162,6 @@ function Footer() {
                   lteretail@cyberspace.net.ng{" "}
                 </NavLink>
               </li>
-            </ul>
-          </div>
-          {/* <div>
-            <p className="font-normal text-[1.06rem] text-white uppercase">
-            Customer service
-            </p>
-            <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
-            <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1">
-              <LuSmartphone size={20} />
-                <NavLink to="tel:02015159999 ">02015159999 </NavLink>
-              </li>
-              <p className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1">
-              Emails for customer care and enquiries
-            </p>
-              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1">
-              <FaRegEnvelope size={20} />
-                <NavLink to="mailto:customercare_retail@cyberspace.net.ng  ">customercare_retail@cyberspace.net.ng  </NavLink>
-              </li>
-              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1">
-              <FaRegEnvelope size={20} />
-                <NavLink to="mailto:lteretail@cyberspace.net.ng  ">lteretail@cyberspace.net.ng   </NavLink>
-              </li>
-              
-            </ul>
-          </div> */}
-          <div>
-            <p className="font-normal text-[1.06rem] text-white uppercase">
-              Quick links
-            </p>
-            <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
-              <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/products">Shop Products</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/products">Services</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/products">About us</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/dealers">our dealers</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/coverage">coverage</NavLink>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="font-normal text-[1.06rem] text-white uppercase">
-              support
-            </p>
-            <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
-              <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
-                <NavLink to="/terms-conditions">terms & conditions</NavLink>
-              </li>
-              {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">help</NavLink>
-              </li> */}
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/privacy-policy">privacy policy</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/faqs">FAQs</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/contact">contact us</NavLink>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-normal text-[1.06rem] text-white uppercase">
-              account
-            </p>
-            <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
-              {verifyUser && (
-                <li className="text-[12px] text-[#ADB7BC] font-norma capitalize">
-                  <NavLink to="/account">my account</NavLink>
-                </li>
-              )}
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/cart">My cart</NavLink>
-              </li>
-              {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">wishlist</NavLink>
-              </li>
-              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="">payment</NavLink>
-              </li> */}
             </ul>
           </div>
         </div>
