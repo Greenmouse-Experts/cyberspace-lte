@@ -176,7 +176,7 @@ function Header() {
              
                 <p className="font-bold text-white px-3 py-3 rounded-3xl btn-hover bg-bluePrimary text-nowrap lg:text-sm capitalize  ">
                   {verifyUser ? (
-                    <NavLink to="/account">{first_name}</NavLink>
+                    <NavLink to="/account" className="px-2">{first_name}</NavLink>
                   ) : (
                     <span onClick={logout} className="flex items-center"> Selfcare Portal</span>
                   )}
