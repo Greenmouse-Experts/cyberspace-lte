@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
-import { FiUser } from "react-icons/fi";
+// import { FiUser } from "react-icons/fi";
 import { NavLink, useNavigate } from "react-router-dom";
 import DarkmodeToggle from "../features/darkmode/DarkmodeToggle";
 import { useAppSelector } from "../state/hooks";
@@ -159,7 +159,7 @@ function Header() {
                 </li>
               </ul>
             </nav>
-            <div className="2xl:w-[400px] w-[300px] 2xl:h-[60px] h-[40px] relative xl:block hidden">
+            <div className="2xl:w-[400px] w-[300px] 2xl:h-[50px] h-[40px] relative xl:block hidden">
               <BsSearch
                 color="#0080CF"
                 size={20}
@@ -174,11 +174,11 @@ function Header() {
             <div className="flex items-center  md:gap-6 gap-2">
               <div className="flex items-center gap-1 cursor-pointer">
              
-                <p className="font-bold text-white px-3 py-2 rounded-3xl btn-hover bg-bluePrimary text-nowrap lg:text-sm capitalize  ">
+                <p className="font-bold text-white px-3 py-3 rounded-3xl btn-hover bg-bluePrimary text-nowrap lg:text-sm capitalize  ">
                   {verifyUser ? (
                     <NavLink to="/account">{first_name}</NavLink>
                   ) : (
-                    <span onClick={logout} className="flex items-center">    <FiUser color="white" size={22} />Selfcare Portal</span>
+                    <span onClick={logout} className="flex items-center"> Selfcare Portal</span>
                   )}
                   {/* {verifyUser ? `${firstName}` : "Selfcare Portal"} */}
                 </p>
