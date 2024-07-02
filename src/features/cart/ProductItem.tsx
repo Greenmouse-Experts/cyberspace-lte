@@ -23,7 +23,7 @@ const ProductItem: FC<Props> = ({ data }) => {
   
   
   return (
-    <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-[#008ECC]  w-full pb-3 overflow-hidden relative">
+    <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-bluePrimary  w-full pb-3 overflow-hidden relative">
       <div className="bg-[#E4E7E9] w-full flex items-center justify-center xl:h-64 md:h-52 sm:h-48 h-44 px-5">
         <img src={renderImg} alt="" className="max-w-[95%] max-h-[95%]" />
       </div>
@@ -63,7 +63,7 @@ const ProductItem: FC<Props> = ({ data }) => {
 
       <NavLink
         to={productUrl}
-        className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
+        className="2xl:text-lg text-sm bg-bluePrimary py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
       >
         Buy Now
       </NavLink>

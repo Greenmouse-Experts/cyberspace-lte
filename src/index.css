@@ -29,6 +29,14 @@
   url("./assets/fonts/Mark-Simonson-Proxima-Nova-Regular.otf")
     format("opentype");
 }
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Mark-Simonson-Proxima-Nova-Light"),
+  url("./assets/fonts/Mark-Simonson-Proxima-Nova-Light.otf")
+    format("opentype");
+}
 
 @tailwind base;
 @tailwind components;

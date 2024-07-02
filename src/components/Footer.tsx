@@ -10,7 +10,7 @@ function Footer() {
   const verifyUser = useAppSelector(isLoggedIn);
   return (
     <>
-      <section className="bg-[#057FCC] 2xl:py-20 md:py-14 py-6  mx-0 relative">
+      <section className="bg-bluePrimary 2xl:py-20 md:py-14 py-6  mx-0 relative">
         <div className="text-white font-pSans text-center justify-center flex flex-col mx-auto lg:w-[35%] w-[80%]">
           <h3 className="2xl:text-[30px] text-2xl font-semibold">
             Subscribe to our newsletter

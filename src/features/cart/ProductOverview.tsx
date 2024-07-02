@@ -32,7 +32,7 @@ function ProductOverview() {
         </div>
         <NavLink
           to="/plans"
-          className="border border-bluePrimary px-11 py-5 dark:text-white text-white bg-bluePrimary rounded-[50px] flex items-center justify-center animate__animated animate__pulse animate__infinite animate__slow"
+          className="border border-bluePrimary px-11 py-3 dark:text-white text-white bg-bluePrimary rounded-[50px] flex items-center justify-center animate__animated animate__pulse animate__infinite animate__slow"
         >
           View Plans
           <span className="text-white">
