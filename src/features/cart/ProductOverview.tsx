@@ -5,8 +5,8 @@ import { useState } from "react";
 import { useCategory } from "./useCategory";
 import ProductView from "./ProductView";
 import Loader from "../../components/Loader";
-import { NavLink } from "react-router-dom";
-import { IoIosArrowForward } from "react-icons/io";
+// import { NavLink } from "react-router-dom";
+// import { IoIosArrowForward } from "react-icons/io";
 
 function ProductOverview() {
   const { products, isLoading } = useProducts();
@@ -30,7 +30,7 @@ function ProductOverview() {
             placeholder="Search products..."
           />
         </div>
-        <NavLink
+        {/* <NavLink
           to="/plans"
           className=" btn-hover px-11 py-3 dark:text-white text-white bg-bluePrimary rounded-[50px] flex items-center justify-center animate__animated animate__pulse animate__infinite animate__slow"
         >
@@ -38,7 +38,7 @@ function ProductOverview() {
           <span className="text-white">
             <IoIosArrowForward className="dark:!text-white" />
           </span>
-        </NavLink>
+        </NavLink> */}
       </div>
       <div className="flex lg:flex-row flex-col items-start justify-between gap-20">
         <ProductCategory
