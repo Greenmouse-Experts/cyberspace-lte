@@ -26,7 +26,7 @@ function Plans() {
             <MdOutlineKeyboardArrowRight color="#0080CF" size={25} />
           </NavLink>
         </div>
-        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk shadow-lg">
+        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk shadow-lg cursor-pointer"  onClick={handleViewPlans}>
           <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
             Modem + 70GB Data bundle + Voice
           </p>
@@ -42,14 +42,14 @@ function Plans() {
           <p className="text-black font-bold 2xl:text-2xl text-lg ">
             N28,500
           </p>
-          <button
+          {/* <button
             onClick={handleViewPlans}
             className="text-white bg-bluePrimary btn-hover w-full 2xl:py-3 py-3 2xl:text-lg text-sm text-center rounded-[3rem] font-grotesk font-semibold"
           >
             VIEW
-          </button>
+          </button> */}
         </div>
-        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk shadow-lg ">
+        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk shadow-lg cursor-pointer "  onClick={handleViewPlans}>
           <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
             Modem + 100GB Data bundle + Voice
           </p>
@@ -65,12 +65,12 @@ function Plans() {
           <p className="text-black font-bold 2xl:text-2xl text-lg ">
             N35,000
           </p>
-          <button
+          {/* <button
             onClick={handleViewPlans}
             className="text-white bg-bluePrimary btn-hover w-full 2xl:py-3 py-3 2xl:text-lg text-sm text-center rounded-[3rem] font-grotesk font-semibold"
           >
             VIEW
-          </button>
+          </button> */}
         </div>
         {/* <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk  shadow-lg">
           <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
