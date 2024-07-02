@@ -67,17 +67,35 @@ function Header() {
             >
               <ul className="flex md:gap-4 md:pt-0 pt-10 gap-10 md:flex-row flex-col md:items-center   text-black dark:text-white font-bold">
                 <li className="">
-                  <NavLink onClick={() => setmMenu(false)} to="/">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "!text-[#DE0F04] " : ""
+                    }
+                    onClick={() => setmMenu(false)}
+                    to="/"
+                  >
                     Home
                   </NavLink>{" "}
                 </li>
                 <li className="">
-                  <NavLink onClick={() => setmMenu(false)} to="/about">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "!text-[#DE0F04] " : ""
+                    }
+                    onClick={() => setmMenu(false)}
+                    to="/about"
+                  >
                     About Us
                   </NavLink>{" "}
                 </li>
                 <li className="">
-                  <NavLink onClick={() => setmMenu(false)} to="/services">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "!text-[#DE0F04] " : ""
+                    }
+                    onClick={() => setmMenu(false)}
+                    to="/services"
+                  >
                     Services
                   </NavLink>{" "}
                 </li>
@@ -85,6 +103,9 @@ function Header() {
                 <li className="">
                   <NavLink
                     to="/products"
+                    className={({ isActive }) =>
+                      isActive ? "!text-[#DE0F04] " : ""
+                    }
                     onClick={() => {
                       setmMenu(false);
                     }}
@@ -93,22 +114,46 @@ function Header() {
                   </NavLink>{" "}
                 </li>
                 <li className=" text-black font-bold dark:text-white md:block hidden ">
-                  <NavLink onClick={() => setmMenu(false)} to="/plans">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "!text-[#DE0F04] " : ""
+                    }
+                    onClick={() => setmMenu(false)}
+                    to="/plans"
+                  >
                     Plans
                   </NavLink>{" "}
                 </li>
                 <li className="md:hidden block">
-                  <NavLink onClick={() => setmMenu(false)} to="/dealers">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "!text-[#DE0F04] " : ""
+                    }
+                    onClick={() => setmMenu(false)}
+                    to="/dealers"
+                  >
                     Our dealers
                   </NavLink>{" "}
                 </li>
                 <li className="md:hidden block">
-                  <NavLink onClick={() => setmMenu(false)} to="/coverage">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "!text-[#DE0F04] " : ""
+                    }
+                    onClick={() => setmMenu(false)}
+                    to="/coverage"
+                  >
                     Coverage
                   </NavLink>{" "}
                 </li>
                 <li className=" text-black font-bold dark:text-white md:block hidden ">
-                  <NavLink onClick={() => setmMenu(false)} to="/coverage">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "!text-[#DE0F04] " : ""
+                    }
+                    onClick={() => setmMenu(false)}
+                    to="/coverage"
+                  >
                     Coverage
                   </NavLink>{" "}
                 </li>
