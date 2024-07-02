@@ -9,11 +9,11 @@ export default withMT({
   theme: {
     extend: {
       fontFamily: {
-        grotesk: ['Montserrat', 'sans-serif'],
-        pSans: ['Montserrat', 'sans-serif'],
-        mdSans: ['Montserrat', 'sans-serif'],
-        inter: ['Montserrat', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
+        grotesk: ['Proxima Nova', 'sans-serif'],
+        pSans: ['Proxima Nova', 'sans-serif'],
+        mdSans: ['Proxima Nova', 'sans-serif'],
+        inter: ['Proxima Nova', 'sans-serif'],
+        montserrat: ['Proxima Nova', 'sans-serif'],
       },
       colors: {
         grey:{

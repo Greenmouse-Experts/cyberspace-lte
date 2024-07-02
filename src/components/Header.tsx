@@ -66,7 +66,7 @@ function Header() {
                 : "left-[-1000px] top-10"
             } top-5   flex justify-start md:h-auto h-screen transition-all unset`}
           >
-            <ul className="flex md:gap-4 md:pt-0 pt-10 gap-10 md:flex-row flex-col md:items-center   text-[#666666] dark:text-white font-bold">
+            <ul className="flex md:gap-4 md:pt-0 pt-10 gap-10 md:flex-row flex-col md:items-center   text-black dark:text-white font-bold">
               <li className="">
                 <NavLink onClick={() => setmMenu(false)} to="/about">
                   About Us
@@ -135,7 +135,7 @@ function Header() {
               />
             )}
             <div className="bg-[#D9D9D9] w-[2px]" />
-            <li className=" text-grayPrimary font-bold dark:text-white md:block hidden ">
+            <li className=" text-black font-bold dark:text-white md:block hidden ">
               <NavLink onClick={() => setmMenu(false)} to="/coverage">
                 Coverage
               </NavLink>{" "}
