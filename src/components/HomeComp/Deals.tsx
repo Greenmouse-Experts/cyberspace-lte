@@ -89,7 +89,7 @@ function Deals() {
 
                 <NavLink
                   to={`/product/${product.id}/${createSlug(product.product_name)}`}
-                  className="2xl:text-lg text-sm bg-[#008ECC] py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
+                  className="2xl:text-lg text-sm bg-bluePrimary py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
                 >
                   Buy Now
                 </NavLink>
@@ -101,7 +101,7 @@ function Deals() {
         <div className="text-center mt-16 flex items-center justify-center">
           <NavLink
             to="/products"
-            className="border border-bluePrimary px-11 py-5 text-white bg-bluePrimary rounded-[50px] flex items-center justify-center"
+            className="border border-bluePrimary px-11 py-3 text-white bg-bluePrimary rounded-[50px] flex items-center justify-center"
           >
             View All{" "}
             <span>
@@ -117,7 +117,7 @@ function Deals() {
             <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Fast Delivery
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
+            <p className="2xl:text-sm text-[12px] text-black font-medium">
               Delivery in 24 Hours
             </p>
           </div>
@@ -129,7 +129,7 @@ function Deals() {
             <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Quality Devices
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
+            <p className="2xl:text-sm text-[12px] text-black font-medium">
               100% Quality products
             </p>
           </div>
@@ -141,7 +141,7 @@ function Deals() {
             <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Secure Payment
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
+            <p className="2xl:text-sm text-[12px] text-black font-medium">
               Your money is safe
             </p>
           </div>
@@ -153,7 +153,7 @@ function Deals() {
             <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
               Support 24 Hours
             </p>
-            <p className="2xl:text-sm text-[12px] text-lightGray font-medium">
+            <p className="2xl:text-sm text-[12px] text-black font-medium">
               Live contact/message
             </p>
           </div>
