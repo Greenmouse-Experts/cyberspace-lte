@@ -173,12 +173,12 @@ function Header() {
             </div>
             <div className="flex items-center  md:gap-6 gap-2">
               <div className="flex items-center gap-1 cursor-pointer">
-                <FiUser color="#0080CF" size={25} />
-                <p className="font-bold text-white px-3 py-1 rounded-2xl btn-hover bg-bluePrimary text-nowrap lg:text-sm capitalize  ">
+             
+                <p className="font-bold text-white px-3 py-2 rounded-3xl btn-hover bg-bluePrimary text-nowrap lg:text-sm capitalize  ">
                   {verifyUser ? (
                     <NavLink to="/account">{first_name}</NavLink>
                   ) : (
-                    <span onClick={logout}>Selfcare Portal</span>
+                    <span onClick={logout} className="flex items-center">    <FiUser color="white" size={22} />Selfcare Portal</span>
                   )}
                   {/* {verifyUser ? `${firstName}` : "Selfcare Portal"} */}
                 </p>
