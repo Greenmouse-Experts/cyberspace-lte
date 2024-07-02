@@ -89,7 +89,7 @@ function Deals() {
 
                 <NavLink
                   to={`/product/${product.id}/${createSlug(product.product_name)}`}
-                  className="2xl:text-lg text-sm bg-bluePrimary py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
+                  className="2xl:text-lg text-sm btn-hover bg-bluePrimary py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
                 >
                   Buy Now
                 </NavLink>
@@ -101,7 +101,7 @@ function Deals() {
         <div className="text-center mt-16 flex items-center justify-center">
           <NavLink
             to="/products"
-            className="border border-bluePrimary px-11 py-3 text-white bg-bluePrimary rounded-[50px] flex items-center justify-center"
+            className="border  btn-hover px-11 py-3 text-white bg-bluePrimary rounded-[50px] flex items-center justify-center"
           >
             View All{" "}
             <span>

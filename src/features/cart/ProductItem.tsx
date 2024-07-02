@@ -63,7 +63,7 @@ const ProductItem: FC<Props> = ({ data }) => {
 
       <NavLink
         to={productUrl}
-        className="2xl:text-lg text-sm bg-bluePrimary py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
+        className="2xl:text-lg text-sm bg-bluePrimary btn-hover py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
       >
         Buy Now
       </NavLink>
