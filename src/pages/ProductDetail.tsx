@@ -110,7 +110,7 @@ console.log(specification)
               </div>
             </div> */}
 
-            <div className="bg-grey-100 px-5 py-4 md:w-[80%] w-full lg:h-[26rem] flex items-center justify-center h-full">
+            <div className="bg-[#F1F1F1] px-5 py-4 md:w-[80%] w-full lg:h-[26rem] flex items-center justify-center h-full">
               <img src={renderImg} alt="product" className="w-[80%] mx-auto" />
             </div>
           </div>
@@ -189,7 +189,7 @@ console.log(specification)
               </div>
             )}
 
-            <h3 className="text-2xl text-grey-300 line-through font-inter">
+            <h3 className="text-2xl text-[#D9D9D9] line-through font-inter">
               ₦50,000
             </h3>
           </div>
