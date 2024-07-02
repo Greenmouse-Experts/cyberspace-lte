@@ -19,14 +19,14 @@ function Plans() {
             Embark on your digital journey with confidence through our data
             plans, meticulously crafted to meet your evolving needs.
           </p>
-          <NavLink to="/plans" className="flex items-center mt-5">
-            <p className="text-[#222222] sm:text-base text-[12px] font-medium text-nowrap capitalize">
+          <NavLink to="/plans" className="flex items-center mt-5 bg-bluePrimary px-2 py-1 rounded-2xl text-white w-fit btn-hover">
+            <p className=" sm:text-base text-[12px]  font-medium text-nowrap capitalize">
               see more{" "}
             </p>
-            <MdOutlineKeyboardArrowRight color="#0080CF" size={25} />
+            <MdOutlineKeyboardArrowRight color="white" size={25} />
           </NavLink>
         </div>
-        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk shadow-lg cursor-pointer"  onClick={handleViewPlans}>
+        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk shadow-lg cursor-pointer hover:-translate-y-1 transition-all hover:shadow-xl"  onClick={handleViewPlans}>
           <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
             Modem + 70GB Data bundle + Voice
           </p>
@@ -49,7 +49,7 @@ function Plans() {
             VIEW
           </button> */}
         </div>
-        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk shadow-lg cursor-pointer "  onClick={handleViewPlans}>
+        <div className="border border-bluePrimary p-6 rounded-2xl flex flex-col 2xl:gap-6 gap-3 md:w-[33%] w-full font-grotesk shadow-lg cursor-pointer hover:-translate-y-1 transition-all hover:shadow-xl "  onClick={handleViewPlans}>
           <p className="text-bluePrimary font-bold 2xl:text-[18px] text-base font-grotesk">
             Modem + 100GB Data bundle + Voice
           </p>

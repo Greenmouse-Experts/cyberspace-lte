@@ -16,7 +16,7 @@ function Footer() {
             Subscribe to our newsletter
           </h3>
           <p className="2xl:text-lg font-[300] text-[#f4f4f4] mt-3 mx-auto">
-            Subscribe to our newsletter and be the first to know when we have
+            Be the first to know when we have
             new products to boost your internet experience.
           </p>
           <div className="mt-10 w-full relative">
