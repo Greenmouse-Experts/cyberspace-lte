@@ -9,7 +9,7 @@ function Hero() {
         <Slider/>
       </section>
 
-      <section className="font-grotesk border grid md:grid-cols-6 grid-cols-2 justify-start items-center  sm:gap-0 gap-5  border-[#E4E7E9] dark:bg-gray-200 transition-colors  rounded-[10px] px-10 py-5 mt-10 md:divide-x divide-grey-400 dark:divide-gray-200 ">
+      <section className="font-grotesk border grid md:grid-cols-6 grid-cols-2 justify-start items-center  sm:gap-0 gap-5  border-[#E4E7E9] dark:bg-gray-200 transition-colors  rounded-[10px] px-10 py-5 mt-10">
         <div className="flex flex-col items-center justify-center">
           <img
             src="/icons/fast.gif"
