@@ -5,6 +5,7 @@ import { LuSmartphone } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "../state/hooks";
 import { isLoggedIn } from "../state/user/userSlice";
+import { BsInstagram } from "react-icons/bs";
 
 function Footer() {
   const verifyUser = useAppSelector(isLoggedIn);
@@ -39,7 +40,16 @@ function Footer() {
       </section>
       <footer className="lg:bg-[url('/img/footer-bg-test.png')] bg-[url('/img/footer-small.png')] bg-contain pt-16 w-full">
         <div className="flex flex-wrap md:flex-row flex-col md:justify-between justify-start md:items-start items-center md:text-start text-center  md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
-          
+          <div className="flex flex-col items-start gap-6">
+          <img
+                src="/logo-dark.png"
+                alt=""
+                className="2xl:w-[8rem] w-[6.25rem]"
+              />
+              <NavLink to="https://www.instagram.com/cyberspacenaija">
+                <BsInstagram color="#ADB7BC" size={23}/>
+              </NavLink>
+          </div>
         
           <div>
             <p className="font-normal text-[1.06rem] text-white uppercase">
