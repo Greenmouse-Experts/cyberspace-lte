@@ -65,7 +65,7 @@ function Header() {
                   : "left-[-1000px] top-10"
               } top-5   flex justify-start md:h-auto h-screen transition-all unset`}
             >
-              <ul className="flex md:gap-6 md:pt-0 pt-10 gap-10 md:flex-row flex-col md:items-center   text-black dark:text-white ">
+              <ul className="flex md:gap-10 md:pt-0 pt-10 gap-10 md:flex-row flex-col md:items-center   text-black dark:text-white ">
                 <li className="">
                   <NavLink
                     className={({ isActive }) =>
@@ -168,7 +168,7 @@ function Header() {
               <input
                 type="text"
                 className=" w-full h-full bg-[#f3f8fb] px-14 text-black border border-bluePrimary rounded-xl 2xl:placeholder:text-[16px] placeholder:text-grayPrimary placeholder:text-[12px]"
-                placeholder="Search devices, plans and more..."
+                placeholder="Search devices..."
               />
             </div>
             <div className="flex items-center  md:gap-6 gap-2">

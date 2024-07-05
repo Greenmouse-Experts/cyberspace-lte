@@ -53,7 +53,7 @@ function About() {
             </p>
           </div>
           <div className="xl:w-[40%] w-full flex justify-center ">
-            <img src="/img/about-1.png" className=" scale-90 h-80" alt="" />
+            <img src="/img/about-2.png" className=" scale-90 h-80" alt="" />
           </div>
 
          

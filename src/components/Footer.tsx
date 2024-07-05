@@ -3,12 +3,12 @@ import { GoArrowRight } from "react-icons/go";
 import { GrLocation } from "react-icons/gr";
 import { LuSmartphone } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
-import { useAppSelector } from "../state/hooks";
-import { isLoggedIn } from "../state/user/userSlice";
+// import { useAppSelector } from "../state/hooks";
+// import { isLoggedIn } from "../state/user/userSlice";
 import { BsInstagram } from "react-icons/bs";
 
 function Footer() {
-  const verifyUser = useAppSelector(isLoggedIn);
+
   return (
     <>
       <section className="bg-bluePrimary 2xl:py-20 md:py-14 py-6  mx-0 relative">
@@ -99,7 +99,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div>
+          {/* <div>
             <p className="font-normal text-[1.06rem] text-start text-white uppercase">
               account
             </p>
@@ -112,14 +112,14 @@ function Footer() {
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="/cart">My cart</NavLink>
               </li>
-              {/* <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
+              <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">wishlist</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="">payment</NavLink>
-              </li> */}
+              </li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <p className="font-normal text-[1.06rem] text-white uppercase">
@@ -130,7 +130,7 @@ function Footer() {
                 <GrLocation size={20} />
                 <NavLink to="/">
                   12 Ologun Agbaje Street, Victoria
-                  <br /> Island, Lagos, Nigeria
+                   Island, Lagos, Nigeria
                 </NavLink>
               </li>
               <p className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1">

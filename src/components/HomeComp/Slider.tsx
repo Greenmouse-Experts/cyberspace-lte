@@ -42,7 +42,7 @@ function Slider() {
             </div>
             <div className="mt-0">
               <NavLink
-                className="bg-white text-bluePrimary rounded-3xl text-base px-5 py-3 mt-5 font-bold flex items-center w-fit gap-2 justify-center"
+                className="bg-white text-bluePrimary rounded-3xl base-btn text-base px-5 py-3 mt-5 font-bold flex items-center w-fit gap-2 justify-center"
                 to="/products"
               >
                 See our Products{" "}
@@ -81,7 +81,7 @@ function Slider() {
             </div>
             <div className="">
               <NavLink
-                className="bg-white text-black rounded-3xl text-base px-5 py-3 mt-5 font-bold flex items-center w-fit gap-2 justify-center"
+                className="bg-white text-black rounded-3xl base-btn text-base px-5 py-3 mt-5 font-bold flex items-center w-fit gap-2 justify-center"
                 to="/plans"
               >
                 See our Data Plans{" "}
@@ -121,7 +121,7 @@ function Slider() {
             </div>
             <div className="">
               <NavLink
-                className="bg-redPrimary text-white rounded-3xl text-base px-5 py-3 mt-5 font-bold flex items-center w-fit gap-2 justify-center"
+                className="bg-redPrimary text-white rounded-3xl base-btn text-base px-5 py-3 mt-5 font-bold flex items-center w-fit gap-2 justify-center"
                 to="/plans"
               >
                 Explore More{" "}
