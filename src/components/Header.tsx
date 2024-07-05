@@ -46,7 +46,7 @@ function Header() {
           </div>
         </div>
 
-        <div className="flex items-center justify-between lg:gap-5 md:gap-5 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] lg:px-[100px] px-5 border-b-[0.6px] border-[#EDEDED] dark:border-darkMood relative">
+        <div className="flex items-center  lg:gap-5 md:gap-5 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] lg:px-[100px] px-5 border-b-[0.6px] border-[#EDEDED] dark:border-darkMood relative">
           <NavLink onClick={() => setmMenu(false)} to="/">
             <div className="2xl:w-[165px] w-[100px]">
               <img
@@ -57,7 +57,7 @@ function Header() {
             </div>
           </NavLink>
 
-          <div className="flex items-center gap-10 2xl:text-[1.05rem]  text-[14px] text-nowrap">
+          <div className="flex items-center gap-10 2xl:text-[1.05rem]  text-[14px] text-nowrap ml-auto">
             <nav
               className={` absolute bg-white dark:bg-darkMood transition-all  ${
                 menu
@@ -65,7 +65,7 @@ function Header() {
                   : "left-[-1000px] top-10"
               } top-5   flex justify-start md:h-auto h-screen transition-all unset`}
             >
-              <ul className="flex md:gap-4 md:pt-0 pt-10 gap-10 md:flex-row flex-col md:items-center   text-black dark:text-white font-bold">
+              <ul className="flex md:gap-6 md:pt-0 pt-10 gap-10 md:flex-row flex-col md:items-center   text-black dark:text-white ">
                 <li className="">
                   <NavLink
                     className={({ isActive }) =>
@@ -113,7 +113,7 @@ function Header() {
                     Products
                   </NavLink>{" "}
                 </li>
-                <li className=" text-black font-bold dark:text-white md:block hidden ">
+                <li className=" text-black  dark:text-white md:block hidden ">
                   <NavLink
                     className={({ isActive }) =>
                       isActive ? "!text-[#DE0F04] " : ""
@@ -146,7 +146,7 @@ function Header() {
                     Coverage
                   </NavLink>{" "}
                 </li>
-                <li className=" text-black font-bold dark:text-white md:block hidden ">
+                <li className=" text-black  dark:text-white md:block hidden ">
                   <NavLink
                     className={({ isActive }) =>
                       isActive ? "!text-[#DE0F04] " : ""
@@ -159,7 +159,7 @@ function Header() {
                 </li>
               </ul>
             </nav>
-            <div className="2xl:w-[400px] w-[300px] 2xl:h-[50px] h-[40px] relative xl:block hidden">
+            <div className="2xl:w-[300px] w-[250px] 2xl:h-[50px] h-[40px] relative xl:block hidden">
               <BsSearch
                 color="#0080CF"
                 size={20}
@@ -174,9 +174,9 @@ function Header() {
             <div className="flex items-center  md:gap-6 gap-2">
               <div className="flex items-center gap-1 cursor-pointer">
              
-                <p className="font-bold text-white px-3 py-3 rounded-3xl btn-hover bg-bluePrimary text-nowrap lg:text-sm capitalize  ">
+                <p className=" text-white rounded-3xl base-btn bg-bluePrimary text-nowrap lg:text-sm capitalize  ">
                   {verifyUser ? (
-                    <NavLink to="/account" className="px-2">{first_name}</NavLink>
+                    <NavLink to="/account" className="base-btn">{first_name}</NavLink>
                   ) : (
                     <span onClick={logout} className="flex items-center"> Selfcare Portal</span>
                   )}

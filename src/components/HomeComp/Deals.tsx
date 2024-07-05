@@ -104,7 +104,7 @@ function Deals() {
         <div className="text-center mt-16 flex items-center justify-center">
           <NavLink
             to="/products"
-            className="border  btn-hover px-11 py-3 text-white bg-bluePrimary rounded-[50px] flex items-center justify-center"
+            className=" base-btn text-white bg-bluePrimary flex items-center justify-center"
           >
             View All{" "}
             <span>

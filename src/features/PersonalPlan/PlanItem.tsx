@@ -33,11 +33,11 @@ function PersonalPlanItem({
   return (
     <>
       <div
-        className="border flex  flex-col justify-between border-bluePrimary py-8 px-4 rounded-2xl font-inter shadow-sm"
+        className="border flex  flex-col justify-between border-bluePrimary py-8 px-4 rounded-2xl font-inter shadow-sm hover:-translate-y-1 transition-all hover:shadow-xl"
       
       >
         <div>
-          <h3 className="text-3xl mb-2">{plan}</h3>
+          <h3 className="text-3xl mb-2 text-center">{plan}</h3>
 
           <h3 className="font-inter text-bluePrimary font-semibold text-2xl text-center">
             {formatAsNgnMoney(price)}
@@ -50,7 +50,7 @@ function PersonalPlanItem({
             navigate("/signin");
             toast.error("Sign in to continue...");
           }
-        }} className="border border-bluePrimary px-8 py-2 rounded-3xl text-xl">Subscribe</button>
+        }} className="border border-bluePrimary  rounded-3xl text-xl base-btn">Subscribe</button>
          </div>
           <div className="flex items-center gap-2  py-3">
             <span>

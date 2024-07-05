@@ -19,7 +19,7 @@ function Plans() {
             Embark on your digital journey with confidence through our data
             plans, meticulously crafted to meet your evolving needs.
           </p>
-          <NavLink to="/plans" className="flex items-center mt-5 bg-bluePrimary px-5 py-3 rounded-3xl text-white w-fit btn-hover">
+          <NavLink to="/plans" className="flex items-center mt-5 bg-bluePrimary base-btn rounded-3xl text-white w-fit btn-hover">
             <p className=" sm:text-base text-[12px]  font-medium text-nowrap capitalize">
               see more{" "}
             </p>

@@ -78,7 +78,7 @@ function Faq() {
      
       <section>
         <div className="text-center mt-16">
-          <NavLink to="/faqs" className=" btn-hover bg-bluePrimary px-12 py-4 text-white rounded-[50px]">
+          <NavLink to="/faqs" className="base-btn bg-bluePrimary px-12 py-4 text-white">
             Read More {">"}
           </NavLink>
         </div>
