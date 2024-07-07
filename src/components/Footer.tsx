@@ -39,7 +39,7 @@ function Footer() {
         />
       </section>
       <footer className="lg:bg-[url('/img/footer-bg-test.png')] bg-[url('/img/footer-small.png')] bg-contain pt-16 w-full">
-        <div className="flex flex-wrap md:flex-row flex-col md:justify-between justify-start md:items-start items-center md:text-start text-center  md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
+        <div className="flex flex-wrap md:flex-row flex-col md:justify-between justify-start md:items-start items-start md:text-start text-start  md:gap-0 gap-10 2xl:px-[200px] md:px-[140px] px-10">
           <div className="flex flex-col items-start gap-6">
           <img
                 src="/logo-dark.png"

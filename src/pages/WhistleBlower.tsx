@@ -54,7 +54,7 @@ function WhistleBlower() {
         <div className="lg:mt-20 flex justify-end mt-10">
           <button
             type="submit"
-            className="bg-bluePrimary text-white px-10 py-3 para rounded-lg  "
+            className="bg-bluePrimary text-white base-btn  "
           >
             submit
           </button>

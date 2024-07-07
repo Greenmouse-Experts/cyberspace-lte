@@ -239,7 +239,7 @@ li{
     margin-right: 20px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .unset {
     position: unset !important;
   }
