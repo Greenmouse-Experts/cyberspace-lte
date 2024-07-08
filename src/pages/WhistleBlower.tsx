@@ -56,7 +56,7 @@ function WhistleBlower() {
             type="submit"
             className="bg-bluePrimary text-white base-btn  "
           >
-            submit
+            Submit
           </button>
         </div>
       </form>

@@ -7,10 +7,10 @@ interface BannerProps {
 }
 
 function Banner({ title, text, image }: BannerProps) {
-  console.log(image);
+
   return (
-    <section className="xl:mt-32 mt-20 mx-0 bg-cover bg-center relative h-[260px] xl:mb-24 mb-10">
-      <img src={image ? `${image}` : "/img/banner-img.png"} alt="" className=" w-full h-full object-cover object-center " />
+    <section className="xl:mt-32 mt-20 mx-0  relative h-[300px] xl:mb-24 mb-10">
+      <img src={image ? `${image}` : "/img/banner-img.png"} alt="" className=" w-full h-full object-cover object-top  " />
       <div
         className={` flex flex-col justify-center items-center px-[7%] mx-0 text-white gap-3 w-full h-full absolute xl:top-[55%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
       >

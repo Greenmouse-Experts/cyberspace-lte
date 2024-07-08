@@ -10,9 +10,11 @@ import { useDispatch } from "react-redux";
 import { isDark } from "../features/darkmode/DarkModeSlice";
 import { MdExitToApp } from "react-icons/md";
 import { LogoutModal } from "./modals/LogoutModal";
+import { LiaTimesSolid } from "react-icons/lia";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 function Header() {
-  const [menu, setmMenu] = useState(false);
+  const [menu, setMenu] = useState(false);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
   const verifyUser = useAppSelector(isLoggedIn);
@@ -46,8 +48,8 @@ function Header() {
           </div>
         </div>
 
-        <div className="flex items-center  lg:gap-5 md:gap-5 gap-10 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[140px] lg:px-[100px] px-5 border-b-[0.6px] border-[#EDEDED] dark:border-darkMood relative">
-          <NavLink onClick={() => setmMenu(false)} to="/">
+        <div className="flex items-center  lg:gap-5 md:gap-5 gap-10 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[7%] xl:px-[3%] lg:px-[3%] px-5 border-b-[0.6px] border-[#EDEDED] dark:border-darkMood relative">
+          <NavLink onClick={() => setMenu(false)} to="/">
             <div className="2xl:w-[165px] w-[100px]">
               <img
                 src={mood ? "/logo-dark.png" : "/logo.svg"}
@@ -61,17 +63,32 @@ function Header() {
             <nav
               className={` absolute bg-white dark:bg-darkMood transition-all  ${
                 menu
-                  ? "left-0 w-[80%] z-50 h-screen pl-10 top-20"
+                  ? "left-0 w-[100%] z-50 h-screen pl-10 top-20"
                   : "left-[-1000px] top-10"
               } top-5   flex justify-start lg:h-auto h-screen transition-all unset`}
             >
-              <ul className="flex lg:gap-10 lg:pt-0 pt-10 gap-10 lg:flex-row flex-col lg:items-center   text-black dark:text-white ">
+              <ul className="flex lg:gap-10 lg:pt-0 pt-10 gap-10 lg:flex-row flex-col lg:items-center relative w-full   text-black dark:text-white ">
+                <span
+                  onClick={() => setMenu(false)}
+                  className="absolute top-0 right-4 cursor-pointer lg:hidden block"
+                >
+                  <LiaTimesSolid size={30} />
+                </span>
+                <NavLink onClick={() => setMenu(false)} to="/" className=" lg:hidden block">
+                  <div className="2xl:w-[165px] w-[100px]">
+                    <img
+                      src={mood ? "/logo-dark.png" : "/logo.svg"}
+                      alt=""
+                      className="2xl:w-[10.3rem] w-[6.25rem]"
+                    />
+                  </div>
+                </NavLink>
                 <li className="">
                   <NavLink
                     className={({ isActive }) =>
                       isActive ? "!text-[#DE0F04] " : ""
                     }
-                    onClick={() => setmMenu(false)}
+                    onClick={() => setMenu(false)}
                     to="/"
                   >
                     Home
@@ -82,7 +99,7 @@ function Header() {
                     className={({ isActive }) =>
                       isActive ? "!text-[#DE0F04] " : ""
                     }
-                    onClick={() => setmMenu(false)}
+                    onClick={() => setMenu(false)}
                     to="/about"
                   >
                     About Us
@@ -93,7 +110,7 @@ function Header() {
                     className={({ isActive }) =>
                       isActive ? "!text-[#DE0F04] " : ""
                     }
-                    onClick={() => setmMenu(false)}
+                    onClick={() => setMenu(false)}
                     to="/services"
                   >
                     Services
@@ -107,7 +124,7 @@ function Header() {
                       isActive ? "!text-[#DE0F04] " : ""
                     }
                     onClick={() => {
-                      setmMenu(false);
+                      setMenu(false);
                     }}
                   >
                     Products
@@ -118,8 +135,8 @@ function Header() {
                     className={({ isActive }) =>
                       isActive ? "!text-[#DE0F04] " : ""
                     }
-                    onClick={() => setmMenu(false)}
-                    to="/plans" 
+                    onClick={() => setMenu(false)}
+                    to="/plans"
                   >
                     Plans
                   </NavLink>{" "}
@@ -129,7 +146,7 @@ function Header() {
                     className={({ isActive }) =>
                       isActive ? "!text-[#DE0F04] " : ""
                     }
-                    onClick={() => setmMenu(false)}
+                    onClick={() => setMenu(false)}
                     to="/dealers"
                   >
                     Our dealers
@@ -140,7 +157,7 @@ function Header() {
                     className={({ isActive }) =>
                       isActive ? "!text-[#DE0F04] " : ""
                     }
-                    onClick={() => setmMenu(false)}
+                    onClick={() => setMenu(false)}
                     to="/coverage"
                   >
                     Coverage
@@ -151,7 +168,7 @@ function Header() {
                     className={({ isActive }) =>
                       isActive ? "!text-[#DE0F04] " : ""
                     }
-                    onClick={() => setmMenu(false)}
+                    onClick={() => setMenu(false)}
                     to="/coverage"
                   >
                     Coverage
@@ -226,10 +243,13 @@ function Header() {
           </div>
           <DarkmodeToggle />
           <div
-            className="lg:hidden block cursor-pointer w-8 h-8"
-            onClick={() => setmMenu((menu) => !menu)}
+            className="lg:hidden block cursor-pointer bg-bluePrimary px-2 rounded-lg"
+            onClick={() => setMenu(true)}
           >
-            <img src="/icons/hamburger.svg" alt="menu" className="w-8 h-8" />
+            <span className="">
+            <RxHamburgerMenu size={30} color="white"/>
+            </span>
+            
           </div>
         </div>
       </header>

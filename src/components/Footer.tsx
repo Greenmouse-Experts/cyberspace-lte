@@ -177,8 +177,8 @@ function Footer() {
         </div>
 
         <div className="text-[#ADB7BC] flex justify-center items-center 2xl:py-10 py-6 border-t-[0.7px] border-grayPrimary mt-16 ">
-          <p className="2xl:text-base text-[10px] font-pSans px-1 text-center">
-            © 2024 Cyberspace LTE. All Rights Reserved |
+          <p className="2xl:text-base text-sm font-pSans px-1 text-center">
+            © 2024 Cyberspace LTE. All Rights Reserved |&nbsp;
             <span className=" text-nowrap">
               <NavLink to="whistle-blower">Whistle Blower</NavLink>
             </span>
