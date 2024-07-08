@@ -113,50 +113,50 @@ function Deals() {
           </NavLink>
         </div>
       </section>
-      <section className=" grid lg:grid-cols-4 grid-cols-2 gap-10 items-center sm:justify-between justify-center  rounded-[10px] lg:px-0 px-5 py-10 jus mt-20 font-montserrat mb-20">
-        <div className="flex sm:flex-row flex-col items-center gap-3">
-          <img src="/icons/quality-4.png" alt="" className="w-10 h-10" />
+      <section className=" grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10 items-center sm:justify-between justify-center  rounded-[10px] lg:px-0 px-5 py-10 jus mt-20 font-montserrat mb-20">
+        <div className="flex items-center gap-3 sm:flex-row flex-col sm:text-start text-center">
+          <img src="/icons/quality-4.png" alt="" className="sm:w-10 sm:h-10 w-16 h-16" />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
+            <p className="2xl:text-lg text-xl text-[#222222]  font-bold">
               Fast Delivery
             </p>
-            <p className="2xl:text-sm text-[12px] text-black font-medium">
+            <p className="2xl:text-base text-base text-black font-medium">
               Delivery in 24 Hours
             </p>
           </div>
         </div>
 
-        <div className="flex sm:flex-row flex-col items-center gap-3">
-          <img src="/icons/quality-3.png" alt="" className="w-10 h-10" />
+        <div className="flex items-center gap-3 sm:flex-row flex-col sm:text-start text-center">
+          <img src="/icons/quality-3.png" alt="" className="sm:w-10 sm:h-10 w-16 h-16" />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
+            <p className="2xl:text-lg text-xl text-[#222222]  font-bold">
               Quality Devices
             </p>
-            <p className="2xl:text-sm text-[12px] text-black font-medium">
+            <p className="2xl:text-base text-base text-black font-medium">
               100% Quality products
             </p>
           </div>
         </div>
 
-        <div className="flex sm:flex-row flex-col items-center gap-3">
-          <img src="/icons/quality-2.png" alt="" className="w-10 h-10" />
+        <div className="flex items-center gap-3 sm:flex-row flex-col sm:text-start text-center">
+          <img src="/icons/quality-2.png" alt="" className="sm:w-10 sm:h-10 w-16 h-16" />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
+            <p className="2xl:text-lg text-xl text-[#222222]  font-bold">
               Secure Payment
             </p>
-            <p className="2xl:text-sm text-[12px] text-black font-medium">
+            <p className="2xl:text-base text-base text-black font-medium">
               Your money is safe
             </p>
           </div>
         </div>
 
-        <div className="flex sm:flex-row flex-col items-center gap-3">
-          <img src="/icons/quality-1.png" alt="" className="w-10 h-10" />
+        <div className="flex items-center gap-3 sm:flex-row flex-col sm:text-start text-center">
+          <img src="/icons/quality-1.png" alt="" className="sm:w-10 sm:h-10 w-16 h-16" />
           <div>
-            <p className="2xl:text-lg text-sm text-[#222222]  font-bold">
+            <p className="2xl:text-lg text-xl text-[#222222]  font-bold">
               Support 24 Hours
             </p>
-            <p className="2xl:text-sm text-[12px] text-black font-medium">
+            <p className="2xl:text-base text-base text-black font-medium">
               Live contact/message
             </p>
           </div>

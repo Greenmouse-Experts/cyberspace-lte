@@ -247,7 +247,7 @@ function Header() {
             onClick={() => setMenu(true)}
           >
             <span className="">
-            <RxHamburgerMenu size={30} color="white"/>
+            <RxHamburgerMenu size={25} color="white"/>
             </span>
             
           </div>
