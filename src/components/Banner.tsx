@@ -21,9 +21,9 @@ function Banner({ title, text, image }: BannerProps) {
           </NavLink>{" "}
           / <span className="font-semibold self-center">{text}</span>
         </p> */}
-        <h4 className=" !text-white  font-semibold font-inter uppercase">
+        <h3 className=" !text-white  font-semibold font-inter uppercase">
           {title}
-        </h4>
+        </h3>
       </div>
     </section>
   );
