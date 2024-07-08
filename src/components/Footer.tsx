@@ -1,11 +1,12 @@
 import { FaRegEnvelope } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
 import { GrLocation } from "react-icons/gr";
-import { LuSmartphone } from "react-icons/lu";
+
 import { NavLink } from "react-router-dom";
 // import { useAppSelector } from "../state/hooks";
 // import { isLoggedIn } from "../state/user/userSlice";
 import { BsInstagram } from "react-icons/bs";
+import { FiPhone } from "react-icons/fi";
 
 function Footer() {
 
@@ -138,19 +139,19 @@ function Footer() {
               </p>
 
               <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
-                <LuSmartphone size={20} />
+                <FiPhone size={18} />
                 <NavLink to="tel:09076555350 ">09076555350 </NavLink>
               </li>
 
               <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
-                <LuSmartphone size={20} />
+                <FiPhone size={18} />
                 <NavLink to="tel:09076555417 ">09076555417 </NavLink>
               </li>
               <p className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
                 Customer Service :
               </p>
               <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
-                <LuSmartphone size={20} />
+                <FiPhone size={18} />
                 <NavLink to="tel:02015159999 ">02015159999 </NavLink>
               </li>
 
@@ -158,7 +159,7 @@ function Footer() {
                 Emails for customer care and enquiries
               </p>
               <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1 text-wrap  ml-2">
-                <FaRegEnvelope size={20} />
+                <FaRegEnvelope size={18} />
                 <NavLink
                   to="mailto:customercare_retail@cyberspace.net.ng"
                   className="!text-wrap"
@@ -167,7 +168,7 @@ function Footer() {
                 </NavLink>
               </li>
               <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
-                <FaRegEnvelope size={20} />
+                <FaRegEnvelope size={18} />
                 <NavLink to="mailto:lteretail@cyberspace.net.ng  ">
                   lteretail@cyberspace.net.ng{" "}
                 </NavLink>
