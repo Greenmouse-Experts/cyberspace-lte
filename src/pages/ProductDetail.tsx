@@ -49,10 +49,10 @@ function ProductDetail() {
   // const product = products.data.filter(
   //   (p: ProductItemType) => p.id == productId
   // );
-  
 
-  const { product_name, price, images, specification, description, coverage  } = product.data;
-console.log(specification)
+  const { product_name, price, images, specification, description, coverage } =
+    product.data;
+  console.log(specification);
   const renderImg = JSON.parse(images)[0];
 
   const handleChange = (newValue: number) => {
@@ -75,7 +75,11 @@ console.log(specification)
 
   return (
     <>
-      <Banner title="internet routers" text={` ${product_name}`} image="/img/product-banner.png" />
+      <Banner
+        title="internet routers"
+        text={` ${product_name}`}
+        image="/img/product-banner.png"
+      />
       <section className="mt-20 flex lg:flex-row flex-col items-center gap-10 font-inter">
         <div className="lg:w-[55%] w-full">
           <div className="flex gap-5 md:flex-row flex-col-reverse items-start h-full">
@@ -124,7 +128,10 @@ console.log(specification)
               {/* <span>
                 <GoDotFill size={12} />
               </span> */}
-              <div className="add_list"  dangerouslySetInnerHTML={{ __html: specification }} />
+              <div
+                className="add_list"
+                dangerouslySetInnerHTML={{ __html: specification }}
+              />
             </li>
             {/* <li className="text-lg font-[300] flex items-center gap-2">
               <span>
@@ -269,20 +276,14 @@ console.log(specification)
 
         <div className="mt-5">
           <section>
-            {value === 0 && (
-              <p className="text-center">
-              {description}
-              </p>
-            )}
+            {value === 0 && <p className="text-center">{description}</p>}
             {value === 1 && (
-               <div className="add_list"  dangerouslySetInnerHTML={{ __html: specification }} />
+              <div
+                className="add_list"
+                dangerouslySetInnerHTML={{ __html: specification }}
+              />
             )}
-            {value === 3 && (
-              <p className="text-center">
-              {coverage}
-              </p>
-            )}
-            
+            {value === 3 && <p className="text-center">{coverage}</p>}
           </section>
         </div>
       </section>
@@ -314,7 +315,7 @@ export default ProductDetail;
     aria-label="scrollable prevent tabs example"
     sx={{
       ".MuiTabs-indicator": {
-        backgroundColor: "#0080CF",
+        backgroundColor: " #0075BF",
       },
       
       ".MuiTabs-root css-her8mk-MuiTabs-root":{

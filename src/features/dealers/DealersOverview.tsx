@@ -7,10 +7,9 @@ import Loader from "../../components/Loader";
 import { IoIosArrowForward } from "react-icons/io";
 
 function DealersOverview() {
+  const { dealers, isLoading } = useDealers();
 
-  const {dealers, isLoading}  = useDealers()
-
-  if (isLoading) return <Loader/>
+  if (isLoading) return <Loader />;
   return (
     <>
       <section className="flex lg:flex-row flex-col items-center justify-between pt-20 font-inter bg-[#FCFCFC] dark:bg-darkMood">
@@ -33,7 +32,11 @@ function DealersOverview() {
             to="/products"
             className="border border-bluePrimary px-10 py-5 text-bluePrimary rounded-[50px] text-base flex items-center gap-2 w-fit"
           >
-            View Products <span> <IoIosArrowForward /></span>
+            View Products{" "}
+            <span>
+              {" "}
+              <IoIosArrowForward />
+            </span>
           </NavLink>
         </div>
       </section>
@@ -42,7 +45,7 @@ function DealersOverview() {
           <h4 className="text-black font-semibold">Our List of Dealers</h4>
           <div className="flex items-end rounded-xl w-[400px] h-[50px] overflow-hidden relative">
             <BsSearch
-              color="#0080CF"
+              color=" #0075BF"
               size={20}
               className="absolute left-4 2xl:top-4 top-3"
             />
@@ -59,8 +62,12 @@ function DealersOverview() {
         </div>
 
         <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-8 ">
-          {dealers?.data?.slice().reverse().map((dealer:DealerItemTypes) => <DealerItem dealer={dealer}  key={dealer.id}/>)}
-      
+          {dealers?.data
+            ?.slice()
+            .reverse()
+            .map((dealer: DealerItemTypes) => (
+              <DealerItem dealer={dealer} key={dealer.id} />
+            ))}
         </div>
       </section>
     </>

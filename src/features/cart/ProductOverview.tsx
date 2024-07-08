@@ -20,7 +20,7 @@ function ProductOverview() {
       <div className="flex justify-between md:flex-row flex-col-reverse md:gap-0 gap-10 mb-20 w-full">
         <div className="sm:w-[400px] w-full  2xl:h-[60px] h-16 relative lg:block">
           <BsSearch
-            color="#0080CF"
+            color=" #0075BF"
             size={20}
             className="absolute left-4 2xl:top-5 md:top-4 top-5 "
           />

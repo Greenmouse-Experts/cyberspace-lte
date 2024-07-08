@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
@@ -10,32 +9,31 @@
   font-style: normal;
   font-weight: 700;
   src: local("Mark-Simonson-Proxima-Nova-Bold"),
-  url("./assets/fonts/Mark-Simonson-Proxima-Nova-Bold.otf")
-    format("opentype");
+    url("./assets/fonts/Mark-Simonson-Proxima-Nova-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 600;
   src: local("Mark-Simonson-Proxima-Nova-Semibold"),
-  url("./assets/fonts/Mark-Simonson-Proxima-Nova-Semibold.otf")
-    format("opentype");
+    url("./assets/fonts/Mark-Simonson-Proxima-Nova-Semibold.otf")
+      format("opentype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 400;
   src: local("Mark-Simonson-Proxima-Nova-Regular"),
-  url("./assets/fonts/Mark-Simonson-Proxima-Nova-Regular.otf")
-    format("opentype");
+    url("./assets/fonts/Mark-Simonson-Proxima-Nova-Regular.otf")
+      format("opentype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 300;
   src: local("Mark-Simonson-Proxima-Nova-Light"),
-  url("./assets/fonts/Mark-Simonson-Proxima-Nova-Light.otf")
-    format("opentype");
+    url("./assets/fonts/Mark-Simonson-Proxima-Nova-Light.otf")
+      format("opentype");
 }
 
 @tailwind base;
@@ -74,29 +72,28 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   overflow-x: hidden;
-  font-family: 'Proxima Nova', sans-serif !important;
+  font-family: "Proxima Nova", sans-serif !important;
 }
 /* 
 a,
 button {
     
 } */
- .base-btn{
-  padding: .9rem 1.3rem;
+.base-btn {
+  padding: 0.9rem 1.3rem;
   border-radius: 2rem;
-  
- }
- .base-btn:hover{
+}
+.base-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  transition: all ease-in .2s;
-  background-color: #DE0F04;
+  transition: all ease-in 0.2s;
+  background-color: #de0f04;
   color: white;
- }
+}
 
-.add_list > ul > li{
+.add_list > ul > li {
   list-style: disc;
 }
 
@@ -141,7 +138,7 @@ button {
   transition: color 0.3s;
 }
 .dark svg {
-  color: #0080cf;
+  color: #0075bf;
   transition: color 0.3s;
 }
 .dark input {
@@ -165,7 +162,7 @@ button {
 }
 
 .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root > input {
-  border: none  !important;
+  border: none !important;
 }
 
 .dark input::placeholder {
@@ -173,10 +170,10 @@ button {
   transition: color 0.3s;
 }
 
-.css-1v4ccyo{
+.css-1v4ccyo {
   border-radius: 10px !important;
 }
-.css-1v4ccyo:hover{
+.css-1v4ccyo:hover {
   border: none !important;
 }
 
@@ -192,7 +189,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Proxima Nova', sans-serif !important;
+  font-family: "Proxima Nova", sans-serif !important;
 }
 
 section {
@@ -211,10 +208,10 @@ h4 {
 
 footer a {
   font-size: 1rem;
-  font-family: 'Proxima Nova', sans-serif !important;
+  font-family: "Proxima Nova", sans-serif !important;
 }
 
-li{
+li {
   list-style: none;
 }
 
@@ -276,7 +273,7 @@ li{
 }
 
 .css-14lo706 > span {
-  color: #0080cf !important;
+  color: #0075bf !important;
   opacity: 0 !important;
 }
 .css-14lo706 {
@@ -286,43 +283,30 @@ li{
   border-radius: 10px !important;
 }
 
-.cardShadow{
-  box-shadow: 0px 62px 103.5px 20px #C9C9C940;
-
+.cardShadow {
+  box-shadow: 0px 62px 103.5px 20px #c9c9c940;
 }
 
-@media screen and (max-width: 1024px){
-    
-  html{
-      font-size: 90%;
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 90%;
   }
 }
 
-
-
-
-@media screen and (max-width: 850px){
-  
-  html{
+@media screen and (max-width: 850px) {
+  html {
     font-size: 85%;
   }
 }
 
-
-
-@media screen and (max-width: 640px){
-  
-  html{
-      font-size: 80%;
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 80%;
   }
-
 }
 
-@media screen and (max-width: 550px){
-  
-  html{
-      font-size: 75%;
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 75%;
   }
-
- 
 }

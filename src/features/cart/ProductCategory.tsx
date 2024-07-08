@@ -21,7 +21,7 @@ const ProductCategory: FC<Props> = ({ data, isLoading, active, setActive }) => {
               active === 0 && "active bg-bluePrimary text-white"
             } `}
           >
-           view All
+           View All
           </p>
           {!isLoading &&
             data &&

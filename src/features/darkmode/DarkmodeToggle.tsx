@@ -5,10 +5,9 @@ import { isDark, toggleMode } from "./DarkModeSlice";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../../state/hooks";
 
-
 function DarkmodeToggle() {
-const dispatch = useDispatch()
- 
+  const dispatch = useDispatch();
+
   const mood = useAppSelector(isDark);
   useEffect(() => {
     if (mood) {
@@ -18,25 +17,27 @@ const dispatch = useDispatch()
       document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
     }
-  }, [mood,]);
+  }, [mood]);
 
   function toggleDarkMode() {
     // setIsDarkMode((isDark:boolean) => !isDark);
-    dispatch(toggleMode())
+    dispatch(toggleMode());
   }
 
-  
+  //   const dispatch = useAppDispatch();
 
-//   const dispatch = useAppDispatch();
-
-//   const handleToggle = () => {
-//     dispatch(toggleMode());
-//     console.log("clicked");
-//   };
+  //   const handleToggle = () => {
+  //     dispatch(toggleMode());
+  //     console.log("clicked");
+  //   };
 
   return (
     <div className=" cursor-pointer" onClick={toggleDarkMode}>
-      {mood ? <MdOutlineWbSunny color="#0080CF" size={25} /> : <FaRegMoon size={22} color="#0080CF" />}
+      {mood ? (
+        <MdOutlineWbSunny color=" #0075BF" size={25} />
+      ) : (
+        <FaRegMoon size={22} color=" #0075BF" />
+      )}
     </div>
   );
 }

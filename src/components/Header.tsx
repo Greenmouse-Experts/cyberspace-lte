@@ -74,7 +74,11 @@ function Header() {
                 >
                   <LiaTimesSolid size={30} />
                 </span>
-                <NavLink onClick={() => setMenu(false)} to="/" className=" lg:hidden block">
+                <NavLink
+                  onClick={() => setMenu(false)}
+                  to="/"
+                  className=" lg:hidden block"
+                >
                   <div className="2xl:w-[165px] w-[100px]">
                     <img
                       src={mood ? "/logo-dark.png" : "/logo.svg"}
@@ -192,7 +196,7 @@ function Header() {
                   </div>
                   {verifyUser && (
                     <MdExitToApp
-                      color="#0080CF"
+                      color=" #0075BF"
                       size={25}
                       onClick={handleOpen}
                       className=" cursor-pointer"
@@ -204,7 +208,7 @@ function Header() {
             </nav>
             <div className="2xl:w-[300px] w-[250px] 2xl:h-[50px] h-[40px] relative xl:block hidden">
               <BsSearch
-                color="#0080CF"
+                color=" #0075BF"
                 size={20}
                 className="absolute left-4 2xl:top-4 top-3"
               />
@@ -232,7 +236,7 @@ function Header() {
               </div>
               {verifyUser && (
                 <MdExitToApp
-                  color="#0080CF"
+                  color=" #0075BF"
                   size={25}
                   onClick={handleOpen}
                   className=" cursor-pointer"
@@ -247,9 +251,8 @@ function Header() {
             onClick={() => setMenu(true)}
           >
             <span className="">
-            <RxHamburgerMenu size={25} color="white"/>
+              <RxHamburgerMenu size={25} color="white" />
             </span>
-            
           </div>
         </div>
       </header>

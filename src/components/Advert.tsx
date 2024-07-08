@@ -15,7 +15,7 @@ function Advert() {
           <p className="text-[#222222] sm:text-base text-[12px] text-nowrap font-medium capitalize">
             see more{" "}
           </p>
-          <MdOutlineKeyboardArrowRight color="#0080CF" size={25} />
+          <MdOutlineKeyboardArrowRight color=" #0075BF" size={25} />
         </NavLink>
       </div>
       <div className="flex w-full items-center 2xl:mt-8 mt-5">
