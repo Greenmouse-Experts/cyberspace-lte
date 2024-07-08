@@ -5,7 +5,7 @@ import ProductOverview from "../features/cart/ProductOverview"
 function Products() {
   return (
     <>
-    <Banner text="Products" title="products"/>
+    <Banner text="Products" title="products" image="/img/product-banner.png"/>
 
     <ProductOverview/>
     </>

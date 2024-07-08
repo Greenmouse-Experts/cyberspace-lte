@@ -22,7 +22,7 @@ function BusinessPlanItem({ img, title, text }: Iplan) {
 function BusinessPlan() {
   return (
     <>
-      <Banner title="Business Plan" text="Business Plan" />
+      <Banner title="Business Plan" text="Business Plan" image="/img/plan-banner.png" />
       <section className="flex lg:flex-row flex-col items-center justify-between pt-20 font-inter bg-[#FCFCFC] dark:bg-darkMood">
         <div className="lg:w-[40%] w-full">
           <h3>Enterprise connectivity</h3>

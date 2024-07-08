@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 function About() {
   return (
     <>
-      <Banner title="About" text="About us" />
+      <Banner title="About" text="About us" image="/img/about-banner.png" />
       <section className="mt-10">
         <div className=" flex items-center  xl:flex-row flex-col gap-20">
           <div className="xl:w-[40%] w-full flex justify-center h-80">

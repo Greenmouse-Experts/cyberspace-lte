@@ -4,7 +4,7 @@ import CoverageMap from "../components/Map"
 function Coverage() {
   return (
     <>
-    <Banner title="coverage" text="coverage"/>
+    <Banner title="coverage" text="coverage"  image="/img/coverage-banner.png"/>
     <CoverageMap/>
     </>
   )

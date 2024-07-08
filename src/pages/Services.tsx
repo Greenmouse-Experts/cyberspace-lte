@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 function Services() {
   return (
     <>
-      <Banner title="services" text="services" />
+      <Banner image="/img/services-banner.png" title="services" text="services" />
       <section className="pt-20 grid xl:grid-cols-3 gap-x-32">
        <div className="flex flex-col gap-10 col-span-2">
        <div className=" pt-10 bg-white dark:bg-black rounded-[10px] pb-8 px-8 cardShadow">

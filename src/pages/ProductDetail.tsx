@@ -75,7 +75,7 @@ console.log(specification)
 
   return (
     <>
-      <Banner title="internet routers" text={`Product / ${product_name}`} />
+      <Banner title="internet routers" text={` ${product_name}`} image="/img/product-banner.png" />
       <section className="mt-20 flex lg:flex-row flex-col items-center gap-10 font-inter">
         <div className="lg:w-[55%] w-full">
           <div className="flex gap-5 md:flex-row flex-col-reverse items-start h-full">
