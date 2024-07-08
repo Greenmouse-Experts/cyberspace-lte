@@ -117,7 +117,7 @@ export function PlantModal({ handleOpen, open, planItem }) {
       <form onSubmit={handleSubmit(onSubmit, onError)}>
         <DialogHeader className="dark:text-white">Checkout</DialogHeader>
         <DialogBody>
-          <div className="flex md:flex-row flex-col items-center gap-10">
+          <div className="flex md:flex-row flex-col items-center gap-10 text-black">
             <InputText
               id="first_name"
               textLabel="First name"
