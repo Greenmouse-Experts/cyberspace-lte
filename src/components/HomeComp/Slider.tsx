@@ -27,9 +27,9 @@ function Slider() {
             <p className="font-medium 2xl:text-3xl text-2xl ">
               Double Your Online Presence
             </p>
-            <h3 className="2xl:text-6xl md:text-5xl text-4xl font-semibold my-3">
+            <h2 className="2xl:text-6xl md:text-5xl text-4xl font-semibold my-3">
               New Superfast Modem
-            </h3>
+            </h2>
             <div className="flex items-center gap-5">
               <p className="font-medium 2xl:text-3xl text-2xl">
                 Enjoy Smart Deals
@@ -66,9 +66,9 @@ function Slider() {
             <p className="font-medium 2xl:text-3xl text-2xl">
               Double Your Online Presence
             </p>
-            <h3 className="2xl:text-6xl md:text-5xl text-4xl font-semibold my-5">
+            <h2 className="2xl:text-6xl md:text-5xl text-4xl font-semibold my-5">
               Bundled Data Offers
-            </h3>
+            </h2>
             <div className="flex items-center gap-5">
               <p className="font-medium 2xl:text-3xl text-2xl">
                 Enjoy Great Data Offers
@@ -106,9 +106,9 @@ function Slider() {
             <p className="font-medium 2xl:text-3xl text-2xl">
               Double Your Online Presence
             </p>
-            <h3 className="2xl:text-6xl md:text-5xl text-4xl font-semibold my-5">
+            <h2 className="2xl:text-6xl md:text-5xl text-4xl font-semibold my-5">
               High Speed Internet
-            </h3>
+            </h2>
             <div className="flex items-center gap-5">
               <p className="font-medium 2xl:text-3xl text-2xl">
                 Affordable Internet Voices
@@ -212,9 +212,9 @@ export default Slider;
 //               <p className="font-medium 2xl:text-3xl text-2xl">
 //               Double Your Online Presence
 //               </p>
-//               <h3 className="2xl:text-6xl md:text-5xl text-4xl font-semibold my-5">
+//               <h2 className="2xl:text-6xl md:text-5xl text-4xl font-semibold my-5">
 //                 {slide.subheading}
-//               </h3>
+//               </h2>
 //               <div className="flex items-center gap-5">
 //                 <p className="font-medium 2xl:text-3xl text-2xl">
 //                   {slide.description}
