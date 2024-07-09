@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 function Contact() {
   return (
     <>
-      <Banner title="contact" text="Contact us" />
+      <Banner title="contact Us" text="Contact us" image="/img/contact-banner.png" />
       <section className="pt-20">
         <p className="font-normal md:text-lg">
           Experience the power of superfast internet with Cyberspace Superfast.

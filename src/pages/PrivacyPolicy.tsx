@@ -4,7 +4,7 @@ import List from "../components/List";
 function PrivacyPolicy() {
   return (
     <>
-      <Banner title="Privacy Policy" text="Privacy Policy" />
+      <Banner title="Privacy Policy" text="Privacy Policy" image="/img/privacy-banner.png" />
       <section className="">
         <div className="pt-20">
           <h4>What is this Privacy Notice for?</h4>

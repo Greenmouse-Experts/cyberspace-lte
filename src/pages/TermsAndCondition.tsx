@@ -4,7 +4,7 @@ import Banner from "../components/Banner"
 function TermsAndCondition() {
   return (
    <>
-   <Banner title="Terms and conditions" text="terms and conditions" />
+   <Banner title="Terms and conditions" text="terms and conditions" image="/img/terms-banner.png" />
    <section className="my-20">
    <div className=" mt-5">
         <div className="mb-12">
