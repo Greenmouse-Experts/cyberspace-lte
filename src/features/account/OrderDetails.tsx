@@ -41,7 +41,7 @@ const OrderDetails = () => {
           {items.map((item: any) => (
             <div className="flex justify-between items-center py-1">
               <p>Superfast Indoor Modem</p>
-              <p>{item.amount}</p>
+              <p>{formatAsNgnMoney(item.amount)}</p>
               <p>{item.quantity}</p>
             </div>
           ))}

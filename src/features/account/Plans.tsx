@@ -1,6 +1,6 @@
 
 import { NavLink } from 'react-router-dom';
-import { formatDate } from '../../utils/helpers';
+import { formatAsNgnMoney, formatDate } from '../../utils/helpers';
 import { usePlans } from './useAccount';
 import Loader from '../../components/Loader';
 import { PlanTypes } from './orders.type';
@@ -29,7 +29,7 @@ const Plans = () => {
             </button>
           </NavLink>
 
-          <p className="font-bold text-xl">{plan.plan.price}</p>
+          <p className="font-bold text-xl">{formatAsNgnMoney(plan.plan.price)}</p>
         </div>
       </div>
     ))}

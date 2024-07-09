@@ -18,15 +18,15 @@ function ProductOverview() {
   return (
     <section className="mt-20">
       <div className="flex justify-between md:flex-row flex-col-reverse md:gap-0 gap-10 mb-20 w-full">
-        <div className="sm:w-[400px] w-full  2xl:h-[60px] h-16 relative lg:block">
+        <div className="sm:w-[400px] w-full  2xl:h-[60px] h-14 relative lg:block">
           <BsSearch
             color=" #0075BF"
             size={20}
-            className="absolute left-4 2xl:top-5 md:top-4 top-5 "
+            className="absolute left-4 2xl:top-4 xl:mt-1 md:top-4 top-5 "
           />
           <input
             type="text"
-            className=" w-full h-full bg-[#F3F9FB] px-14 text-bluePrimary rounded-xl 2xl:placeholder:text-[16px] placeholder:text-grayPrimary placeholder:text-[12px]"
+            className=" w-full h-full bg-[#F3F9FB] px-14 text-bluePrimary border border-bluePrimary rounded-xl 2xl:placeholder:text-[16px] placeholder:text-grayPrimary placeholder:text-[12px]"
             placeholder="Search products..."
           />
         </div>

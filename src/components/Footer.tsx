@@ -15,7 +15,7 @@ function Footer() {
       <section className="bg-bluePrimary 2xl:py-20 md:py-14 py-6  mx-0 relative">
         <div className="text-white font-pSans text-center justify-center flex flex-col mx-auto lg:w-[35%] w-[80%]">
           <h3 className="2xl:text-[30px] text-2xl font-semibold">
-            Subscribe to our newsletter
+            Subscribe to our  Newsletter
           </h3>
           <p className="2xl:text-lg font-[300] text-[#f4f4f4] mt-3 mx-auto">
             Be the first to know when we have
@@ -25,9 +25,9 @@ function Footer() {
             <input
               type="text"
               placeholder="Email address"
-              className="w-full 2xl:h-[70px] h-[60px] rounded-[3px] pl-6 2xl:placeholder:text-[1.03rem] placeholder:text-[11px] text-black"
+              className="w-full 2xl:h-[70px] h-[60px] rounded-[1rem] pl-6 2xl:placeholder:text-[1.03rem] placeholder:text-[11px] text-black"
             />
-            <button className="flex items-center font-bold 2xl:text-[12px] text-[10px] h-[80%] sm:px-6 px-2 uppercase bg-[#DE0F04] absolute right-2 2xl:top-2 md:top-[6px] sm:top-2 top-[6px] rounded-[3px]">
+            <button className="flex items-center font-bold 2xl:text-[12px] text-[10px] h-[80%]  uppercase  absolute base-btn bg-redPrimary  right-2 2xl:top-2 md:top-[6px] sm:top-2 top-[6px] ">
               Subscribe &nbsp;
               <GoArrowRight color="white" size={22} />
             </button>
@@ -127,7 +127,7 @@ function Footer() {
               Contact Us
             </p>
             <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
-              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1 ml-2">
+              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1 ">
                 <GrLocation size={20} />
                 <NavLink to="/">
                   12 Ologun Agbaje Street, Victoria
@@ -138,19 +138,19 @@ function Footer() {
                 For enquiries about our products:
               </p>
 
-              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
+              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ">
                 <FiPhone size={18} />
                 <NavLink to="tel:09076555350 ">09076555350 </NavLink>
               </li>
 
-              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
+              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ">
                 <FiPhone size={18} />
                 <NavLink to="tel:09076555417 ">09076555417 </NavLink>
               </li>
-              <p className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
+              <p className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ">
                 Customer Service :
               </p>
-              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
+              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ">
                 <FiPhone size={18} />
                 <NavLink to="tel:02015159999 ">02015159999 </NavLink>
               </li>
@@ -158,7 +158,7 @@ function Footer() {
               <p className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1">
                 Emails for customer care and enquiries
               </p>
-              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1 text-wrap  ml-2">
+              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1 text-wrap  ">
                 <FaRegEnvelope size={18} />
                 <NavLink
                   to="mailto:customercare_retail@cyberspace.net.ng"
@@ -167,7 +167,7 @@ function Footer() {
                   customercare_retail@cyberspace.net.ng{" "}
                 </NavLink>
               </li>
-              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ml-2">
+              <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ">
                 <FaRegEnvelope size={18} />
                 <NavLink to="mailto:lteretail@cyberspace.net.ng  ">
                   lteretail@cyberspace.net.ng{" "}

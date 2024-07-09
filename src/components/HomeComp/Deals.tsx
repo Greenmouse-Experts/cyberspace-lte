@@ -42,7 +42,7 @@ function Deals() {
             >
               <div
                 key={product.id}
-                className="flex sm:flex-row flex-col items-center gap-8 p-2 sm:h-[19rem] h-[25] rounded-[20px] border-[1.6px] border-[#008ECC] pb-3 overflow-hidden relative hover:-translate-y-1 transition-all hover:shadow-xl"
+                className="flex sm:flex-row flex-col items-center gap-8 p-2 sm:h-[19rem] h-[25] rounded-[20px] border-[1.6px] border-bluePrimary shadow-lg pb-3 overflow-hidden relative hover:-translate-y-1 transition-all hover:shadow-xl"
               >
                 <div className="bg-[#E4E7E9] sm:w-[45%] w-full h-full  rounded-2xl flex justify-center items-center">
                   <img
@@ -69,7 +69,7 @@ function Deals() {
                           className="border border-blue-gray-50 bg-white px-4 py-3 shadow-xl dark:bg-darkMood shadow-black/10"
                           content={
                             <div className="w-80">
-                              <p className="font-normal opacity-80 text-redPrimary dark:!text-white">
+                              <p className="font-normal opacity-80 text-black dark:!text-white">
                                 <span className="font-medium">Note:</span>{" "}
                                 {formatCurrency(product.price)} is only for the
                                 product not with installation.

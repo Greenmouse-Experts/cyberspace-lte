@@ -37,7 +37,7 @@ function PersonalPlanItem({
       
       >
         <div>
-          <h3 className="text-3xl mb-2 text-center">{plan}</h3>
+          <h3 className="text-2xl mb-2 text-center">{plan}</h3>
 
           <h3 className="font-inter text-bluePrimary font-semibold text-2xl text-center">
             {formatAsNgnMoney(price)}

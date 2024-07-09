@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import Loader from "../../components/Loader";
 import { OrderTypes } from "./orders.type";
 import { useOrders } from "./useAccount";
-import { formatDate } from "../../utils/helpers";
+import { formatAsNgnMoney, formatDate } from "../../utils/helpers";
 
 const Orders = () => {
   const { orders, isLoading } = useOrders();
@@ -30,7 +30,7 @@ const Orders = () => {
               </button>
             </NavLink>
 
-            <p className="font-bold text-xl">{order.items[0].amount}</p>
+            <p className="font-bold text-xl">{formatAsNgnMoney(order.items[0].amount)}</p>
           </div>
         </div>
       ))}
