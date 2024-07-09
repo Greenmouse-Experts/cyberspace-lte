@@ -95,7 +95,7 @@ function PersonalPlanOverview() {
       </div>
       {plan && (
         <>
-          <div className="pt-16 grid md:grid-cols-4 grid-col-1 gap-5 ">
+          <div className="pt-16 grid xl:grid-cols-4 md:grid-cols-2  grid-col-1 gap-5 ">
             {monthlyRenewal.map((plan: PlanType) => (
               <PersonalPlanItem
                 plan={plan.name}
