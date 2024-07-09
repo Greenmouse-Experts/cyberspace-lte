@@ -74,7 +74,7 @@ function PersonalPlanOverview() {
   );
 
   return (
-    <section className="pt-16">
+    <section className="">
       <div className="border border-bluePrimary rounded-[100px] flex items-center 2xl:w-[55%] md:w-[70%] w-full justify-center mx-auto h-[70px] ">
         <p
           onClick={() => setPlan(false)}

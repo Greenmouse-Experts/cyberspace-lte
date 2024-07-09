@@ -25,7 +25,7 @@ const ProductItem: FC<Props> = ({ data }) => {
   return (
     <NavLink
     to={productUrl}>
-    <div className="flex flex-col items-center rounded-[20px] border-[1.6px] border-bluePrimary  w-full pb-3 overflow-hidden relative">
+    <div className="flex flex-col items-center rounded-[20px] border border-bluePrimary  w-full pb-3 overflow-hidden relative">
       <div className="bg-[#E4E7E9] w-full flex items-center justify-center xl:h-56 md:h-52 sm:h-48 h-44 px-5">
         <img src={renderImg} alt="" className="max-w-[95%] max-h-[95%]" />
       </div>

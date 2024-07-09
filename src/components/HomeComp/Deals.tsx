@@ -42,7 +42,7 @@ function Deals() {
             >
               <div
                 key={product.id}
-                className="flex sm:flex-row flex-col items-center gap-8 p-2 sm:h-[19rem] h-[25] rounded-[20px] border-[1.6px] border-bluePrimary shadow-lg pb-3 overflow-hidden relative hover:-translate-y-1 transition-all hover:shadow-xl"
+                className="flex sm:flex-row flex-col items-center gap-8 p-2 sm:h-[19rem] h-[25] rounded-[20px] border border-bluePrimary shadow-lg pb-3 overflow-hidden relative hover:-translate-y-1 transition-all hover:shadow-xl"
               >
                 <div className="bg-[#E4E7E9] sm:w-[45%] w-full h-full  rounded-2xl flex justify-center items-center">
                   <img
