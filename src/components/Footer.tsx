@@ -67,7 +67,7 @@ function Footer() {
                 <NavLink to="/plans">Plans</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
-                <NavLink to="/products">Services</NavLink>
+                <NavLink to="/services">Services</NavLink>
               </li>
               <li className="text-[12px] text-[#ADB7BC] font-normal capitalize">
                 <NavLink to="/about">About us</NavLink>
