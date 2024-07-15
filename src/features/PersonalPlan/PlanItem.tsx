@@ -57,22 +57,22 @@ function PersonalPlanItem({
             </button>
           </div>
           <div className="flex flex-col ">
-            <div className="flex items-start gap-2  py-3">
-              <span>
+            <div className="flex items-start gap-3  py-3">
+              <span className="mt-1">
                 <FaCheck color="" size={15} />
               </span>
               <p className=" font-normal text-base">
                 {available_hour ? available_hour : "24 Hours x 7 Days"}
               </p>
             </div>
-            <div className="flex items-start gap-2  py-3">
-              <span>
+            <div className="flex items-start gap-3  py-3">
+              <span className="mt-1">
                 <FaCheck color="" size={15} />
               </span>
               <p className=" font-normal text-base">{size} GB</p>
             </div>
-            <div className="flex items-start gap-2  py-3">
-              <span>
+            <div className="flex items-start gap-3  py-3">
+              <span className="mt-1">
                 <FaCheck color="" size={15} />
               </span>
               <p className=" font-normal text-base">{duration + " days"}</p>
