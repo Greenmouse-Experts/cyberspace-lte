@@ -117,10 +117,10 @@ function Deals() {
         <div className="flex items-center gap-3 sm:flex-row flex-col sm:text-start text-center">
           <img src="/icons/quality-4.png" alt="" className="sm:w-10 sm:h-10 w-16 h-16" />
           <div>
-            <p className="2xl:text-lg text-xl text-[#222222]  font-bold">
+            <p className=" text-[#222222]  font-bold">
               Fast Delivery
             </p>
-            <p className="2xl:text-base text-base text-black font-medium">
+            <p className=" text-black font-medium">
               Delivery in 24 Hours
             </p>
           </div>
@@ -129,10 +129,10 @@ function Deals() {
         <div className="flex items-center gap-3 sm:flex-row flex-col sm:text-start text-center">
           <img src="/icons/quality-3.png" alt="" className="sm:w-10 sm:h-10 w-16 h-16" />
           <div>
-            <p className="2xl:text-lg text-xl text-[#222222]  font-bold">
+            <p className=" text-[#222222]  font-bold">
               Quality Devices
             </p>
-            <p className="2xl:text-base text-base text-black font-medium">
+            <p className=" text-black font-medium">
               100% Quality products
             </p>
           </div>
@@ -141,10 +141,10 @@ function Deals() {
         <div className="flex items-center gap-3 sm:flex-row flex-col sm:text-start text-center">
           <img src="/icons/quality-2.png" alt="" className="sm:w-10 sm:h-10 w-16 h-16" />
           <div>
-            <p className="2xl:text-lg text-xl text-[#222222]  font-bold">
+            <p className=" text-[#222222]  font-bold">
               Secure Payment
             </p>
-            <p className="2xl:text-base text-base text-black font-medium">
+            <p className=" text-black font-medium">
               Your money is safe
             </p>
           </div>
@@ -153,10 +153,10 @@ function Deals() {
         <div className="flex items-center gap-3 sm:flex-row flex-col sm:text-start text-center">
           <img src="/icons/quality-1.png" alt="" className="sm:w-10 sm:h-10 w-16 h-16" />
           <div>
-            <p className="2xl:text-lg text-xl text-[#222222]  font-bold">
+            <p className=" text-[#222222]  font-bold">
               Support 24 Hours
             </p>
-            <p className="2xl:text-base text-base text-black font-medium">
+            <p className=" text-black font-medium">
               Live contact/message
             </p>
           </div>

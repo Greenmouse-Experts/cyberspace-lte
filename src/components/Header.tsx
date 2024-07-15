@@ -32,16 +32,16 @@ function Header() {
   return (
     <>
       <header className="fixed top-0 bg-white dark:bg-darkMood transition-colors z-10 right-0 w-full left-0">
-        <div className=" justify-between items-center 2xl:py-2 py-2 2xl:px-28 lg:px-24 xl:flex hidden  bg-bluePrimary text-white 2xl:text-[19px] text-[10px]  font-grotesk">
-          <p className=""> Welcome to Cyberspace Superfast LTE!</p>
+        <div className=" justify-between items-center 2xl:py-2 py-2 2xl:px-28 lg:px-24 xl:flex hidden  bg-bluePrimary text-white   font-grotesk">
+          <p className="!text-sm font-[300]"> Welcome to Cyberspace Superfast LTE!</p>
 
-          <div className="flex gap-6 items-center font-sora 2xl:text-[18px] sm:text-[12px] text-[5px] text-white">
-            <NavLink to="/dealers" className="border-r pr-6">
-              Our Dealers
+          <div className="flex gap-6 items-center font-sora text-white">
+            <NavLink to="/dealers" className="border-r pr-6 ">
+          <p className="!text-sm font-[300]"> Our Dealers</p>
             </NavLink>
             <div className="flex gap-1 items-center pr-4">
               <CiLocationOn color="white" size={22} />
-              <p className="font-[300]">
+              <p className="!text-sm font-[300]">
                 12 Ologun Agbaje Street, Victoria Island, Lagos, Nigeria
               </p>
             </div>
@@ -134,7 +134,7 @@ function Header() {
                     Products
                   </NavLink>{" "}
                 </li>
-                <li className=" text-black  dark:text-white lg:block hidden ">
+                <li className=" text-black  dark:text-white  ">
                   <NavLink
                     className={({ isActive }) =>
                       isActive ? "!text-[#DE0F04] " : ""

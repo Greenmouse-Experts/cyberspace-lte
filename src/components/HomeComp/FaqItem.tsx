@@ -26,7 +26,7 @@ const FaqItem = ({ index, title, answer, open, toggleAccordion }: AccordionProps
         onClick={() => toggleAccordion(index)}
       >
         <button className="flex justify-between w-full items-center">
-          <span className={`font-sora 2xl:text-[22px] text-left 2xl:font-[400] text-base font-normal ${open ? "text-white" : "text-black"}`}>
+          <span className={`font-sora text-left 2xl:font-[400] text-base font-normal ${open ? "text-white" : "text-black"}`}>
             {title}
           </span>
           {open ? (

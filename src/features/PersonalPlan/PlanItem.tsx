@@ -32,11 +32,11 @@ function PersonalPlanItem({
 
   return (
     <>
-      <div className="border flex relative  flex-col justify-between md:h-[28rem] h-[25rem]  border-bluePrimary py-8 px-4 rounded-2xl font-inter shadow-sm hover:-translate-y-1 transition-all hover:shadow-xl">
+      <div className="border flex relative  flex-col justify-between md:h-[30rem] h-[25rem]  border-bluePrimary py-8 px-4 rounded-2xl font-inter shadow-sm hover:-translate-y-1 transition-all hover:shadow-xl">
         <div className="flex flex-col  justify-between h-full ">
           <div className="flex flex-col ">
-            <h3 className="text-2xl mb-2 text-center">{plan}</h3>
-            <h3 className="font-inter text-bluePrimary font-semibold text-2xl text-center">
+            <h3 className="text-2xl mb-2 text-start">{plan}</h3>
+            <h3 className="font-inter text-bluePrimary font-semibold text-2xl text-center mt-5">
               {formatAsNgnMoney(price)}
             </h3>
           </div>

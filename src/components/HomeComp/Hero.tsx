@@ -16,7 +16,7 @@ function Hero() {
             className="2xl:w-[83px] w-[40px] "
             alt="gif"
           />
-          <p className="2xl:text-[16px] text-[12px] dark:!text-[#222222] font-semibold">
+          <p className="text-base dark:!text-[#222222] font-semibold">
             Super fast
           </p>
         </div>
@@ -27,7 +27,7 @@ function Hero() {
             className="2xl:w-[83px] w-[40px] "
             alt=""
           />
-          <p className="2xl:text-[16px] text-[12px] dark:!text-[#222222] font-semibold text-nowrap">
+          <p className="text-base dark:!text-[#222222] font-semibold text-nowrap">
             Customer support
           </p>
         </div>
@@ -38,7 +38,7 @@ function Hero() {
             className="2xl:w-[83px] w-[40px] "
             alt=""
           />
-          <p className="2xl:text-[16px] text-[12px] dark:!text-[#222222] font-semibold">
+          <p className="text-base dark:!text-[#222222] font-semibold">
             Wide coverage
           </p>
         </div>
@@ -49,7 +49,7 @@ function Hero() {
             className="2xl:w-[83px] w-[40px] "
             alt=""
           />
-          <p className="2xl:text-[16px] text-[12px] dark:!text-[#222222] font-semibold">
+          <p className="text-base dark:!text-[#222222] font-semibold">
             Reliable
           </p>
         </div>
@@ -60,7 +60,7 @@ function Hero() {
             className="2xl:w-[83px] w-[40px] "
             alt=""
           />
-          <p className="2xl:text-[16px] text-[12px] dark:!text-[#222222] font-semibold">
+          <p className="text-base dark:!text-[#222222] font-semibold">
             Selfcare
           </p>
         </div>
@@ -71,7 +71,7 @@ function Hero() {
             className="2xl:w-[83px] w-[40px] "
             alt=""
           />
-          <p className="2xl:text-[16px] text-[12px] dark:!text-[#222222] font-semibold">
+          <p className="text-base dark:!text-[#222222] font-semibold">
             Secure
           </p>
         </div>

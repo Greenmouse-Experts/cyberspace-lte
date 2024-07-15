@@ -31,11 +31,11 @@ function Plans() {
             Modem + 70GB Data bundle + Voice
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="font-pSans uppercase text-black 2xl:text-base text-sm ">
+          <p className="font-pSans uppercase text-black ">
             CYBER STARTER
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="text-bluePrimary font-bold 2xl:text-lg text-sm">
+          <p className="text-bluePrimary font-bold">
             30 Days
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
@@ -44,7 +44,7 @@ function Plans() {
           </p>
           {/* <button
             onClick={handleViewPlans}
-            className="text-white bg-bluePrimary btn-hover w-full 2xl:py-3 py-3 2xl:text-lg text-sm text-center rounded-[3rem] font-grotesk font-semibold"
+            className="text-white bg-bluePrimary btn-hover w-full 2xl:py-3 py-3 text-center rounded-[3rem] font-grotesk font-semibold"
           >
             VIEW
           </button> */}
@@ -54,11 +54,11 @@ function Plans() {
             Modem + 100GB Data bundle + Voice
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="font-pSans uppercase text-black 2xl:text-base text-sm ">
+          <p className="font-pSans uppercase text-black ">
             CYBER STARTER
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="text-bluePrimary font-bold 2xl:text-lg text-sm">
+          <p className="text-bluePrimary font-bold">
             30 Days
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
@@ -67,7 +67,7 @@ function Plans() {
           </p>
           {/* <button
             onClick={handleViewPlans}
-            className="text-white bg-bluePrimary btn-hover w-full 2xl:py-3 py-3 2xl:text-lg text-sm text-center rounded-[3rem] font-grotesk font-semibold"
+            className="text-white bg-bluePrimary btn-hover w-full 2xl:py-3 py-3 text-center rounded-[3rem] font-grotesk font-semibold"
           >
             VIEW
           </button> */}
@@ -77,18 +77,18 @@ function Plans() {
             Unlimited volume (1 Mbps/1Mbps)
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="font-pSans uppercase text-black 2xl:text-base text-sm ">
+          <p className="font-pSans uppercase text-black ">
           STARTER UNLIMITED
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
-          <p className="text-bluePrimary font-bold 2xl:text-lg text-sm">
+          <p className="text-bluePrimary font-bold">
             1 Year
           </p>
           <div className="bg-[#E4E7E9] h-[1px]" />
           <p className="text-black font-bold 2xl:text-2xl text-lg ">
           N97,200
           </p>
-          <button onClick={handleViewPlans} className="text-white bg-bluePrimary btn-hover w-full 2xl:py-3 py-3 2xl:text-lg text-sm text-center rounded-[3rem] font-grotesk font-semibold">
+          <button onClick={handleViewPlans} className="text-white bg-bluePrimary btn-hover w-full 2xl:py-3 py-3 text-center rounded-[3rem] font-grotesk font-semibold">
             VIEW
           </button>
         </div> */}
