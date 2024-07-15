@@ -31,11 +31,11 @@ const ProductItem: FC<Props> = ({ data }) => {
       </div>
 
     <div className="p-3 w-full">
-    <p className="2xl:text-lg text-start  font-semibold text-[#222222] mt-3">
+    <p className="text-start  font-semibold text-[#222222] mt-3">
         {product_name}
       </p>
       <div className="flex gap-4 items-center mt-3">
-        <p className="2xl:text-[22px] text-base font-semibold text-[#222222] ">
+        <p className=" text-base font-semibold text-[#222222] ">
           {formatCurrency(price)}
         </p>
         {price == 122000 && (

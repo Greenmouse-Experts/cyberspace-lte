@@ -7,7 +7,7 @@ function DealerItem({dealer}:DealerProps) {
   return (
     <div className="border border-grey-400 p-4 rounded-2xl">
       {/* <div className="h-[100px] w-full rounded-xl bg-grey-300" /> */}
-      <p className="text-xl text-bluePrimary font-normal py-3">
+      <p className="text-xl  font-normal py-3">
        {dealer.name}
       </p>
       <div className="flex items-start gap-2 border-t border-grey-400 pt-3 pb-1">

@@ -17,7 +17,7 @@ function Footer() {
           <h3 className="2xl:text-[30px] text-2xl font-semibold">
             Subscribe to our  Newsletter
           </h3>
-          <p className="2xl:text-lg font-[300] text-[#f4f4f4] mt-3 mx-auto">
+          <p className=" font-[300] text-[#f4f4f4] mt-3 mx-auto">
             Be the first to know when we have
             new products to boost your internet experience.
           </p>
@@ -36,7 +36,7 @@ function Footer() {
         <img
           src="/img/arrow-2.png"
           alt=""
-          className="absolute left-[7%] top-5"
+          className="absolute left-[7%] top-5 sm:block hidden"
         />
       </section>
       <footer className="lg:bg-[url('/img/footer-bg-test.png')] bg-[url('/img/footer-small.png')] bg-contain pt-16 w-full">
