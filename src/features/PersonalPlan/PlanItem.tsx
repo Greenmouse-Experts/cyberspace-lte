@@ -35,7 +35,7 @@ function PersonalPlanItem({
       <div className="border flex relative  flex-col justify-between md:h-[30rem] h-[25rem]  border-bluePrimary py-8 px-4 rounded-2xl font-inter shadow-sm hover:-translate-y-1 transition-all hover:shadow-xl">
         <div className="flex flex-col  justify-between h-full ">
           <div className="flex flex-col ">
-            <h3 className="text-2xl mb-2 text-start">{plan}</h3>
+            <h3 className="text-2xl mb-2 text-center">{plan}</h3>
             <h3 className="font-inter text-bluePrimary font-semibold text-2xl text-center mt-5">
               {formatAsNgnMoney(price)}
             </h3>
@@ -57,7 +57,7 @@ function PersonalPlanItem({
             </button>
           </div>
           <div className="flex flex-col ">
-            <div className="flex items-center gap-2  py-3">
+            <div className="flex items-start gap-2  py-3">
               <span>
                 <FaCheck color="" size={15} />
               </span>
@@ -65,13 +65,13 @@ function PersonalPlanItem({
                 {available_hour ? available_hour : "24 Hours x 7 Days"}
               </p>
             </div>
-            <div className="flex items-center gap-2  py-3">
+            <div className="flex items-start gap-2  py-3">
               <span>
                 <FaCheck color="" size={15} />
               </span>
               <p className=" font-normal text-base">{size} GB</p>
             </div>
-            <div className="flex items-center gap-2  py-3">
+            <div className="flex items-start gap-2  py-3">
               <span>
                 <FaCheck color="" size={15} />
               </span>
