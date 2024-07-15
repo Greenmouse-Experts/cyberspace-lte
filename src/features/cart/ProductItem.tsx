@@ -31,7 +31,7 @@ const ProductItem: FC<Props> = ({ data }) => {
       </div>
 
     <div className="p-3 w-full">
-    <p className="2xl:text-lg text-start text-sm font-semibold text-[#222222] mt-3">
+    <p className="2xl:text-lg text-start  font-semibold text-[#222222] mt-3">
         {product_name}
       </p>
       <div className="flex gap-4 items-center mt-3">
@@ -67,7 +67,7 @@ const ProductItem: FC<Props> = ({ data }) => {
 
       {/* <NavLink
         to={productUrl}
-        className="2xl:text-lg text-sm bg-bluePrimary btn-hover py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
+        className="2xl:text-lg  bg-bluePrimary btn-hover py-[10px] w-[90%] rounded-[20px] text-white my-2 text-center"
       >
         Buy Now
       </NavLink> */}
