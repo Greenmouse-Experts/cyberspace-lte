@@ -6,8 +6,8 @@ function About() {
       <Banner title="About Us" text="About us" image="/img/about-banner.png" />
       <section className="mt-10">
         <div className=" flex items-center  xl:flex-row flex-col gap-20">
-          <div className="xl:w-[40%] w-full flex  xl:justify-start justify-center h-80">
-            <img src="/img/about-1.png" className=" scale-90 h-80" alt="" />
+          <div className="xl:w-[40%] w-full flex  xl:justify-start justify-center ">
+            <img src="/img/about-1.png" className=" scale-90 h-64" alt="" />
           </div>
 
           <div className="xl:w-[60%] w-full ">
@@ -53,7 +53,7 @@ function About() {
             </p>
           </div>
           <div className="xl:w-[40%] w-full flex xl:justify-end justify-center  ">
-            <img src="/img/about-2.png" className=" scale-90 h-80" alt="" />
+            <img src="/img/about-2.png" className=" scale-90 h-64" alt="" />
           </div>
 
          
