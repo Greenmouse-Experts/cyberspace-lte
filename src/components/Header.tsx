@@ -32,7 +32,7 @@ function Header() {
   return (
     <>
       <header className="fixed top-0 bg-white dark:bg-darkMood transition-colors z-10 right-0 w-full left-0">
-        <div className=" justify-between items-center 2xl:py-2 py-2 2xl:px-28 lg:px-24 xl:flex hidden  bg-bluePrimary text-white   font-grotesk">
+        <div className=" justify-between items-center 2xl:py-2 py-2 xl:flex hidden  bg-bluePrimary text-white px-[5%]   font-grotesk">
           <p className="!text-sm font-[300]"> Welcome to Cyberspace Superfast LTE!</p>
 
           <div className="flex gap-6 items-center font-sora text-white">
@@ -48,7 +48,7 @@ function Header() {
           </div>
         </div>
 
-        <div className="flex items-center  lg:gap-5 md:gap-5 gap-10 font-grotesk 2xl:text-[20px] text-[10px] py-5 2xl:px-[7%] xl:px-[3%] lg:px-[3%] px-5 border-b-[0.6px] border-[#EDEDED] dark:border-darkMood relative">
+        <div className="flex items-center  lg:gap-5 md:gap-5 gap-10 font-grotesk 2xl:text-[20px] text-[10px] py-5 px-[5%] border-b-[0.6px] border-[#EDEDED] dark:border-darkMood relative">
           <NavLink onClick={() => setMenu(false)} to="/">
             <div className="2xl:w-[165px] w-[100px]">
               <img

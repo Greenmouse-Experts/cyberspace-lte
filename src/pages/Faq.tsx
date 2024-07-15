@@ -14,7 +14,7 @@ function Faq() {
   return (
     <>
       <Banner title="faqs" text="faqs" image="/img/faq-banner.png" />
-      <section className="bg-[#F5FBFE] dark:bg-darkMood mx-0 pv-20 2xl:px-36 md:px-24 px-5">
+      <section className="bg-[#F5FBFE] dark:bg-darkMood mx-0 py-14 ">
         <h4 className="text-black text-center font-semibold mb-20">
           Frequently Asked Questions
         </h4>

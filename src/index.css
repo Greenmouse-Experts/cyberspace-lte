@@ -194,9 +194,17 @@ h6 {
 }
 
 section {
-  margin-left: 140px;
-  margin-right: 140px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
+footer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+/* header {
+  padding-left: 7%;
+  padding-right: 7%;
+} */
 h3 {
   font-size: 2rem;
   font-weight: 500;
@@ -217,10 +225,7 @@ li {
 }
 
 @media screen and (max-width: 1440px) {
-  section {
-    margin-left: 96px;
-    margin-right: 96px;
-  }
+
 
   h4 {
     font-size: 1.9rem;
@@ -232,10 +237,7 @@ li {
 }
 
 @media screen and (max-width: 1180px) {
-  section {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+ 
 }
 @media screen and (min-width: 960px) {
   .unset {

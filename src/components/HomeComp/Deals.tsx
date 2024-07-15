@@ -113,7 +113,7 @@ function Deals() {
           </NavLink>
         </div>
       </section>
-      <section className=" grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10 items-center sm:justify-between justify-center  rounded-[10px] lg:px-0 px-5 py-10 jus mt-20 font-montserrat mb-20">
+      <section className=" grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10 items-center sm:justify-between justify-center  rounded-[10px]  py-10 jus mt-20 font-montserrat mb-20">
         <div className="flex items-center gap-3 sm:flex-row flex-col sm:text-start text-center">
           <img src="/icons/quality-4.png" alt="" className="sm:w-10 sm:h-10 w-16 h-16" />
           <div>
