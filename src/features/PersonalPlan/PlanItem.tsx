@@ -32,31 +32,31 @@ function PersonalPlanItem({
 
   return (
     <>
-      <div className="border flex relative  flex-col justify-between md:h-[30rem] h-[25rem]  border-bluePrimary py-8 px-4 rounded-2xl font-inter shadow-sm hover:-translate-y-1 transition-all hover:shadow-xl">
-        <div className="flex flex-col  justify-between h-full ">
-          <div className="flex flex-col ">
+      <div className="border flex relative  flex-col justify-between  border-bluePrimary py-8 px-4 rounded-2xl font-inter shadow-sm hover:-translate-y-1 transition-all hover:shadow-xl">
+        <div className="flex flex-col h-full ">
+          <div className="flex flex-col justify-between h-[12rem]">
             <h3 className="text-2xl mb-2 text-center">{plan}</h3>
-            <h3 className="font-inter text-bluePrimary font-semibold text-2xl text-center mt-5">
-              {formatAsNgnMoney(price)}
-            </h3>
+            <div className="w-full flex items-center flex-col gap-6">
+              <h3 className="font-inter text-bluePrimary font-semibold text-2xl text-center mt-5">
+                {formatAsNgnMoney(price)}
+              </h3>
+              <button
+                onClick={() => {
+                  if (checkUser) {
+                    handleOpen();
+                  } else {
+                    navigate("/signin");
+                    toast.error("Sign in to continue...");
+                  }
+                }}
+                className="border border-bluePrimary  rounded-3xl base-btn w-fit mx-auto"
+              >
+                Subscribe
+              </button>
+            </div>
           </div>
 
-          <div className="w-full flex justify-center absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-            <button
-              onClick={() => {
-                if (checkUser) {
-                  handleOpen();
-                } else {
-                  navigate("/signin");
-                  toast.error("Sign in to continue...");
-                }
-              }}
-              className="border border-bluePrimary  rounded-3xl text-xl base-btn"
-            >
-              Subscribe
-            </button>
-          </div>
-          <div className="flex flex-col ">
+          <div className="flex flex-col mt-6">
             <div className="flex items-start gap-3  py-3">
               <span className="mt-1">
                 <FaCheck color="" size={15} />

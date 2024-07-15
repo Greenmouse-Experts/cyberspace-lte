@@ -8,20 +8,21 @@ import { useSelector } from "react-redux";
 import { getCart } from "../state/cart/cartSlice";
 
 function AppLayout() {
-  const { pathname } = useLocation();
-  const location = useLocation();
+  // const location = useLocation();
   const cartItems = useSelector(getCart);
   const cartCount = cartItems.items.length;
+  
+  const { pathname } = useLocation();
 
-  useEffect(() => {
-    nprogress.start();
-    nprogress.done();
-  }, [location.pathname]);
-
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
+  
+  // useEffect(() => {
+  //   nprogress.start();
+  //   nprogress.done();
+  // }, [location.pathname]);
   return (
     <>
       <Header />
