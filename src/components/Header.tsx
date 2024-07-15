@@ -206,7 +206,7 @@ function Header() {
                 </div>
               </ul>
             </nav>
-            <div className="2xl:w-[300px] w-[250px] 2xl:h-[50px] h-[40px] relative xl:block hidden">
+            <div className="2xl:w-[300px] w-[200px] 2xl:h-[50px] h-[40px] relative xl:block hidden">
               <BsSearch
                 color=" #0075BF"
                 size={20}
