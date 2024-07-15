@@ -120,7 +120,7 @@ function ProductDetail() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 lg:w-[45%] w-full">
+        <div className="flex flex-col gap-3 lg:w-[45%] w-full xl:pl-0 pl-5">
           <h4 className="font-medium  uppercase">{product_name}</h4>
 
           <ul className="flex flex-col gap-2">

@@ -7,7 +7,7 @@ function About() {
       <section className="mt-10">
         <div className=" flex items-center  xl:flex-row flex-col gap-20">
           <div className="xl:w-[40%] w-full flex justify-center h-80">
-            <img src="/img/about-1.png" className=" scale-90" alt="" />
+            <img src="/img/about-1.png" className=" scale-90 h-80" alt="" />
           </div>
 
           <div className="xl:w-[60%] w-full ">
