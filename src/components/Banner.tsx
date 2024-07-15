@@ -7,7 +7,7 @@ interface BannerProps {
 }
 
 function Banner({ title, text, image }: BannerProps) {
-  
+  console.log(text)
 
   return (
     <section className="xl:mt-32 mt-20 mx-0  relative 2xl:h-[300px] xl:h-[250px] h-[200px] xl:mb-24 mb-10 px-0">
