@@ -52,8 +52,13 @@ function Contact() {
       );
       // toast.success(response.data.message);
       reset(initialValues); // Reset the form to initial values after successful submission
-      setOpen(true); // Open the success dialog
-      console.log("Form submitted successfully:", response.data);
+      if(response.data.success === true){
+        setOpen(true); // Open the success dialog 
+      }
+      if(response.data.success === false){
+        toast.error("Failed to submit form");
+      }
+    
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Failed to submit form");
@@ -114,7 +119,7 @@ function Contact() {
               ></iframe>
             </div>
           </div>
-          <div className=" text-black border border-gray-400 rounded-md dark:text-white px-8 2xl:py-[70px] py-10 md:w-[50%] w-full   md:ml-3 ml-0 shadow-md">
+          <div className=" text-black border border-gray-400 rounded-md dark:text-white px-8 2xl:py-[70px] py-10 lg:w-[50%] w-full   md:ml-3 ml-0 shadow-md">
             <form
               className="flex flex-col 2xl:gap-8 gap-5 "
               onSubmit={handleSubmit(onSubmit)}
