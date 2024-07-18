@@ -1,7 +1,69 @@
-// import { NavLink } from "react-router-dom";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-nocheck
 import Banner from "../components/Banner";
+import { Dialog, DialogBody, DialogFooter } from "@material-tailwind/react";
+import InputText from "../components/InputText";
+import { Controller, useForm } from "react-hook-form";
+import { useState } from "react";
+import axios from "axios";
+import { BASE_URL } from "../config/_url";
+import toast from "react-hot-toast";
+
+interface ContactForm {
+  name: string;
+  phone: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 function Contact() {
+  const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const initialValues: ContactForm = {
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactForm>({
+    defaultValues: initialValues,
+  });
+
+  const onSubmit = async (data: ContactForm) => {
+    setLoading(true);
+    console.log(data);
+    try {
+      const response = await axios.post(
+        `${BASE_URL}/submit/contact/form`,
+        {
+          ...data,
+          full_name: data.name,
+          phone_number: data.phone,
+        }
+      );
+      // toast.success(response.data.message);
+      reset(initialValues); // Reset the form to initial values after successful submission
+      setOpen(true); // Open the success dialog
+      console.log("Form submitted successfully:", response.data);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Failed to submit form");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleDialogClose = () => setOpen(false);
+
   return (
     <>
       <Banner title="contact Us" text="Contact us" image="/img/contact-banner.png" />
@@ -55,41 +117,101 @@ function Contact() {
           <div className=" text-black border border-gray-400 rounded-md dark:text-white px-8 2xl:py-[70px] py-10 md:w-[50%] w-full   md:ml-3 ml-0 shadow-md">
             <form
               className="flex flex-col 2xl:gap-8 gap-5 "
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit(onSubmit)}
             >
               <h5 className="font-montserrat text-[22px] font-semibold  ">
                 Contact Us
               </h5>
               <div className=" flex md:flex-row flex-col justify-between gap-8 ">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="bg-[#F4F4F4] border border-gray-300 rounded-lg 2xl:h-[60px] placeholder:text-gray-800 dark:placeholder:text-white h-[50px] pl-5 md:w-[373px] w-full"
+              <Controller
+                  name="name"
+                  control={control}
+                  rules={{ required: "Name is required" }}
+                  render={({ field }) => (
+                    <InputText
+                  
+                      type="text"
+                      placeholder="Enter full name"
+                      error={errors.name?.message}
+                      {...field}
+                    />
+                  )}
                 />
-                <input
-                  type="text"
-                  placeholder="Email"
-                  className="bg-[#F4F4F4] border border-gray-300 rounded-lg md:w-[373px] w-full 2xl:h-[60px] placeholder:text-gray-800 dark:placeholder:text-white  h-[50px] pl-5"
+              <Controller
+                  name="email"
+                  control={control}
+                  rules={{
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                      message: "Invalid email address",
+                    },
+                  }}
+                  render={({ field }) => (
+                    <InputText
+                      
+                      type="email"
+                      placeholder="Enter email address"
+                      error={errors.email?.message}
+                      {...field}
+                    />
+                  )}
                 />
               </div>
               <div className=" ">
-                <input
-                  type="tel"
-                  placeholder="Phone"
-                  className="bg-[#F4F4F4] border border-gray-300 rounded-lg 2xl:h-[60px] placeholder:text-gray-800 dark:placeholder:text-white  h-[50px] pl-5 w-full"
+              <Controller
+                  name="phone"
+                  control={control}
+                  rules={{ required: "Phone number is required" }}
+                  render={({ field }) => (
+                    <InputText
+                      
+                      type="tel"
+                      placeholder="Enter phone number"
+                      error={errors.phone?.message}
+                      {...field}
+                    />
+                  )}
+                />
+              </div>
+              <div>
+                <Controller
+                  name="subject"
+                  control={control}
+                  rules={{ required: "Subject is required" }}
+                  render={({ field }) => (
+                    <InputText
+                      label="Subject"
+                      type="text"
+                      placeholder="Subject"
+                      error={errors.subject?.message}
+                      {...field}
+                    />
+                  )}
                 />
               </div>
               <div className=" ">
-                <textarea
-                  placeholder="Additional details"
-                  className="bg-[#F4F4F4] border border-gray-300 rounded-lg text-black h-[120px] pl-5 w-full pt-4 placeholder:text-gray-800 dark:placeholder:text-white"
+              <Controller
+                  name="message"
+                  control={control}
+                  rules={{ required: "Message is required" }}
+                  render={({ field }) => (
+                    <textarea
+                      {...field}
+                      placeholder="Additional details..."
+                      className="border border-gray-500 text-black rounded-lg h-[120px] pl-5 w-full pt-4 "
+                    />
+                  )}
                 />
+                  {errors.message && (
+                  <p className="text-red-600">{errors.message.message}</p>
+                )}
               </div>
               <button
                 type="submit"
                 className="bg-bluePrimary btn-hover text-white font-medium py-3 rounded-[5rem]"
               >
-                Submit Form
+               {loading ? "Sending..." : "Submit"}
               </button>
             </form>
           </div>
@@ -100,6 +222,25 @@ function Contact() {
           today!
         </p>
       </section>
+      <Dialog open={open} handler={handleDialogClose}>
+        <DialogBody>
+          <div className="text-center text-black">
+            <h3 className="text-2xl font-semibold mb-4">Success</h3>
+            <p className=" text-xl">
+              Thank you for reaching out! Your message has been successfully
+              sent. We will get back to you shortly.!
+            </p>
+          </div>
+        </DialogBody>
+        <DialogFooter>
+          <button
+            className="bg-colorPrimary btn btn-green rounded-md text-white font-semibold py-2 px-3"
+            onClick={handleDialogClose}
+          >
+            Close
+          </button>
+        </DialogFooter>
+      </Dialog>
     </>
   );
 }

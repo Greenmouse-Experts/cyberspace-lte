@@ -1,12 +1,14 @@
 import React from "react";
 
 interface InputProps {
-  textLabel: string;
-  error: string;
+  textLabel?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  error: any;
   type: string;
-  value: string;
+  value?: string;
   setValue: React.Dispatch<React.SetStateAction<string>>;
-  id: string;
+  id?: string;
+  placeholder?:string;
  
 }
 
@@ -16,6 +18,7 @@ const InputText: React.FC<InputProps> = React.forwardRef(({
   value,
   type,
   setValue,
+  placeholder,
   id,
   ...rest
 }, ref) => {
@@ -30,7 +33,8 @@ const InputText: React.FC<InputProps> = React.forwardRef(({
         //@ts-expect-error
         ref={ref}
         id={id}
-        className="w-full py-3 px-4 outline-none border border-gray-500 rounded-lg text-sm"
+        placeholder={placeholder}
+        className="w-full py-3 px-4 2xl:h-[60px] outline-none border border-gray-500 rounded-lg text-sm"
         {...rest}
       />
       {error && <p className="text-red-500">{error}</p>}
