@@ -21,7 +21,7 @@ function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const logout = () => {
-    navigate("/signin");
+    navigate("https://selfcare.cyberspace.net.ng/lteselfcare/signin");
     dispatch(removeToken());
   };
   const user = useAppSelector(userData);
@@ -33,11 +33,14 @@ function Header() {
     <>
       <header className="fixed top-0 bg-white dark:bg-darkMood transition-colors z-10 right-0 w-full left-0">
         <div className=" justify-between items-center 2xl:py-2 py-2 xl:flex hidden  bg-bluePrimary text-white px-[5%]   font-grotesk">
-          <p className="!text-sm font-[300]"> Welcome to Cyberspace Superfast LTE!</p>
+          <p className="!text-sm font-[300]">
+            {" "}
+            Welcome to Cyberspace Superfast LTE!
+          </p>
 
           <div className="flex gap-6 items-center font-sora text-white">
             <NavLink to="/dealers" className="border-r pr-6 ">
-          <p className="!text-sm font-[300]"> Our Dealers</p>
+              <p className="!text-sm font-[300]"> Our Dealers</p>
             </NavLink>
             <div className="flex gap-1 items-center pr-4">
               <CiLocationOn color="white" size={22} />
@@ -220,9 +223,10 @@ function Header() {
             </div>
             <div className="lg:flex items-center  lg:gap-6 gap-2  hidden">
               <div className="flex items-center gap-1 cursor-pointer">
-                <p className=" text-white rounded-3xl base-btn bg-bluePrimary text-nowrap lg:text-sm capitalize  ">
-                  {verifyUser ? (
-                    <NavLink to="/account" className="base-btn">
+                <NavLink to="https://selfcare.cyberspace.net.ng/lteselfcare/signin">
+                  <p className=" text-white rounded-3xl base-btn bg-bluePrimary text-nowrap lg:text-sm capitalize  ">
+                    {/* {verifyUser ? (
+                    <NavLink to="/account" className="">
                       {first_name}
                     </NavLink>
                   ) : (
@@ -230,9 +234,11 @@ function Header() {
                       {" "}
                       Selfcare Portal
                     </span>
-                  )}
-                  {/* {verifyUser ? `${firstName}` : "Selfcare Portal"} */}
-                </p>
+                  )} */}
+                    {/* {verifyUser ? `${firstName}` : "Selfcare Portal"} */}
+                    Selfcare Portal
+                  </p>
+                </NavLink>
               </div>
               {verifyUser && (
                 <MdExitToApp
