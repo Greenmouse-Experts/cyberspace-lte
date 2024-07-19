@@ -13,32 +13,34 @@ function WhistleBlower() {
 
   const [image, setimage] = useState<File | null>(null);
 
-  const resetForm = () =>{
+  const resetForm = () => {
     setName("");
     setEmail("");
     setPhone("");
     setDescription("");
     setimage(null);
-  }
+  };
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
-
+  
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('phone', phone);
+    formData.append('description', description);
+    if (image) {
+      formData.append('document', image);
+    }
+  
     try {
-      const response = await axios.post(`${BASE_URL}/submit/whistle/blower`, {
-        name,
-        email,
-        phone,
-        description,
-        document: image,
-      });
-      console.log(response);
+      const response = await axios.post(`${BASE_URL}/submit/whistle/blower`, formData);
+    
       if (response.data.success === true) {
         toast.success(response.data.message);
-        resetForm()
-      }
-      if (response.data.success === false) {
+        resetForm();
+      } else {
         toast.error("Failed to submit form");
       }
     } catch (error) {
@@ -48,7 +50,7 @@ function WhistleBlower() {
       setLoading(false);
     }
   }
-
+  
   return (
     <section className="py-20">
       <form className="padding !pt-40" onSubmit={handleSubmit}>
@@ -110,6 +112,7 @@ function WhistleBlower() {
             className="mt-5"
             onChange={(e) => {
               const file = e.target.files ? e.target.files[0] : null;
+              console.log(file)
               setimage(file);
             }}
           />
