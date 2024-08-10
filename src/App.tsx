@@ -6,9 +6,8 @@ import CartPage from "./pages/CartPage";
 import Dealers from "./pages/Dealers";
 import Coverage from "./pages/Coverage";
 import BusinessPlan from "./pages/BusinessPlan";
-
+import PageNotFound from "./pages/PageNotFound";
 import { Provider } from "react-redux";
-
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import About from "./pages/About";
@@ -28,10 +27,13 @@ import Account from "./pages/Account";
 import PersonalPlan from "./pages/PersonalPlan";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import ProtectedRoute from "./components/ProtectedRoute";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./components/ErrorFallback";
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <ErrorFallback />,
     children: [
       {
         path: "/",
@@ -120,6 +122,10 @@ const router = createBrowserRouter([
     path: "/reset-password",
     element: <ResetPassword />,
   },
+  {
+    path: "*",
+    element: <PageNotFound />,
+  },
 ]);
 
 function App() {
@@ -129,7 +135,12 @@ function App() {
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
-        <RouterProvider router={router} />
+        <ErrorBoundary
+          FallbackComponent={ErrorFallback}
+          onReset={() => window.location.replace("/")}
+        >
+          <RouterProvider router={router} />
+        </ErrorBoundary>
         <Toaster
           position="top-center"
           gutter={12}

@@ -62,15 +62,15 @@ function PersonalPlanOverview() {
 
   if (isLoading || isConfirming || isChecking) return <Loader />;
 
-  const monthlyRenewal = plans.data.filter(
-    (plan: PlanType) => plan.plan_type === "monthly_renewal"
+  const monthlyRenewal = plans?.data.filter(
+    (plan: PlanType) => plan?.plan_type === "monthly_renewal"
   );
 
-  const holidayPackages = plans.data.filter(
-    (plan: PlanType) => plan.plan_type === "holiday"
+  const holidayPackages = plans?.data.filter(
+    (plan: PlanType) => plan?.plan_type === "holiday"
   );
-  const extraValidity = plans.data.filter(
-    (plan: PlanType) => plan.plan_type === "extra_validity"
+  const extraValidity = plans?.data.filter(
+    (plan: PlanType) => plan?.plan_type === "extra_validity"
   );
 
   return (
@@ -96,7 +96,7 @@ function PersonalPlanOverview() {
       {plan && (
         <>
           <div className="pt-16 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-col-1 gap-5 ">
-            {monthlyRenewal.map((plan: PlanType) => (
+            {monthlyRenewal?.map((plan: PlanType) => (
               <PersonalPlanItem
                 plan={plan.name}
                 price={plan.price}
@@ -119,7 +119,7 @@ function PersonalPlanOverview() {
           </div>
 
           <div className="pt-16 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-col-1 gap-5 ">
-            {extraValidity.map((plan: PlanType) => (
+            {extraValidity?.map((plan: PlanType) => (
               <PersonalPlanItem
                 plan={plan.name}
                 price={plan.price}
@@ -136,7 +136,7 @@ function PersonalPlanOverview() {
       {!plan && (
         <>
           <div className="pt-16 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  grid-col-1 gap-5 ">
-            {holidayPackages.map((plan: PlanType) => (
+            {holidayPackages?.map((plan: PlanType) => (
               <PersonalPlanItem
                 plan={plan.name}
                 price={plan.price}

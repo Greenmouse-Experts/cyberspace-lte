@@ -25,7 +25,7 @@ const ProductCategory: FC<Props> = ({ data, isLoading, active, setActive }) => {
           </p>
           {!isLoading &&
             data &&
-            data.map((item: CategoryItemType) => (
+            data?.map((item: CategoryItemType) => (
               <p
                 key={item.id}
                 onClick={() => setActive(item.id)}
@@ -46,7 +46,7 @@ const ProductCategory: FC<Props> = ({ data, isLoading, active, setActive }) => {
           onChange={(e) => setActive(parseInt(e.target.value))}
         >
           <option value={0}>All categories</option>
-          {data.map((item) => (
+          {data?.map((item) => (
             <option key={item.id} value={item.id}>
               {item.name}
             </option>

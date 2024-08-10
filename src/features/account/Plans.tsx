@@ -12,7 +12,7 @@ const Plans = () => {
   if (isLoading) return <Loader />;
   return (
     <div className="container mx-auto p-6 flex flex-col">
-    {plans.data.map((plan:PlanTypes) => (
+    {plans?.data?.map((plan:PlanTypes) => (
       <div
         className="bplan-grey-700 flex justify-between p-4 bg-white shadow-md rounded my-6"
         key={plan.plan.name}
