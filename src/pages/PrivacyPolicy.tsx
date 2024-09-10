@@ -1,12 +1,32 @@
+import { useQuery } from "@tanstack/react-query";
 import Banner from "../components/Banner";
-import List from "../components/List";
+import { getPolicy } from "../services/apis/generalApi";
+import Loader from "../components/Loader";
 
 function PrivacyPolicy() {
+  const { data: policy, isLoading } = useQuery({
+    queryKey: ["policy"],
+    queryFn: getPolicy,
+  });
+
+  console.log(policy)
+
+  const content = policy && JSON.parse(policy?.content) 
+
   return (
     <>
       <Banner title="Privacy Policy" text="Privacy Policy" image="/img/privacy-banner.png" />
+    {isLoading ? <Loader/> :
       <section className="">
-        <div className="pt-20">
+        {content &&
+          content.map((item) =>(
+            <div className="pt-20">
+            <h4>{item.title}</h4>
+            <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
+          </div>
+          ))
+        }
+        {/* <div className="pt-20">
           <h4>What is this Privacy Notice for?</h4>
           <p className="">
             Cyberspace Limited (“Cyberspace”, “the Company”, or “We”) values
@@ -19,7 +39,7 @@ function PrivacyPolicy() {
             By this Notice, we explain to you how your Personal Data is
             collected, used, managed and transferred by Cyberspace and also
             explain how you can update your Personal Data with us and exercise
-            your rights in respect of the Personal Data provided to us.{" "}
+            your rights in respect of the Personal Data provided to us.
           </p>
         </div>
 
@@ -163,8 +183,8 @@ function PrivacyPolicy() {
             our DPO, you may contact us at Cyberspace Limited, 33, Saka Tinubu
             Street, VI, Lagos, or at dpo@cyberspace.net.ng
           </p>
-        </div>
-      </section>
+        </div> */}
+      </section>}
     </>
   );
 }

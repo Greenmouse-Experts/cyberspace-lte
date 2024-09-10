@@ -7,19 +7,27 @@ import { NavLink } from "react-router-dom";
 // import { isLoggedIn } from "../state/user/userSlice";
 import { BsInstagram } from "react-icons/bs";
 import { FiPhone } from "react-icons/fi";
+import { getContact } from "../services/apis/generalApi";
+import { useQuery } from "@tanstack/react-query";
 
 function Footer() {
+  const { data: contact } = useQuery({
+    queryKey: ["contact"],
+    queryFn: getContact,
+  });
+
+  console.log(contact);
 
   return (
     <>
       <section className="bg-bluePrimary 2xl:py-20 md:py-14 py-6  mx-0 relative">
         <div className="text-white font-pSans text-center justify-center flex flex-col mx-auto lg:w-[35%] w-[80%]">
           <h3 className="2xl:text-[30px] text-2xl font-semibold">
-            Subscribe to our  Newsletter
+            Subscribe to our Newsletter
           </h3>
           <p className=" font-[300] text-[#f4f4f4] mt-3 mx-auto">
-            Be the first to know when we have
-            new products to boost your internet experience.
+            Be the first to know when we have new products to boost your
+            internet experience.
           </p>
           <div className="mt-10 w-full relative">
             <input
@@ -42,16 +50,16 @@ function Footer() {
       <footer className="lg:bg-[url('/img/footer-bg-test.png')] bg-[url('/img/footer-small.png')] bg-contain pt-16 w-full">
         <div className="flex flex-wrap md:flex-row flex-col md:justify-between justify-start md:items-start items-start md:text-start text-start  md:gap-0 gap-10 ">
           <div className="flex flex-col items-start gap-6">
-          <img
-                src="/logo-dark.png"
-                alt=""
-                className="2xl:w-[8rem] w-[6.25rem]"
-              />
-              <NavLink to="https://www.instagram.com/cyberspacenaija">
-                <BsInstagram color="#ADB7BC" size={23}/>
-              </NavLink>
+            <img
+              src="/logo-dark.png"
+              alt=""
+              className="2xl:w-[8rem] w-[6.25rem]"
+            />
+            <NavLink to="https://www.instagram.com/cyberspacenaija">
+              <BsInstagram color="#ADB7BC" size={23} />
+            </NavLink>
           </div>
-        
+
           <div>
             <p className="font-normal text-[1.06rem] text-white uppercase">
               Quick links
@@ -129,7 +137,65 @@ function Footer() {
             <p className="font-normal text-[1.06rem] text-white uppercase">
               Contact Us
             </p>
-            <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
+            <div>
+              {contact?.addresses?.map((item, index) => (
+                <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1 " key={index}>
+                  <span>
+                    {" "}
+                    <GrLocation size={20} />
+                  </span>
+                  {item}
+                  </li>
+              ))}
+                  <p className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1">
+                Emails for customer care and enquiries
+              </p>
+            
+              {contact?.emails?.map((item, index) => (
+                <p
+                  className="text-[#bdbdbd] flex items-start gap-1 dark:!text-[#BDBDBD]"
+                  key={index}
+                >
+                  {" "}
+                  <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ">
+
+                    <span>
+                      {" "}
+                      <FaRegEnvelope size={18} />
+                    </span>{" "}
+                  <NavLink
+                  
+                    to={`mailto:${item}`}
+                  >
+                    {item}
+                  </NavLink>
+
+                  </li>
+                </p>
+              ))}
+                <p className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1">
+                For enquiries about our products:
+              </p>
+              {contact?.phones?.map((item, index) => (
+                <p
+                  className="flex items-start gap-1 dark:!text-[#BDBDBD]"
+                  key={index}
+                >
+                  <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1  ">
+                    <span>
+                      <FiPhone size={18} />
+                      {" "}
+                    </span>
+                  <NavLink  to={`tel:${item}`}>
+                    {item}
+                  </NavLink>
+
+                  </li>
+                </p>
+              ))}
+            </div>
+
+            {/* <ul className="flex flex-col 2xl:gap-4 gap-1 mt-5">
               <li className="text-[1.03rem] text-[#ADB7BC] font-normal flex items-center gap-1 ">
                 <GrLocation size={20} />
                 <NavLink to="/">
@@ -176,7 +242,7 @@ function Footer() {
                   lteretail@cyberspace.net.ng{" "}
                 </NavLink>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
 

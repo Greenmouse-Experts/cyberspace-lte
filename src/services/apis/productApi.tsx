@@ -26,7 +26,7 @@ axios.interceptors.response.use(
       localStorage.clear();
       sessionStorage.clear();
       // console.log(error)
-      return (window.location.href = "/signin");
+      return (window.location.href = "/");
     }
     return Promise.reject(error);
   }
@@ -40,7 +40,7 @@ export const getProducts = async () => {
 
 export const getProduct = async (id:string) => {
   return axios
-    .get(`https://cyberspacelte.greenmouseacademy.com.ng/api/public/view/product/${id}`)
+    .get(`https://backend.cyberspace.net.ng/api/public/view/product/${id}`)
     .then((response) => response.data);
 };
 

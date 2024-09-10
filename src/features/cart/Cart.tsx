@@ -10,7 +10,6 @@ import {
 import { CheckoutModal } from "../../components/modals/CheckoutModal";
 import { useState } from "react";
 import { isLoggedIn } from "../../state/user/userSlice";
-import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 
@@ -19,8 +18,7 @@ function Cart() {
   const cartItems = useSelector(getCart);
   const totalPrice = useSelector(getTotalCartPrice);
   const checkUser = useSelector(isLoggedIn);
-  const navigate = useNavigate()
-
+ 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
   return (
@@ -81,7 +79,7 @@ function Cart() {
             if(checkUser){
               handleOpen()
             }else{
-              navigate('/signin')
+              window.open('https://selfcare.cyberspace.net.ng/lteselfcare/signin', '_blank');
               toast.error('Sign in to continue...')
             }
            }
