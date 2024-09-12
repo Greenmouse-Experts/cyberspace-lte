@@ -5,11 +5,12 @@ import Loader from "../components/Loader";
 
 function Services() {
   const { data: service, isLoading } = useQuery({
-    queryKey: ["about"],
+    queryKey: ["services"],
     queryFn: getServices,
   });
 
   console.log(service);
+  const content = service && JSON.parse(service.content)
   return (
     <>
       <Banner
@@ -22,8 +23,8 @@ function Services() {
       ) : (
         <section className=" grid xl:grid-cols-3 gap-x-32">
           <div className="flex flex-col gap-10 col-span-2">
-            {service && service?.content?.map((item) => (
-              <div
+            {service && content?.map((item, i) => (
+              <div key={i}
                 className=" pt-10 bg-white dark:bg-black rounded-[10px] pb-8 px-8 cardShadow text-start"
                 dangerouslySetInnerHTML={{ __html: item.description }}
               ></div>
