@@ -29,5 +29,10 @@ export const getAbout = async () => {
     const response = await axios.get("/breadcrumbs"); 
     return response.data.data;
   };
+
+  export const getBanners = async () => {
+    const response = await axios.get("/banners"); 
+    return response.data.data;
+  };
   
  

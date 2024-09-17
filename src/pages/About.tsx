@@ -23,7 +23,7 @@ function About() {
                 className={`flex items-center ${
                   index % 2 === 0
                     ? "xl:flex-row  gap-20"
-                    : "xl:flex-row-reverse  gap-20"
+                    : "xl:flex-row-reverse  gap-20 mt-10"
                 }`}
               >
                 <div
@@ -37,11 +37,11 @@ function About() {
                 </div>
 
                 <div
-                  className={`xl:w-[60%] w-full ${
+                  className={`xl:w-[60%] w-full dark:text-white" ${
                     index % 2 === 0 ? "" : " text-start"
                   }`}
-                  dangerouslySetInnerHTML={{ __html: item.description }}
-                ></div>
+                 
+                > <p> {item.description}</p> </div>
               </div>
             ))}
           </div>
@@ -54,7 +54,7 @@ function About() {
                 <div className=" flex justify-between items-center">
                   <h4 className="!text-bluePrimary">Mission</h4>
                 </div>
-                <p className="">{about.mission}</p>
+                <p className=" dark:!text-white">{about.mission}</p>
               </div>
             </div>
 

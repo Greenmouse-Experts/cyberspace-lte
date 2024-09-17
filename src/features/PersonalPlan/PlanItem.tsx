@@ -45,8 +45,7 @@ function PersonalPlanItem({
                   if (checkUser) {
                     handleOpen();
                   } else {
-                    navigate("/signin");
-                    toast.error("Sign in to continue...");
+                    window.open('https://selfcare.cyberspace.net.ng/lteselfcare/signin', '_blank');
                   }
                 }}
                 className="border border-bluePrimary  rounded-3xl base-btn w-fit mx-auto"

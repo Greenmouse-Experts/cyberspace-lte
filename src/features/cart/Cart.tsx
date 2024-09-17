@@ -80,7 +80,7 @@ function Cart() {
               handleOpen()
             }else{
               window.open('https://selfcare.cyberspace.net.ng/lteselfcare/signin', '_blank');
-              toast.error('Sign in to continue...')
+            
             }
            }
             }>Checkout</Button>
