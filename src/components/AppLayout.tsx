@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import nprogress from "nprogress";
 import { useSelector } from "react-redux";
 import { getCart } from "../state/cart/cartSlice";
+import ChatBot from "./Chat";
 
 function AppLayout() {
   const location = useLocation();
@@ -36,6 +37,7 @@ function AppLayout() {
             {cartCount > 0  && <p className="absolute z-10 -top-6 -left-6 drop-shadow-lg w-7 h-7 !bg-[#ffff] dark:!bg-gray-900  rounded-full flex items-center justify-center font-semibold text-[14px]">{cartCount}</p>}
           </div>
         </div>
+        <ChatBot/>
       </main>
       <Footer />
     </>

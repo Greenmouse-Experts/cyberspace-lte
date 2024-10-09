@@ -290,6 +290,13 @@ li {
   box-shadow: 0px 62px 103.5px 20px #c9c9c940;
 }
 
+.styles-module_whatsappButton__tVits{
+  left: 2rem !important;
+}
+.styles-module_whatsappChatBox__MdQ5U {
+  left: 2rem !important;
+}
+
 @media screen and (max-width: 1024px) {
   html {
     font-size: 90%;
