@@ -23,13 +23,13 @@ function Services() {
       ) : (
         <section className=" grid xl:grid-cols-3 gap-x-32">
           <div className="flex flex-col gap-10 col-span-2">
-            {service && content?.map((item, i) => (
+            {/* {service && content?.map((item, i) => (
               <div key={i}
                 className=" pt-10 bg-white dark:bg-black rounded-[10px] pb-8 px-8 cardShadow text-start"
                 dangerouslySetInnerHTML={{ __html: item.description }}
               ></div>
-            ))}
-            {/*
+            ))} */}
+            
              <div className=" pt-10 bg-white dark:bg-black rounded-[10px] pb-8 px-8 cardShadow">
               <h4 className="text-start mb-3">Residential Internet</h4>
               <p className="font-normal">
@@ -59,7 +59,7 @@ function Services() {
                 troubleshooting and upgrades, we handle all aspects of your
                 internet connection, allowing you to focus on what matters most.
               </p>
-            </div> */}
+            </div>
           </div>
           <div className="xl:block hidden">
             <img src="/img/service-1.png" alt="" />

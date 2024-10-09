@@ -12,6 +12,7 @@ import { MdExitToApp } from "react-icons/md";
 import { LogoutModal } from "./modals/LogoutModal";
 import { LiaTimesSolid } from "react-icons/lia";
 import { RxHamburgerMenu } from "react-icons/rx";
+import SearchInput from "./SearchInput";
 
 function Header() {
   const [menu, setMenu] = useState(false);
@@ -209,7 +210,8 @@ function Header() {
                 </div>
               </ul>
             </nav>
-            <div className="2xl:w-[300px] w-[200px] 2xl:h-[50px] h-[40px] relative xl:block hidden">
+            <SearchInput/>
+            {/* <div className="2xl:w-[300px] w-[200px] 2xl:h-[50px] h-[40px] relative xl:block hidden">
               <BsSearch
                 color=" #0075BF"
                 size={20}
@@ -220,7 +222,7 @@ function Header() {
                 className=" w-full h-full bg-[#f3f8fb] px-14 text-black border border-bluePrimary rounded-xl 2xl:placeholder:text-[16px] placeholder:text-grayPrimary placeholder:text-[12px]"
                 placeholder="Search devices..."
               />
-            </div>
+            </div> */}
             <div className="lg:flex items-center  lg:gap-6 gap-2  hidden">
               <div className="flex items-center gap-1 cursor-pointer">
                 <NavLink to="https://selfcare.cyberspace.net.ng/lteselfcare/signin">

@@ -21,6 +21,7 @@ import SpinnerMini from "../SpinnerMini";
 import { userData } from "../../state/user/userSlice";
 import { GATEWAY_KEY } from "../../services/constant";
 import { addPaymentDetails } from "../../state/payment/paymentSlice";
+import toast from "react-hot-toast";
 
 export function CheckoutModal({ handleOpen, open }) {
   const totalPrice = useSelector(getTotalCartPrice);
@@ -60,7 +61,8 @@ export function CheckoutModal({ handleOpen, open }) {
   };
 
   const onSubmit = (data) => {
-    // const paymentData = {
+    
+    // const paymentData = {data
     //   first_name: data.first_name || "",
     //   last_name: data.last_name || "",
     //   address: data.address || "",
@@ -69,43 +71,46 @@ export function CheckoutModal({ handleOpen, open }) {
     //   state: data.state || "",
     //   lga: data.lga || "",
     // };
+    // window.open('https://selfcare.cyberspace.net.ng/lteselfcare/signin', '_blank');
+    toast.success("Your order has been sent")
+    handleOpen();
 
-   if(data){
-    dispatch(addPaymentDetails(data));
-   }
-    pay(
-      {
-        Currency: "NGN",
-        MerchantRef: generateMerchantRef(),
-        Amount: `${totalPrice * 100}`,
-        Description: "Product",
-        CustomerId: id,
-        CustomerName: `${data.first_name} ${data.last_name}`,
-        CustomerEmail: data.email,
-        CustomerMobile: data.phone_number,
-        IntegrationKey: `${GATEWAY_KEY}`,
-        ReturnUrl: "https://cyberspace-lte.netlify.app/account",
-        WebhookUrl: "https://merchant_webhook_url",
-        ProductCode: "",
-        // Splits: [
-        //   {
-        //     WalletCode: "teargstd",
-        //     Amount: totalPrice,
-        //     ShouldDeductFrom: true,
-        //   },
-        // ],
-      },
-      {
-        onSuccess(data) {
-          if (data.succeeded) {
-            window.location.href = data.data.redirectUrl;
-          }
-        },
-        onError() {
-          handleOpen();
-        },
-      }
-    );
+  //  if(data){
+  //   dispatch(addPaymentDetails(data));
+  //  }
+  //   pay(
+  //     {
+  //       Currency: "NGN",
+  //       MerchantRef: generateMerchantRef(),
+  //       Amount: `${totalPrice * 100}`,
+  //       Description: "Product",
+  //       CustomerId: id,
+  //       CustomerName: `${data.first_name} ${data.last_name}`,
+  //       CustomerEmail: data.email,
+  //       CustomerMobile: data.phone_number,
+  //       IntegrationKey: `${GATEWAY_KEY}`,
+  //       ReturnUrl: "https://cyberspace-lte.netlify.app/account",
+  //       WebhookUrl: "https://merchant_webhook_url",
+  //       ProductCode: "",
+  //       // Splits: [
+  //       //   {
+  //       //     WalletCode: "teargstd",
+  //       //     Amount: totalPrice,
+  //       //     ShouldDeductFrom: true,
+  //       //   },
+  //       // ],
+  //     },
+  //     {
+  //       onSuccess(data) {
+  //         if (data.succeeded) {
+  //           window.location.href = data.data.redirectUrl;
+  //         }
+  //       },
+  //       onError() {
+  //         handleOpen();
+  //       },
+  //     }
+  //   );
   };
 
   const onError = (errors) => {
@@ -233,7 +238,7 @@ export function CheckoutModal({ handleOpen, open }) {
           >
             <span>Cancel</span>
           </Button>
-          <Button variant="gradient" color="green" type="submit">
+          <Button  variant="gradient" color="green" type="submit">
             {isLoading ? <SpinnerMini /> : <span>Proceed</span>}
           </Button>
         </DialogFooter>

@@ -18,6 +18,8 @@ function Cart() {
   const cartItems = useSelector(getCart);
   const totalPrice = useSelector(getTotalCartPrice);
   const checkUser = useSelector(isLoggedIn);
+
+  console.log(cartItems)
  
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
@@ -75,11 +77,13 @@ function Cart() {
           </div>
           <CheckoutModal handleOpen={handleOpen} open={open} />
           <Button onClick={
-           () => {
-            if(checkUser){
-              handleOpen()
-            }else{
-              window.open('https://selfcare.cyberspace.net.ng/lteselfcare/signin', '_blank');
+            () => {
+              if(cartItems.items.length < 1){
+                toast.error('Your cart is empty.')
+                return
+              }else{
+                // window.open('https://selfcare.cyberspace.net.ng/lteselfcare/signin', '_blank');
+                handleOpen()
             
             }
            }
